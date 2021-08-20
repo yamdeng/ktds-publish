@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PTable1 extends Component {
+class PTable2 extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -13,4 +13,4 @@ class PTable1 extends Component {
   }
 }
 
-export default PTable1;
+export default PTable2;

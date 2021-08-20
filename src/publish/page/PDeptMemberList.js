@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PTable1 extends Component {
+class PDeptMemberList extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,8 +9,8 @@ class PTable1 extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>테이블 1</div>;
+    return <div>사외 조직/사원 등록</div>;
   }
 }
 
-export default PTable1;
+export default PDeptMemberList;

@@ -2,52 +2,43 @@ const PageConfig = {};
 
 const list = [
   {
-    title: '컴포넌트',
-    fileName: 'PComponentsGuide.js',
-    url: '/components',
-    pageCount: '',
-    success: true,
-    description: '퍼블리싱 컴포넌트 모음'
-  },
-  {
-    title: '로그인',
-    fileName: 'PLogin.js',
-    url: '/login',
-    pageCount: '15',
-    success: true,
-    description: ''
-  },
-  {
-    title: '채팅 영역',
-    fileName: 'PChatContainer.js',
-    url: '/chat',
-    pageCount: '16 ~ 40',
+    title: '레이아웃 샘플 ',
+    fileName: 'PLayoutSample.js',
+    url: '/layout-sample',
+    pageCount: '1',
     success: false,
-    description:
-      '1.방 목록 : 16 ~ 22(검색결과 없을 경우 포함)\n2.메시지 목록 : 23 ~ 31(대화 내용 검색 : 31)\n3.채목록 하단 4개 탭 않보이게 하고 [내 상담으로 가져오기] 버튼 보이게 하기 : 32\n4.이미지 전송 : 34\n5.메시지 목록 하단 탭 4개 : 35 ~ 37\n6.사용계약정보 영역 : 40'
-  },
-  {
-    title: '답변 템플릿 분류',
-    fileName: 'PTemplateContainer.js',
-    url: '/template',
-    pageCount: '41 ~ 42',
-    success: true,
     description: ''
   },
   {
-    title: '상담 도우미(목록 + 상세)',
-    fileName: 'PManualDetail.js',
-    url: '/manual-detail',
-    pageCount: '45 ~ 46',
-    success: true,
-    description: '검색결과 없는 경우 포함'
+    title: '사외 조직/사원 등록',
+    fileName: 'PDeptMemberList.js',
+    url: '/dept-member-list',
+    pageCount: '2',
+    success: false,
+    description: ''
+  },
+  {
+    title: '테이블 1',
+    fileName: 'PTable1.js',
+    url: '/table1',
+    pageCount: '3',
+    success: false,
+    description: ''
+  },
+  {
+    title: '테이블 2',
+    fileName: 'PTable2.js',
+    url: '/table2',
+    pageCount: '4',
+    success: false,
+    description: ''
   },
   {
     title: '상담 도우미 등록/수정 폼',
     fileName: 'PManualForm.js',
     url: '/manual-form',
     pageCount: '49 ~ 50',
-    success: true,
+    success: false,
     description: '팝업으로 할지 페이지로 할지 결정 필요'
   },
   {
@@ -73,7 +64,7 @@ const list = [
     fileName: 'PMemberList.js',
     url: '/member-list',
     pageCount: '54',
-    success: true,
+    success: false,
     description: '왼쪽 메뉴 영역은 중복으로 넣어줘야 함'
   },
   {
@@ -81,7 +72,7 @@ const list = [
     fileName: 'PCategoryContainer.js',
     url: '/category',
     pageCount: '55 ~ 59',
-    success: true,
+    success: false,
     description: '왼쪽 메뉴 영역은 중복으로 넣어줘야 함'
   },
   {
@@ -89,7 +80,7 @@ const list = [
     fileName: 'PAutoMessageContainer.js',
     url: '/auto-message',
     pageCount: '60',
-    success: true,
+    success: false,
     description: '왼쪽 메뉴 영역은 중복으로 넣어줘야 함'
   },
   {
@@ -97,7 +88,7 @@ const list = [
     fileName: 'PCustomerList.js',
     url: '/customer',
     pageCount: '62',
-    success: true,
+    success: false,
     description: '왼쪽 메뉴 영역은 중복으로 넣어줘야 함'
   },
   {
@@ -105,7 +96,7 @@ const list = [
     fileName: 'PAdminLogin.js',
     url: '/admin-login',
     pageCount: '63',
-    success: true,
+    success: false,
     description: ''
   },
   {
@@ -121,8 +112,16 @@ const list = [
     fileName: 'PLinkConatiner.js',
     url: '/link',
     pageCount: '66',
-    success: true,
+    success: false,
     description: ''
+  },
+  {
+    title: '컴포넌트 가이드',
+    fileName: 'PComponentsGuide.js',
+    url: '/components',
+    pageCount: '',
+    success: false,
+    description: '퍼블리싱 컴포넌트 모음'
   }
 ];
 

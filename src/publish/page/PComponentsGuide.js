@@ -9,7 +9,7 @@ class PComponentsGuide extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>PComponentsGuide!!</div>;
+    return <div>컴포넌트 가이드</div>;
   }
 }
 

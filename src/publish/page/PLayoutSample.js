@@ -9,7 +9,7 @@ class PLayoutSample extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>PLayoutSample!!</div>;
+    return <div>레이아웃 샘플</div>;
   }
 }
 
