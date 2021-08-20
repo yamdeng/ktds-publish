@@ -50,14 +50,22 @@ const resolveModule = (resolveFn, filePath) => {
   return resolveFn(`${filePath}.js`);
 };
 
+const entryIndexJs = process.env.ENTRY_NAME
+  ? 'src/' + process.env.ENTRY_NAME
+  : 'src/index';
+
+const entryIndexHtml = process.env.ENTRY_NAME
+  ? 'entry_html/' + process.env.ENTRY_NAME + '.html'
+  : 'entry_html/index.html';
+
 // config after eject: we're in ./config/
 module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
   appBuild: resolveApp(buildPath),
   appPublic: resolveApp('public'),
-  appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appHtml: resolveApp(entryIndexHtml),
+  appIndexJs: resolveModule(resolveApp, entryIndexJs),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
