@@ -55,9 +55,10 @@ class PSideBar extends Component {
               ></path>
             </svg>
           </button>
+          <h1 className="">SAFETY-DOC</h1>
         </div>
         <div
-          className={this.state.mobileToggle ? 'menu_side show' : 'menu_side '}
+          className={this.state.mobileToggle ? 'menu_side show' : 'menu_side'}
         >
           <div className="menu_toggle_bar">
             <button className="toggle_btn" onClick={this.webMenuToggle}>
@@ -75,15 +76,67 @@ class PSideBar extends Component {
                 ></path>
               </svg>
             </button>
-            <button className="toggle_dark_mode" onClick={this.toggleTheme}>
-              다크모드 토글
-            </button>
           </div>
           <div
             className={this.state.webToggle ? 'menu_area' : 'menu_area hide'}
           >
             <div className="menu_wrap">
+              <h1 className="">SAFETY-DOC</h1>
               <ul className="dep_1">
+                <li className="active">
+                  <p>대시보드</p>
+                  <ul class="dep_2">
+                    <li className="active">
+                      <p>서브 대시보드</p>
+                      <ul className="dep_3">
+                        <li className="active">
+                          <p>- 서서브 대시보드</p>
+                        </li>
+                        <li>
+                          <p>- 서서브 대시보드</p>
+                        </li>
+                        <li>
+                          <p>- 서서브 대시보드</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p>서브 대시보드</p>
+                      <ul class="dep_3">
+                        <li>
+                          <p>- 서서브 대시보드</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p>서브 대시보드</p>
+                      <ul class="dep_3">
+                        <li>
+                          <p>- 서서브 대시보드</p>
+                        </li>
+                        <li>
+                          <p>- 서서브 대시보드</p>
+                        </li>
+                        <li>
+                          <p>- 서서브 대시보드</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>대시보드</p>
+                  <ul class="dep_2">
+                    <li>
+                      <p>서브 대시보드</p>
+                      <ul class="dep_3">
+                        <li>
+                          <p>서서브 대시보드</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
                 <li>
                   <p>대시보드</p>
                   <ul class="dep_2">
@@ -99,6 +152,9 @@ class PSideBar extends Component {
                 </li>
               </ul>
             </div>
+            <button className="toggle_dark_mode" onClick={this.toggleTheme}>
+              다크모드 토글
+            </button>
           </div>
         </div>
       </React.Fragment>
