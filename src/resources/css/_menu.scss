@@ -192,6 +192,18 @@ body.dark-theme {
 }
 
 @include tablet {
+  .menu_side {
+    .menu_toggle_bar {
+    }
+    .menu_area {
+      width: 0px;
+      transition: width 0.3s ease;
+      &.hide {
+        width: 240px;
+        transition: width 0.3s ease;
+      }
+    }
+  }
 }
 
 @include desktop {

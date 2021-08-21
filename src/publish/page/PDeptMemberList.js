@@ -13,20 +13,18 @@ class PDeptMemberList extends Component {
       <div className="content_area">
         <h3>사외 조직/사원 등록</h3>
         <div className="box_form">
-          <span className="input_wrap">
-            <label className="" for="in">
-              조직 명
-            </label>
+          <span className="form_area">
+            <label className="">조직 명</label>
           </span>
-          <span className="input_wrap wid50">
-            <input type="search" id="in" className="input" placeHolder="123" />
+          <span className="form_area wid50">
+            <input type="search" className="input" placeHolder="조직 명" />
           </span>
-          <span className="input_wrap">
-            <button className="btn_search btn_blue wid100p">조회</button>
+          <span className="form_area">
+            <button className="btn_search btn_blue wid100">조회</button>
           </span>
         </div>
-        <div className="multi_box">
-          <div className="two">
+        <div className="float_group">
+          <div className="two_margin">
             <div className="box_form">
               <p className="relative c_mb10">
                 <span className="fs_12">총 nnn 건</span>
@@ -63,7 +61,7 @@ class PDeptMemberList extends Component {
               </table>
             </div>
           </div>
-          <div className="two">
+          <div className="two_margin">
             <div className="box_form">
               <p className="relative c_mb10">
                 <span className="fs_12">총 nnn 건</span>
