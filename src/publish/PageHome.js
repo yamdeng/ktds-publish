@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import PageConfig from 'publish/PageConfig';
 import _ from 'lodash';
+import ReactHelper from 'util/ReactHelper';
 
 class PageHome extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { listType: '', useIcon: false };
     this.changeList = this.changeList.bind(this);
+    this.changeUseIcon = this.changeUseIcon.bind(this);
   }
 
   changeList(listType) {
     this.setState({ listType: listType });
+  }
+
+  changeUseIcon(event) {
+    let checked = event.target.checked;
+    this.setState({ useIcon: checked });
   }
 
   render() {
@@ -21,6 +28,7 @@ s
     */
     let list = PageConfig.list;
     let listType = this.state.listType;
+    let useIcon = this.state.useIcon;
     let filetedList = _.filter(list, (info) => {
       if (listType === 'ing') {
         return !info.success;
@@ -29,6 +37,11 @@ s
       }
       return true;
     });
+    if (useIcon) {
+      filetedList = _.filter(list, (info) => {
+        return info.useIcon;
+      });
+    }
     return (
       <div style={{ overflowX: 'auto' }}>
         <h6>
@@ -49,7 +62,15 @@ s
           >
             완료
           </button>{' '}
-          <button onClick={() => this.changeList('')}>전체</button>
+          <button onClick={() => this.changeList('')}>전체</button> 아이콘 존재
+          여부{' '}
+          <input
+            type="checkbox"
+            id="useIcon"
+            name="useIcon"
+            checked={useIcon}
+            onChange={this.changeUseIcon}
+          />
         </div>
         <table className="publish_tb">
           <tr>
@@ -111,7 +132,8 @@ s
               style={{
                 border: '1px solid black',
                 borderCollapse: 'collapse',
-                padding: 5
+                padding: 5,
+                width: '40%'
               }}
             >
               설명
@@ -203,11 +225,15 @@ s
                   style={{
                     border: '1px solid black',
                     borderCollapse: 'collapse',
-                    padding: 5
+                    padding: 5,
+                    width: '40%'
                   }}
-                >
-                  <pre>{info.description}</pre>
-                </td>
+                  dangerouslySetInnerHTML={{
+                    __html: ReactHelper.convertEnterStringToBrTag(
+                      info.description
+                    )
+                  }}
+                ></td>
               </tr>
             );
           })}
