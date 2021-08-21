@@ -9,7 +9,7 @@ class PTable2 extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>테이블 1</div>;
+    return <div>테이블 2</div>;
   }
 }
 

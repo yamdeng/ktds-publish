@@ -31,9 +31,6 @@ s
     });
     return (
       <div style={{ overflowX: 'auto' }}>
-        <h6 style={{ color: 'red' }}>
-          기획서 페이지 반영 문서 : 퍼블_페이지작업.pptx
-        </h6>
         <h6>
           <a href={'#/modal'} style={{ color: 'blue' }}>
             모달 퍼블리싱 : (#/modal)
