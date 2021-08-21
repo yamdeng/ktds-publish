@@ -9,9 +9,9 @@ import PMain from 'publish/PMain';
 class PublishApp extends Component {
   render() {
     return (
-      <>
+      <div>
         <PMain />
-      </>
+      </div>
     );
   }
 }

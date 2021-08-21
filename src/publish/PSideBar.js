@@ -5,10 +5,12 @@ class PSideBar extends Component {
     super(props);
     this.state = {
       webToggle: true,
-      mobileToggle: false
+      mobileToggle: false,
+      isDarkTheme: false
     };
     this.webMenuToggle = this.webMenuToggle.bind(this);
     this.mobileMenuToggle = this.mobileMenuToggle.bind(this);
+    this.toggleTheme = this.toggleTheme.bind(this);
   }
 
   webMenuToggle() {
@@ -20,6 +22,16 @@ class PSideBar extends Component {
     this.setState({
       mobileToggle: !this.state.mobileToggle
     });
+  }
+
+  toggleTheme() {
+    let { isDarkTheme } = this.state;
+    if (isDarkTheme) {
+      $('body').removeClass('dark-theme');
+    } else {
+      $('body').addClass('dark-theme');
+    }
+    this.setState({ isDarkTheme: !isDarkTheme });
   }
 
   componentDidMount() {}
@@ -63,7 +75,9 @@ class PSideBar extends Component {
                 ></path>
               </svg>
             </button>
-            <button className="toggle_dark_mode">다크모드 토글</button>
+            <button className="toggle_dark_mode" onClick={this.toggleTheme}>
+              다크모드 토글
+            </button>
           </div>
           <div
             className={this.state.webToggle ? 'menu_area' : 'menu_area hide'}
