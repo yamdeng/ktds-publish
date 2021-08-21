@@ -132,6 +132,15 @@ s
               style={{
                 border: '1px solid black',
                 borderCollapse: 'collapse',
+                padding: 5
+              }}
+            >
+              아이콘여부
+            </th>
+            <th
+              style={{
+                border: '1px solid black',
+                borderCollapse: 'collapse',
                 padding: 5,
                 width: '40%'
               }}
@@ -220,6 +229,15 @@ s
                   }}
                 >
                   {info.success ? '완료' : '작업중'}
+                </td>
+                <td
+                  style={{
+                    border: '1px solid black',
+                    borderCollapse: 'collapse',
+                    padding: 5
+                  }}
+                >
+                  {info.useIcon ? '사용' : '미사용'}
                 </td>
                 <td
                   style={{
