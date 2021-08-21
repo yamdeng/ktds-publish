@@ -1,39 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: 'Nanum GothicL';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../font/NanumGothicLight.eot);
-  src: url(../font/NanumGothicLight.eot?#iefix) format('embedded-opentype'),
-    url(../font/NanumGothicLight.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../font/NanumGothic.eot);
-  src: url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'),
-    url(../font/NanumGothic.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nanum GothicB';
-  font-style: normal;
-  font-weight: 700;
-  src: url(../font/NanumGothicBold.eot);
-  src: url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
-    url(../font/NanumGothicBold.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nanum GothicE';
-  font-style: normal;
-  font-weight: 800;
-  src: url(../font/NanumGothicExtraBold.eot);
-  src: url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype'),
-    url(../font/NanumGothicExtraBold.ttf) format('truetype');
-}
-
 body,
 p,
 h1,
