@@ -38,7 +38,7 @@ const list = [
     pageCount: '4',
     success: false,
     useIcon: true,
-    description: '첫번째 컬럼에 체크박스 반영(테이블 행 선택을 위한)'
+    description: '1.첫번째 컬럼에 체크박스 반영(테이블 행 선택을 위한)'
   },
   {
     title: '탭 + 테이블이 수직으로 2개 있는 경우',

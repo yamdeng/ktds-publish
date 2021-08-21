@@ -223,6 +223,7 @@ s
                 </td>
                 <td
                   style={{
+                    backgroundColor: '#2196f3',
                     border: '1px solid black',
                     borderCollapse: 'collapse',
                     padding: 5,
