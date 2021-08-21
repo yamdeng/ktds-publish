@@ -68,9 +68,23 @@ class PSideBar extends Component {
           <div
             className={this.state.webToggle ? 'menu_area' : 'menu_area hide'}
           >
-            <ul style={{ width: '240px' }}>
-              <li>메뉴메뉴</li>
-            </ul>
+            <div className="menu_wrap">
+              <ul className="dep_1">
+                <li>
+                  <p>대시보드</p>
+                  <ul class="dep_2">
+                    <li>
+                      <p>서브 대시보드</p>
+                      <ul class="dep_3">
+                        <li>
+                          <p>서서브 대시보드</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </React.Fragment>
