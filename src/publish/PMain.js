@@ -34,7 +34,6 @@ class PMain extends Component {
     return (
       <>
         {state.side ? <PSideBar /> : null}
-        {state.top ? <PTopHeader /> : null}
 
         <Switch>
           <Route exact path="/" component={PageHome} />

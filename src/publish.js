@@ -8,8 +8,7 @@ import 'moment/locale/ko';
 import { configure } from 'mobx';
 import { Provider } from 'mobx-react';
 import rootStore from 'store/RootStore';
-import 'resources/css/index.css';
-import 'resources/css/index.scss';
+import 'resources/css/import.scss';
 
 // moment 전역 locale 설정
 moment.locale('ko');
