@@ -59,6 +59,11 @@ body.dark-theme {
 .top_menu_toggle {
   display: none;
 }
+.toggle_dark_mode {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
 
 @include mobile {
   .menu_side {

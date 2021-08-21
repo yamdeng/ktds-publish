@@ -63,6 +63,7 @@ class PSideBar extends Component {
                 ></path>
               </svg>
             </button>
+            <button className="toggle_dark_mode">다크모드 토글</button>
           </div>
           <div
             className={this.state.webToggle ? 'menu_area' : 'menu_area hide'}
