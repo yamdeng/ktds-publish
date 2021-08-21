@@ -1,9 +1,19 @@
+import PLayoutSample from 'publish/page/PLayoutSample';
+import PDeptMemberList from 'publish/page/PDeptMemberList';
+import PTable1 from 'publish/page/PTable1';
+import PTable2 from 'publish/page/PTable2';
+import PTabTable1 from 'publish/page/PTabTable1';
+import PBoardForm from 'publish/page/PBoardForm';
+
+import PComponentsGuide from 'publish/page/PComponentsGuide';
+
 const PageConfig = {};
 
 const list = [
   {
     title: '레이아웃 샘플',
     fileName: 'PLayoutSample.js',
+    component: PLayoutSample,
     url: '/layout-sample',
     pageCount: '1',
     success: false,
@@ -14,16 +24,18 @@ const list = [
   {
     title: '사외 조직/사원 등록',
     fileName: 'PDeptMemberList.js',
+    component: PDeptMemberList,
     url: '/dept-member-list',
     pageCount: '2',
     success: false,
     useIcon: true,
     description:
-      '1.테이블이 수평으로 2중으로 구성되어있는데 모바일로 보여질 경우 조회만 고려해서 수직 구조로만 내려주시면 될 것 같습니다\n2.그것도 애매하면 그냥 가로 스크롤되서 화면만 확인할 수 있께끔 해주시면 됩니다\n3.검색 input 필드에 좌측은 검색 아이콘, 인풋 필드에 내용이 존재하면 우측에 x 버튼\n4.테이블의 건수 정보는 테이블의 좌측 상단으로 통일\n5.페이징이 필요없는 UI\n6.아이콘은 검색, 검색 내용 삭제(알파벳 x로 해도 됩니다), 편집, 삭제 아이콘 4개 필요'
+      '1.테이블이 수평으로 2중으로 구성되어있는데 모바일로 보여질 경우 조회만 고려해서 수직 구조로만 내려주시면 될 것 같습니다\n2.그것도 애매하면 그냥 가로 스크롤되서 화면만 확인할 수 있께끔 해주시면 됩니다\n3.검색 input 필드에 좌측은 검색 아이콘, 인풋 필드에 내용이 존재하면 우측에 x 버튼\n4.테이블의 건수 정보는 테이블의 좌측 상단으로 통일(모바일 화면에서는 않보여주는게 나아보임)\n5.페이징이 필요없는 UI\n6.아이콘은 검색, 검색 내용 삭제(알파벳 x로 해도 됩니다), 편집, 삭제 아이콘 4개 필요'
   },
   {
     title: '테이블 1',
     fileName: 'PTable1.js',
+    component: PTable1,
     url: '/table1',
     pageCount: '3',
     success: false,
@@ -34,6 +46,7 @@ const list = [
   {
     title: '테이블 2',
     fileName: 'PTable2.js',
+    component: PTable2,
     url: '/table2',
     pageCount: '4',
     success: false,
@@ -42,7 +55,8 @@ const list = [
   },
   {
     title: '탭 + 테이블이 수직으로 2개 있는 경우',
-    fileName: 'PTablTable1.js',
+    fileName: 'PTabTable1.js',
+    component: PTabTable1,
     url: '/tab-table1',
     pageCount: '5',
     success: false,
@@ -51,14 +65,25 @@ const list = [
       '1.탭은 선택, 선택이 아닌 경우, 비활성화 이렇게 3개의 경우로 스타일 반영(3가지가 애매하면 선택/선택아닌 상태2가지로)\n2.모바일에서는 각 테이블의 상단 영역만 반응형으로 나오게끔 해주시면 됩니다. 상단 테이블에는 "페이징" 존재하는 걸로 판단됩니다(기획누락)'
   },
   {
-    title: '게시록 폼',
-    fileName: 'PBoardForms.js',
-    url: '/board-forms',
+    title: '게시판 폼',
+    fileName: 'PBoardForm.js',
+    component: PBoardForm,
+    url: '/board-form',
     pageCount: '6',
     success: false,
     useIcon: false,
     description:
       '필수 컬럼 여부 표기 필요/n각 input 하단에 경고 메시지 보여주는 경우 추가 필요'
+  },
+  {
+    title: '컴포넌트 가이드',
+    fileName: 'PComponentsGuide.js',
+    component: PComponentsGuide,
+    url: '/component-guide',
+    pageCount: 'gusalnim',
+    success: false,
+    useIcon: false,
+    description: '컴포넌트 가이드 정리'
   }
 ];
 

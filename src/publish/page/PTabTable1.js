@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PDeptMemberList extends Component {
+class PTabTable1 extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,8 +9,8 @@ class PDeptMemberList extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>2 : 사외 조직/사원 등록</div>;
+    return <div>5 : 탭 + 테이블이 수직으로 2개 있는 경우</div>;
   }
 }
 
-export default PDeptMemberList;
+export default PTabTable1;

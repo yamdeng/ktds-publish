@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PDeptMemberList extends Component {
+class PBoardForm extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,8 +9,8 @@ class PDeptMemberList extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>2 : 사외 조직/사원 등록</div>;
+    return <div>6 : 게시판 폼</div>;
   }
 }
 
-export default PDeptMemberList;
+export default PBoardForm;

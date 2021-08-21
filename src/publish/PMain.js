@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 
 import { observer } from 'mobx-react';
 import { Route, withRouter, Switch } from 'react-router-dom';
-import PageHome from 'publish/PageHome';
-import ModalHome from 'publish/ModalHome';
-import PComponentsGuide from 'publish/page/PComponentsGuide';
-import PLayoutSample from 'publish/page/PLayoutSample';
-import PDeptMemberList from 'publish/page/PDeptMemberList';
-import PTable1 from 'publish/page/PTable1';
-import PTable2 from 'publish/page/PTable2';
 import PSideBar from './PSideBar';
 import PTopHeader from './PTopHeader';
+import PageHome from 'publish/PageHome';
+import ModalHome from 'publish/ModalHome';
+import PageConfig from './PageConfig';
 
 // 사이드바 및 헤더 없는 메뉴
 const fullPageMenu = ['/', '/modal', 'layout-sample'];
@@ -34,19 +30,20 @@ class PMain extends Component {
 
   render() {
     const { state } = this;
+    const pageList = PageConfig.list;
     return (
       <>
         {state.side ? <PSideBar /> : null}
-
         {state.top ? <PTopHeader /> : null}
+
         <Switch>
           <Route exact path="/" component={PageHome} />
           <Route exact path="/modal" component={ModalHome} />
-          <Route exact path="/layout-sample" component={PLayoutSample} />
-          <Route exact path="/dept-member-list" component={PDeptMemberList} />
-          <Route exact path="/table1" component={PTable1} />
-          <Route exact path="/table2" component={PTable2} />
-          <Route exact path="/components" component={PComponentsGuide} />
+          {pageList.map((pageInfo) => {
+            return (
+              <Route exact path={pageInfo.url} component={pageInfo.component} />
+            );
+          })}
         </Switch>
       </>
     );
