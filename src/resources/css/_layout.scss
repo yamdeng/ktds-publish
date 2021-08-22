@@ -1,4 +1,5 @@
 .content_area {
+  overflow: hidden;
   h3 {
     font-size: 25px;
     color: #{$col-default-text};
@@ -8,8 +9,12 @@
   }
 }
 
+.horizon_tb {
+  overflow-x: auto;
+}
 .tb_list {
   width: 100%;
+
   border-top: 2px solid #{$col-gray};
   th {
     font-weight: bold;
@@ -174,6 +179,30 @@ textarea.textarea {
   transform: translate(0, -50%);
 }
 
+.tabs_wrap {
+  text-align: center;
+  overflow: hidden;
+  li {
+    display: block;
+    border-left: none;
+    float: left;
+    padding: 10px 30px;
+    min-width: 200px;
+    border: 1px solid #{$col-default-text};
+    border-left: none;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    &.active,
+    &:hover {
+      color: #{$col-default-bg};
+      background: #{$col-default-text};
+    }
+    &:first-child {
+      border-left: 1px solid #{$col-default-text};
+    }
+  }
+}
+
 @include mobile {
   .float_group {
     .two,
@@ -206,6 +235,13 @@ textarea.textarea {
   .btn_search {
     &.wid100 {
       width: 100%;
+    }
+  }
+
+  .tabs_wrap {
+    li {
+      width: 50%;
+      padding: 15px 0;
     }
   }
 }

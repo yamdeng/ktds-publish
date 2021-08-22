@@ -3,11 +3,6 @@ body {
   background-color: #{$col-default-bg};
 }
 
-body.dark-theme {
-  color: #{$dark-col-default-text};
-  background-color: #{$dark-col-default-bg};
-}
-
 #root > div {
   box-sizing: border-box;
   display: flex;
@@ -18,13 +13,15 @@ body.dark-theme {
   display: flex;
   flex-direction: row;
   height: calc(100vh - 0px);
+  box-shadow: 10px 0px 10px rgba($color: #000000, $alpha: 0.1);
+  z-index: 2;
   .menu_toggle_bar {
     align-items: center;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    background: #{$col-blue};
+    background: #{$col-white};
     width: 60px;
   }
   .menu_area {
@@ -32,7 +29,7 @@ body.dark-theme {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    background: #{$col-blue};
+    background: #{$col-white};
     overflow: hidden auto;
     width: 240px;
     transition: width 0.3s ease;
@@ -52,7 +49,6 @@ body.dark-theme {
     cursor: pointer;
   }
   h1 {
-    color: #fff;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 50px;
@@ -62,9 +58,9 @@ body.dark-theme {
       > p {
         padding: 10px 20px 8px;
         font-size: 20px;
-        color: #fff;
+        font-weight: bold;
         &:hover {
-          background: #2f6ac5;
+          background: #f3f3f3;
         }
       }
       .dep_2 {
@@ -72,7 +68,7 @@ body.dark-theme {
       }
       &.active {
         > p {
-          background: #2f6ac5;
+          background: #f3f3f3;
         }
         .dep_2 {
           display: block;
@@ -80,10 +76,11 @@ body.dark-theme {
             > p {
               padding: 10px 20px;
               font-size: 16px;
-              color: #8aaee4;
-              border-bottom: 1px solid #306ac5;
+              color: #777;
+              font-weight: bold;
+              border-bottom: 1px solid #ddd;
               &:hover {
-                color: #fff;
+                color: #{$col-default-text};
               }
             }
             .dep_3 {
@@ -92,7 +89,7 @@ body.dark-theme {
             }
             &.active {
               > p {
-                color: #fff;
+                color: #{$col-default-text};
               }
               .dep_3 {
                 display: block;
@@ -101,14 +98,14 @@ body.dark-theme {
                   > p {
                     padding: 5px 30px;
                     font-size: 14px;
-                    color: #8aaee4;
+                    color: #666;
                     &:hover {
-                      color: #fff;
+                      color: #{$col-default-text};
                     }
                   }
                   &.active {
                     p {
-                      color: #fff;
+                      color: #{$col-default-text};
                     }
                   }
                 }
@@ -134,6 +131,7 @@ body.dark-theme {
   flex: auto;
   box-sizing: border-box;
   padding: 20px;
+  z-index: 1;
 }
 .top_menu_toggle {
   display: none;
@@ -156,7 +154,7 @@ body.dark-theme {
     left: -260px;
     top: 0;
     transition: left 0.3s ease;
-    box-shadow: 10px 0px 10px rgba($color: #000000, $alpha: 0.3);
+
     .menu_toggle_bar {
       display: none;
     }
@@ -175,7 +173,7 @@ body.dark-theme {
     width: 100%;
     height: 50px;
     background: #{$col-top-menu-bg};
-    z-index: 2;
+    z-index: 3;
     h1 {
       color: #{$col-default-text};
       font-size: 20px;
@@ -207,4 +205,63 @@ body.dark-theme {
 }
 
 @include desktop {
+}
+
+body.dark-theme {
+  color: #{$dark-col-default-text};
+  background-color: #{$dark-col-default-bg};
+  .menu_toggle_bar,
+  .menu_area {
+    background: #{$dark-col-white};
+  }
+  .dep_1 {
+    > li {
+      > p {
+        &:hover {
+          background: #444;
+        }
+      }
+      .dep_2 {
+        display: none;
+      }
+      &.active {
+        > p {
+          background: #444;
+        }
+        .dep_2 {
+          > li {
+            > p {
+              color: #aaa;
+              border-bottom: 1px solid #ddd;
+              &:hover {
+                color: #{$dark-col-default-text};
+              }
+            }
+            .dep_3 {
+            }
+            &.active {
+              > p {
+                color: #{$dark-col-default-text};
+              }
+              .dep_3 {
+                > li {
+                  > p {
+                    color: #aaa;
+                    &:hover {
+                      color: #{$dark-col-default-text};
+                    }
+                  }
+                  &.active {
+                    p {
+                      color: #{$dark-col-default-text};
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

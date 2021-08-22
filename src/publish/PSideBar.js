@@ -71,7 +71,7 @@ class PSideBar extends Component {
               >
                 <path
                   d="M5 15h14v2H5zm0-8h14v2H5zm0 4h14v2H5z"
-                  fill="#fff"
+                  fill="currentColor"
                   fill-rule="evenodd"
                 ></path>
               </svg>
@@ -152,9 +152,9 @@ class PSideBar extends Component {
                 </li>
               </ul>
             </div>
-            <button className="toggle_dark_mode" onClick={this.toggleTheme}>
+            {/* <button className="toggle_dark_mode" onClick={this.toggleTheme}>
               다크모드 토글
-            </button>
+            </button> */}
           </div>
         </div>
       </React.Fragment>
