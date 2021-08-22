@@ -71,7 +71,7 @@ const list = [
     component: PTabTable1,
     url: '/tab-table1',
     pageCount: '5',
-    success: false,
+    success: true,
     useIcon: false,
     description:
       '1.탭은 선택, 선택이 아닌 경우, 비활성화 이렇게 3개의 경우로 스타일 반영(3가지가 애매하면 선택/선택아닌 상태2가지로)\n2.모바일에서는 각 테이블의 상단 영역만 반응형으로 나오게끔 해주시면 됩니다. 상단 테이블에는 "페이징" 존재하는 걸로 판단됩니다(기획 누락)'

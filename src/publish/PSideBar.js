@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 class PSideBar extends Component {
   constructor(props) {
@@ -41,19 +43,7 @@ class PSideBar extends Component {
       <React.Fragment>
         <div className="top_menu_toggle">
           <button className="toggle_btn" onClick={this.mobileMenuToggle}>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              focusable="false"
-              role="presentation"
-            >
-              <path
-                d="M5 15h14v2H5zm0-8h14v2H5zm0 4h14v2H5z"
-                fill="#000"
-                fill-rule="evenodd"
-              ></path>
-            </svg>
+            <FontAwesomeIcon icon={faBars} />
           </button>
           <h1 className="">SAFETY-DOC</h1>
         </div>
@@ -62,19 +52,7 @@ class PSideBar extends Component {
         >
           <div className="menu_toggle_bar">
             <button className="toggle_btn" onClick={this.webMenuToggle}>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                focusable="false"
-                role="presentation"
-              >
-                <path
-                  d="M5 15h14v2H5zm0-8h14v2H5zm0 4h14v2H5z"
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                ></path>
-              </svg>
+              <FontAwesomeIcon icon={faBars} />
             </button>
           </div>
           <div

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faSort, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 class PTabTable1 extends Component {
   constructor(props) {
@@ -56,41 +58,75 @@ class PTabTable1 extends Component {
           </p>
           <div className="tabs_wrap_scroll">
             <div className="horizon_tb">
-              <table className="tb_list" style={{ minWidth: '1000px' }}>
+              <table className="tb_list" style={{ minWidth: '500px' }}>
                 <caption></caption>
                 <thead>
                   <tr>
-                    <th>등록일시</th>
-                    <th>등록자</th>
-                    <th>제목</th>
-                    <th>유형</th>
-                    <th>공개기간</th>
-                    <th>파일</th>
-                    <th>댓글수</th>
-                    <th>조회수</th>
-                    <th>상세</th>
-                    <th>편집</th>
-                    <th>삭제</th>
+                    <th style={{ width: '50px' }}>V</th>
+                    <th style={{ width: '20%' }}>
+                      <span className="c_mr5">분류ID</span>
+                      <FontAwesomeIcon icon={faSort} />
+                    </th>
+                    <th>분류 명</th>
+                    <th style={{ width: '7%' }}>사용</th>
+                    <th style={{ width: '7%' }}>편집</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Yyyy-MM-DD HH:MI</td>
-                    <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
-                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
-                    <td>공지</td>
-                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
-                    <td>첨부</td>
-                    <td>5</td>
-                    <td>1</td>
+                    <td>&nbsp;</td>
+                    <td>123456789</td>
+                    <td>고공작업</td>
+                    <td>Yes</td>
                     <td>
-                      <span className="ico_view">보기</span>
+                      <FontAwesomeIcon icon={faEdit} />
                     </td>
-                    <td>
-                      <span className="ico_modify">편집</span>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div className="box_form">
+          <p className="relative c_mb10">
+            <span className="fs_12">점검항목 총 NNN 건</span>
+            <div className="abrc">
+              <button className="btn_search btn_blue c_mr5">항목 추가</button>
+              <button className="btn_search btn_blue c_mr5">순위 저장</button>
+              <button className="btn_search btn_blue">삭제</button>
+            </div>
+          </p>
+          <div className="tabs_wrap_scroll">
+            <div className="horizon_tb">
+              <table className="tb_list" style={{ minWidth: '500px' }}>
+                <caption></caption>
+                <thead>
+                  <tr>
+                    <th style={{ width: '50px' }}>V</th>
+                    <th style={{ width: '20%' }}>
+                      <span className="c_mr5">항목ID</span>
+                      <FontAwesomeIcon icon={faSort} />
+                    </th>
+                    <th>점검 항목명</th>
+                    <th>점검 내용</th>
+                    <th style={{ width: '7%' }}>사용</th>
+                    <th style={{ width: '7%' }}>편집</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>123456789</td>
+                    <td className="left">
+                      도로 인접한 통신주 작업 시 신호수 배치 여부
                     </td>
+                    <td className="left">
+                      작업 시&작업 종료 시까지 신호수를 배치하고 있는가?
+                    </td>
+                    <td>Yes</td>
                     <td>
-                      <span className="ico_delete">삭제</span>
+                      <FontAwesomeIcon icon={faEdit} />
                     </td>
                   </tr>
                 </tbody>

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 class PDeptMemberList extends Component {
   constructor(props) {
@@ -51,10 +53,10 @@ class PDeptMemberList extends Component {
                     <td>한성유통</td>
                     <td>한성유통㈜</td>
                     <td>
-                      <span className="ico_modify">편집</span>
+                      <FontAwesomeIcon icon={faEdit} />
                     </td>
                     <td>
-                      <span className="ico_delete">삭제</span>
+                      <FontAwesomeIcon icon={faTrashAlt} />
                     </td>
                   </tr>
                 </tbody>
@@ -91,10 +93,10 @@ class PDeptMemberList extends Component {
                     <td>한성유통㈜</td>
                     <td>부장</td>
                     <td>
-                      <span className="ico_modify">편집</span>
+                      <FontAwesomeIcon icon={faEdit} />
                     </td>
                     <td>
-                      <span className="ico_delete">삭제</span>
+                      <FontAwesomeIcon icon={faTrashAlt} />
                     </td>
                   </tr>
                 </tbody>

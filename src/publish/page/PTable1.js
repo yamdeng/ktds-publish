@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 class PTable1 extends Component {
   constructor(props) {
@@ -158,10 +160,10 @@ class PTable1 extends Component {
                       <span className="ico_view">보기</span>
                     </td>
                     <td>
-                      <span className="ico_modify">편집</span>
+                      <FontAwesomeIcon icon={faEdit} />
                     </td>
                     <td>
-                      <span className="ico_delete">삭제</span>
+                      <FontAwesomeIcon icon={faTrashAlt} />
                     </td>
                   </tr>
                 </tbody>
