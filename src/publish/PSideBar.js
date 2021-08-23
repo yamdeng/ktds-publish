@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faChevronRight,
+  faEdit,
+  faTrashAlt
+} from '@fortawesome/free-solid-svg-icons';
+
+// import { logo } from '../../src/resources/images/ktLogo.png';
 
 class PSideBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       webToggle: true,
-      mobileToggle: false,
       isDarkTheme: false
     };
     this.webMenuToggle = this.webMenuToggle.bind(this);
-    this.mobileMenuToggle = this.mobileMenuToggle.bind(this);
     this.toggleTheme = this.toggleTheme.bind(this);
   }
 
   webMenuToggle() {
     this.setState({
       webToggle: !this.state.webToggle
-    });
-  }
-  mobileMenuToggle() {
-    this.setState({
-      mobileToggle: !this.state.mobileToggle
     });
   }
 
@@ -42,71 +42,84 @@ class PSideBar extends Component {
     return (
       <React.Fragment>
         <div className="top_menu_toggle">
-          <button className="toggle_btn" onClick={this.mobileMenuToggle}>
+          <button className="toggle_btn" onClick={this.webMenuToggle}>
             <FontAwesomeIcon icon={faBars} />
           </button>
-          <h1 className="">SAFETY-DOC</h1>
+          <h1 className="">
+            {/* <img src={logo} /> */}
+            SAFETY-DOC
+          </h1>
         </div>
-        <div
-          className={this.state.mobileToggle ? 'menu_side show' : 'menu_side'}
-        >
-          <div className="menu_toggle_bar">
-            <button className="toggle_btn" onClick={this.webMenuToggle}>
-              <FontAwesomeIcon icon={faBars} />
-            </button>
-          </div>
-          <div
-            className={this.state.webToggle ? 'menu_area' : 'menu_area hide'}
-          >
+        <div className={this.state.webToggle ? 'menu_side' : 'menu_side hide'}>
+          <div className="menu_area">
             <div className="menu_wrap">
-              <h1 className="">SAFETY-DOC</h1>
               <ul className="dep_1">
                 <li className="active">
-                  <p>대시보드</p>
+                  <p>
+                    <span className="icon ablc">대</span>대시보드
+                    <span className="abrc">
+                      <FontAwesomeIcon icon={faChevronRight} />
+                    </span>
+                  </p>
                   <ul class="dep_2">
                     <li className="active">
-                      <p>서브 대시보드</p>
+                      <p>
+                        서브 대시보드
+                        <span className="abrc">
+                          <FontAwesomeIcon icon={faChevronRight} />
+                        </span>
+                      </p>
                       <ul className="dep_3">
                         <li className="active">
-                          <p>- 서서브 대시보드</p>
+                          <p>서서브 대시보드</p>
                         </li>
                         <li>
-                          <p>- 서서브 대시보드</p>
+                          <p>서서브 대시보드</p>
                         </li>
                         <li>
-                          <p>- 서서브 대시보드</p>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <p>서브 대시보드</p>
-                      <ul class="dep_3">
-                        <li>
-                          <p>- 서서브 대시보드</p>
+                          <p>서서브 대시보드</p>
                         </li>
                       </ul>
                     </li>
                     <li>
                       <p>서브 대시보드</p>
+                    </li>
+                    <li>
+                      <p>
+                        서브 대시보드
+                        <span className="abrc">
+                          <FontAwesomeIcon icon={faChevronRight} />
+                        </span>
+                      </p>
                       <ul class="dep_3">
                         <li>
-                          <p>- 서서브 대시보드</p>
+                          <p>서서브 대시보드</p>
                         </li>
                         <li>
-                          <p>- 서서브 대시보드</p>
+                          <p>서서브 대시보드</p>
                         </li>
                         <li>
-                          <p>- 서서브 대시보드</p>
+                          <p>서서브 대시보드</p>
                         </li>
                       </ul>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <p>대시보드</p>
+                  <p>
+                    <span className="icon ablc">대</span>대시보드
+                    <span className="abrc">
+                      <FontAwesomeIcon icon={faChevronRight} />
+                    </span>
+                  </p>
                   <ul class="dep_2">
                     <li>
-                      <p>서브 대시보드</p>
+                      <p>
+                        서브 대시보드
+                        <span className="abrc">
+                          <FontAwesomeIcon icon={faChevronRight} />
+                        </span>
+                      </p>
                       <ul class="dep_3">
                         <li>
                           <p>서서브 대시보드</p>
@@ -116,15 +129,20 @@ class PSideBar extends Component {
                   </ul>
                 </li>
                 <li>
-                  <p>대시보드</p>
+                  <p>
+                    <span className="icon ablc">대</span>대시보드
+                    <span className="abrc">
+                      <FontAwesomeIcon icon={faChevronRight} />
+                    </span>
+                  </p>
                   <ul class="dep_2">
                     <li>
-                      <p>서브 대시보드</p>
-                      <ul class="dep_3">
-                        <li>
-                          <p>서서브 대시보드</p>
-                        </li>
-                      </ul>
+                      <p>
+                        서브 대시보드
+                        <span className="abrc">
+                          <FontAwesomeIcon icon={faChevronRight} />
+                        </span>
+                      </p>
                     </li>
                   </ul>
                 </li>
@@ -135,6 +153,9 @@ class PSideBar extends Component {
             </button> */}
           </div>
         </div>
+        <span className={this.state.webToggle ? 'menu_bg' : 'menu_bg active'}>
+          &nbsp;
+        </span>
       </React.Fragment>
     );
   }
