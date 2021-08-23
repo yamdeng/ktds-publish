@@ -16,8 +16,17 @@ import PWorkForm6 from 'publish/page/PWorkForm6';
 import PWorkForm7 from 'publish/page/PWorkForm7';
 import PWorkForm8 from 'publish/page/PWorkForm8';
 import PWorkForm9 from 'publish/page/PWorkForm9';
-
-// import PComponentsGuide from 'publish/page/PComponentsGuide';
+import PWorkDirectionList from 'publish/page/PWorkDirectionList';
+import PWorkDirectionForm1 from 'publish/page/PWorkDirectionForm1';
+import PWorkDirectionForm2 from 'publish/page/PWorkDirectionForm2';
+import PConfinedSpaceForm1 from 'publish/page/PConfinedSpaceForm1';
+import PConfinedSpaceForm2 from 'publish/page/PConfinedSpaceForm2';
+import PConfinedSpaceForm3 from 'publish/page/PConfinedSpaceForm3';
+import PCheckResultList from 'publish/page/PCheckResultList';
+import PCheckResultForm from 'publish/page/PCheckResultForm';
+import PSafeCheckList from 'publish/page/PSafeCheckList';
+import PWorkReportList from 'publish/page/PWorkReportList';
+import PComponentsGuide from 'publish/page/PComponentsGuide';
 
 const PageConfig = {};
 
@@ -123,7 +132,7 @@ const list = [
   {
     title: '안전 서류 등록/수정 : 파일 업로드',
     fileName: 'PWorkForm1.js',
-    component: PWorkForm1.js,
+    component: PWorkForm1,
     url: '/work-form1',
     pageCount: '10',
     success: false,
@@ -134,7 +143,7 @@ const list = [
   {
     title: '안전 서류 등록/수정 : 결재선 지정',
     fileName: 'PWorkForm2.js',
-    component: PWorkForm2.js,
+    component: PWorkForm2,
     url: '/work-form2',
     pageCount: '11',
     success: false,
@@ -145,17 +154,18 @@ const list = [
   {
     title: '안전 서류 등록/수정 : 안전관리자 등록',
     fileName: 'PWorkForm3.js',
-    component: PWorkForm3.js,
+    component: PWorkForm3,
     url: '/work-form3',
     pageCount: '12',
     success: false,
     useIcon: true,
-    description: ''
+    description:
+      '1.안전관리자 필드는 많은 화면에서 사용하는 "사원검색" 팝업을 통해 선택된 결과값을 보여주는 영역입니다.\n2.기획서는 여러 필드로 나와있는데 3개의 필드로 보여주는 경우와 하나의 필드로 보여주는 경우 2가지 경우를 가이드해주시면 좋을 것 같습니다.\n3.하나의 필드일 경우 사번 / 이름 / 소속 순으로 라벨링되어 보여집니다'
   },
   {
     title: '안전 서류 등록/수정 : 근로자측 위원 등록',
     fileName: 'PWorkForm4.js',
-    component: PWorkForm4.js,
+    component: PWorkForm4,
     url: '/work-form4',
     pageCount: '13',
     success: false,
@@ -166,7 +176,7 @@ const list = [
   {
     title: '안전 서류 등록/수정 : 직문전환자 안전보건교육 증빙자료',
     fileName: 'PWorkForm5.js',
-    component: PWorkForm5.js,
+    component: PWorkForm5,
     url: '/work-form5',
     pageCount: '14',
     success: false,
@@ -177,18 +187,18 @@ const list = [
   {
     title: '안전 서류 등록/수정 : 도급/합동 안전',
     fileName: 'PWorkForm6.js',
-    component: PWorkForm6.js,
+    component: PWorkForm6,
     url: '/work-form6',
     pageCount: '15',
     success: false,
     useIcon: false,
     description:
-      '1.도급인은 [추가] 버튼을 통해 멀티로 추가되는 UI이고 기존 기획서 상에 [추가] 버튼과 [삭제] 버튼이 누락된걸로 판단됨'
+      '1.도급인은 [추가] 버튼을 통해 멀티로 추가되는 UI이고 기존 기획서 상에 [추가] 버튼과 [삭제] 버튼이 누락된걸로 판단됨\n2.확인자 영역의 [?] 버튼은 툴팁 형태로 도움말이 나오는 구조임'
   },
   {
     title: '안전 서류 등록/수정 : 보호구 지급대장',
     fileName: 'PWorkForm7.js',
-    component: PWorkForm7.js,
+    component: PWorkForm7,
     url: '/work-form7',
     pageCount: '16',
     success: false,
@@ -199,7 +209,7 @@ const list = [
   {
     title: '안전 서류 등록/수정 : 작업장 상황조사',
     fileName: 'PWorkForm8.js',
-    component: PWorkForm8.js,
+    component: PWorkForm8,
     url: '/work-form8',
     pageCount: '17',
     success: false,
@@ -209,25 +219,124 @@ const list = [
   {
     title: '안전 서류 등록/수정 : 도급_작업장 순회점검일자 격일',
     fileName: 'PWorkForm9.js',
-    component: PWorkForm9.js,
+    component: PWorkForm9,
     url: '/work-form9',
     pageCount: '18',
     success: false,
     useIcon: false,
     description: ''
+  },
+  {
+    title: '작업 지시 관리',
+    fileName: 'PWorkDirectionList.js',
+    component: PWorkDirectionList,
+    url: '/work-directions',
+    pageCount: '19',
+    success: false,
+    useIcon: true,
+    description: ''
+  },
+  {
+    title: '작업 지시 등록/수정 : 작업정보 탭',
+    fileName: 'PWorkDirectionForm1.js',
+    component: PWorkDirectionForm1,
+    url: '/work-direction-form1',
+    pageCount: '20',
+    success: false,
+    useIcon: true,
+    description: ''
+  },
+  {
+    title: '작업 지시 등록/수정 : 작업조 탭',
+    fileName: 'PWorkDirectionForm2.js',
+    component: PWorkDirectionForm2,
+    url: '/work-direction-form2',
+    pageCount: '21',
+    success: false,
+    useIcon: true,
+    description: ''
+  },
+  {
+    title: '밀폐공간 작업 허가서 등록 : 작업정보 탭',
+    fileName: 'PConfinedSpaceForm1.js',
+    component: PConfinedSpaceForm1,
+    url: '/confined-space-form1',
+    pageCount: '22',
+    success: false,
+    useIcon: false,
+    description: ''
+  },
+  {
+    title: '밀폐공간 작업 허가서 등록 : 안전조치 요구사항 탭',
+    fileName: 'PConfinedSpaceForm2.js',
+    component: PConfinedSpaceForm2,
+    url: '/confined-space-form2',
+    pageCount: '23',
+    success: false,
+    useIcon: false,
+    description: ''
+  },
+  {
+    title: '밀폐공간 작업 허가서 등록 : 산소 및 유해가스 농도 측정 탭',
+    fileName: 'PConfinedSpaceForm3.js',
+    component: PConfinedSpaceForm3,
+    url: '/confined-space-form3',
+    pageCount: '24',
+    success: false,
+    useIcon: true,
+    description: ''
+  },
+  {
+    title: '점검결과 현황',
+    fileName: 'PCheckResultList.js',
+    component: PCheckResultList,
+    url: '/check-results',
+    pageCount: '25',
+    success: false,
+    useIcon: true,
+    description: ''
+  },
+  {
+    title: '점검결과 등록',
+    fileName: 'PCheckResultForm.js',
+    component: PCheckResultForm,
+    url: '/check-result-form',
+    pageCount: '26',
+    success: false,
+    useIcon: false,
+    description: ''
+  },
+  {
+    title: '안전 점검 등록 현황 조회',
+    fileName: 'PSafeCheckList.js',
+    component: PSafeCheckList,
+    url: '/safe-checks',
+    pageCount: '27',
+    success: false,
+    useIcon: false,
+    description: ''
+  },
+  {
+    title: '작업 지시서 현황',
+    fileName: 'PWorkReportList.js',
+    component: PWorkReportList,
+    url: '/work-reports',
+    pageCount: '28',
+    success: false,
+    useIcon: true,
+    description: ''
+  },
+  {
+    title: '컴포넌트 가이드',
+    fileName: 'PComponentsGuide.js',
+    component: PComponentsGuide,
+    url: '/component-guide',
+    pageCount: 'gusalnim',
+    success: false,
+    useIcon: false,
+    description: '컴포넌트 가이드 정리'
   }
 ];
-
-// {
-//   title: '컴포넌트 가이드',
-//   fileName: 'PComponentsGuide.js',
-//   component: PComponentsGuide,
-//   url: '/component-guide',
-//   pageCount: 'gusalnim',
-//   success: false,
-//   useIcon: false,
-//   description: '컴포넌트 가이드 정리'
-// }
 
 PageConfig.list = list;
 

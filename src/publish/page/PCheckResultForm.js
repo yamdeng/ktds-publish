@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PComponentsGuide extends Component {
+class PCheckResultForm extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,8 +9,8 @@ class PComponentsGuide extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>100.컴포넌트 가이드</div>;
+    return <div>26 : 점검결과 등록</div>;
   }
 }
 
-export default PComponentsGuide;
+export default PCheckResultForm;
