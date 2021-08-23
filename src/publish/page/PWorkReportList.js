@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PComponentsGuide extends Component {
+class PWorkReportList extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,8 +9,8 @@ class PComponentsGuide extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>100.컴포넌트 가이드</div>;
+    return <div>28 : 작업 지시서 현황</div>;
   }
 }
 
-export default PComponentsGuide;
+export default PWorkReportList;
