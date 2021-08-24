@@ -21,8 +21,16 @@ body {
   h1 {
     color: #{$col-default-text};
     font-size: 20px;
-    font-weight: bold;
-    padding: 23px 70px;
+    padding: 18px 70px;
+    img {
+      width: 40px;
+      margin-right: 15px;
+    }
+    span {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 6px;
+    }
   }
 }
 
@@ -53,6 +61,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+
   .menu_area {
     box-sizing: border-box;
     padding-top: 72px;
@@ -176,8 +185,13 @@ body {
   flex-direction: column;
   flex: auto;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 110px 30px 20px;
   z-index: 1;
+  @include mobile {
+    display: block;
+    flex-direction: row;
+    padding: 100px 15px 15px;
+  }
 }
 
 .toggle_dark_mode {
@@ -209,13 +223,6 @@ body {
       display: block;
     }
   }
-
-  .content_area {
-    display: block;
-    flex-direction: row;
-    //height: calc(100vh - 0px);
-    padding-top: 70px;
-  }
 }
 
 @include tablet {
@@ -224,60 +231,6 @@ body {
 @include desktop {
 }
 
+// 부모 선택자 이용해서 다크테마 각각 클래스에 적용하기
 body.dark-theme {
-  // color: #{$dark-col-default-text};
-  // background-color: #{$dark-col-default-bg};
-  .menu_area {
-    // background: #{$dark-col-white};
-  }
-  .dep_1 {
-    > li {
-      > p {
-        &:hover {
-          // background: #{$col-gray400}
-        }
-      }
-      .dep_2 {
-        display: none;
-      }
-      &.active {
-        > p {
-          // background: #{$col-gray400}
-        }
-        .dep_2 {
-          > li {
-            > p {
-              // color: #aaa;
-              // border-bottom: 1px solid #{$col-gray300}
-              &:hover {
-                // color: #{$dark-col-default-text};
-              }
-            }
-            .dep_3 {
-            }
-            &.active {
-              > p {
-                // color: #{$dark-col-default-text};
-              }
-              .dep_3 {
-                > li {
-                  > p {
-                    // color: #aaa;
-                    &:hover {
-                      // color: #{$dark-col-default-text};
-                    }
-                  }
-                  &.active {
-                    p {
-                      // color: #{$dark-col-default-text};
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }

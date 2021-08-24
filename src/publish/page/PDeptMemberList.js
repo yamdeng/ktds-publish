@@ -14,23 +14,30 @@ class PDeptMemberList extends Component {
     return (
       <div className="content_area">
         <h3>사외 조직/사원 등록</h3>
+
         <div className="box_form">
-          <span className="form_area">
-            <label className="">조직 명</label>
-          </span>
-          <span className="form_area wid50">
-            <input type="search" className="input" placeHolder="조직 명" />
-          </span>
-          <span className="form_area">
-            <button className="btn_search btn_blue wid100">조회</button>
-          </span>
+          <div className="form_table">
+            {/* 
+              input,select,textarea 실패했을때 isFail, 값이 있을때 isValue
+              label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
+              f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
+              wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
+            */}
+            <div className="form_cell f_wid50">
+              <span className="form_group wid50 c_mr5">
+                <input type="search" className="fome_tag " />
+                <label className="f_label">조직 명</label>
+              </span>
+              <button className="btn_search btn_blue">조회</button>
+            </div>
+          </div>
         </div>
-        <div className="float_group">
-          <div className="two_margin">
-            <div className="box_form">
+        <div className="flex_grow_two">
+          <div className="wid50">
+            <div className="list_form c_mt10">
               <p className="relative c_mb10">
                 <span className="fs_12">총 nnn 건</span>
-                <button className="btn_search btn_blue abrc">추가</button>
+                <button className="btn_search btn_blue abrb">추가</button>
               </p>
               <table className="tb_list">
                 <caption></caption>
@@ -63,11 +70,11 @@ class PDeptMemberList extends Component {
               </table>
             </div>
           </div>
-          <div className="two_margin">
-            <div className="box_form">
+          <div className="wid50">
+            <div className="list_form c_mt10">
               <p className="relative c_mb10">
                 <span className="fs_12">총 nnn 건</span>
-                <button className="btn_search btn_blue abrc">추가</button>
+                <button className="btn_search btn_blue abrb">추가</button>
               </p>
               <table className="tb_list">
                 <caption></caption>

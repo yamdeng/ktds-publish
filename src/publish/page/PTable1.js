@@ -22,7 +22,7 @@ class PTable1 extends Component {
               f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
               wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
             */}
-            <div className="form_cell f_wid40">
+            <div className="form_cell f_wid50">
               <span className="form_group wid70 c_mr5">
                 <input type="text" className="fome_tag " />
                 <label className="f_label">검색어</label>
@@ -33,7 +33,7 @@ class PTable1 extends Component {
               </span>
             </div>
             <div className="form_cell f_wid30">
-              <span className="form_group wid70">
+              <span className="form_group wid100">
                 <select name="" id="b" className="fome_tag ">
                   <option value=""> </option>
                   <option value="">전체1</option>
@@ -44,8 +44,8 @@ class PTable1 extends Component {
                 </label>
               </span>
             </div>
-            <div className="form_cell f_wid30">
-              <span className="form_group wid70">
+            <div className="form_cell f_wid20">
+              <span className="form_group wid100">
                 <select name="" id="b" className="fome_tag ">
                   <option value=""> </option>
                   <option value="">전체1</option>
@@ -97,41 +97,73 @@ class PTable1 extends Component {
 
           <div className="form_table">
             <div className="form_cell f_wid50">
-              <span className="form_group wid40 c_mr5">
-                <input type="text" className="fome_tag " />
+              <span className="form_group wid70 c_mr5">
+                <input
+                  type="text"
+                  className="fome_tag"
+                  disabled
+                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                />
                 <label className="f_label" for="b">
                   공사번호
                 </label>
               </span>
-              <button className="btn_search btn_green">찾기</button>
+              <button className="btn_search btn_dark_gray">찾기</button>
             </div>
+          </div>
+          <div className="form_table">
             <div className="form_cell f_wid50">
-              <span className="form_group wid40 c_mr5">
-                <input type="text" className="fome_tag " />
+              <span className="form_group wid20 c_mr5">
+                <input
+                  type="text"
+                  className="fome_tag"
+                  disabled="true"
+                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                />
                 <label className="f_label" for="b">
-                  공사번호
+                  사번
                 </label>
               </span>
-              <span className="form_group wid40 c_mr5">
-                <input type="text" className="fome_tag " />
+              <span className="form_group wid20 c_mr5">
+                <input
+                  type="text"
+                  className="fome_tag"
+                  disabled="true"
+                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                />
                 <label className="f_label" for="b">
-                  공사번호
+                  이름
                 </label>
               </span>
-              <button className="btn_search btn_green">찾기</button>
+              <span className="form_group wid30 c_mr5">
+                <input
+                  type="text"
+                  className="fome_tag"
+                  disabled="true"
+                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                />
+                <label className="f_label" for="b">
+                  소속
+                </label>
+              </span>
+              <span className="form_group c_mr5">
+                <button className="btn_search btn_dark_gray">찾기</button>
+              </span>
             </div>
           </div>
 
-          <p className="form_area ab_search">
+          <p className="c_pt15 ">
             <button className="btn_search btn_blue wid100">조회</button>
           </p>
         </div>
-        <div className="box_form">
+        <div className="list_form c_mt10">
           <p className="relative c_mb10">
             <span className="fs_12">총 nnn 건</span>
-            <div className="abrc">
-              <button className="btn_search btn_blue c_mr5">미사용 처리</button>
-              <button className="btn_search btn_blue c_mr5">사용 처리</button>
+            <div className="abrb">
+              <button className="btn_search btn_green c_mr5">
+                미사용 처리
+              </button>
+              <button className="btn_search btn_green c_mr5">사용 처리</button>
               <button className="btn_search btn_blue">등록</button>
             </div>
           </p>
@@ -155,6 +187,44 @@ class PTable1 extends Component {
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td>Yyyy-MM-DD HH:MI</td>
+                    <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
+                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
+                    <td>공지</td>
+                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
+                    <td>첨부</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>
+                      <span className="ico_view">보기</span>
+                    </td>
+                    <td>
+                      <FontAwesomeIcon icon={faEdit} />
+                    </td>
+                    <td>
+                      <FontAwesomeIcon icon={faTrashAlt} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Yyyy-MM-DD HH:MI</td>
+                    <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
+                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
+                    <td>공지</td>
+                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
+                    <td>첨부</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>
+                      <span className="ico_view">보기</span>
+                    </td>
+                    <td>
+                      <FontAwesomeIcon icon={faEdit} />
+                    </td>
+                    <td>
+                      <FontAwesomeIcon icon={faTrashAlt} />
+                    </td>
+                  </tr>
                   <tr>
                     <td>Yyyy-MM-DD HH:MI</td>
                     <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>

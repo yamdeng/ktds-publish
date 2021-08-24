@@ -1,11 +1,21 @@
 .content_area {
   overflow: hidden;
   h3 {
-    font-size: 25px;
+    font-size: 20px;
     color: #{$col-default-text};
-    padding-bottom: 10px;
-    border-bottom: 1px solid #{$col-default-text};
+    padding-bottom: 5px;
     margin-bottom: 20px;
+    border-bottom: 1px solid #{$col-gray200};
+  }
+}
+
+.flex_grow_two {
+  display: flex;
+  & > div {
+    &:first-child {
+      margin-right: 50px;
+    }
+    flex-grow: 1;
   }
 }
 
@@ -15,25 +25,37 @@
 .tb_list {
   width: 100%;
 
-  border-top: 2px solid #{$col-gray300};
+  border-top: 2px solid #{$col-default-text};
   th {
     font-weight: bold;
     border-bottom: 1px solid #{$col-gray300};
-    padding: 9px 0 10px;
+    padding: 15px 0 10px;
     background: #{$col-white};
   }
   td {
     border-bottom: 1px solid #{$col-gray300};
     text-align: center;
-    padding: 9px 10px 10px;
+    padding: 15px 10px 10px;
+  }
+  tr:nth-child(even) {
+    background: #{$col-gray};
+  }
+  tr:hover {
+    background: #{$col-gray100};
   }
 }
 
 .box_form {
-  border: 1px solid #dbdbdb;
+  border: 1px solid #{$col-gray200};
   padding: 15px;
-  margin-bottom: 10px;
+  padding-top: 0;
+  margin-bottom: 40px;
   position: relative;
+}
+
+.list_form {
+  padding: 15px 0;
+  margin-bottom: 40px;
 }
 
 .form_table {
@@ -41,11 +63,11 @@
   width: 100%;
   .form_cell {
     display: table-cell;
-    padding-right: 20px;
+    padding-right: 15px;
+    padding-top: 15px;
   }
 }
 .form_group {
-  margin-top: 7px;
   position: relative;
   display: inline-block;
   .f_label {
@@ -69,13 +91,19 @@
     background: #{$col-white};
     outline: none !important;
     &::placeholder {
-      color: #{$col-gray300};
+      color: #{$col-white};
     }
     &:disabled {
       background: #{$col-disabled};
+      &::placeholder {
+        color: #{$col-disabled};
+      }
     }
     &:focus {
       border: 1px solid #{$col-blue};
+      &::placeholder {
+        color: #{$col-gray300};
+      }
     }
     &.isValue {
       border: 1px solid #{$col-gray300};
@@ -86,6 +114,9 @@
     }
     &.isFail::selection {
       color: #{$col-red};
+    }
+    &:disabled + .f_label {
+      background: #{$col-disabled};
     }
     &:focus + .f_label {
       left: 10px;
@@ -174,11 +205,22 @@
 }
 
 .btn_search {
-  height: 28px;
+  height: 38px;
   padding: 0 20px;
   border: none;
+  border-radius: 5px;
+  opacity: 1;
+  transition: opacity 0.1s ease;
+  &:hover {
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+  }
 }
 
+.btn_dark_gray {
+  background: #{$col-gray400};
+  color: #{$col-white};
+}
 .btn_blue {
   background: #{$col-blue};
   color: #{$col-white};

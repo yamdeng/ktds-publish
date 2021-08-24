@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faSort, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEdit,
+  faSort,
+  faSortAlphaDown,
+  faSortUp,
+  faTrashAlt
+} from '@fortawesome/free-solid-svg-icons';
 
 class PTabTable1 extends Component {
   constructor(props) {
@@ -19,40 +25,39 @@ class PTabTable1 extends Component {
           <li>공사유형별</li>
         </ul>
         <div className="box_form">
-          <div className="float_group">
-            <div className="three_random">
-              <span className="form_area">
-                <label className="">작업 부문</label>
+          <div className="form_table">
+            {/* 
+              input,select,textarea 실패했을때 isFail, 값이 있을때 isValue
+              label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
+              f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
+              wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
+            */}
+            <div className="form_cell f_wid100">
+              <span className="form_group wid30 c_mr5">
+                <input type="text" className="fome_tag " />
+                <label className="f_label">작업 부문</label>
               </span>
-              <span className="form_area ">
-                <select name="" id="" className="select">
+              <span className="form_group wid30 c_mr5">
+                <select name="" id="b" className="fome_tag ">
+                  <option value=""> </option>
                   <option value="">전체</option>
+                  <option value="">전체2</option>
                 </select>
+                <label className="f_label" for="b">
+                  게시유형
+                </label>
               </span>
-            </div>
-            <div className="three_random">
-              <span className="form_area">
-                <label className="">작업 유형</label>
-              </span>
-              <span className="form_area ">
-                <select name="" id="" className="select">
-                  <option value="">전체</option>
-                </select>
-              </span>
+              <button className="btn_search btn_blue">조회</button>
             </div>
           </div>
-
-          <p className="form_area ab_search">
-            <button className="btn_search btn_blue wid100">조회</button>
-          </p>
         </div>
-        <div className="box_form">
+        <div className="list_form">
           <p className="relative c_mb10">
             <span className="fs_12">점검항목그룹 총 NNN 건</span>
-            <div className="abrc">
-              <button className="btn_search btn_blue c_mr5">엑셀다운</button>
-              <button className="btn_search btn_blue c_mr5">그룹 추가</button>
-              <button className="btn_search btn_blue c_mr5">순위 저장</button>
+            <div className="abrb">
+              <button className="btn_search btn_green c_mr5">엑셀다운</button>
+              <button className="btn_search btn_green c_mr5">그룹 추가</button>
+              <button className="btn_search btn_green c_mr5">순위 저장</button>
               <button className="btn_search btn_blue">삭제</button>
             </div>
           </p>
@@ -62,10 +67,14 @@ class PTabTable1 extends Component {
                 <caption></caption>
                 <thead>
                   <tr>
-                    <th style={{ width: '50px' }}>V</th>
+                    <th style={{ width: '50px' }}>
+                      <input type="checkbox" />
+                    </th>
                     <th style={{ width: '20%' }}>
                       <span className="c_mr5">분류ID</span>
                       <FontAwesomeIcon icon={faSort} />
+                      <FontAwesomeIcon icon={faSortAlphaDown} />
+                      <FontAwesomeIcon icon={faSortUp} />
                     </th>
                     <th>분류 명</th>
                     <th style={{ width: '7%' }}>사용</th>
@@ -74,7 +83,9 @@ class PTabTable1 extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>&nbsp;</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
                     <td>123456789</td>
                     <td>고공작업</td>
                     <td>Yes</td>
@@ -88,12 +99,12 @@ class PTabTable1 extends Component {
           </div>
         </div>
 
-        <div className="box_form">
+        <div className="list_form">
           <p className="relative c_mb10">
             <span className="fs_12">점검항목 총 NNN 건</span>
-            <div className="abrc">
-              <button className="btn_search btn_blue c_mr5">항목 추가</button>
-              <button className="btn_search btn_blue c_mr5">순위 저장</button>
+            <div className="abrb">
+              <button className="btn_search btn_green c_mr5">항목 추가</button>
+              <button className="btn_search btn_green c_mr5">순위 저장</button>
               <button className="btn_search btn_blue">삭제</button>
             </div>
           </p>
@@ -103,7 +114,9 @@ class PTabTable1 extends Component {
                 <caption></caption>
                 <thead>
                   <tr>
-                    <th style={{ width: '50px' }}>V</th>
+                    <th style={{ width: '50px' }}>
+                      <input type="checkbox" />
+                    </th>
                     <th style={{ width: '20%' }}>
                       <span className="c_mr5">항목ID</span>
                       <FontAwesomeIcon icon={faSort} />
@@ -116,7 +129,9 @@ class PTabTable1 extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>&nbsp;</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
                     <td>123456789</td>
                     <td className="left">
                       도로 인접한 통신주 작업 시 신호수 배치 여부

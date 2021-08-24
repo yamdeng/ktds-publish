@@ -7,7 +7,7 @@ import {
   faTrashAlt
 } from '@fortawesome/free-solid-svg-icons';
 
-// import { logo } from '../../src/resources/images/ktLogo.png';
+import logo from 'resources/images/ktLogo.png';
 
 class PSideBar extends Component {
   constructor(props) {
@@ -46,8 +46,8 @@ class PSideBar extends Component {
             <FontAwesomeIcon icon={faBars} />
           </button>
           <h1 className="">
-            {/* <img src={logo} /> */}
-            SAFETY-DOC
+            <img src={logo} alt="" />
+            <span>SAFETY-DOC</span>
           </h1>
         </div>
         <div className={this.state.webToggle ? 'menu_side' : 'menu_side hide'}>
