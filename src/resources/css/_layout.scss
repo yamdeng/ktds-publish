@@ -29,84 +29,35 @@
   }
 }
 
-.float_group {
-  overflow: hidden;
-  width: 100%;
-  .two {
-    width: 50%;
-    float: left;
-  }
-  .two_margin {
-    width: 49.5%;
-    float: left;
-    margin-left: 1%;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-  .three {
-    width: 32%;
-    float: left;
-    margin-left: 2%;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-  .three_random {
-    float: left;
-    width: 25%;
-    &:first-child {
-      width: 50%;
-    }
-  }
-}
-
 .box_form {
   border: 1px solid #dbdbdb;
-  border-radius: 5px;
   padding: 15px;
   margin-bottom: 10px;
   position: relative;
 }
 
-.form_area {
-  display: inline-block;
-  margin: 5px 0;
-  padding-right: 10px;
-  &.wid20 {
-    width: 20%;
-  }
-  &.wid30 {
-    width: 30%;
-  }
-  &.wid50 {
-    width: 50%;
-  }
-  &.wid70 {
-    width: 70%;
-  }
-  label {
-    display: inline-block;
-    min-width: 48px;
-  }
-  &.ab_search {
-    position: absolute;
-    right: 5px;
-    bottom: 15px;
+.form_table {
+  display: table;
+  width: 100%;
+  .form_cell {
+    display: table-cell;
+    padding-right: 20px;
   }
 }
-
 .form_group {
+  margin-top: 7px;
   position: relative;
-  label {
+  display: inline-block;
+  .f_label {
     position: absolute;
     left: 10px;
-    top: 1px;
+    top: 8px;
     background: #{$col-white};
     padding: 2px 4px;
     transition: top 0.3s ease;
+    display: inline-block;
   }
-  input.input {
+  .fome_tag {
     height: 38px;
     line-height: 38px;
     border: 1px solid #{$col-gray300};
@@ -124,81 +75,102 @@
       background: #{$col-disabled};
     }
     &:focus {
-      outline: none !important;
-      border: 1px solid #{$col-primary};
+      border: 1px solid #{$col-blue};
     }
     &.isValue {
-      outline: none !important;
       border: 1px solid #{$col-gray300};
     }
-    &:focus + label {
+    &.isFail {
+      color: #{$col-red};
+      border: 1px solid #{$col-red};
+    }
+    &.isFail::selection {
+      color: #{$col-red};
+    }
+    &:focus + .f_label {
       left: 10px;
-      top: -17px;
+      top: -11px;
       font-size: 12px;
-      color: #{$col-primary};
+      color: #{$col-blue};
+      transition: top 0.3s ease;
+    }
+    &.isValue + .f_label {
+      left: 10px;
+      top: -11px;
+      font-size: 12px;
+      color: #{$col-default-text};
+      transition: top 0.3s ease;
+    }
+    &.isFail + .f_label {
+      left: 10px;
+      top: -11px;
+      font-size: 12px;
+      color: #{$col-red};
       transition: top 0.3s ease;
     }
   }
 }
 
-// input.input {
-//   height: 38px;
-//   line-height: 38px;
-//   border: 1px solid #{$col-gray300};
-//   border-radius: 5px;
-//   padding: 0 10px;
-//   width: 100%;
-//   box-sizing: border-box;
-//   color: #{$col-default-text};
-//   background: #{$col-white};
-//   &::placeholder {
-//     color: #{$col-gray300};
-//   }
-//   &:disabled {
-//     background: #{$col-disabled};
-//   }
-//   &.wid20 {
-//     width: 20%;
-//   }
-//   &.wid30 {
-//     width: 30%;
-//   }
-//   &.wid50 {
-//     width: 50%;
-//   }
-//   &.wid70 {
-//     width: 70%;
-//   }
-//   &:focus {
-//     outline: none !important;
-//     border: 1px solid #{$col-primary};
-//     box-shadow: 0 0 5px #{$col-primary};
-//     transition: box-shadow 0.3s ease;
-//   }
-// }
-select.select {
-  height: 40px;
-  line-height: 40px;
-  border: 1px solid #{$col-gray300};
-  border-radius: 5px;
-  padding: 0 10px;
-  width: 100%;
-  box-sizing: border-box;
-  color: #{$col-default-text};
-  background: #{$col-white};
+.wid10 {
+  width: 10%;
 }
-textarea.textarea {
+.wid20 {
+  width: 20%;
+}
+.wid30 {
+  width: 30%;
+}
+.wid40 {
+  width: 40%;
+}
+.wid50 {
+  width: 50%;
+}
+.wid60 {
+  width: 60%;
+}
+.wid70 {
+  width: 70%;
+}
+.wid80 {
+  width: 80%;
+}
+.wid90 {
+  width: 90%;
+}
+.wid100 {
   width: 100%;
-  height: 100px;
-  border: 1px solid #{$col-gray300};
-  border-radius: 5px;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  color: #{$col-default-text};
-  background: #{$col-white};
-  &::placeholder {
-    color: #{$col-gray300};
-  }
+}
+
+.f_wid10 {
+  width: 10%;
+}
+.f_wid20 {
+  width: 20%;
+}
+.f_wid30 {
+  width: 30%;
+}
+.f_wid40 {
+  width: 40%;
+}
+.f_wid50 {
+  width: 50%;
+}
+.f_wid60 {
+  width: 60%;
+}
+.f_wid70 {
+  width: 70%;
+}
+.f_wid80 {
+  width: 80%;
+}
+.f_wid90 {
+  width: 90%;
+}
+.f_wid100 {
+  width: 100%;
 }
 
 .btn_search {
@@ -265,34 +237,27 @@ textarea.textarea {
 }
 
 @include mobile {
-  .float_group {
-    .two,
-    .two_margin,
-    .three,
-    .three_random {
-      width: 100%;
-      float: none;
-      margin-left: 0;
-      &:first-child {
-        width: 100%;
-      }
+  .form_table {
+    display: block;
+    .form_cell {
+      display: block;
+      padding-right: 0;
     }
   }
 
-  .form_area {
+  .f_wid10,
+  .f_wid20,
+  .f_wid30,
+  .f_wid40,
+  .f_wid50,
+  .f_wid60,
+  .f_wid70,
+  .f_wid80,
+  .f_wid90,
+  .f_wid100 {
     width: 100% !important;
-    padding-right: 0;
-    margin: 3px 0;
-    label {
-      margin-top: 5px;
-      display: inline-block;
-    }
-    &.ab_search {
-      position: inherit;
-      right: 0;
-      bottom: 0;
-    }
   }
+
   .btn_search {
     &.wid100 {
       width: 100%;

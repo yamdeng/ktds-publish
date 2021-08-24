@@ -15,107 +15,111 @@ class PTable1 extends Component {
       <div className="content_area">
         <h3>테이블 case 1</h3>
         <div className="box_form">
-          <span className="form_group">
-            <input type="text" className="input wid70 c_mr5" />
-            <label className="">검색어</label>
-          </span>
-          <div className="float_group">
-            <div className="three_random">
-              <span className="form_area">
-                <label className="">검색어</label>
+          <div className="form_table">
+            {/* 
+              input,select,textarea 실패했을때 isFail, 값이 있을때 isValue
+              label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
+              f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
+              wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
+            */}
+            <div className="form_cell f_wid40">
+              <span className="form_group wid70 c_mr5">
+                <input type="text" className="fome_tag " />
+                <label className="f_label">검색어</label>
               </span>
-              <span className="form_area ">
-                <input
-                  type="text"
-                  className="input wid70 c_mr5"
-                  placeHolder="123"
-                />
+              <span className="form_group">
                 <label className="c_mr5">내용포함</label>
                 <input type="checkbox" />
               </span>
             </div>
-            <div className="three_random">
-              <span className="form_area">
-                <label className="">게시유형</label>
-              </span>
-              <span className="form_area ">
-                <select name="" id="" className="select">
-                  <option value="">전체</option>
+            <div className="form_cell f_wid30">
+              <span className="form_group wid70">
+                <select name="" id="b" className="fome_tag ">
+                  <option value=""> </option>
+                  <option value="">전체1</option>
+                  <option value="">전체2</option>
                 </select>
+                <label className="f_label" for="b">
+                  게시유형
+                </label>
               </span>
             </div>
-            <div className="three_random">
-              <span className="form_area">
-                <label className="">공개</label>
-              </span>
-              <span className="form_area ">
-                <select name="" id="" className="select">
-                  <option value="">전체</option>
+            <div className="form_cell f_wid30">
+              <span className="form_group wid70">
+                <select name="" id="b" className="fome_tag ">
+                  <option value=""> </option>
+                  <option value="">전체1</option>
+                  <option value="">전체2</option>
                 </select>
+                <label className="f_label" for="b">
+                  공개
+                </label>
               </span>
             </div>
           </div>
 
-          <div className="float_group">
-            <div className="two">
-              <span className="form_area">
-                <label className="">서류유형</label>
-              </span>
-              <span className="form_area ">
-                <select name="" id="" className="select">
-                  <option value="">서류분류 전체</option>
+          <div className="form_table">
+            <div className="form_cell f_wid50">
+              <span className="form_group wid40 c_mr5">
+                <select name="" id="b" className="fome_tag ">
+                  <option value=""> </option>
+                  <option value="">전체1</option>
+                  <option value="">전체2</option>
                 </select>
+                <label className="f_label" for="b">
+                  서류분류
+                </label>
               </span>
-              <span className="form_area ">
-                <select name="" id="" className="select">
-                  <option value="">서류 유형 전체</option>
+              <span className="form_group wid40">
+                <select name="" id="b" className="fome_tag ">
+                  <option value=""> </option>
+                  <option value="">전체1</option>
+                  <option value="">전체2</option>
                 </select>
+                <label className="f_label" for="b">
+                  서류유형
+                </label>
               </span>
             </div>
-            <div className="two">
-              <span className="form_area">
-                <label className="">진행상태</label>
-              </span>
-              <span className="form_area ">
-                <select name="" id="" className="select">
-                  <option value="">전체</option>
+            <div className="form_cell f_wid50">
+              <span className="form_group wid70">
+                <select name="" id="b" className="fome_tag ">
+                  <option value=""> </option>
+                  <option value="">전체1</option>
+                  <option value="">전체2</option>
                 </select>
+                <label className="f_label" for="b">
+                  진행상태
+                </label>
               </span>
             </div>
           </div>
-          <div className="float_group">
-            <span className="form_area">
-              <label className="">공사번호</label>
-            </span>
-            <span className="form_area wid70">
-              <input
-                type="search"
-                className="input wid70 c_mr10 "
-                placeHolder="공사번호"
-                disabled="true"
-              />
+
+          <div className="form_table">
+            <div className="form_cell f_wid50">
+              <span className="form_group wid40 c_mr5">
+                <input type="text" className="fome_tag " />
+                <label className="f_label" for="b">
+                  공사번호
+                </label>
+              </span>
               <button className="btn_search btn_green">찾기</button>
-            </span>
-          </div>
-          <div className="float_group">
-            <span className="form_area">
-              <label className="">등록자</label>
-            </span>
-            <span className="form_area wid70">
-              <input
-                type="search"
-                className="input wid20 c_mr5"
-                placeHolder="이름"
-                disabled="true"
-              />
-              <input
-                type="search"
-                className="input wid50 c_mr5"
-                placeHolder="소속"
-                disabled="true"
-              />
+            </div>
+            <div className="form_cell f_wid50">
+              <span className="form_group wid40 c_mr5">
+                <input type="text" className="fome_tag " />
+                <label className="f_label" for="b">
+                  공사번호
+                </label>
+              </span>
+              <span className="form_group wid40 c_mr5">
+                <input type="text" className="fome_tag " />
+                <label className="f_label" for="b">
+                  공사번호
+                </label>
+              </span>
               <button className="btn_search btn_green">찾기</button>
-            </span>
+            </div>
           </div>
 
           <p className="form_area ab_search">
