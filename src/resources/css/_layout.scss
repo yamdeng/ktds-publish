@@ -116,6 +116,7 @@
     box-sizing: border-box;
     color: #{$col-default-text};
     background: #{$col-white};
+    outline: none !important;
     &::placeholder {
       color: #{$col-gray300};
     }
@@ -125,14 +126,10 @@
     &:focus {
       outline: none !important;
       border: 1px solid #{$col-primary};
-      box-shadow: 0 0 5px #{$col-primary};
-      transition: box-shadow 0.3s ease;
     }
     &.isValue {
       outline: none !important;
       border: 1px solid #{$col-gray300};
-      box-shadow: none;
-      transition: box-shadow 0.3s ease;
     }
     &:focus + label {
       left: 10px;
@@ -144,41 +141,41 @@
   }
 }
 
-input.input {
-  height: 38px;
-  line-height: 38px;
-  border: 1px solid #{$col-gray300};
-  border-radius: 5px;
-  padding: 0 10px;
-  width: 100%;
-  box-sizing: border-box;
-  color: #{$col-default-text};
-  background: #{$col-white};
-  &::placeholder {
-    color: #{$col-gray300};
-  }
-  &:disabled {
-    background: #{$col-disabled};
-  }
-  &.wid20 {
-    width: 20%;
-  }
-  &.wid30 {
-    width: 30%;
-  }
-  &.wid50 {
-    width: 50%;
-  }
-  &.wid70 {
-    width: 70%;
-  }
-  &:focus {
-    outline: none !important;
-    border: 1px solid #{$col-primary};
-    box-shadow: 0 0 5px #{$col-primary};
-    transition: box-shadow 0.3s ease;
-  }
-}
+// input.input {
+//   height: 38px;
+//   line-height: 38px;
+//   border: 1px solid #{$col-gray300};
+//   border-radius: 5px;
+//   padding: 0 10px;
+//   width: 100%;
+//   box-sizing: border-box;
+//   color: #{$col-default-text};
+//   background: #{$col-white};
+//   &::placeholder {
+//     color: #{$col-gray300};
+//   }
+//   &:disabled {
+//     background: #{$col-disabled};
+//   }
+//   &.wid20 {
+//     width: 20%;
+//   }
+//   &.wid30 {
+//     width: 30%;
+//   }
+//   &.wid50 {
+//     width: 50%;
+//   }
+//   &.wid70 {
+//     width: 70%;
+//   }
+//   &:focus {
+//     outline: none !important;
+//     border: 1px solid #{$col-primary};
+//     box-shadow: 0 0 5px #{$col-primary};
+//     transition: box-shadow 0.3s ease;
+//   }
+// }
 select.select {
   height: 40px;
   line-height: 40px;
