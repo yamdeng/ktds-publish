@@ -16,6 +16,7 @@ import PWorkForm6 from 'publish/page/PWorkForm6';
 import PWorkForm7 from 'publish/page/PWorkForm7';
 import PWorkForm8 from 'publish/page/PWorkForm8';
 import PWorkForm9 from 'publish/page/PWorkForm9';
+import PWorkForm10 from 'publish/page/PWorkForm10';
 import PWorkDirectionList from 'publish/page/PWorkDirectionList';
 import PWorkDirectionForm1 from 'publish/page/PWorkDirectionForm1';
 import PWorkDirectionForm2 from 'publish/page/PWorkDirectionForm2';
@@ -83,7 +84,7 @@ const list = [
     success: true,
     useIcon: false,
     description:
-      '1.탭은 선택, 선택이 아닌 경우, 비활성화 이렇게 3개의 경우로 스타일 반영(3가지가 애매하면 선택/선택아닌 상태2가지로)\n2.모바일에서는 각 테이블의 상단 영역만 반응형으로 나오게끔 해주시면 됩니다. 상단 테이블에는 "페이징" 존재하는 걸로 판단됩니다(기획 누락)'
+      '1.탭은 선택, 선택이 아닌 경우, 비활성화 이렇게 3개의 경우로 스타일 반영(3가지가 애매하면 선택/선택아닌 상태2가지로)\n2.모바일에서는 각 테이블의 상단 영역만 반응형으로 나오게끔 해주시면 됩니다. 상단 테이블에는 "페이징" 존재하는 걸로 판단됩니다(기획 누락)\n3.마지막 컬럼에 sort 이미지가 필요할듯(셀이 위/아래 아이콘이 동시에 있어야 됩니다. 정렬을 바꿔줘야 될 것 같애요)'
   },
   {
     title: '게시판 폼',
@@ -138,7 +139,7 @@ const list = [
     success: false,
     useIcon: true,
     description:
-      '0.10~18 페이지는 안전 서류 등록/수정 case로 좌측영역과 상단역역이 공통으로 구성되어있습니다(별도의 파일로 분류함 : PWorkFormLeft.js, PWorkFormTop.js)\n1.[찾기],[조회],[초기화] 버튼은 같은 액션 그룹이라 같이 붙어있으면 됩니다.(찾기와 동시에 조회가 되는 구조여야 될 것 같애서 조회 버튼 필요없을 수 도 있습니다(있다고 가정하시면 됩니다)\n2.[찾기] 버튼 우측에 있는 등록일시, 등록자 소속 이름, 서류 상태 라벨을 바로 아래로 내립니다.\n3.[?],[X],[+] : 3개 아이콘 필요(일반 버튼으로 처리해도 상관은 없음'
+      '0.10~18 페이지는 안전 서류 등록/수정 case로 좌측영역과 상단역역이 공통으로 구성되어있습니다(별도의 파일로 분류함 : PWorkFormLeft.js, PWorkFormTop.js)\n1.[찾기],[조회],[초기화] 버튼은 같은 액션 그룹이라 같이 붙어있으면 됩니다.(찾기와 동시에 조회가 되는 구조여야 될 것 같애서 조회 버튼 필요없을 수 도 있습니다(있다고 가정하시면 됩니다)\n2.파일첨부 각 필드의 마지막에 아래 화살표 아이콘이 있는데 용도가 없어 보여서 삭제\n3.[X] 버튼과 [+] 버튼이 같은 정렬로 있는데 [x] 버튼은 업로된 파일을 삭제하는거고 [+]는 클릭시 파일 다이얼로그가 오픈됨\n4.좌측 하단에 공간이 따로 존재하는데 존재하는 경우와 존재하지 않는 경우 2가지 가이드 필요합니다.\n5.[찾기] 버튼 우측에 있는 등록일시, 등록자 소속 이름, 서류 상태 라벨을 바로 아래로 내립니다.\n3.[?],[X],[+] : 3개 아이콘 필요'
   },
   {
     title: '안전 서류 등록/수정 : 결재선 지정',
@@ -149,7 +150,7 @@ const list = [
     success: false,
     useIcon: true,
     description:
-      '1.삭제,변경은 버튼으로 할지 아이콘으로 할지 가이드해주시는데로 그대로 진행'
+      '1.삭제,변경은 버튼으로 할지 아이콘으로 할지 가이드해주시는데로 그대로 진행\n2.변경 버튼을 누르면 해당 로우는 라벨에서 input으로 변경됨'
   },
   {
     title: '안전 서류 등록/수정 : 안전관리자 등록',
@@ -160,7 +161,7 @@ const list = [
     success: false,
     useIcon: true,
     description:
-      '1.안전관리자 필드는 많은 화면에서 사용하는 "사원검색" 팝업을 통해 선택된 결과값을 보여주는 영역입니다.\n2.기획서는 여러 필드로 나와있는데 3개의 필드로 보여주는 경우와 하나의 필드로 보여주는 경우 2가지 경우를 가이드해주시면 좋을 것 같습니다.\n3.하나의 필드일 경우 사번 / 이름 / 소속 순으로 라벨링되어 보여집니다'
+      '1.안전관리자 필드는 많은 화면에서 사용하는 "사원검색" 팝업을 통해 선택된 결과값을 보여주는 영역입니다.\n2.기획서는 여러 필드로 나와있는데 3개의 필드로 보여주는 경우와 하나의 필드로 보여주는 경우 2가지 경우를 가이드해주시면 좋을 것 같습니다.\n3.하나의 필드일 경우 이름 지책(사번) / 소속 순으로 라벨링되어 보여집니다(기획서에 반영해놓았습니다)'
   },
   {
     title: '안전 서류 등록/수정 : 근로자측 위원 등록',
@@ -204,7 +205,7 @@ const list = [
     success: false,
     useIcon: false,
     description:
-      '1.[추가] 버튼시 오픈되는 팝업을 통해 테이블에 행이 추가되는 구조입니다'
+      '1.[추가] 버튼시 오픈되는 팝업을 통해 테이블에 행이 추가되는 구조입니다\n2.확인자는 기본 사원검색 팝업을 통해 선택된 사원 정보인데 "상태"와 "최종처리 일시" 값을 보여줘야하는데 최종 다음행으로 내려서 보여주는 걸로 변경'
   },
   {
     title: '안전 서류 등록/수정 : 작업장 상황조사',
@@ -227,11 +228,21 @@ const list = [
     description: ''
   },
   {
+    title: '안전 서류 등록/수정 : 중량물 점검결과',
+    fileName: 'PWorkForm10.js',
+    component: PWorkForm10,
+    url: '/work-form10',
+    pageCount: '19',
+    success: false,
+    useIcon: false,
+    description: '양호/불량은 스위치 스타일 or 체크박스 스타일 둘중 하나입니다.'
+  },
+  {
     title: '작업 지시 관리',
     fileName: 'PWorkDirectionList.js',
     component: PWorkDirectionList,
     url: '/work-directions',
-    pageCount: '19',
+    pageCount: '20',
     success: false,
     useIcon: true,
     description: ''
@@ -241,7 +252,7 @@ const list = [
     fileName: 'PWorkDirectionForm1.js',
     component: PWorkDirectionForm1,
     url: '/work-direction-form1',
-    pageCount: '20',
+    pageCount: '21',
     success: false,
     useIcon: true,
     description: ''
@@ -251,7 +262,7 @@ const list = [
     fileName: 'PWorkDirectionForm2.js',
     component: PWorkDirectionForm2,
     url: '/work-direction-form2',
-    pageCount: '21',
+    pageCount: '22',
     success: false,
     useIcon: true,
     description: ''
@@ -261,7 +272,7 @@ const list = [
     fileName: 'PConfinedSpaceForm1.js',
     component: PConfinedSpaceForm1,
     url: '/confined-space-form1',
-    pageCount: '22',
+    pageCount: '23',
     success: false,
     useIcon: false,
     description: ''
@@ -271,7 +282,7 @@ const list = [
     fileName: 'PConfinedSpaceForm2.js',
     component: PConfinedSpaceForm2,
     url: '/confined-space-form2',
-    pageCount: '23',
+    pageCount: '24',
     success: false,
     useIcon: false,
     description: ''
@@ -281,7 +292,7 @@ const list = [
     fileName: 'PConfinedSpaceForm3.js',
     component: PConfinedSpaceForm3,
     url: '/confined-space-form3',
-    pageCount: '24',
+    pageCount: '25',
     success: false,
     useIcon: true,
     description: ''
@@ -291,7 +302,7 @@ const list = [
     fileName: 'PCheckResultList.js',
     component: PCheckResultList,
     url: '/check-results',
-    pageCount: '25',
+    pageCount: '26',
     success: false,
     useIcon: true,
     description: ''
@@ -301,7 +312,7 @@ const list = [
     fileName: 'PCheckResultForm.js',
     component: PCheckResultForm,
     url: '/check-result-form',
-    pageCount: '26',
+    pageCount: '27',
     success: false,
     useIcon: false,
     description: ''
@@ -311,7 +322,7 @@ const list = [
     fileName: 'PSafeCheckList.js',
     component: PSafeCheckList,
     url: '/safe-checks',
-    pageCount: '27',
+    pageCount: '28',
     success: false,
     useIcon: false,
     description: ''
@@ -321,7 +332,7 @@ const list = [
     fileName: 'PWorkReportList.js',
     component: PWorkReportList,
     url: '/work-reports',
-    pageCount: '28',
+    pageCount: '29',
     success: false,
     useIcon: true,
     description: ''
