@@ -64,7 +64,6 @@
 .box_form {
   border: 1px solid #dbdbdb;
   border-radius: 5px;
-  background: #{$search-form};
   padding: 15px;
   margin-bottom: 10px;
   position: relative;
@@ -97,6 +96,54 @@
   }
 }
 
+.form_group {
+  position: relative;
+  label {
+    position: absolute;
+    left: 10px;
+    top: 1px;
+    background: #{$col-white};
+    padding: 2px 4px;
+    transition: top 0.3s ease;
+  }
+  input.input {
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #{$col-gray300};
+    border-radius: 5px;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #{$col-default-text};
+    background: #{$col-white};
+    &::placeholder {
+      color: #{$col-gray300};
+    }
+    &:disabled {
+      background: #{$col-disabled};
+    }
+    &:focus {
+      outline: none !important;
+      border: 1px solid #{$col-primary};
+      box-shadow: 0 0 5px #{$col-primary};
+      transition: box-shadow 0.3s ease;
+    }
+    &.isValue {
+      outline: none !important;
+      border: 1px solid #{$col-gray300};
+      box-shadow: none;
+      transition: box-shadow 0.3s ease;
+    }
+    &:focus + label {
+      left: 10px;
+      top: -17px;
+      font-size: 12px;
+      color: #{$col-primary};
+      transition: top 0.3s ease;
+    }
+  }
+}
+
 input.input {
   height: 38px;
   line-height: 38px;
@@ -124,6 +171,12 @@ input.input {
   }
   &.wid70 {
     width: 70%;
+  }
+  &:focus {
+    outline: none !important;
+    border: 1px solid #{$col-primary};
+    box-shadow: 0 0 5px #{$col-primary};
+    transition: box-shadow 0.3s ease;
   }
 }
 select.select {

@@ -15,6 +15,10 @@ class PTable1 extends Component {
       <div className="content_area">
         <h3>테이블 case 1</h3>
         <div className="box_form">
+          <span className="form_group">
+            <input type="text" className="input wid70 c_mr5" />
+            <label className="">검색어</label>
+          </span>
           <div className="float_group">
             <div className="three_random">
               <span className="form_area">

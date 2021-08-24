@@ -16,14 +16,14 @@ const fullPageMenu = ['/', '/modal', 'layout-sample'];
 class PMain extends Component {
   constructor(props) {
     super(props);
-    this.state = { side: true, top: true };
+    this.state = { side: false, top: true };
   }
 
   componentDidMount() {
     const { pathname } = this.props.location;
     fullPageMenu.forEach((menu) => {
       if (pathname === menu) {
-        this.setState({ side: true, top: false });
+        this.setState({ side: false, top: false });
       }
     });
   }
