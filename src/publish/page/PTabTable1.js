@@ -3,10 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faEdit,
   faSort,
-  faSortAlphaDown,
+  faSortDown,
   faSortUp,
+  faCaretUp,
+  faCaretDown,
   faTrashAlt
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class PTabTable1 extends Component {
   constructor(props) {
@@ -72,9 +75,10 @@ class PTabTable1 extends Component {
                     </th>
                     <th style={{ width: '20%' }}>
                       <span className="c_mr5">분류ID</span>
+                      {/* default, 클릭할떄마다 up,down 바뀜. */}
                       <FontAwesomeIcon icon={faSort} />
-                      <FontAwesomeIcon icon={faSortAlphaDown} />
-                      <FontAwesomeIcon icon={faSortUp} />
+                      {/* <FontAwesomeIcon icon={faSortDown} /> */}
+                      {/* <FontAwesomeIcon icon={faSortUp} /> */}
                     </th>
                     <th>분류 명</th>
                     <th style={{ width: '7%' }}>사용</th>
@@ -125,6 +129,7 @@ class PTabTable1 extends Component {
                     <th>점검 내용</th>
                     <th style={{ width: '7%' }}>사용</th>
                     <th style={{ width: '7%' }}>편집</th>
+                    <th style={{ width: '7%' }}>정렬</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -141,7 +146,17 @@ class PTabTable1 extends Component {
                     </td>
                     <td>Yes</td>
                     <td>
-                      <FontAwesomeIcon icon={faEdit} />
+                      <Link>
+                        <FontAwesomeIcon icon={faEdit} />
+                      </Link>
+                    </td>
+                    <td>
+                      <Link style={{ fontSize: '20px' }}>
+                        <FontAwesomeIcon icon={faCaretUp} />
+                      </Link>
+                      <Link style={{ fontSize: '20px' }}>
+                        <FontAwesomeIcon icon={faCaretDown} />
+                      </Link>
                     </td>
                   </tr>
                 </tbody>

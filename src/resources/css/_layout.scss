@@ -49,13 +49,12 @@
   border: 1px solid #{$col-gray200};
   padding: 15px;
   padding-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   position: relative;
 }
 
 .list_form {
-  padding: 15px 0;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .form_table {
@@ -139,7 +138,19 @@
       color: #{$col-red};
       transition: top 0.3s ease;
     }
+    &.textarea {
+      min-height: 200px;
+    }
   }
+}
+
+hr.line {
+  border: none;
+  height: 1px;
+  background: #{$col-gray200};
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
 }
 
 .wid10 {
@@ -225,6 +236,11 @@
   background: #{$col-blue};
   color: #{$col-white};
 }
+.btn_white {
+  background: #{$col-white};
+  color: #{$col-default-text};
+  border: 1px solid #{$col-default-text};
+}
 .btn_green {
   background: #{$col-green};
   color: #{$col-white};
@@ -262,18 +278,19 @@
     border-left: none;
     float: left;
     padding: 10px 30px;
-    min-width: 200px;
-    border: 1px solid #{$col-default-text};
-    border-left: none;
+    width: 50%;
     box-sizing: border-box;
-    margin-bottom: 5px;
-    &.active,
+    border-bottom: 1px solid #{$col-default-text};
+    cursor: pointer;
     &:hover {
+      background: rgba($col-default-text, 0.1);
+    }
+    &.active {
       color: #{$col-default-bg};
       background: #{$col-default-text};
     }
+
     &:first-child {
-      border-left: 1px solid #{$col-default-text};
     }
   }
 }
