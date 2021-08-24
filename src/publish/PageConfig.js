@@ -235,7 +235,8 @@ const list = [
     pageCount: '19',
     success: false,
     useIcon: false,
-    description: '양호/불량은 스위치 스타일 or 체크박스 스타일 둘중 하나입니다.'
+    description:
+      '양호/불량은 스위치 스타일 or 체크박스 스타일 둘중 하나입니다. 여력되시면 2가지 경우 가이드 부탁드릴게요!'
   },
   {
     title: '작업 지시 관리',
@@ -335,7 +336,8 @@ const list = [
     pageCount: '29',
     success: false,
     useIcon: true,
-    description: ''
+    description:
+      '1.좌측을 트리로할지 결정이 않났습니다. 이건 일단 작업 보류 해주세용'
   },
   {
     title: '컴포넌트 가이드',
