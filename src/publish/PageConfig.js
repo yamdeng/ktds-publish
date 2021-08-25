@@ -92,7 +92,7 @@ const list = [
     component: PBoardForm,
     url: '/board-form',
     pageCount: '6',
-    success: false,
+    success: true,
     useIcon: true,
     description:
       '1.input 필드 필수 컬럼 여부 표기 필요\n2.validation 실패시 input border 스타일과 input 하단에 경고 메시지 보여주는 스타일 가이드 필요\n3.공개 기간은 단순 input filed로 해주시고 필드 우측에 캘린더 아이콘 넣어주시면 됩니다(YYYY-MM-DD HH:mm) 공백포함 알파벳 16자리가 max로 들어갈 공간이면 됩니다\n4.우측 상단의 [조회] 버튼은 필요없거나 등록자 input 필드 바로옆에 붙여주시면 됩니다\n5.첨부영역은 단순 파일 첨부입니다.첨부 파일을 추가하는 UI와 삭제하는 UI가 필요합니다. 캡쳐화면은 무시하시는게 좋을 것 같애요\n6.폼 화면의 반응형은 기존에 material-ui로 만들어서 해당 링크 참고해주셔도 됩니다 https://material-ui.com/components/text-fields (원래 하셨던 반응형 작업 경험 그대로 가져가면 될 것 같애요)\n7.첨부 파일 등록 버튼은 아이콘으로 할지 단순 버튼으로 할지 결정해주시면 되고 가이드해주시는데로 가져갈게요. 각 첨부된 삭제 버튼도 일관성 유지되게 가이드해주시면 됩니다'
