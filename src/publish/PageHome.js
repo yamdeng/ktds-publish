@@ -62,15 +62,15 @@ s
           >
             완료
           </button>{' '}
-          <button onClick={() => this.changeList('')}>전체</button> 아이콘 존재
-          여부{' '}
+          <button onClick={() => this.changeList('')}>전체</button>
+          {/* 아이콘 존재 여부{' '}
           <input
             type="checkbox"
             id="useIcon"
             name="useIcon"
             checked={useIcon}
             onChange={this.changeUseIcon}
-          />
+          /> */}
         </div>
         <table className="publish_tb">
           <tr>
