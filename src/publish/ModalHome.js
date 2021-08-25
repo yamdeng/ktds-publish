@@ -3,6 +3,7 @@ import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import ModalConfig from 'publish/ModalConfig';
 import _ from 'lodash';
+import ReactHelper from 'util/ReactHelper';
 
 @withRouter
 @inject('modalStore')
@@ -38,18 +39,11 @@ class ModalHome extends Component {
 
     return (
       <div>
-        <h3>
-          <a
-            href={
-              'vscode://file/' +
-              process.env.PROJECT_FOLDER_PATH +
-              '/src/publish/ModalHome.js'
-            }
-            style={{ color: 'blue' }}
-          >
-            모달 퍼블리싱(file open)
+        <h6>
+          <a href={'/publish.html'} style={{ color: 'blue' }}>
+            페이지 퍼블리싱으로 이동
           </a>
-        </h3>
+        </h6>
         <div>
           <button
             onClick={() => this.changeList('ing')}
@@ -111,6 +105,25 @@ class ModalHome extends Component {
               }}
             >
               완료여부
+            </th>
+            <th
+              style={{
+                border: '1px solid black',
+                borderCollapse: 'collapse',
+                padding: 5
+              }}
+            >
+              mobile-full
+            </th>
+            <th
+              style={{
+                border: '1px solid black',
+                borderCollapse: 'collapse',
+                padding: 5,
+                width: '40%'
+              }}
+            >
+              설명
             </th>
           </tr>
           {filetedMenu.map((info, index) => {
@@ -179,6 +192,29 @@ class ModalHome extends Component {
                 >
                   {info.success ? '완료' : '작업중'}
                 </td>
+                <td
+                  style={{
+                    border: '1px solid black',
+                    borderCollapse: 'collapse',
+                    padding: 5
+                  }}
+                >
+                  {info.isMobileFull ? 'O' : 'X'}
+                </td>
+                <td
+                  style={{
+                    backgroundColor: '#2196f3',
+                    border: '1px solid black',
+                    borderCollapse: 'collapse',
+                    padding: 5,
+                    width: '40%'
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: ReactHelper.convertEnterStringToBrTag(
+                      info.description
+                    )
+                  }}
+                ></td>
               </tr>
             );
           })}

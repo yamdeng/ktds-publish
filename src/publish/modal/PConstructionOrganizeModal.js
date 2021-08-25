@@ -5,7 +5,7 @@ import { observer, inject } from 'mobx-react';
 @withRouter
 @inject('modalStore')
 @observer
-class PAlertModal extends React.Component {
+class PConstructionOrganizeModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -20,7 +20,7 @@ class PAlertModal extends React.Component {
     return (
       <div className="popup-container size-330">
         <div className="popup-content">
-          <strong>1 : </strong> alert 팝업
+          <strong>11 : </strong> 공사 편성 팝업
         </div>
         <div className="popup-footer">
           <div className="btn-group wide">
@@ -38,4 +38,4 @@ class PAlertModal extends React.Component {
   }
 }
 
-export default PAlertModal;
+export default PConstructionOrganizeModal;

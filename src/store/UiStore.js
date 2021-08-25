@@ -1,7 +1,6 @@
 import { observable, action, makeObservable } from 'mobx';
-import AppHistory from 'utils/AppHistory';
-import Helper from 'utils/Helper';
-import Constant from 'config/Constant';
+import AppHistory from 'util/AppHistory';
+import Helper from 'util/Helper';
 
 /*
   
@@ -34,9 +33,6 @@ class UiStore {
 
   // 현재 라우팅 url
   @observable currentRouteUrl = null;
-
-  // 관리설정 메뉴 타입
-  @observable managerSideMenuType = Constant.MANAGER_MENU_TYPE_MEMBER;
 
   constructor(rootStore) {
     makeObservable(this);

@@ -46,7 +46,7 @@ s
       <div style={{ overflowX: 'auto' }}>
         <h6>
           <a href={'#/modal'} style={{ color: 'blue' }}>
-            모달 퍼블리싱 : (#/modal)
+            모달 퍼블리싱으로 이동
           </a>
         </h6>
         <div>

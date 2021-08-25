@@ -1,0 +1,95 @@
+.alert-modal-overlay {
+  z-index: 50;
+}
+
+.middle-modal-overlay {
+  z-index: 40;
+}
+
+.full-modal-overlay {
+  z-index: 30;
+}
+
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+// 팝업 공통
+.ReactModal__Content {
+  position: absolute;
+  background: #fff;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 6px;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.15);
+  .popup-header {
+    position: relative;
+    padding: 20px 20px 0;
+    .inner {
+      position: relative;
+    }
+    .btn-close {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 12px;
+      width: 30px;
+      height: 30px;
+      text-indent: -9999px;
+    }
+  }
+  .popup-title {
+    display: block;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+    font-size: 16px;
+    &.center {
+      text-align: center;
+    }
+  }
+  .popup-content {
+    padding: 27px 20px 30px;
+    &.center {
+      text-align: center;
+    }
+  }
+  .popup-footer {
+    padding: 0 20px 30px;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    &.wide {
+      button {
+        width: 100%;
+      }
+    }
+    button {
+      min-width: 140px;
+      + button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

@@ -1,7 +1,7 @@
-// import AppStore from 'store/AppStore';
-// import UiStore from 'store/UiStore';
-// import ModalStore from 'store/ModalStore';
-// import AlertModalStore from 'store/AlertModalStore';
+import AppStore from 'store/AppStore';
+import UiStore from 'store/UiStore';
+import ModalStore from 'store/ModalStore';
+import AlertModalStore from 'store/AlertModalStore';
 
 /*
 
@@ -13,10 +13,10 @@
 */
 class RootStore {
   constructor() {
-    // this.appStore = new AppStore(this);
-    // this.uiStore = new UiStore(this);
-    // this.alertModalStore = new AlertModalStore(this);
-    // this.modalStore = new ModalStore(this);
+    this.appStore = new AppStore(this);
+    this.uiStore = new UiStore(this);
+    this.alertModalStore = new AlertModalStore(this);
+    this.modalStore = new ModalStore(this);
   }
 }
 
