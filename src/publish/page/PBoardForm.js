@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import ReactTooltip from 'react-tooltip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faEdit,
+  faTrashAlt,
+  faSearch,
+  faTimesCircle,
+  faCalendarAlt,
+  faTimes,
+  faRedo,
+  faPlus
+} from '@fortawesome/free-solid-svg-icons';
 
 class PBoardForm extends Component {
   constructor(props) {
@@ -14,7 +25,7 @@ class PBoardForm extends Component {
     const ExampleCustomInput = React.forwardRef(({ value, onClick }, ref) => (
       <input
         type="text"
-        className="fome_tag"
+        className="form_tag"
         onClick={onClick}
         ref={ref}
         value={value}
@@ -23,7 +34,7 @@ class PBoardForm extends Component {
     return (
       <div className="content_area">
         <h3>테이블 case 1</h3>
-        <div className="list_form">
+        <div className="write_form">
           <div className="form_table">
             {/* 
           input,select,textarea 실패했을때 isFail, 값이 있을때 isValue
@@ -32,21 +43,33 @@ class PBoardForm extends Component {
           wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
         */}
             <div className="form_cell f_wid50">
-              <span className="form_group wid70 c_mr5">
-                <input type="text" className="fome_tag " />
-                <label className="f_label">게시판번호</label>
+              {/* 
+                기본은 form_group
+                앞에 돋보기 아이콘을 추가하려면 .form_search 와 icon icon_search 추가
+                뒤에 클리어 아이콘을 추가하려면 .form_clear 와 icon icon_clear 추가
+              */}
+              <span className="form_group form_search form_clear wid70 c_mr5">
+                <input type="text" className="form_tag" />
+                <label className="f_label">조직 명</label>
+                <span className="icon icon_search">
+                  <FontAwesomeIcon icon={faSearch} />
+                </span>
+                {/* input에 value 값이 있으면 style display로 제어 */}
+                <span className="icon icon_clear" style={{ display: 'block' }}>
+                  <FontAwesomeIcon icon={faTimesCircle} />
+                </span>
               </span>
-              <button className="btn_search btn_dark_gray">조회 아이콘</button>
+              <button className="btn_text btn_dark_gray">조회</button>
             </div>
             <div className="form_cell f_wid20">
               <span className="form_group wid100 c_mr5">
-                <input type="text" className="fome_tag " disabled />
+                <input type="text" className="form_tag " disabled />
                 <label className="f_label">작성자</label>
               </span>
             </div>
             <div className="form_cell f_wid30">
               <span className="form_group wid100 c_mr5">
-                <input type="text" className="fome_tag " disabled />
+                <input type="text" className="form_tag " disabled />
                 <label className="f_label">작성일시</label>
               </span>
             </div>
@@ -54,8 +77,8 @@ class PBoardForm extends Component {
           <hr className="line" />
           <div className="form_table">
             <div className="form_cell f_wid50">
-              <span className="form_group f_wid20 c_mr5">
-                <select name="" id="b" className="fome_tag ">
+              <span className="form_group f_wid50 c_mr5">
+                <select name="" id="b" className="form_tag ">
                   <option value=""> </option>
                   <option value="">전체1</option>
                   <option value="">전체2</option>
@@ -72,7 +95,7 @@ class PBoardForm extends Component {
               <span className="form_group wid100 c_mr5">
                 <input
                   type="text"
-                  className="fome_tag"
+                  className="form_tag"
                   placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
                 />
                 <label className="f_label" for="b">
@@ -88,7 +111,7 @@ class PBoardForm extends Component {
                 <textarea
                   name=""
                   id=""
-                  className="fome_tag textarea"
+                  className="form_tag textarea"
                 ></textarea>
                 <label className="f_label" for="b">
                   내용 *
@@ -100,16 +123,22 @@ class PBoardForm extends Component {
           <div className="form_table">
             <div className="form_cell f_wid100">
               <span className="form_group wid40 c_mr5">
-                <input type="text" className="fome_tag" />
+                <input type="text" className="form_tag" />
                 <label className="f_label" for="b">
                   공개시작기간 *
                 </label>
+                <span className="icon icon_calendar">
+                  <FontAwesomeIcon icon={faCalendarAlt} />
+                </span>
               </span>
               <span className="form_group wid40">
-                <input type="text" className="fome_tag" />
+                <input type="text" className="form_tag" />
                 <label className="f_label" for="b">
                   공개종료기간 *
                 </label>
+                <span className="icon icon_calendar">
+                  <FontAwesomeIcon icon={faCalendarAlt} />
+                </span>
               </span>
             </div>
           </div>
@@ -121,6 +150,9 @@ class PBoardForm extends Component {
                 <label className="f_label" for="b">
                   공개시작기간2 *
                 </label>
+                <span className="icon icon_calendar">
+                  <FontAwesomeIcon icon={faCalendarAlt} />
+                </span>
               </span>
               <span className="form_group wid40">
                 <DatePicker
@@ -131,48 +163,56 @@ class PBoardForm extends Component {
                 <label className="f_label" for="b">
                   공개종료기간2 *
                 </label>
+                <span className="icon icon_calendar">
+                  <FontAwesomeIcon icon={faCalendarAlt} />
+                </span>
               </span>
             </div>
           </div>
           <hr className="line" />
           <div className="form_table">
             <div className="form_cell f_wid100">
-              <span className="form_group wid100 c_mr5">
-                <input type="text" className="fome_tag" />
+              <span className="form_group wid50 c_mr5">
+                <input
+                  type="text"
+                  className="form_tag center"
+                  disabled
+                  placeholder="xxxxx.pdf - 10kb"
+                />
                 <label className="f_label" for="b">
                   첨부
                 </label>
               </span>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <FontAwesomeIcon icon={faTimes} />
+              </button>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <FontAwesomeIcon icon={faRedo} />
+              </button>
+              <button className="btn_icon btn_dark_gray abrb">
+                <FontAwesomeIcon icon={faPlus} />
+              </button>
             </div>
           </div>
-
-          <p className="c_pt15 center">
-            <button
-              className="btn_search btn_blue f_wid10 c_mr5"
-              data-tip="hello world"
-            >
-              등록
-            </button>
-            <button
-              className="btn_search btn_white f_wid10"
-              data-tip
-              data-for="cancel"
-            >
-              취소2
-            </button>
-            <ReactTooltip id="cancel" type="warning" effect="solid">
-              <span>aaaaa aaaaaa a adas dad asd asd as</span>
-            </ReactTooltip>
-
-            <a data-tip data-for="happyFace">
-              {' '}
-              d(`･∀･)b{' '}
-            </a>
-            <ReactTooltip id="happyFace" type="error">
-              <span>Show happy face</span>
-            </ReactTooltip>
-          </p>
         </div>
+        <p className="c_pt15 right">
+          <a data-tip data-for="happyFace">
+            {' '}
+            d(`･∀･)b{' '}
+          </a>
+          <ReactTooltip id="happyFace" type="error">
+            <span>Show happy face</span>
+          </ReactTooltip>
+          <button className="btn_text btn_green  c_mr5" data-tip="hello world">
+            등록
+          </button>
+          <button className="btn_text btn_white " data-tip data-for="cancel">
+            취소
+          </button>
+          <ReactTooltip id="cancel" type="warning" effect="solid">
+            <span>aaaaa aaaaaa a adas dad asd asd as</span>
+          </ReactTooltip>
+        </p>
       </div>
     );
   }

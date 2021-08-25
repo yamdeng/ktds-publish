@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEdit,
+  faTrashAlt,
+  faSearch,
+  faTimesCircle
+} from '@fortawesome/free-solid-svg-icons';
 
 class PDeptMemberList extends Component {
   constructor(props) {
@@ -24,20 +29,31 @@ class PDeptMemberList extends Component {
               wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
             */}
             <div className="form_cell f_wid50">
-              <span className="form_group wid50 c_mr5">
-                <input type="search" className="fome_tag " />
+              {/* 
+                기본은 form_group
+                앞에 돋보기 아이콘을 추가하려면 .form_search 와 icon icon_search 추가
+                뒤에 클리어 아이콘을 추가하려면 .form_clear 와 icon icon_clear 추가
+              */}
+              <span className="form_group form_search form_clear wid50 c_mr5">
+                <input type="text" className="form_tag" />
                 <label className="f_label">조직 명</label>
+                <span className="icon icon_search">
+                  <FontAwesomeIcon icon={faSearch} />
+                </span>
+                {/* input에 value 값이 있으면 style display로 제어 */}
+                <span className="icon icon_clear" style={{ display: 'block' }}>
+                  <FontAwesomeIcon icon={faTimesCircle} />
+                </span>
               </span>
-              <button className="btn_search btn_blue">조회</button>
+              <button className="btn_text btn_dark_gray">조회</button>
             </div>
           </div>
         </div>
         <div className="flex_grow_two">
-          <div className="wid50">
+          <div className="f_wid50">
             <div className="list_form c_mt10">
               <p className="relative c_mb10">
                 <span className="fs_12">총 nnn 건</span>
-                <button className="btn_search btn_blue abrb">추가</button>
               </p>
               <table className="tb_list">
                 <caption></caption>
@@ -68,13 +84,15 @@ class PDeptMemberList extends Component {
                   </tr>
                 </tbody>
               </table>
+              <div className="list_form_btns not_list">
+                <button className="btn_text btn_green">추가</button>
+              </div>
             </div>
           </div>
-          <div className="wid50">
+          <div className="f_wid50">
             <div className="list_form c_mt10">
               <p className="relative c_mb10">
                 <span className="fs_12">총 nnn 건</span>
-                <button className="btn_search btn_blue abrb">추가</button>
               </p>
               <table className="tb_list">
                 <caption></caption>
@@ -108,6 +126,9 @@ class PDeptMemberList extends Component {
                   </tr>
                 </tbody>
               </table>
+              <div className="list_form_btns not_list">
+                <button className="btn_text btn_green">추가</button>
+              </div>
             </div>
           </div>
         </div>

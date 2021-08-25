@@ -1,16 +1,22 @@
 .content_area {
-  overflow: hidden;
   h3 {
     font-size: 20px;
     color: #{$col-default-text};
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 1px solid #{$col-gray200};
+  }
+  h4 {
+    font-size: 16px;
+    padding-bottom: 5px;
   }
 }
 
 .flex_grow_two {
   display: flex;
+  @include tablet {
+    display: block;
+  }
   & > div {
     &:first-child {
       margin-right: 50px;
@@ -45,16 +51,82 @@
   }
 }
 
+.detail_form {
+  margin-bottom: 30px;
+}
+
+.detail_list {
+  border-top: 2px solid #{$col-default-text};
+  .lists {
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 1px solid #{$col-gray300};
+    .label {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 80px;
+      text-align: left;
+      color: #{$col-gray600};
+      border-right: 1px solid #{$col-gray200};
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+    .cont {
+      padding-left: 100px;
+      box-sizing: border-box;
+    }
+  }
+}
+
 .box_form {
   border: 1px solid #{$col-gray200};
   padding: 15px;
   padding-top: 0;
   margin-bottom: 50px;
   position: relative;
+  @include mobile {
+    margin-bottom: 30px;
+  }
 }
 
 .list_form {
   margin-bottom: 50px;
+  position: relative;
+  @include mobile {
+    margin-bottom: 30px;
+    > p {
+      text-align: left;
+      > span.fs_12 {
+        display: none;
+      }
+    }
+    .list_form_btns {
+      position: inherit;
+      right: inherit;
+      bottom: inherit;
+      text-align: right;
+      margin-top: 10px;
+    }
+  }
+}
+
+.list_form_btns {
+  position: absolute;
+  right: 0;
+  top: 0;
+  &.not_list {
+    top: -20px;
+    @include mobile {
+      top: 0;
+    }
+  }
+}
+
+.write_form {
+  border-bottom: 2px solid #{$col-default-text};
+  padding-bottom: 15px;
 }
 
 .form_table {
@@ -64,23 +136,54 @@
     display: table-cell;
     padding-right: 15px;
     padding-top: 15px;
+    position: relative;
   }
 }
+
 .form_group {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  .icon {
+    &.icon_search {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      color: #{$col-gray350};
+      &.isValue {
+        color: #{$col-green};
+      }
+    }
+    &.icon_clear {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      color: #{$col-green};
+    }
+    &.icon_calendar {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+      color: #{$col-gray350};
+    }
+  }
+
   .f_label {
     position: absolute;
     left: 10px;
-    top: 8px;
+    top: 10px;
     background: #{$col-white};
     padding: 2px 4px 4px;
     line-height: 1em;
-    transition: top 0.3s ease;
+    transition: all 0.3s ease;
     display: inline-block;
   }
-  .fome_tag {
+
+  .form_tag {
     height: 38px;
     line-height: 38px;
     border: 1px solid #{$col-gray300};
@@ -131,14 +234,14 @@
       color: #{$col-white};
     }
     &:disabled {
-      background: #{$col-disabled};
+      background: #{$col-gray300};
       &::placeholder {
-        color: #{$col-disabled};
+        //color: #{$col-disabled};
       }
     }
     &:focus,
     &.active {
-      border: 1px solid #{$col-blue};
+      border: 1px solid #{$col-green};
       &::placeholder {
         color: #{$col-gray300};
       }
@@ -160,40 +263,50 @@
     &.isFail::selection {
       color: #{$col-red};
     }
+    &:disabled + .f_label,
+    &:focus + .f_label,
+    &.active + .f_label,
+    &.isValue + .f_label,
+    &.isFail + .f_label {
+      left: 10px;
+      top: -8px;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
     &:disabled + .f_label {
-      background: #{$col-disabled};
+      background: none;
+      color: #{$col-default-text};
     }
     &:focus + .f_label,
     &.active + .f_label {
-      left: 10px;
-      top: -11px;
-      font-size: 12px;
-      color: #{$col-blue};
-      transition: top 0.3s ease;
+      color: #{$col-green};
     }
     &.isValue + .f_label {
-      left: 10px;
-      top: -11px;
-      font-size: 12px;
       color: #{$col-default-text};
-      transition: top 0.3s ease;
     }
     &.isFail + .f_label {
-      left: 10px;
-      top: -11px;
-      font-size: 12px;
       color: #{$col-red};
-      transition: top 0.3s ease;
     }
+
     &.textarea {
       min-height: 200px;
     }
   }
 }
 
+.form_search {
+  .form_tag {
+    text-indent: 20px;
+  }
+  .f_label {
+    left: 25px;
+  }
+}
+
 .radio-wrapper,
 .checkbox-wrapper {
   position: relative;
+  display: inline-block;
 }
 input[type='checkbox'],
 input[type='radio'] {
@@ -212,7 +325,6 @@ input[type='radio'] {
   font-size: 14px;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 10px;
 }
 .radio-label:before,
 .radio-label:after,
@@ -290,7 +402,7 @@ input[type='radio'] {
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   border-radius: 13px;
-  background-color: #{$col-red};
+  background-color: #{$col-green};
   color: #{$col-white};
   font-weight: bold;
   cursor: pointer;
@@ -417,9 +529,21 @@ hr.line {
   width: 100%;
 }
 
-.btn_search {
+.btn_text {
   height: 38px;
   padding: 0 20px;
+  border: none;
+  border-radius: 5px;
+  opacity: 1;
+  transition: opacity 0.1s ease;
+  &:hover {
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+  }
+}
+.btn_icon {
+  height: 38px;
+  padding: 0 15px;
   border: none;
   border-radius: 5px;
   opacity: 1;
@@ -474,13 +598,18 @@ hr.line {
 
 .tabs_wrap {
   text-align: center;
-  overflow: hidden;
+  margin-bottom: 10px;
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
   li {
     display: block;
     border-left: none;
     float: left;
     padding: 10px 30px;
-    width: 50%;
+    width: 200px;
     box-sizing: border-box;
     border-bottom: 1px solid #{$col-default-text};
     cursor: pointer;
@@ -497,7 +626,7 @@ hr.line {
   }
 }
 
-@include mobile {
+@include tablet {
   .form_table {
     display: block;
     .form_cell {
@@ -519,7 +648,7 @@ hr.line {
     width: 100% !important;
   }
 
-  .btn_search {
+  .btn_text {
     &.wid100 {
       width: 100%;
     }

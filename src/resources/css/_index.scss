@@ -218,7 +218,7 @@ textarea {
 
 a:link {
   text-decoration: none;
-  color: #363636;
+  color: #{$col-green};
 }
 a:visited {
   text-decoration: none;
@@ -438,6 +438,14 @@ display
 
 .c_mb20 {
   margin-bottom: 20px;
+}
+
+.c_mt15 {
+  margin-top: 15px;
+}
+
+.fix_wid100 {
+  width: 100px;
 }
 
 .btn_test {

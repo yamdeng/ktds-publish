@@ -37,11 +37,11 @@ class PTabTable1 extends Component {
             */}
             <div className="form_cell f_wid100">
               <span className="form_group wid30 c_mr5">
-                <input type="text" className="fome_tag " />
+                <input type="text" className="form_tag " />
                 <label className="f_label">작업 부문</label>
               </span>
               <span className="form_group wid30 c_mr5">
-                <select name="" id="b" className="fome_tag ">
+                <select name="" id="b" className="form_tag ">
                   <option value=""> </option>
                   <option value="">전체</option>
                   <option value="">전체2</option>
@@ -50,20 +50,22 @@ class PTabTable1 extends Component {
                   게시유형
                 </label>
               </span>
-              <button className="btn_search btn_blue">조회</button>
+              <button className="btn_text btn_dark_gray">조회</button>
             </div>
           </div>
         </div>
         <div className="list_form">
           <p className="relative c_mb10">
-            <span className="fs_12">점검항목그룹 총 NNN 건</span>
-            <div className="abrb">
-              <button className="btn_search btn_green c_mr5">엑셀다운</button>
-              <button className="btn_search btn_green c_mr5">그룹 추가</button>
-              <button className="btn_search btn_green c_mr5">순위 저장</button>
-              <button className="btn_search btn_blue">삭제</button>
-            </div>
+            <span className="form_group fix_wid100 c_mr5">
+              <select name="" id="b" className="form_tag ">
+                <option value="">목록 10개</option>
+                <option value="">전체1</option>
+                <option value="">전체2</option>
+              </select>
+            </span>
+            <span className="fs_12">총 nnn 건</span>
           </p>
+
           <div className="tabs_wrap_scroll">
             <div className="horizon_tb">
               <table className="tb_list" style={{ minWidth: '500px' }}>
@@ -71,7 +73,17 @@ class PTabTable1 extends Component {
                 <thead>
                   <tr>
                     <th style={{ width: '50px' }}>
-                      <input type="checkbox" />
+                      <div className="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          name="Claude Monet"
+                          id="question-1-option-1"
+                        />
+                        <label
+                          className="checkbox-label"
+                          for="question-1-option-1"
+                        ></label>
+                      </div>
                     </th>
                     <th style={{ width: '20%' }}>
                       <span className="c_mr5">분류ID</span>
@@ -88,7 +100,17 @@ class PTabTable1 extends Component {
                 <tbody>
                   <tr>
                     <td>
-                      <input type="checkbox" />
+                      <div className="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          name="Claude Monet"
+                          id="question-1-option-1"
+                        />
+                        <label
+                          className="checkbox-label"
+                          for="question-1-option-1"
+                        ></label>
+                      </div>
                     </td>
                     <td>123456789</td>
                     <td>고공작업</td>
@@ -101,16 +123,24 @@ class PTabTable1 extends Component {
               </table>
             </div>
           </div>
+          <div className="list_form_btns">
+            <button className="btn_text btn_blue c_mr5">엑셀다운</button>
+            <button className="btn_text btn_blue c_mr5">그룹 추가</button>
+            <button className="btn_text btn_blue c_mr5">순위 저장</button>
+            <button className="btn_text btn_green">삭제</button>
+          </div>
         </div>
 
         <div className="list_form">
           <p className="relative c_mb10">
-            <span className="fs_12">점검항목 총 NNN 건</span>
-            <div className="abrb">
-              <button className="btn_search btn_green c_mr5">항목 추가</button>
-              <button className="btn_search btn_green c_mr5">순위 저장</button>
-              <button className="btn_search btn_blue">삭제</button>
-            </div>
+            <span className="form_group fix_wid100 c_mr5">
+              <select name="" id="b" className="form_tag ">
+                <option value="">목록 10개</option>
+                <option value="">전체1</option>
+                <option value="">전체2</option>
+              </select>
+            </span>
+            <span className="fs_12">총 nnn 건</span>
           </p>
           <div className="tabs_wrap_scroll">
             <div className="horizon_tb">
@@ -119,7 +149,17 @@ class PTabTable1 extends Component {
                 <thead>
                   <tr>
                     <th style={{ width: '50px' }}>
-                      <input type="checkbox" />
+                      <div className="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          name="Claude Monet"
+                          id="question-1-option-1"
+                        />
+                        <label
+                          className="checkbox-label"
+                          for="question-1-option-1"
+                        ></label>
+                      </div>
                     </th>
                     <th style={{ width: '20%' }}>
                       <span className="c_mr5">항목ID</span>
@@ -135,7 +175,17 @@ class PTabTable1 extends Component {
                 <tbody>
                   <tr>
                     <td>
-                      <input type="checkbox" />
+                      <div className="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          name="Claude Monet"
+                          id="question-1-option-1"
+                        />
+                        <label
+                          className="checkbox-label"
+                          for="question-1-option-1"
+                        ></label>
+                      </div>
                     </td>
                     <td>123456789</td>
                     <td className="left">
@@ -162,6 +212,11 @@ class PTabTable1 extends Component {
                 </tbody>
               </table>
             </div>
+          </div>
+          <div className="list_form_btns">
+            <button className="btn_text btn_blue c_mr5">항목 추가</button>
+            <button className="btn_text btn_blue c_mr5">순위 저장</button>
+            <button className="btn_text btn_green">삭제</button>
           </div>
         </div>
       </div>
