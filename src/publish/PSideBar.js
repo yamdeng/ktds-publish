@@ -49,6 +49,18 @@ class PSideBar extends Component {
             <img src={logo} alt="" />
             <span>SAFETY-DOC</span>
           </h1>
+          <div className="mode_change">
+            <input
+              type="checkbox"
+              id="switch"
+              name="switch"
+              className="input_on_off"
+            />
+            <label for="switch" className="label_on_off">
+              <span className="marble"></span> <span className="on">dark</span>
+              <span class="off">light</span>
+            </label>
+          </div>
         </div>
         <div className={this.state.webToggle ? 'menu_side' : 'menu_side hide'}>
           <div className="menu_area">

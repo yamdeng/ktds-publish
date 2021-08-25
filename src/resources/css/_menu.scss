@@ -32,6 +32,12 @@ body {
       margin-top: 6px;
     }
   }
+  .mode_change {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 
 .toggle_btn {
