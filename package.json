@@ -70,6 +70,7 @@
     "react-refresh": "^0.8.3",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-signature-canvas": "^1.0.3",
     "react-tooltip": "^4.2.21",
     "recharts": "^2.1.2",
     "resolve": "1.18.1",
