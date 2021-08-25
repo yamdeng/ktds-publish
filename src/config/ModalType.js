@@ -6,40 +6,61 @@
 
 const ModalType = {};
 
-// 공통 alert 모달
+// 공통 alert 팝업
 ModalType.ALERT_MODAL = 'alert-modal';
 
-// 공통 confirm 모달
+// 공통 confirm 팝업
 ModalType.CONFRIM_MODAL = 'confirm-modal';
 
-// 관심고객 지정 모달
-ModalType.BLACK_CUSTOMER_MODAL = 'black-customer-modal';
+// 조직 선택 팝업
+ModalType.ORG_SELECT_MODAL = 'org-select-modal';
 
-// 챗봇 이력 모달
-ModalType.CHAT_BOT_HISTORY_MODAL = 'chatbot-history-modal';
+// 사원 선택 팝업
+ModalType.MEMBER_SELECT_MODAL = 'member-select-modal';
 
-// 채팅 과거이력 모달
-ModalType.JOIN_HISTORY_MODAL = 'join-history-modal';
+// 조직 폼 팝업
+ModalType.ORG_SIMPLE_FORM_MODAL = 'org-simple-form-modal';
 
-// 매뉴얼 태그 목록 모달
-ModalType.MANUAL_TAGLIST_MODAL = 'manual-taglist-modal';
+// 사원 폼 팝업
+ModalType.MEMBER_SIMPLE_FORM_MODAL = 'member-simple-form-modal';
 
-// 민원 등록 모달
-ModalType.MINWON_ADD_MODAL = 'minwon-add-modal';
+// 권한 수정 팝업
+ModalType.MEMBER_ROLE_UPDATE_MODAL = 'member-role-update-modal';
 
-// 상담 이관 모달
-ModalType.TALK_MOVE_MODAL = 'talk-move-modal';
+// 댓글 목록 팝업
+ModalType.BOARD_COMMENT_LIST_MODAL = 'board-comment-list-modal';
 
-// 템플릿 폼 모달
-ModalType.TEMPLATE_FORM_MODAL = 'template-form-modal';
+// 안전 서류 템플릿 폼 팝업
+ModalType.SAFE_DOC_TEMPLATE_FORM_MODAL = 'safe-doc-template-form-modal';
 
-// 민원 등록 이력 모달
-ModalType.MINWON_HISTORY_MODAL = 'minwon-history-modal';
+// 템플릿 적용 팝업
+ModalType.TEMPLATE_APPLY_MODAL = 'template-apply-modal';
 
-// 매뉴얼 상세 확대보기 모달
-ModalType.MANUAL_VIEWER_MODAL = 'manual-viewer-modal';
+// 공사 편성 팝업
+ModalType.CONSTRUCTION_ORGANIZE_MODAL = 'construction-organize-modal';
 
-// 고객평점 관리 과거채팅상담 모달
-ModalType.CUSTOMER_RATING_HISTORY_MODAL = 'customer-rating-history-modal';
+// 유예 사유 팝업(공통 팝업)
+ModalType.COMMON_SIMPLE_DESCRIPTION_MODAL = 'common-simple-description-modal';
+
+// 보호구 지급 대장 폼 팝업
+ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL = 'safe-cloth-supply-form-modal';
+
+// 점검 항목 폼 팝업
+ModalType.CHECK_ITEM_FORM_MODAL = 'check-item-form-modal';
+
+// 작업 지시서 목록 팝업
+ModalType.WORK_DIRECTION_LIST_MODAL = 'work-direction-list-modal';
+
+// 등록 서류 검색 팝업
+ModalType.DOC_SEARCH_MODAL = 'doc-search-modal';
+
+// 에디터 팝업
+ModalType.COMMON_EDITOR_MODAL = 'common-editor-modal';
+
+// 결재 팝업
+ModalType.COMMON_SIGN_MODAL = 'common-sign-modal';
+
+// 지도 팝업
+ModalType.COMMON_MAP_MODAL = 'common-map-modal';
 
 export default ModalType;
