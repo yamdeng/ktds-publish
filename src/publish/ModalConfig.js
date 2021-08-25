@@ -175,7 +175,7 @@ const list = [
     fileName: 'PCommonEditorModal.js',
     pageCount: '14',
     success: false,
-    modalType: ModalType.DOC_SEARCH_MODAL,
+    modalType: ModalType.COMMON_EDITOR_MODAL,
     isAlert: false,
     isMobileFull: true,
     description:
