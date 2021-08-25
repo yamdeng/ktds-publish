@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import ReactTooltip from 'react-tooltip';
 
 class PBoardForm extends Component {
   constructor(props) {
@@ -9,6 +11,15 @@ class PBoardForm extends Component {
   componentDidMount() {}
 
   render() {
+    const ExampleCustomInput = React.forwardRef(({ value, onClick }, ref) => (
+      <input
+        type="text"
+        className="fome_tag"
+        onClick={onClick}
+        ref={ref}
+        value={value}
+      />
+    ));
     return (
       <div className="content_area">
         <h3>테이블 case 1</h3>
@@ -105,6 +116,27 @@ class PBoardForm extends Component {
           <hr className="line" />
           <div className="form_table">
             <div className="form_cell f_wid100">
+              <span className="form_group wid40 c_mr5">
+                <DatePicker onChange={(date) => {}} />
+                <label className="f_label" for="b">
+                  공개시작기간2 *
+                </label>
+              </span>
+              <span className="form_group wid40">
+                <DatePicker
+                  locale="ko"
+                  onChange={(date) => {}}
+                  customInput={<ExampleCustomInput />}
+                />
+                <label className="f_label" for="b">
+                  공개종료기간2 *
+                </label>
+              </span>
+            </div>
+          </div>
+          <hr className="line" />
+          <div className="form_table">
+            <div className="form_cell f_wid100">
               <span className="form_group wid100 c_mr5">
                 <input type="text" className="fome_tag" />
                 <label className="f_label" for="b">
@@ -115,8 +147,30 @@ class PBoardForm extends Component {
           </div>
 
           <p className="c_pt15 center">
-            <button className="btn_search btn_blue f_wid10 c_mr5">등록</button>
-            <button className="btn_search btn_white f_wid10">취소</button>
+            <button
+              className="btn_search btn_blue f_wid10 c_mr5"
+              data-tip="hello world"
+            >
+              등록
+            </button>
+            <button
+              className="btn_search btn_white f_wid10"
+              data-tip
+              data-for="cancel"
+            >
+              취소2
+            </button>
+            <ReactTooltip id="cancel" type="warning" effect="solid">
+              <span>aaaaa aaaaaa a adas dad asd asd as</span>
+            </ReactTooltip>
+
+            <a data-tip data-for="happyFace">
+              {' '}
+              d(`･∀･)b{' '}
+            </a>
+            <ReactTooltip id="happyFace" type="error">
+              <span>Show happy face</span>
+            </ReactTooltip>
           </p>
         </div>
       </div>

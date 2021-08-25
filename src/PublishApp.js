@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import PMain from 'publish/PMain';
 import PModalContainer from 'publish/PModalContainer';
 import LoadingBarContainer from 'component/layout/LoadingBarContainer';
+import ReactTooltip from 'react-tooltip';
 
 @withRouter
 @observer
@@ -14,6 +15,7 @@ class PublishApp extends Component {
         <PMain />
         <PModalContainer />
         <LoadingBarContainer />
+        <ReactTooltip />
       </div>
     );
   }
