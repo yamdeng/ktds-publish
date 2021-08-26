@@ -26,12 +26,12 @@ class PBoardForm extends Component {
         <div className="write_form">
           <div className="form_table">
             {/* 
-          input,select,textarea 실패했을때 invalid
-          label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
-          f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
-          wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
-        */}
-            <div className="form_cell f_wid50">
+              input,select,textarea 실패했을때 invalid
+              label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
+              f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
+              wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
+            */}
+            <div className="form_cell f_wid70">
               {/* 
                 기본은 form_group
                 앞에 돋보기 아이콘을 추가하려면 .form_search 와 icon icon_search 추가
@@ -171,15 +171,37 @@ class PBoardForm extends Component {
                 <label className="f_label" for="b">
                   첨부
                 </label>
+                {/* input에 value 값이 있으면 style display로 제어 */}
+                <span className="icon icon_clear" style={{ display: 'block' }}>
+                  <i class="fas fa-times-circle"></i>
+                </span>
               </span>
-              <button className="btn_icon btn_dark_gray c_mr5">
-                <i class="fas fa-times"></i>
+              <button className="btn_text btn_dark_gray c_mr5">첨부하기</button>
+            </div>
+          </div>
+          <div className="form_table">
+            <div className="form_cell f_wid100">
+              <span className="form_group wid50 c_mr5">
+                <input
+                  type="text"
+                  className="form_tag center"
+                  disabled
+                  placeholder="xxxxx.pdf - 10kb"
+                />
+                <label className="f_label" for="b">
+                  첨부
+                </label>
+                {/* input에 value 값이 있으면 style display로 제어 */}
+                <span className="icon icon_clear" style={{ display: 'block' }}>
+                  <i class="fas fa-times-circle"></i>
+                </span>
+              </span>
+              <button className="btn_text btn_dark_gray c_mr5">
+                첨부하기
+                {/* <i class="fas fa-times"></i> */}
               </button>
-              <button className="btn_icon btn_dark_gray c_mr5">
-                <i class="fas fa-redo"></i>
-              </button>
-              <button className="btn_icon btn_dark_gray abrb">
-                <i class="fas fa-plus"></i>
+              <button className="btn_icon btn_gray c_mr5">
+                <i class="fas fa-times-circle"></i>
               </button>
             </div>
           </div>

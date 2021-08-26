@@ -18,21 +18,38 @@ class PCommonSimpleDescriptionModal extends React.Component {
 
   render() {
     return (
-      <div className="popup-container size-330">
-        <div className="popup-content">
-          <strong>12 : </strong> 유예 사유 팝업(공통 팝업)
-        </div>
-        <div className="popup-footer">
-          <div className="btn-group wide">
-            <button
-              type="button"
-              className="btn medium btn-primary"
-              onClick={this.close}
-            >
-              확인
-            </button>
+      <div className="popup-container">
+        <h3 className="pop_title">유예 사유</h3>
+        <div className="pop_cont_box">
+          <div className="box_form">
+            <div className="form_table">
+              <div className="form_cell f_wid100">
+                <span className="form_group wid100 c_mr5">
+                  <textarea
+                    name=""
+                    id=""
+                    className="form_tag textarea"
+                  ></textarea>
+                  <label className="f_label" for="b">
+                    내용 *
+                  </label>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div className="pop_btns">
+          <button className="btn_text btn_dark_gray" onClick={this.close}>
+            닫기
+          </button>
+          <button className="btn_text btn_green" onClick={this.close}>
+            저장
+          </button>
+        </div>
+        <span className="pop_close" onClick={this.close}>
+          <i class="fas fa-times"></i>
+        </span>
       </div>
     );
   }

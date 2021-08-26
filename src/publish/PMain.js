@@ -16,7 +16,7 @@ const fullPageMenu = ['/', '/modal', 'layout-sample'];
 class PMain extends Component {
   constructor(props) {
     super(props);
-    this.state = { side: false, top: true };
+    this.state = { side: true, top: true };
   }
 
   componentDidMount() {

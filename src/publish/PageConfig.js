@@ -71,7 +71,7 @@ const list = [
     component: PTable2,
     url: '/table2',
     pageCount: '4',
-    success: false,
+    success: true,
     useIcon: true,
     description: '1.첫번째 컬럼에 체크박스 반영(테이블 행 선택을 위한)'
   },
@@ -103,7 +103,7 @@ const list = [
     component: PBoardDetail,
     url: '/board-detail',
     pageCount: '7',
-    success: false,
+    success: true,
     useIcon: false,
     description:
       '1.첨부 파일 목록의 삭제 버튼은 불필요합니다\n2.하단 댓글의 내용은 컬럼은 한줄로 표기해주시고 벗어나면 "..."으로 표기해주시면 됩니다. 클릭하면 팝업 형태로 보여주거나 툴팁으로 보여주거 둘중 하나로 할 예정입니다(이후 액션은 고려X)'
@@ -114,7 +114,7 @@ const list = [
     component: PWorkDetail1,
     url: '/work-detail1',
     pageCount: '8',
-    success: false,
+    success: true,
     useIcon: false,
     description:
       '1.상세화면이라 input으로 하실 경우 disabled 상태입니다(input으로 해야되는건 아닙니다. 편한대로 가이드해주세요)\n2.[조회] 버튼의 위치는 [찾기] 버튼 바로 옆입니다'
@@ -125,7 +125,7 @@ const list = [
     component: PWorkDetail2,
     url: '/work-detail2',
     pageCount: '9',
-    success: false,
+    success: true,
     useIcon: false,
     description:
       '1.좌측 테이블에 선택한 행을 구분하기 위한 스타일이 필요(테이블 공통 사항이긴 합니다)\n2.좌측 테이블에 대한 비활성화 스타일도 가능하면 가이드 부탁드려요.(테마반영할때 스타일이 너무 많다 싶으면 고려않하셔도 됩니다)'

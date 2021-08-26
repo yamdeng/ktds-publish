@@ -31,7 +31,9 @@ class PTable1 extends Component {
             <div className="form_cell f_wid50">
               <span className="form_group form_search form_clear wid70 c_mr5">
                 <input type="text" className="form_tag" />
-                <label className="f_label">검색어</label>
+                <label className="f_label">
+                  검색어 <span className="required">*</span>
+                </label>
                 <span className="icon icon_search">
                   <i class="fas fa-search"></i>
                 </span>
@@ -233,7 +235,7 @@ class PTable1 extends Component {
         </div>
         <div className="list_form c_mt10">
           <p className="relative c_mb10">
-            <span className="form_group fix_wid100 c_mr5">
+            <span className="form_group c_mr5" style={{ width: '100px' }}>
               <select name="" id="b" className="form_tag ">
                 <option value="">목록 10개</option>
                 <option value="">전체1</option>

@@ -1,3 +1,175 @@
+.alert-modal-content,
+.confirm-modal-content,
+.org-simple-form-modal-content,
+.member-simple-form-modal-content,
+.construction-organize-modal-content,
+.common-simple-description-modal-content {
+  width: 500px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  @include mobile {
+    width: 90%;
+    padding: 0;
+  }
+}
+
+.member-role-update-modal-content,
+.template-apply-modal-content,
+.safe-cloth-supply-form-modal-content,
+.check-item-form-modal-content {
+  width: 600px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  @include mobile {
+    width: 90%;
+    padding: 0;
+  }
+}
+.work-direction-list-modal-content {
+  width: 900px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  @include mobile {
+    width: 90%;
+    padding: 0;
+  }
+}
+.org-select-modal-content,
+.member-select-modal-content,
+.board-comment-list-modal-content,
+.safe-doc-template-form-modal-content,
+.doc-search-modal-content {
+  width: 900px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  @include mobile {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    border-radius: 0 !important;
+    .popup-container {
+      height: 100%;
+    }
+  }
+}
+
+.pop_title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #{$col-gray300};
+  margin-bottom: 20px;
+  @include mobile {
+    padding: 20px 0;
+    margin: 0 30px;
+  }
+}
+
+.pop_cont_box {
+  position: relative;
+  max-height: 650px;
+  overflow-y: auto;
+  @include mobile {
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .box_form {
+    margin-bottom: 30px;
+  }
+}
+
+.pop_full_cont_box {
+  position: relative;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .list_form,
+  .tb_wrap_scroll {
+    margin-bottom: 30px;
+  }
+  .write_form {
+    border-bottom: none;
+    margin-bottom: 10px;
+    padding-bottom: 0 !important;
+  }
+  @include mobile {
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    .list_form,
+    .write_form {
+      margin-bottom: 30px;
+    }
+  }
+}
+.pop_full_cont_box + .pop_btns {
+  border-top: 1px solid #{$col-gray350};
+  padding-top: 10px;
+  @include mobile {
+    border-top: none;
+  }
+}
+
+.tree_wrap {
+}
+
+.pop_cont {
+  padding-bottom: 30px;
+  @include mobile {
+    padding: 20px 30px 30px;
+  }
+}
+
+.pop_btns {
+  > button {
+    margin: 0 5px;
+  }
+  text-align: center;
+  @include mobile {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    > button {
+      border-radius: 0 !important;
+      margin: 0;
+      flex-basis: auto;
+      flex-grow: 1;
+    }
+  }
+}
+
+.pop_close {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+}
+
+.pop_flex_group {
+  display: flex;
+  .tree_wrap {
+    flex-grow: 1;
+    @include mobile {
+      display: none;
+    }
+  }
+  .pop_cont_form {
+    flex-grow: 3;
+    .box_form {
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      flex-grow: 1;
+      padding: 30px;
+    }
+  }
+}
+
 .alert-modal-overlay {
   z-index: 50;
 }
@@ -34,56 +206,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.15);
-  .popup-header {
-    position: relative;
-    padding: 20px 20px 0;
-    .inner {
-      position: relative;
-    }
-    .btn-close {
-      display: block;
-      position: absolute;
-      top: 15px;
-      right: 12px;
-      width: 30px;
-      height: 30px;
-      text-indent: -9999px;
-    }
-  }
-  .popup-title {
-    display: block;
-    padding-bottom: 19px;
-    border-bottom: 1px solid #ddd;
-    font-weight: 700;
-    font-size: 16px;
-    &.center {
-      text-align: center;
-    }
-  }
-  .popup-content {
-    padding: 27px 20px 30px;
-    &.center {
-      text-align: center;
-    }
-  }
-  .popup-footer {
-    padding: 0 20px 30px;
-  }
-  .btn-group {
-    display: flex;
-    justify-content: center;
-    &.wide {
-      button {
-        width: 100%;
-      }
-    }
-    button {
-      min-width: 140px;
-      + button {
-        margin-left: 10px;
-      }
-    }
-  }
+  overflow: hidden;
 }
 
 .ReactModal__Overlay--after-open {

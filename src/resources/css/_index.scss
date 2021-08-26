@@ -87,6 +87,16 @@ menu {
   padding: 0;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent; /* 터치 하이라이트 제거*/
+  -webkit-overflow-scrolling: touch; /* ios 스크롤 스무스*/
+  -ms-overflow-style: none; /* IE에서 스크롤바 감춤*/
+}
+
+::-webkit-scrollbar {
+  display: none !important; /* 윈도우 크롬 등 */
+}
+
 body {
 }
 img,
@@ -417,35 +427,42 @@ display
 }
 
 .c_pt15 {
-  padding-top: 15px;
+  padding-top: 15px !important;
+}
+
+.c_pt30 {
+  padding-top: 30px;
+}
+
+.c_pr0 {
+  padding-right: 0px !important;
 }
 
 .c_pr5 {
-  padding-right: 5px;
+  padding-right: 5px !important;
 }
 
 .c_mr5 {
-  margin-right: 5px;
+  margin-right: 5px !important;
 }
 
 .c_mr10 {
-  margin-right: 10px;
+  margin-right: 10px !important;
+}
+.c_mr30 {
+  margin-right: 30px !important;
 }
 
 .c_mb10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .c_mb20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .c_mt15 {
-  margin-top: 15px;
-}
-
-.fix_wid100 {
-  width: 100px;
+  margin-top: 15px !important;
 }
 
 .btn_test {

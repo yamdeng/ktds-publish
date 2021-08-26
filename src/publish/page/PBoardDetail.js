@@ -56,9 +56,8 @@ class PBoardDetail extends Component {
                       placeholder="xxxxx.pdf - 10kb"
                     />
                   </span>
-                  <button className="btn_icon btn_dark_gray c_mr5">
+                  <button className="btn_icon btn_green ">
                     <i class="fas fa-download"></i>
-                    <i class="fas fa-chevron-right"></i>
                   </button>
                 </div>
               </div>

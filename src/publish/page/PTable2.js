@@ -74,7 +74,7 @@ class PTable2 extends Component {
         </div>
         <div className="list_form c_mt10">
           <p className="relative c_mb10">
-            <span className="form_group fix_wid100 c_mr5">
+            <span className="form_group c_mr5" style={{ width: '100px' }}>
               <select name="" id="b" className="form_tag ">
                 <option value="">목록 10개</option>
                 <option value="">전체1</option>

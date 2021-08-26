@@ -18,21 +18,94 @@ class PMemberRoleUpdateModal extends React.Component {
 
   render() {
     return (
-      <div className="popup-container size-330">
-        <div className="popup-content">
-          <strong>7 : </strong> 권한 수정 팝업
-        </div>
-        <div className="popup-footer">
-          <div className="btn-group wide">
-            <button
-              type="button"
-              className="btn medium btn-primary"
-              onClick={this.close}
-            >
-              확인
-            </button>
+      <div className="popup-container">
+        <h3 className="pop_title">confirm modal</h3>
+        <div className="pop_cont_box">
+          <div className="box_form">
+            <div className="form_table">
+              <div className="form_cell f_wid100">
+                {/* 
+                기본은 form_group
+                앞에 돋보기 아이콘을 추가하려면 .form_search 와 icon icon_search 추가
+                뒤에 클리어 아이콘을 추가하려면 .form_clear 와 icon icon_clear 추가
+              */}
+                <span className="form_group form_search wid20 c_mr5">
+                  <input type="text" className="form_tag" />
+                  <label className="f_label">사번</label>
+                  {/* input에 value 값이 있으면 style display로 제어 */}
+                  <span
+                    className="icon icon_clear"
+                    style={{ display: 'block' }}
+                  >
+                    <i class="fas fa-times-circle"></i>
+                  </span>
+                </span>
+                <span className="form_group form_search wid50 c_mr5">
+                  <input type="text" className="form_tag" disabled />
+                  <label className="f_label">조직풀명</label>
+                </span>
+                <button className="btn_text btn_dark_gray">조회</button>
+              </div>
+            </div>
+          </div>
+          <div className="list_form c_mt10">
+            <table className="tb_list">
+              <caption></caption>
+              <thead>
+                <tr>
+                  <th>권한</th>
+                  <th>부여</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>한성유통</td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      id="switch"
+                      name="switch"
+                      className="switch_on_off"
+                    />
+                    <label for="switch" className="switch_label_on_off">
+                      <span className="marble"></span>{' '}
+                      <span className="on">NO</span>
+                      <span class="off">YES</span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>한성유통</td>
+                  <td>
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        name="Claude Monet"
+                        id="question-1-option-1"
+                      />
+                      <label
+                        className="checkbox-label"
+                        for="question-1-option-1"
+                      ></label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+
+        <div className="pop_btns">
+          <button className="btn_text btn_dark_gray" onClick={this.close}>
+            닫기
+          </button>
+          <button className="btn_text btn_green" onClick={this.close}>
+            저장
+          </button>
+        </div>
+        <span className="pop_close" onClick={this.close}>
+          <i class="fas fa-times"></i>
+        </span>
       </div>
     );
   }
