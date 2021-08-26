@@ -147,7 +147,13 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-
+  .invalid_txt {
+    position: absolute;
+    left: 11px;
+    top: 37px;
+    font-size: 11px;
+    color: #{$col-red};
+  }
   .icon {
     &.icon_search {
       position: absolute;
@@ -155,9 +161,6 @@
       top: 50%;
       transform: translate(0, -50%);
       color: #{$col-gray350};
-      &.isValue {
-        color: #{$col-green};
-      }
     }
     &.icon_clear {
       display: none;
@@ -199,6 +202,7 @@
     background: #{$col-white};
     outline: none !important;
     position: relative;
+
     .option_item {
       display: none;
       z-index: 3;
@@ -261,18 +265,18 @@
     &:not([value='']) {
       border: 1px solid #{$col-gray300};
     }
-    &.isFail {
+    &.invalid {
       color: #{$col-red};
       border: 1px solid #{$col-red};
     }
-    &.isFail::selection {
+    &.invalid::selection {
       color: #{$col-red};
     }
     &:disabled + .f_label,
     &:focus + .f_label,
     &.active + .f_label,
     &:not([value='']) + .f_label,
-    &.isFail + .f_label {
+    &.invalid + .f_label {
       left: 10px;
       top: -8px;
       font-size: 12px;
@@ -289,7 +293,7 @@
     &:not([value='']) + .f_label {
       color: #{$col-default-text};
     }
-    &.isFail + .f_label {
+    &.invalid + .f_label {
       color: #{$col-red};
     }
 

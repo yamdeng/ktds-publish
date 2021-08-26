@@ -23,7 +23,7 @@ class PTable1 extends Component {
         <div className="box_form">
           <div className="form_table">
             {/* 
-              input,select,textarea 실패했을때 isFail, 값이 있을때 isValue
+              input,select,textarea 실패했을때 invalid
               label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
               f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
               wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
@@ -91,7 +91,7 @@ class PTable1 extends Component {
               </span>
               {/*  
               custom select
-              .form_tag에 .active 추가, 실패했을때 active + isFail, 값이 있을때 active + isValue
+              .form_tag에 .active 추가, 실패했을때 active + invalid, 값이 있을때 active + isValue
               label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
               f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
               wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.

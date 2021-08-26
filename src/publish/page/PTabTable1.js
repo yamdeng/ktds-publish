@@ -30,7 +30,7 @@ class PTabTable1 extends Component {
         <div className="box_form tabs_cont">
           <div className="form_table">
             {/* 
-              input,select,textarea 실패했을때 isFail, 값이 있을때 isValue
+              input,select,textarea 실패했을때 invalid
               label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
               f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
               wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
@@ -39,12 +39,13 @@ class PTabTable1 extends Component {
               <span className="form_group wid30 c_mr5">
                 <input
                   type="text"
-                  className="form_tag "
+                  className="form_tag invalid"
                   value={this.state.inputValue}
                   onChange={this.onChangeInput}
                   onBlur={this.onChangeInput}
                 />
                 <label className="f_label">작업 부문</label>
+                <span className="invalid_txt">유효하지 않습니다.</span>
               </span>
               <span className="form_group wid30 c_mr5">
                 <select name="" id="b" className="form_tag ">
