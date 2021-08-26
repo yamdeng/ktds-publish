@@ -251,6 +251,7 @@
     &:focus,
     &.active {
       border: 1px solid #{$col-green} !important;
+      color: #{$col-green} !important;
       &::placeholder {
         color: #{$col-gray300} !important;
       }
