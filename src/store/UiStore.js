@@ -12,14 +12,6 @@ class UiStore {
   @observable
   displayLoadingBar = false;
 
-  // toast display 여부(우측 하단)
-  @observable
-  displayToast = false;
-
-  // toast message
-  @observable
-  toastMessage = '';
-
   // top 헤더, 왼쪽 메뉴 display 여부
   @observable
   displaySideMenu = true;
@@ -49,19 +41,6 @@ class UiStore {
   @action
   hideLoadingBar() {
     this.displayLoadingBar = false;
-  }
-
-  // toast show
-  @action
-  showToast(message) {
-    this.toastMessage = message;
-    this.displayToast = true;
-  }
-
-  // toast hide
-  @action
-  hideToast() {
-    this.displayToast = false;
   }
 
   // top 헤더, 왼쪽 메뉴 show
@@ -128,12 +107,6 @@ class UiStore {
       }
     }
     this.currentSideMenuName = activeMenuName;
-  }
-
-  // 관리설정 사이드메뉴 활성화 변경
-  @action
-  changeManagerSideMenuType(type) {
-    this.managerSideMenuType = type;
   }
 
   // 모달 전체 close

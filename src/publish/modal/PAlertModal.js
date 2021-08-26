@@ -10,15 +10,20 @@ class PAlertModal extends React.Component {
     super(props);
     this.state = {};
     this.close = this.close.bind(this);
+    this.test = this.test.bind(this);
   }
 
   close() {
     this.props.modalStore.hideModal();
   }
 
+  test() {
+    this.props.modalStore.hideModal();
+  }
+
   render() {
     return (
-      <div className="popup-container size-330">
+      <div className="popup-container" style={{ width: 500 }}>
         <div className="popup-content">
           <strong>1 : </strong> alert 팝업
         </div>
@@ -30,6 +35,13 @@ class PAlertModal extends React.Component {
               onClick={this.close}
             >
               확인
+            </button>
+            <button
+              type="button"
+              className="btn medium btn-primary"
+              onClick={this.test}
+            >
+              이중 팝업
             </button>
           </div>
         </div>

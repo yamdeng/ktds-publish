@@ -3,6 +3,7 @@ import Constant from 'config/Constant';
 import Config from 'config/Config';
 import moment from 'moment';
 import queryString from 'query-string';
+import Logger from 'util/Logger';
 
 /*
 
@@ -30,14 +31,6 @@ const getByLocalStorage = (key) => {
 // 로컬 스토리지에 정보 삭제하기
 const removeInfoToLocalStorage = (key) => {
   localStorage.removeItem(key);
-};
-
-// react-select value 가져오기
-const getReactSelectValue = function (selectList, value, valueColumn) {
-  let searchIndex = _.findIndex(selectList, (info) => {
-    return info[valueColumn ? valueColumn : 'id'] === value;
-  });
-  return selectList[searchIndex] || null;
 };
 
 // 전역 오류 에러 handle
@@ -75,7 +68,7 @@ const handleGlobalError = function (
     appErrorObject.statck = errorObject.stack;
   }
   appErrorObject.errorType = errorObject.errorType || Constant.ERROR_TYPE_CORE;
-  // Logger.error('appErrorObject : ' + JSON.stringify(appErrorObject));
+  Logger.error('appErrorObject : ' + JSON.stringify(appErrorObject));
   return false;
 };
 
@@ -90,6 +83,15 @@ const get1DepthRouteName = function (routeUrl) {
     result = sliceFirstSlashString.substr(0, secondSlashIndex);
   }
   return result;
+};
+
+// 값이 없을 경우
+const convertEmptyValue = function (value) {
+  let valueString = value;
+  if (!value) {
+    valueString = '-';
+  }
+  return valueString;
 };
 
 // 숫자 변환 : null / undefined 값 처리, (콤마) 반영
@@ -126,104 +128,7 @@ const convertDate = function (value, valueFormat, displayFormat) {
   return displayDate;
 };
 
-// 초를 00:00, 00:00:00 문자열로 변환
-// 00:59, 01:01, 01:00:01
-const convertSecondToString = function (value) {
-  let result = '00:00';
-  if (value && value > 0) {
-    if (value < 60) {
-      result = '00:' + (value < 10 ? '0' + value : value);
-    } else if (value < 3600) {
-      let minute = Math.floor(value / 60);
-      let second = value % 60;
-      let minuteString = minute < 10 ? '0' + minute : minute;
-      let secondString = second < 10 ? '0' + second : second;
-      result = minuteString + ':' + secondString;
-    } else {
-      let hour = Math.floor(value / 3600);
-      let hourString = hour < 10 ? '0' + hour : hour;
-      let hourRemainSecond = value % 3600;
-      let minute = Math.floor(hourRemainSecond / 60);
-      let minuteString = minute < 10 ? '0' + minute : minute;
-      let second = hourRemainSecond % 60;
-      let secondString = second < 10 ? '0' + second : second;
-      result = hourString + ':' + minuteString + ':' + secondString;
-    }
-  }
-  return result;
-};
-
-// 00분 10초, 01분 01초, 01시간 00분 01초
-const convertSecondToString2 = function (value) {
-  let result = '00분 00초';
-  if (value && value > 0) {
-    if (value < 60) {
-      result = '00분 ' + (value < 10 ? '0' + value : value) + '초';
-    } else if (value < 3600) {
-      let minute = Math.floor(value / 60);
-      let second = value % 60;
-      let minuteString = minute < 10 ? '0' + minute : minute;
-      let secondString = second < 10 ? '0' + second : second;
-      result = minuteString + '분 ' + secondString + '초';
-    } else {
-      let hour = Math.floor(value / 3600);
-      let hourString = hour < 10 ? '0' + hour : hour;
-      let hourRemainSecond = value % 3600;
-      let minute = Math.floor(hourRemainSecond / 60);
-      let minuteString = minute < 10 ? '0' + minute : minute;
-      let second = hourRemainSecond % 60;
-      let secondString = second < 10 ? '0' + second : second;
-      result =
-        hourString + '시간 ' + minuteString + '분 ' + secondString + '초';
-    }
-  }
-  return result;
-};
-
-// 트리의 children 속성(하위 목록)을 추출하여 하나의 list에 모두 넣기 : addCategoryListArray
-const addCategoryList = function (list, info, parent) {
-  if (info.children) {
-    list.push({
-      id: info.id,
-      name: parent ? parent.title + ' > ' + info.title : info.title,
-      key: info.key,
-      title: info.title,
-      level: info.level,
-      sortIndex: info.sortIndex,
-      parentKey: parent ? parent.key : null
-    });
-    addCategoryListArray(list, info.children, info);
-  } else {
-    list.push({
-      id: info.id,
-      name: parent ? parent.title + ' > ' + info.title : info.title,
-      key: info.key,
-      title: info.title,
-      level: info.level,
-      sortIndex: info.sortIndex,
-      parentKey: parent ? parent.key : null
-    });
-  }
-};
-
-const addCategoryListArray = function (list, children, parent) {
-  children.forEach((treeInfo) => {
-    addCategoryList(list, treeInfo, parent);
-  });
-};
-
-// 검색된 키 목록을 기준으로 전체 트리 목록에서 펼쳐져야하는 key 목록을 셋탱해줌 : 검색된 정보의 상위 트리를 열어줘야 함
-const addExpandedKeys = function (allList, resultKeys, info) {
-  resultKeys.push(info.key);
-  if (info.level !== 1) {
-    let searchIndex = _.findIndex(allList, (tree) => {
-      return tree.key === info.parentKey;
-    });
-    addExpandedKeys(allList, resultKeys, allList[searchIndex]);
-  }
-};
-
-// 메시지 목록에 생성일자를 문자열로 변환 : 오늘인 경우와 아닌 경우로 분류
+// 오늘인 경우와 아닌 경우로 분류해서 변환
 const convertMessageDate = function (messageDate) {
   let dateString = '';
   if (isToday(messageDate)) {
@@ -273,18 +178,6 @@ function scrollLeftByDivId(divId, scrollLeftPosition, timeout) {
   }, timeout || Config.scrollAnimationTimeout);
 }
 
-// 회사코드 -> 회사이름 변환
-function convertCompanyCode(companyId) {
-  let companyName = '';
-
-  if (companyId === Constant.COMPANY_ID_SEOUL) {
-    companyName = '서울';
-  } else if (companyId === Constant.COMPANY_ID_INCHEON) {
-    companyName = '인천';
-  }
-  return companyName;
-}
-
 // 문자열을 콤마기준으로 나누기
 function stringFromToArray(string) {
   let lists = string ? string.split(',') : [];
@@ -314,44 +207,13 @@ const checkImageFileUploadExtension = function (fileObject) {
 // 이미지 파일 업로드 max 용량 체크
 const checkFileUploadMaxSize = function (fileObject, maxSize) {
   let fileSize = fileObject.size;
+  maxSize = maxSize ? maxSize : Config.maxImageUploadSize;
   if (fileSize <= maxSize) {
     return true;
   } else {
     return false;
   }
 };
-
-// 회사별 사용계약번호 패턴 기준으로 각 자릿수 정보 가져오기
-function getLengthInfoByContractPattern(contractPattern) {
-  let contractLengthArray = contractPattern.split('-');
-  let firstContrcatLength = 0;
-  let secondContrcatLength = 0;
-  let thirdContrcatLength = 0;
-  let maxLength = 0;
-  if (contractLengthArray.length === 1) {
-    firstContrcatLength = Number(contractLengthArray[0]);
-    secondContrcatLength = 0;
-    thirdContrcatLength = 0;
-    maxLength = firstContrcatLength;
-  } else if (contractLengthArray.length === 2) {
-    firstContrcatLength = Number(contractLengthArray[0]);
-    secondContrcatLength = Number(contractLengthArray[1]);
-    thirdContrcatLength = 0;
-    maxLength = firstContrcatLength + secondContrcatLength + 1;
-  } else if (contractLengthArray.length === 3) {
-    firstContrcatLength = Number(contractLengthArray[0]);
-    secondContrcatLength = Number(contractLengthArray[1]);
-    thirdContrcatLength = Number(contractLengthArray[2]);
-    maxLength =
-      firstContrcatLength + secondContrcatLength + thirdContrcatLength + 2;
-  }
-  return {
-    firstContrcatLength: firstContrcatLength,
-    secondContrcatLength: secondContrcatLength,
-    thirdContrcatLength: thirdContrcatLength,
-    maxLength: maxLength
-  };
-}
 
 // 변수가 숫자인지 체크
 function isNumber(value) {
@@ -367,17 +229,6 @@ function phoneNumberAddHypen(number) {
   let resultNumber = '';
   resultNumber = number.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
   return resultNumber;
-}
-
-// 증감 건 0을 기준으로 up/down 출력
-function displayNumberContrast(number) {
-  let displayValueType = '';
-  if (number > 0) {
-    displayValueType = 'up';
-  } else if (number < 0) {
-    displayValueType = 'down';
-  }
-  return displayValueType;
 }
 
 // empty function
@@ -400,31 +251,23 @@ function downloadFile(apiUrl, queryStringObject) {
 export default {
   saveInfoToLocalStorage,
   getByLocalStorage,
-  getReactSelectValue,
   removeInfoToLocalStorage,
   handleGlobalError,
   get1DepthRouteName,
+  convertEmptyValue,
   convertNumberValue,
   getTodayString,
   isToday,
   convertDate,
-  convertSecondToString,
-  convertSecondToString2,
-  addCategoryList,
-  addCategoryListArray,
-  addExpandedKeys,
   convertMessageDate,
   scrollBottomByDivId,
   scrollTopByDivId,
   scrollLeftByDivId,
-  convertCompanyCode,
   stringFromToArray,
   checkImageFileUploadExtension,
   checkFileUploadMaxSize,
-  getLengthInfoByContractPattern,
   isNumber,
   phoneNumberAddHypen,
-  displayNumberContrast,
   emptyHandle,
   focusById,
   downloadFile
