@@ -167,7 +167,8 @@ class PTable1 extends Component {
                 </label>
               </span>
               <button className="btn_icon btn_dark_gray">
-                <FontAwesomeIcon icon={faSearch} />
+                {/* <FontAwesomeIcon icon={faSearch} /> */}
+                <i class="fas fa-search"></i>
               </button>
             </div>
           </div>
