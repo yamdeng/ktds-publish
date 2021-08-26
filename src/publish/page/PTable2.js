@@ -91,7 +91,7 @@ class PTable2 extends Component {
             </span>
             <span className="fs_12">총 nnn 건</span>
           </p>
-          <div className="tabs_wrap_scroll">
+          <div className="tb_wrap_scroll">
             <div className="horizon_tb">
               <table className="tb_list" style={{ minWidth: '1000px' }}>
                 <caption></caption>

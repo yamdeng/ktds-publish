@@ -75,32 +75,38 @@ class PWorkDetail1 extends Component {
           </ul>
         </div>
         <ul className="tabs_wrap">
-          <li className="active">안전 선임자</li>
-          <li>안전 위원회</li>
-          <li>협의체</li>
+          <li className="three active">안전 선임자</li>
+          <li className="three ">안전 위원회</li>
+          <li className="three ">협의체</li>
         </ul>
-        <div className="list_form c_mt10">
-          <table className="tb_list">
-            <caption></caption>
-            <thead>
-              <tr>
-                <th>역할</th>
-                <th>사번</th>
-                <th>이름</th>
-                <th>소속</th>
-                <th>선임일</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>관리책임자</td>
-                <td>11111111</td>
-                <td>홍길동</td>
-                <td>전남광역본부>순천지사/ㅇㅇ지점</td>
-                <td>YYYY-MM-DD</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="tabs_cont">
+          <div className="list_form c_mt10">
+            <div className="tb_wrap_scroll">
+              <div className="horizon_tb">
+                <table className="tb_list" style={{ minWidth: '500px' }}>
+                  <caption></caption>
+                  <thead>
+                    <tr>
+                      <th>역할</th>
+                      <th>사번</th>
+                      <th>이름</th>
+                      <th>소속</th>
+                      <th>선임일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>관리책임자</td>
+                      <td>11111111</td>
+                      <td>홍길동</td>
+                      <td>전남광역본부>순천지사/ㅇㅇ지점</td>
+                      <td>YYYY-MM-DD</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -75,14 +75,14 @@ class PWorkDetail2 extends Component {
           </ul>
         </div>
         <ul className="tabs_wrap">
-          <li className="active">안전 선임자</li>
-          <li>안전 위원회</li>
-          <li>협의체</li>
+          <li className="three active">안전 선임자</li>
+          <li className="three ">안전 위원회</li>
+          <li className="three ">협의체</li>
         </ul>
-        <div>
+        <div className="tabs_cont">
           <div className="flex_grow_two">
             <div className="f_wid50">
-              <div className="list_form c_mt10">
+              <div className="list_form mmb c_mt10">
                 <table className="tb_list">
                   <caption></caption>
                   <thead>

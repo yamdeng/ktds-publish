@@ -76,23 +76,28 @@ class PBoardDetail extends Component {
           </ul>
         </div>
         <h4 className="">댓글/답글 </h4>
-        <div className="tabs_wrap_scroll">
+        <div className="tb_wrap_scroll">
           <div className="horizon_tb">
-            <table className="tb_list" style={{ minWidth: '500px' }}>
+            {/* 말줄임이 들어가는 테이블은 tb_fix가 추가되야함. */}
+            <table className="tb_list tb_fix" style={{ minWidth: '500px' }}>
               <caption></caption>
               <thead>
                 <tr>
-                  <th>등록일시</th>
-                  <th>등록자</th>
-                  <th>내용</th>
+                  <th style={{ width: '15%' }}>등록일시</th>
+                  <th style={{ width: '25%' }}>등록자</th>
+                  <th style={{ width: '60%' }}>내용</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Yyyy-MM-DD HH:MI</td>
                   <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
-                  <td>
-                    <Link> ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</Link>
+                  <td className="left">
+                    <div className="ellipsis">
+                      <Link>
+                        ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ
+                      </Link>
+                    </div>
                   </td>
                 </tr>
               </tbody>

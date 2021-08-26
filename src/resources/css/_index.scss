@@ -222,15 +222,15 @@ a:link {
 }
 a:visited {
   text-decoration: none;
-  color: #363636;
+  color: #{$col-dark-green};
 }
 a:hover {
   text-decoration: none;
-  color: #008fd5;
+  color: #{$col-dark-green};
 }
 a:active {
   text-decoration: none;
-  color: #008fd5;
+  color: #{$col-dark-green};
 }
 
 /* ------------------------------

@@ -27,7 +27,7 @@ class PTabTable1 extends Component {
           <li className="active">공통</li>
           <li>공사유형별</li>
         </ul>
-        <div className="box_form">
+        <div className="box_form tabs_cont">
           <div className="form_table">
             {/* 
               input,select,textarea 실패했을때 isFail, 값이 있을때 isValue
@@ -66,7 +66,7 @@ class PTabTable1 extends Component {
             <span className="fs_12">총 nnn 건</span>
           </p>
 
-          <div className="tabs_wrap_scroll">
+          <div className="tb_wrap_scroll">
             <div className="horizon_tb">
               <table className="tb_list" style={{ minWidth: '500px' }}>
                 <caption></caption>
@@ -142,7 +142,7 @@ class PTabTable1 extends Component {
             </span>
             <span className="fs_12">총 nnn 건</span>
           </p>
-          <div className="tabs_wrap_scroll">
+          <div className="tb_wrap_scroll">
             <div className="horizon_tb">
               <table className="tb_list" style={{ minWidth: '500px' }}>
                 <caption></caption>

@@ -49,6 +49,9 @@
   tr:hover {
     background: #{$col-gray100};
   }
+  &.tb_fix {
+    table-layout: fixed;
+  }
 }
 
 .detail_form {
@@ -144,6 +147,7 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+
   .icon {
     &.icon_search {
       position: absolute;
@@ -234,9 +238,10 @@
       color: #{$col-white};
     }
     &:disabled {
-      background: #{$col-gray300};
+      border: 1px solid #{$col-gray};
+      background: #{$col-gray};
       &::placeholder {
-        //color: #{$col-disabled};
+        color: #{$col-gray300};
       }
     }
     &:focus,
@@ -275,7 +280,7 @@
     }
     &:disabled + .f_label {
       background: none;
-      color: #{$col-default-text};
+      color: #{$col-gray350};
     }
     &:focus + .f_label,
     &.active + .f_label {
@@ -599,6 +604,9 @@ hr.line {
 .tabs_wrap {
   text-align: center;
   margin-bottom: 10px;
+  border-bottom: 1px solid #{$col-green};
+  position: relative;
+  margin-bottom: -1px;
   &::after {
     content: '';
     clear: both;
@@ -608,22 +616,82 @@ hr.line {
     display: block;
     border-left: none;
     float: left;
-    padding: 10px 30px;
+    padding: 10px 0;
     width: 200px;
     box-sizing: border-box;
-    border-bottom: 1px solid #{$col-default-text};
+    border-bottom: 1px solid #{$col-green};
     cursor: pointer;
+    position: relative;
+    bottom: -1px;
     &:hover {
       background: rgba($col-default-text, 0.1);
     }
     &.active {
-      color: #{$col-default-bg};
-      background: #{$col-default-text};
+      color: #{$col-white};
+      background: #{$col-green};
+    }
+    @include mobile {
+      width: 50%;
+      &.three {
+        width: 33.33333%;
+      }
     }
 
     &:first-child {
     }
   }
+}
+.tabs_cont {
+  padding: 15px;
+  border: 1px solid #{$col-green};
+  margin-bottom: 50px;
+  @include mobile {
+    margin-bottom: 30px;
+  }
+  &.box_form {
+    padding-top: 0;
+  }
+  .list_form {
+    margin-bottom: 0;
+    &.mmb {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.paging_wrap {
+  margin-top: -30px;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+
+  > * {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .p_web {
+    display: inline-block;
+  }
+  .p_mobile {
+    display: none;
+  }
+  @include mobile {
+    text-align: left;
+    > * {
+      display: inline-block;
+      padding: 0 5px;
+    }
+    .p_web {
+      display: none;
+    }
+    .p_mobile {
+      display: inline-block;
+    }
+  }
+}
+
+.ellipsis {
+  @include ellipsis;
 }
 
 @include tablet {
@@ -651,13 +719,6 @@ hr.line {
   .btn_text {
     &.wid100 {
       width: 100%;
-    }
-  }
-
-  .tabs_wrap {
-    li {
-      width: 50%;
-      padding: 15px 0;
     }
   }
 }

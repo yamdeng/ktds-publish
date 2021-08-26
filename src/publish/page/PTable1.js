@@ -5,7 +5,11 @@ import {
   faTrashAlt,
   faCaretUp,
   faSearch,
-  faTimesCircle
+  faTimesCircle,
+  faAngleDoubleRight,
+  faAngleDoubleLeft,
+  faAngleLeft,
+  faAngleRight
 } from '@fortawesome/free-solid-svg-icons';
 
 class PTable1 extends Component {
@@ -250,7 +254,7 @@ class PTable1 extends Component {
             </span>
             <span className="fs_12">총 nnn 건</span>
           </p>
-          <div className="tabs_wrap_scroll">
+          <div className="tb_wrap_scroll">
             <div className="horizon_tb">
               <table className="tb_list" style={{ minWidth: '1000px' }}>
                 <caption></caption>
@@ -331,11 +335,35 @@ class PTable1 extends Component {
               </table>
             </div>
           </div>
+
           <div className="list_form_btns">
             <button className="btn_text btn_blue c_mr5">미사용 처리</button>
             <button className="btn_text btn_blue c_mr5">사용 처리</button>
             <button className="btn_text btn_green">등록</button>
           </div>
+        </div>
+        <div className="paging_wrap">
+          <span className="p_web">
+            <FontAwesomeIcon icon={faAngleDoubleLeft} />
+          </span>
+          <span className="p_arr_l">
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </span>
+          {/* web paging */}
+          <span className="p_web">1</span>
+          <span className="p_web">2</span>
+          <span className="p_web">3</span>
+          <span className="p_web">4</span>
+          {/* mobile pagind */}
+          <span className="p_mobile">1</span>
+          <span className="p_mobile">/</span>
+          <span className="p_mobile">10</span>
+          <span className="p_arr_r">
+            <FontAwesomeIcon icon={faAngleRight} />
+          </span>
+          <span className="p_web">
+            <FontAwesomeIcon icon={faAngleDoubleRight} />
+          </span>
         </div>
       </div>
     );
