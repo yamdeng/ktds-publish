@@ -53,10 +53,10 @@ class PTable1 extends Component {
             </div>
             <div className="form_cell f_wid30">
               <span className="form_group wid100">
-                <select name="" id="b" className="form_tag ">
-                  <option value=""> </option>
-                  <option value="">전체1</option>
-                  <option value="">전체2</option>
+                <select name="" id="b" className="form_tag_select">
+                  <option value="0">00</option>
+                  <option value="1">전체1</option>
+                  <option value="2">전체2</option>
                 </select>
                 <label className="f_label" for="b">
                   게시유형
