@@ -1,11 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBars,
-  faChevronRight,
-  faEdit,
-  faTrashAlt
-} from '@fortawesome/free-solid-svg-icons';
 
 import logo from 'resources/images/ktLogo.png';
 
@@ -43,7 +36,7 @@ class PSideBar extends Component {
       <React.Fragment>
         <div className="top_menu_toggle">
           <button className="toggle_btn" onClick={this.webMenuToggle}>
-            <FontAwesomeIcon icon={faBars} />
+            <i class="fas fa-bars"></i>
           </button>
           <h1 className="">
             <img src={logo} alt="" />
@@ -70,7 +63,7 @@ class PSideBar extends Component {
                   <p>
                     <span className="icon ablc">대</span>대시보드
                     <span className="abrc">
-                      <FontAwesomeIcon icon={faChevronRight} />
+                      <i class="fas fa-chevron-right"></i>
                     </span>
                   </p>
                   <ul class="dep_2">
@@ -78,7 +71,7 @@ class PSideBar extends Component {
                       <p>
                         서브 대시보드
                         <span className="abrc">
-                          <FontAwesomeIcon icon={faChevronRight} />
+                          <i class="fas fa-chevron-right"></i>
                         </span>
                       </p>
                       <ul className="dep_3">
@@ -100,7 +93,7 @@ class PSideBar extends Component {
                       <p>
                         서브 대시보드
                         <span className="abrc">
-                          <FontAwesomeIcon icon={faChevronRight} />
+                          <i class="fas fa-chevron-right"></i>
                         </span>
                       </p>
                       <ul class="dep_3">
@@ -121,7 +114,7 @@ class PSideBar extends Component {
                   <p>
                     <span className="icon ablc">대</span>대시보드
                     <span className="abrc">
-                      <FontAwesomeIcon icon={faChevronRight} />
+                      <i class="fas fa-chevron-right"></i>
                     </span>
                   </p>
                   <ul class="dep_2">
@@ -129,7 +122,7 @@ class PSideBar extends Component {
                       <p>
                         서브 대시보드
                         <span className="abrc">
-                          <FontAwesomeIcon icon={faChevronRight} />
+                          <i class="fas fa-chevron-right"></i>
                         </span>
                       </p>
                       <ul class="dep_3">
@@ -144,7 +137,7 @@ class PSideBar extends Component {
                   <p>
                     <span className="icon ablc">대</span>대시보드
                     <span className="abrc">
-                      <FontAwesomeIcon icon={faChevronRight} />
+                      <i class="fas fa-chevron-right"></i>
                     </span>
                   </p>
                   <ul class="dep_2">
@@ -152,7 +145,7 @@ class PSideBar extends Component {
                       <p>
                         서브 대시보드
                         <span className="abrc">
-                          <FontAwesomeIcon icon={faChevronRight} />
+                          <i class="fas fa-chevron-right"></i>
                         </span>
                       </p>
                     </li>

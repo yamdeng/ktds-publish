@@ -1,16 +1,5 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faEdit,
-  faTrashAlt,
-  faSearch,
-  faTimesCircle,
-  faCalendarAlt,
-  faTimes,
-  faRedo,
-  faPlus,
-  faDownload
-} from '@fortawesome/free-solid-svg-icons';
+
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class PBoardDetail extends Component {
@@ -68,7 +57,8 @@ class PBoardDetail extends Component {
                     />
                   </span>
                   <button className="btn_icon btn_dark_gray c_mr5">
-                    <FontAwesomeIcon icon={faDownload} />
+                    <i class="fas fa-download"></i>
+                    <i class="fas fa-chevron-right"></i>
                   </button>
                 </div>
               </div>

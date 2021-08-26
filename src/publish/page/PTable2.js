@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faEdit,
-  faTrashAlt,
-  faCaretUp,
-  faSearch,
-  faTimesCircle,
-  faEye
-} from '@fortawesome/free-solid-svg-icons';
+
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class PTable2 extends Component {
@@ -40,7 +32,7 @@ class PTable2 extends Component {
               </span>
               <span className="form_group ">
                 <button className="btn_icon btn_dark_gray ">
-                  <FontAwesomeIcon icon={faSearch} />
+                  <i class="fas fa-search"></i>
                 </button>
               </span>
             </div>
@@ -141,12 +133,12 @@ class PTable2 extends Component {
                     <td>전남광역본부>순천지점 홍길동 차장</td>
                     <td>
                       <Link>
-                        <FontAwesomeIcon icon={faEye} />
+                        <i class="fas fa-eye"></i>
                       </Link>
                     </td>
                     <td>
                       <Link>
-                        <FontAwesomeIcon icon={faEdit} />
+                        <i class="fas fa-edit"></i>
                       </Link>
                     </td>
                   </tr>

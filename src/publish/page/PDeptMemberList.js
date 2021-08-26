@@ -1,11 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faEdit,
-  faTrashAlt,
-  faSearch,
-  faTimesCircle
-} from '@fortawesome/free-solid-svg-icons';
 
 class PDeptMemberList extends Component {
   constructor(props) {
@@ -38,11 +31,11 @@ class PDeptMemberList extends Component {
                 <input type="text" className="form_tag" />
                 <label className="f_label">조직 명</label>
                 <span className="icon icon_search">
-                  <FontAwesomeIcon icon={faSearch} />
+                  <i class="fas fa-search"></i>
                 </span>
                 {/* input에 value 값이 있으면 style display로 제어 */}
                 <span className="icon icon_clear" style={{ display: 'block' }}>
-                  <FontAwesomeIcon icon={faTimesCircle} />
+                  <i class="fas fa-times-circle"></i>
                 </span>
               </span>
               <button className="btn_text btn_dark_gray">조회</button>
@@ -76,10 +69,10 @@ class PDeptMemberList extends Component {
                     <td>한성유통</td>
                     <td>한성유통㈜</td>
                     <td>
-                      <FontAwesomeIcon icon={faEdit} />
+                      <i class="fas fa-edit"></i>
                     </td>
                     <td>
-                      <FontAwesomeIcon icon={faTrashAlt} />
+                      <i class="fas fa-trash-alt"></i>
                     </td>
                   </tr>
                 </tbody>
@@ -118,10 +111,10 @@ class PDeptMemberList extends Component {
                     <td>한성유통㈜</td>
                     <td>부장</td>
                     <td>
-                      <FontAwesomeIcon icon={faEdit} />
+                      <i class="fas fa-edit"></i>
                     </td>
                     <td>
-                      <FontAwesomeIcon icon={faTrashAlt} />
+                      <i class="fas fa-trash-alt"></i>
                     </td>
                   </tr>
                 </tbody>

@@ -1,16 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faEdit,
-  faTrashAlt,
-  faCaretUp,
-  faSearch,
-  faTimesCircle,
-  faAngleDoubleRight,
-  faAngleDoubleLeft,
-  faAngleLeft,
-  faAngleRight
-} from '@fortawesome/free-solid-svg-icons';
 
 class PTable1 extends Component {
   constructor(props) {
@@ -45,11 +33,11 @@ class PTable1 extends Component {
                 <input type="text" className="form_tag" />
                 <label className="f_label">검색어</label>
                 <span className="icon icon_search">
-                  <FontAwesomeIcon icon={faSearch} />
+                  <i class="fas fa-search"></i>
                 </span>
                 {/* input에 value 값이 있으면 style display로 제어 */}
                 <span className="icon icon_clear" style={{ display: 'block' }}>
-                  <FontAwesomeIcon icon={faTimesCircle} />
+                  <i class="fas fa-times-circle"></i>
                 </span>
               </span>
               <div className="checkbox-wrapper">
@@ -117,7 +105,7 @@ class PTable1 extends Component {
                 >
                   전체
                   <span className="arr">
-                    <FontAwesomeIcon icon={faCaretUp} />
+                    <i class="fas fa-caret-up"></i>
                   </span>
                   <ul className="option_item">
                     <li>전체1</li>
@@ -167,7 +155,6 @@ class PTable1 extends Component {
                 </label>
               </span>
               <button className="btn_icon btn_dark_gray">
-                {/* <FontAwesomeIcon icon={faSearch} /> */}
                 <i class="fas fa-search"></i>
               </button>
             </div>
@@ -209,7 +196,7 @@ class PTable1 extends Component {
               </span>
               <span className="form_group c_mr5">
                 <button className="btn_icon btn_dark_gray">
-                  <FontAwesomeIcon icon={faSearch} />
+                  <i class="fas fa-search"></i>
                 </button>
               </span>
             </div>
@@ -288,29 +275,10 @@ class PTable1 extends Component {
                       <span className="ico_view">보기</span>
                     </td>
                     <td>
-                      <FontAwesomeIcon icon={faEdit} />
+                      <i class="fas fa-edit"></i>
                     </td>
                     <td>
-                      <FontAwesomeIcon icon={faTrashAlt} />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Yyyy-MM-DD HH:MI</td>
-                    <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
-                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
-                    <td>공지</td>
-                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
-                    <td>첨부</td>
-                    <td>5</td>
-                    <td>1</td>
-                    <td>
-                      <span className="ico_view">보기</span>
-                    </td>
-                    <td>
-                      <FontAwesomeIcon icon={faEdit} />
-                    </td>
-                    <td>
-                      <FontAwesomeIcon icon={faTrashAlt} />
+                      <i class="fas fa-trash-alt"></i>
                     </td>
                   </tr>
                   <tr>
@@ -326,10 +294,29 @@ class PTable1 extends Component {
                       <span className="ico_view">보기</span>
                     </td>
                     <td>
-                      <FontAwesomeIcon icon={faEdit} />
+                      <i class="fas fa-edit"></i>
                     </td>
                     <td>
-                      <FontAwesomeIcon icon={faTrashAlt} />
+                      <i class="fas fa-trash-alt"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Yyyy-MM-DD HH:MI</td>
+                    <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
+                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
+                    <td>공지</td>
+                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
+                    <td>첨부</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>
+                      <span className="ico_view">보기</span>
+                    </td>
+                    <td>
+                      <i class="fas fa-edit"></i>
+                    </td>
+                    <td>
+                      <i class="fas fa-trash-alt"></i>
                     </td>
                   </tr>
                 </tbody>
@@ -345,10 +332,10 @@ class PTable1 extends Component {
         </div>
         <div className="paging_wrap">
           <span className="p_web">
-            <FontAwesomeIcon icon={faAngleDoubleLeft} />
+            <i class="fas fa-angle-double-left"></i>
           </span>
           <span className="p_arr_l">
-            <FontAwesomeIcon icon={faAngleLeft} />
+            <i class="fas fa-angle-left"></i>
           </span>
           {/* web paging */}
           <span className="p_web">1</span>
@@ -360,10 +347,10 @@ class PTable1 extends Component {
           <span className="p_mobile">/</span>
           <span className="p_mobile">10</span>
           <span className="p_arr_r">
-            <FontAwesomeIcon icon={faAngleRight} />
+            <i class="fas fa-angle-right"></i>
           </span>
           <span className="p_web">
-            <FontAwesomeIcon icon={faAngleDoubleRight} />
+            <i class="fas fa-angle-double-right"></i>
           </span>
         </div>
       </div>

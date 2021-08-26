@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faEdit,
-  faSort,
-  faSortDown,
-  faSortUp,
-  faCaretUp,
-  faCaretDown,
-  faTrashAlt
-} from '@fortawesome/free-solid-svg-icons';
+
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class PTabTable1 extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      aaa: ''
+    };
+    this.bbb = this.bbb.bind(this);
+  }
+
+  bbb(e) {
+    this.setState({
+      aaa: e.target.value
+    });
   }
 
   componentDidMount() {}
@@ -37,7 +37,13 @@ class PTabTable1 extends Component {
             */}
             <div className="form_cell f_wid100">
               <span className="form_group wid30 c_mr5">
-                <input type="text" className="form_tag " />
+                <input
+                  type="text"
+                  className="form_tag "
+                  value={this.state.aaa}
+                  onChange={this.bbb}
+                  onBlur={this.bbb}
+                />
                 <label className="f_label">작업 부문</label>
               </span>
               <span className="form_group wid30 c_mr5">
@@ -88,9 +94,9 @@ class PTabTable1 extends Component {
                     <th style={{ width: '20%' }}>
                       <span className="c_mr5">분류ID</span>
                       {/* default, 클릭할떄마다 up,down 바뀜. */}
-                      <FontAwesomeIcon icon={faSort} />
-                      {/* <FontAwesomeIcon icon={faSortDown} /> */}
-                      {/* <FontAwesomeIcon icon={faSortUp} /> */}
+                      <i class="fas fa-sort"></i>
+                      {/* <i class="fas fa-sort-down"></i> /> */}
+                      {/* <i class="fas fa-sort-up"></i> /> */}
                     </th>
                     <th>분류 명</th>
                     <th style={{ width: '7%' }}>사용</th>
@@ -116,7 +122,7 @@ class PTabTable1 extends Component {
                     <td>고공작업</td>
                     <td>Yes</td>
                     <td>
-                      <FontAwesomeIcon icon={faEdit} />
+                      <i class="fas fa-edit"></i>
                     </td>
                   </tr>
                 </tbody>
@@ -163,7 +169,7 @@ class PTabTable1 extends Component {
                     </th>
                     <th style={{ width: '20%' }}>
                       <span className="c_mr5">항목ID</span>
-                      <FontAwesomeIcon icon={faSort} />
+                      <i class="fas fa-sort"></i>
                     </th>
                     <th>점검 항목명</th>
                     <th>점검 내용</th>
@@ -197,15 +203,15 @@ class PTabTable1 extends Component {
                     <td>Yes</td>
                     <td>
                       <Link>
-                        <FontAwesomeIcon icon={faEdit} />
+                        <i class="fas fa-edit"></i>
                       </Link>
                     </td>
                     <td>
                       <Link style={{ fontSize: '20px' }}>
-                        <FontAwesomeIcon icon={faCaretUp} />
+                        <i class="fas fa-caret-up"></i>
                       </Link>
                       <Link style={{ fontSize: '20px' }}>
-                        <FontAwesomeIcon icon={faCaretDown} />
+                        <i class="fas fa-caret-down"></i>
                       </Link>
                     </td>
                   </tr>

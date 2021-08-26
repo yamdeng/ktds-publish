@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import ReactTooltip from 'react-tooltip';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faEdit,
-  faTrashAlt,
-  faSearch,
-  faTimesCircle,
-  faCalendarAlt,
-  faTimes,
-  faRedo,
-  faPlus
-} from '@fortawesome/free-solid-svg-icons';
 
 class PBoardForm extends Component {
   constructor(props) {
@@ -52,11 +41,11 @@ class PBoardForm extends Component {
                 <input type="text" className="form_tag" />
                 <label className="f_label">조직 명</label>
                 <span className="icon icon_search">
-                  <FontAwesomeIcon icon={faSearch} />
+                  <i class="fas fa-search"></i>
                 </span>
                 {/* input에 value 값이 있으면 style display로 제어 */}
                 <span className="icon icon_clear" style={{ display: 'block' }}>
-                  <FontAwesomeIcon icon={faTimesCircle} />
+                  <i class="fas fa-times-circle"></i>
                 </span>
               </span>
               <button className="btn_text btn_dark_gray">조회</button>
@@ -128,7 +117,7 @@ class PBoardForm extends Component {
                   공개시작기간 *
                 </label>
                 <span className="icon icon_calendar">
-                  <FontAwesomeIcon icon={faCalendarAlt} />
+                  <i class="fas fa-calendar-alt"></i>
                 </span>
               </span>
               <span className="form_group wid40">
@@ -137,7 +126,7 @@ class PBoardForm extends Component {
                   공개종료기간 *
                 </label>
                 <span className="icon icon_calendar">
-                  <FontAwesomeIcon icon={faCalendarAlt} />
+                  <i class="fas fa-calendar-alt"></i>
                 </span>
               </span>
             </div>
@@ -151,7 +140,7 @@ class PBoardForm extends Component {
                   공개시작기간2 *
                 </label>
                 <span className="icon icon_calendar">
-                  <FontAwesomeIcon icon={faCalendarAlt} />
+                  <i class="fas fa-calendar-alt"></i>
                 </span>
               </span>
               <span className="form_group wid40">
@@ -164,7 +153,7 @@ class PBoardForm extends Component {
                   공개종료기간2 *
                 </label>
                 <span className="icon icon_calendar">
-                  <FontAwesomeIcon icon={faCalendarAlt} />
+                  <i class="fas fa-calendar-alt"></i>
                 </span>
               </span>
             </div>
@@ -184,13 +173,13 @@ class PBoardForm extends Component {
                 </label>
               </span>
               <button className="btn_icon btn_dark_gray c_mr5">
-                <FontAwesomeIcon icon={faTimes} />
+                <i class="fas fa-times"></i>
               </button>
               <button className="btn_icon btn_dark_gray c_mr5">
-                <FontAwesomeIcon icon={faRedo} />
+                <i class="fas fa-redo"></i>
               </button>
               <button className="btn_icon btn_dark_gray abrb">
-                <FontAwesomeIcon icon={faPlus} />
+                <i class="fas fa-plus"></i>
               </button>
             </div>
           </div>

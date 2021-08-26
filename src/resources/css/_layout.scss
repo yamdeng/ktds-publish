@@ -246,9 +246,9 @@
     }
     &:focus,
     &.active {
-      border: 1px solid #{$col-green};
+      border: 1px solid #{$col-green} !important;
       &::placeholder {
-        color: #{$col-gray300};
+        color: #{$col-gray300} !important;
       }
       .arr {
         // 화살표 돌리기
@@ -258,7 +258,7 @@
         // transform-origin: center center;
       }
     }
-    &.isValue {
+    &:not([value='']) {
       border: 1px solid #{$col-gray300};
     }
     &.isFail {
@@ -271,7 +271,7 @@
     &:disabled + .f_label,
     &:focus + .f_label,
     &.active + .f_label,
-    &.isValue + .f_label,
+    &:not([value='']) + .f_label,
     &.isFail + .f_label {
       left: 10px;
       top: -8px;
@@ -284,9 +284,9 @@
     }
     &:focus + .f_label,
     &.active + .f_label {
-      color: #{$col-green};
+      color: #{$col-green} !important;
     }
-    &.isValue + .f_label {
+    &:not([value='']) + .f_label {
       color: #{$col-default-text};
     }
     &.isFail + .f_label {
