@@ -48,7 +48,7 @@ class PTabTable1 extends Component {
                 <span className="invalid_txt">유효하지 않습니다.</span>
               </span>
               <span className="form_group wid30 c_mr5">
-                <select name="" id="b" className="form_tag ">
+                <select name="" id="b" className="form_tag">
                   <option value=""> </option>
                   <option value="">전체</option>
                   <option value="">전체2</option>
