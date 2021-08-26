@@ -6,14 +6,14 @@ class PTabTable1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      aaa: ''
+      inputValue: ''
     };
-    this.bbb = this.bbb.bind(this);
+    this.onChangeInput = this.onChangeInput.bind(this);
   }
 
-  bbb(e) {
+  onChangeInput(e) {
     this.setState({
-      aaa: e.target.value
+      inputValue: e.target.value
     });
   }
 
@@ -40,9 +40,9 @@ class PTabTable1 extends Component {
                 <input
                   type="text"
                   className="form_tag "
-                  value={this.state.aaa}
-                  onChange={this.bbb}
-                  onBlur={this.bbb}
+                  value={this.state.inputValue}
+                  onChange={this.onChangeInput}
+                  onBlur={this.onChangeInput}
                 />
                 <label className="f_label">작업 부문</label>
               </span>
