@@ -776,6 +776,16 @@ hr.line {
   width: 100%;
 }
 
+.btn_align {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-top: 7px;
+  @include mobile {
+  }
+}
+
 .btn_text {
   height: 38px;
   padding: 0 20px;

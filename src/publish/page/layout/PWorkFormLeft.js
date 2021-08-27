@@ -9,7 +9,55 @@ class PWorkFormLeft extends Component {
   componentDidMount() {}
 
   render() {
-    return <div>안전 서류 등록/수정 : 좌측 공통</div>;
+    return (
+      <div className="work_left_menu">
+        <div className="">
+          <ul className="task_menu">
+            <li className="item">
+              서류 업로드
+              <span className="abrc">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </li>
+            <li className="item">
+              첨부파일 업로드
+              <span className="abrc">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </li>
+            <li className="item">
+              전자서명 요청
+              <span className="abrc">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </li>
+            <li className="item">
+              결재선 지정
+              <span className="abrc">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </li>
+            <li className="item">
+              직상사 확인 요청
+              <span className="abrc">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+            </li>
+          </ul>
+          <div className="btns_wrap">
+            <button className="btn_text btn_green  c_mb10">
+              양식 다운로드
+            </button>
+            <button className="btn_text btn_green  c_mb10">
+              서류 다운로드
+            </button>
+            <button className="btn_text btn_green  c_mb10">
+              작성이력 보기
+            </button>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
