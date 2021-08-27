@@ -13,17 +13,17 @@ class ModalService {
   }
 
   // ModalContainer에 정의한 모달 오픈
-  openPopup(modalType, modalData) {
+  openModal(modalType, modalData) {
     rootStore.modalStore.showModal(modalType, modalData);
   }
 
   // AlertModalContainer에 정의한 모달 닫기
-  closeAlertPopup() {
+  closeAlertModal() {
     rootStore.alertModalStore.hideModal();
   }
 
   // ModalContainer에 정의한 모달 닫기
-  closePopup() {
+  closeModal() {
     rootStore.modalStore.hideModal();
   }
 }
