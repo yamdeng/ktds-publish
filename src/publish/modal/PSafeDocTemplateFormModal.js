@@ -74,7 +74,7 @@ class PSafeDocTemplateFormModal extends React.Component {
             <div className="form_table">
               <div className="form_cell f_wid100">
                 <span className="form_group wid100 c_mr5">
-                  <select name="" id="b" className="form_tag ">
+                  <select name="" id="b" className="form_tag_select ">
                     <option value="">산업안전보건위원회</option>
                     <option value="">전체1</option>
                     <option value="">전체2</option>
@@ -104,7 +104,7 @@ class PSafeDocTemplateFormModal extends React.Component {
             <div className="form_table">
               <div className="form_cell f_wid50">
                 <span className="form_group wid50 c_mr5">
-                  <select name="" id="b" className="form_tag ">
+                  <select name="" id="b" className="form_tag_select ">
                     <option value="">산업안전보건위원회</option>
                     <option value="">전체1</option>
                     <option value="">전체2</option>
@@ -118,7 +118,7 @@ class PSafeDocTemplateFormModal extends React.Component {
             <div className="form_table">
               <div className="form_cell f_wid100">
                 <span className="form_group wid100 c_mr5">
-                  <select name="" id="b" className="form_tag ">
+                  <select name="" id="b" className="form_tag_select ">
                     <option value="">산업안전보건위원회</option>
                     <option value="">전체1</option>
                     <option value="">전체2</option>
@@ -164,7 +164,7 @@ class PSafeDocTemplateFormModal extends React.Component {
               <div className="form_table">
                 <div className="form_cell f_wid100">
                   <span className="form_group wid50 c_mr5">
-                    <select name="" id="b" className="form_tag ">
+                    <select name="" id="b" className="form_tag_select ">
                       <option value="">산업안전보건위원회</option>
                       <option value="">전체1</option>
                       <option value="">전체2</option>
@@ -181,7 +181,7 @@ class PSafeDocTemplateFormModal extends React.Component {
               <div className="form_table">
                 <div className="form_cell f_wid100">
                   <span className="form_group wid50 c_mr5">
-                    <select name="" id="b" className="form_tag ">
+                    <select name="" id="b" className="form_tag_select ">
                       <option value="">산업안전보건위원회</option>
                       <option value="">전체1</option>
                       <option value="">전체2</option>

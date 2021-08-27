@@ -25,7 +25,7 @@ class PWorkDirectionListModal extends React.Component {
             <div className="form_table">
               <div className="form_cell f_wid100">
                 <span className="form_group wid30 c_mr5">
-                  <select name="" id="b" className="form_tag ">
+                  <select name="" id="b" className="form_tag_select ">
                     <option value=""> </option>
                     <option value="">전체1</option>
                     <option value="">전체2</option>
@@ -37,7 +37,7 @@ class PWorkDirectionListModal extends React.Component {
               </div>
               <div className="form_table">
                 <span className="form_group wid30 c_mr5">
-                  <select name="" id="b" className="form_tag ">
+                  <select name="" id="b" className="form_tag_select ">
                     <option value=""> </option>
                     <option value="">전체1</option>
                     <option value="">전체2</option>
@@ -47,7 +47,7 @@ class PWorkDirectionListModal extends React.Component {
                   </label>
                 </span>
                 <span className="form_group wid30">
-                  <select name="" id="b" className="form_tag ">
+                  <select name="" id="b" className="form_tag_select ">
                     <option value=""> </option>
                     <option value="">전체1</option>
                     <option value="">전체2</option>
@@ -148,7 +148,7 @@ class PWorkDirectionListModal extends React.Component {
             <div className="form_table">
               <div className="form_cell f_wid100">
                 <span className="form_group f_wid20 c_mr5">
-                  <select name="" id="b" className="form_tag ">
+                  <select name="" id="b" className="form_tag_select">
                     <option value=""> </option>
                     <option value="">전체1</option>
                     <option value="">전체2</option>
@@ -204,7 +204,7 @@ class PWorkDirectionListModal extends React.Component {
           <div className="list_form c_mt10">
             <p className="relative c_mb10">
               <span className="form_group c_mr5" style={{ width: '100px' }}>
-                <select name="" id="b" className="form_tag ">
+                <select name="" id="b" className="form_tag_select ">
                   <option value="">목록 10개</option>
                   <option value="">전체1</option>
                   <option value="">전체2</option>

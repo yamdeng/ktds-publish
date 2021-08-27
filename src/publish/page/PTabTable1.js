@@ -48,7 +48,7 @@ class PTabTable1 extends Component {
                 <span className="invalid_txt">유효하지 않습니다.</span>
               </span>
               <span className="form_group wid30 c_mr5">
-                <select name="" id="b" className="form_tag">
+                <select name="" id="b" className="form_tag_select invalid">
                   <option value=""> </option>
                   <option value="">전체</option>
                   <option value="">전체2</option>
@@ -56,6 +56,7 @@ class PTabTable1 extends Component {
                 <label className="f_label" for="b">
                   게시유형
                 </label>
+                <span className="invalid_txt">유효하지 않습니다.</span>
               </span>
               <button className="btn_text btn_dark_gray">조회</button>
             </div>
@@ -64,7 +65,7 @@ class PTabTable1 extends Component {
         <div className="list_form">
           <p className="relative c_mb10">
             <span className="form_group c_mr5" style={{ width: '100px' }}>
-              <select name="" id="b" className="form_tag ">
+              <select name="" id="b" className="form_tag_select ">
                 <option value="">목록 10개</option>
                 <option value="">전체1</option>
                 <option value="">전체2</option>
@@ -141,7 +142,7 @@ class PTabTable1 extends Component {
         <div className="list_form">
           <p className="relative c_mb10">
             <span className="form_group c_mr5" style={{ width: '100px' }}>
-              <select name="" id="b" className="form_tag ">
+              <select name="" id="b" className="form_tag_select ">
                 <option value="">목록 10개</option>
                 <option value="">전체1</option>
                 <option value="">전체2</option>

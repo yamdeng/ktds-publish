@@ -61,20 +61,21 @@ class PTable1 extends Component {
                   <option value="2">전체2</option>
                 </select>
                 <label className="f_label" for="b">
-                  게시유형
+                  게시유형 <span className="required">*</span>
                 </label>
               </span>
             </div>
             <div className="form_cell f_wid20">
               <span className="form_group wid100">
-                <select name="" id="b" className="form_tag_select ">
+                <select name="" id="b" className="form_tag_select invalid">
                   <option value=""> </option>
                   <option value="">전체1</option>
                   <option value="">전체2</option>
                 </select>
                 <label className="f_label" for="b">
-                  공개
+                  공개 <span className="required">*</span>
                 </label>
+                <span className="invalid_txt">유효하지 않습니다.</span>
               </span>
             </div>
           </div>

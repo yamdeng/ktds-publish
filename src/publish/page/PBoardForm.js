@@ -67,7 +67,7 @@ class PBoardForm extends Component {
           <div className="form_table">
             <div className="form_cell f_wid50">
               <span className="form_group f_wid50 c_mr5">
-                <select name="" id="b" className="form_tag ">
+                <select name="" id="b" className="form_tag_select ">
                   <option value=""> </option>
                   <option value="">전체1</option>
                   <option value="">전체2</option>
