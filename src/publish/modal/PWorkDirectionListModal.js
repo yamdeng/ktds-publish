@@ -24,7 +24,7 @@ class PWorkDirectionListModal extends React.Component {
           <div className="list_form c_mt10">
             <p className="relative c_mb10">
               <span className="form_group c_mr5" style={{ width: '100px' }}>
-                <select name="" id="b" className="form_tag ">
+                <select name="" id="b" className="form_tag_select ">
                   <option value="">목록 10개</option>
                   <option value="">전체1</option>
                   <option value="">전체2</option>
