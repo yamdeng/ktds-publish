@@ -25,7 +25,7 @@ class PTabTable1 extends Component {
         <h3>테이블 case 1</h3>
         <ul className="tabs_wrap">
           <li className="active">공통</li>
-          <li>공사유형별</li>
+          <li className="disabled">공사유형별</li>
         </ul>
         <div className="box_form tabs_cont">
           <div className="form_table">

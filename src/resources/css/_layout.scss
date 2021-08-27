@@ -169,7 +169,7 @@
   width: 100%;
   .form_cell {
     display: table-cell;
-    padding-right: 15px;
+    padding-right: 10px;
     padding-top: 15px;
     position: relative;
   }
@@ -179,6 +179,11 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  .checkbox-wrapper,
+  .radio-wrapper {
+    vertical-align: top;
+    margin-top: 12px;
+  }
   .invalid_txt {
     position: absolute;
     left: 11px;
@@ -200,7 +205,7 @@
       right: 10px;
       top: 50%;
       transform: translate(0, -50%);
-      color: #{$col-green};
+      color: #{$col-gray350};
     }
     &.icon_calendar {
       position: absolute;
@@ -708,74 +713,6 @@ hr.line {
   margin-top: 15px;
 }
 
-.wid10 {
-  width: 10%;
-}
-.wid20 {
-  width: 20%;
-}
-.wid25 {
-  width: 25%;
-}
-.wid30 {
-  width: 30%;
-}
-.wid33 {
-  width: 33%;
-}
-.wid40 {
-  width: 40%;
-}
-.wid50 {
-  width: 50%;
-}
-.wid60 {
-  width: 60%;
-}
-.wid70 {
-  width: 70%;
-}
-.wid80 {
-  width: 80%;
-}
-.wid90 {
-  width: 90%;
-}
-.wid100 {
-  width: 100%;
-}
-
-.f_wid10 {
-  width: 10%;
-}
-.f_wid20 {
-  width: 20%;
-}
-.f_wid30 {
-  width: 30%;
-}
-.f_wid40 {
-  width: 40%;
-}
-.f_wid50 {
-  width: 50%;
-}
-.f_wid60 {
-  width: 60%;
-}
-.f_wid70 {
-  width: 70%;
-}
-.f_wid80 {
-  width: 80%;
-}
-.f_wid90 {
-  width: 90%;
-}
-.f_wid100 {
-  width: 100%;
-}
-
 .btn_align {
   position: absolute;
   right: 0;
@@ -783,6 +720,9 @@ hr.line {
   transform: translate(0, -50%);
   margin-top: 7px;
   @include mobile {
+    position: inherit;
+    top: 0;
+    transform: inherit;
   }
 }
 
@@ -882,16 +822,27 @@ hr.line {
     padding: 10px 0;
     width: 200px;
     box-sizing: border-box;
+    border: 1px solid #{$col-gray300};
     border-bottom: 1px solid #{$col-green};
     cursor: pointer;
     position: relative;
     bottom: -1px;
+    margin-left: -1px;
+    &.disabled,
+    &:disabled {
+      cursor: inherit;
+      background: #{$col-gray300} !important;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
     &:hover {
       background: rgba($col-default-text, 0.1);
     }
     &.active {
       color: #{$col-white};
       background: #{$col-green};
+      border: 1px solid #{$col-green};
     }
     @include mobile {
       width: 50%;
@@ -957,6 +908,80 @@ hr.line {
   @include ellipsis;
 }
 
+.wid10 {
+  width: 10%;
+}
+.wid15 {
+  width: 15%;
+}
+.wid20 {
+  width: 20%;
+}
+.wid25 {
+  width: 25%;
+}
+.wid30 {
+  width: 30%;
+}
+.wid33 {
+  width: 33%;
+}
+.wid40 {
+  width: 40%;
+}
+.wid50 {
+  width: 50%;
+}
+.wid60 {
+  width: 60%;
+}
+.wid70 {
+  width: 70%;
+}
+.wid80 {
+  width: 80%;
+}
+.wid90 {
+  width: 90%;
+}
+.wid100 {
+  width: 100%;
+}
+
+.f_wid10 {
+  width: 10%;
+}
+.f_wid15 {
+  width: 15%;
+}
+.f_wid20 {
+  width: 20%;
+}
+.f_wid30 {
+  width: 30%;
+}
+.f_wid40 {
+  width: 40%;
+}
+.f_wid50 {
+  width: 50%;
+}
+.f_wid60 {
+  width: 60%;
+}
+.f_wid70 {
+  width: 70%;
+}
+.f_wid80 {
+  width: 80%;
+}
+.f_wid90 {
+  width: 90%;
+}
+.f_wid100 {
+  width: 100%;
+}
+
 @include tablet {
   .form_table {
     display: block;
@@ -967,6 +992,7 @@ hr.line {
   }
 
   .f_wid10,
+  .f_wid15,
   .f_wid20,
   .f_wid30,
   .f_wid40,

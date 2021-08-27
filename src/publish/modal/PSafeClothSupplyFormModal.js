@@ -38,7 +38,7 @@ class PSafeClothSupplyFormModal extends React.Component {
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid100">
+              <div className="form_cell f_wid100 c_pr0">
                 <span className="form_group wid100">
                   <input type="text" className="form_tag" />
                   <label className="f_label" for="b">
@@ -48,7 +48,7 @@ class PSafeClothSupplyFormModal extends React.Component {
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid100">
+              <div className="form_cell f_wid100 c_pr0">
                 <span className="form_group wid100">
                   <input type="text" className="form_tag" />
                   <label className="f_label" for="b">
