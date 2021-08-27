@@ -89,7 +89,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "scripts": {
-    "start": "cross-env ENTRY_NAME=publish APP_ENV=publish PORT=3000 node scripts/start.js",
+    "start": "cross-env ENTRY_NAME=publish APP_ENV=publish PORT=80 node scripts/start.js",
     "start2": "cross-env APP_TYPE=app NODE_ENV=local DOT_ENV=local APP_ENV=local HTTPS=false node scripts/start.js",
     "build": "cross-env ENTRY_NAME=publish node scripts/build.js",
     "build2": "cross-env APP_TYPE=app DOT_ENV=production APP_ENV=production node scripts/build.js",
