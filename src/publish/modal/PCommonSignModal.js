@@ -21,27 +21,34 @@ class PCommonSignModal extends React.Component {
 
   render() {
     return (
-      <div className="popup-container size-330">
-        <div className="popup-content">
-          <strong>18 : </strong> 공통 결재 팝업
-        </div>
-        <div>
-          <SignatureCanvas
-            penColor="green"
-            canvasProps={{ width: 500, height: 200, className: 'sigCanvas' }}
-          />
-        </div>
-        <div className="popup-footer">
-          <div className="btn-group wide">
-            <button
-              type="button"
-              className="btn medium btn-primary"
-              onClick={this.close}
-            >
-              확인
-            </button>
+      <div className="popup-container">
+        <h3 className="pop_title">공통 결재 팝업</h3>
+        <div className="pop_full_cont_box">
+          <div className="write_form">
+            <div className="sigCanvas_box">
+              <SignatureCanvas
+                penColor="green"
+                canvasProps={{
+                  width: 500,
+                  height: 200,
+                  className: 'sigCanvas'
+                }}
+              />
+            </div>
           </div>
         </div>
+
+        <div className="pop_btns">
+          <button className="btn_text btn_dark_gray" onClick={this.close}>
+            닫기
+          </button>
+          <button className="btn_text btn_green" onClick={this.close}>
+            저장
+          </button>
+        </div>
+        <span className="pop_close" onClick={this.close}>
+          <i class="fas fa-times"></i>
+        </span>
       </div>
     );
   }

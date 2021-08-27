@@ -223,227 +223,238 @@
       color: #{$col-red};
     }
   }
+}
 
-  .form_tag {
-    height: 38px;
-    line-height: 38px;
+.form_tag {
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #{$col-gray300};
+  border-radius: 5px;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #{$col-default-text};
+  background: #{$col-white};
+  outline: none !important;
+  position: relative;
+
+  .option_item {
+    display: none;
+    z-index: 3;
+  }
+  &.active .option_item {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 40px;
     border: 1px solid #{$col-gray300};
     border-radius: 5px;
-    padding: 0 10px;
     width: 100%;
-    box-sizing: border-box;
-    color: #{$col-default-text};
-    background: #{$col-white};
-    outline: none !important;
-    position: relative;
-
-    .option_item {
-      display: none;
-      z-index: 3;
-    }
-    &.active .option_item {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 40px;
-      border: 1px solid #{$col-gray300};
-      border-radius: 5px;
-      width: 100%;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba($col-black, 0.3);
-      li {
-        border-top: 1px solid #{$col-gray300};
-        padding: 8px 15px;
-        background: #{$col-white};
-        &:first-child {
-          border-top: none;
-        }
-        &:hover {
-          background: #{$col-gray100};
-        }
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba($col-black, 0.3);
+    li {
+      border-top: 1px solid #{$col-gray300};
+      padding: 8px 15px;
+      background: #{$col-white};
+      &:first-child {
+        border-top: none;
       }
-    }
-    .arr {
-      position: absolute;
-      right: 5px;
-      top: 54%;
-      transform: translate(0, -50%) rotate(180deg);
-      // transform: translate(0, -50%) rotate(180deg);
-      // transition: transform 0.1s ease, opacity 0.1s ease;
-      // transform-origin: center center;
-    }
-    &::placeholder {
-      color: #{$col-white};
-    }
-    &:disabled {
-      border: 1px solid #{$col-gray};
-      background: #{$col-gray};
-      &::placeholder {
-        color: #{$col-gray300};
+      &:hover {
+        background: #{$col-gray100};
       }
-    }
-    &:focus,
-    &.active {
-      border: 1px solid #{$col-green} !important;
-      color: #{$col-green} !important;
-      &::placeholder {
-        color: #{$col-gray300} !important;
-      }
-      .arr {
-        // 화살표 돌리기
-        // top: 48%;
-        // transform: translate(0, -50%) rotate(0deg);
-        // transition: transform 0.1s ease, opacity 0.1s ease;
-        // transform-origin: center center;
-      }
-    }
-    &:not([value='']) {
-      border: 1px solid #{$col-gray300};
-    }
-    &.invalid {
-      color: #{$col-red};
-      border: 1px solid #{$col-red};
-    }
-    &.invalid::selection {
-      color: #{$col-red};
-    }
-    &:disabled + .f_label,
-    &:focus + .f_label,
-    &.active + .f_label,
-    &:not([value='']) + .f_label,
-    &.invalid + .f_label {
-      left: 10px;
-      top: -8px;
-      font-size: 12px;
-      transition: all 0.3s ease;
-    }
-    &:disabled + .f_label {
-      background: none;
-      color: #{$col-gray350};
-    }
-    &:focus + .f_label,
-    &.active + .f_label {
-      color: #{$col-green} !important;
-    }
-    &:not([value='']) + .f_label {
-      color: #{$col-default-text};
-    }
-    &.invalid + .f_label {
-      color: #{$col-red};
-    }
-
-    &.textarea {
-      padding: 20px;
-      min-height: 200px;
-      line-height: 1.6em;
     }
   }
-
-  .form_tag_select {
-    height: 38px;
-    line-height: 38px;
-    border: 1px solid #{$col-gray300};
-    border-radius: 5px;
-    padding: 0 10px;
-    width: 100%;
-    box-sizing: border-box;
-    color: #{$col-default-text};
-    background: #{$col-white};
-    outline: none !important;
-    position: relative;
-
-    .option_item {
-      display: none;
-      z-index: 3;
+  .arr {
+    position: absolute;
+    right: 5px;
+    top: 54%;
+    transform: translate(0, -50%) rotate(180deg);
+    // transform: translate(0, -50%) rotate(180deg);
+    // transition: transform 0.1s ease, opacity 0.1s ease;
+    // transform-origin: center center;
+  }
+  &::placeholder {
+    color: #{$col-white};
+  }
+  &:disabled {
+    border: 1px solid #{$col-gray};
+    background: #{$col-gray};
+    &::placeholder {
+      color: #{$col-gray300};
     }
-    &.active .option_item {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 40px;
-      border: 1px solid #{$col-gray300};
-      border-radius: 5px;
-      width: 100%;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba($col-black, 0.3);
-      li {
-        border-top: 1px solid #{$col-gray300};
-        padding: 8px 15px;
-        background: #{$col-white};
-        &:first-child {
-          border-top: none;
-        }
-        &:hover {
-          background: #{$col-gray100};
-        }
-      }
+  }
+  &.edit:disabled {
+    border: none;
+    background: none;
+    color: #{$col-default-text};
+  }
+  &:focus,
+  &.active {
+    border: 1px solid #{$col-green} !important;
+    color: #{$col-green} !important;
+    &::placeholder {
+      color: #{$col-gray300} !important;
     }
     .arr {
-      position: absolute;
-      right: 5px;
-      top: 54%;
-      transform: translate(0, -50%) rotate(180deg);
-      // transform: translate(0, -50%) rotate(180deg);
+      // 화살표 돌리기
+      // top: 48%;
+      // transform: translate(0, -50%) rotate(0deg);
       // transition: transform 0.1s ease, opacity 0.1s ease;
       // transform-origin: center center;
     }
+  }
+  &:not([value='']) {
+    border: 1px solid #{$col-gray300};
+  }
+  &.invalid {
+    color: #{$col-red};
+    border: 1px solid #{$col-red};
+  }
+  &.invalid::selection {
+    color: #{$col-red};
+  }
+  &:disabled + .f_label,
+  &:focus + .f_label,
+  &.active + .f_label,
+  &:not([value='']) + .f_label,
+  &.invalid + .f_label {
+    left: 10px;
+    top: -8px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+  }
+  &:disabled + .f_label {
+    background: none;
+    color: #{$col-gray350};
+  }
+  &:focus + .f_label,
+  &.active + .f_label {
+    color: #{$col-green} !important;
+  }
+  &:not([value='']) + .f_label {
+    color: #{$col-default-text};
+  }
+  &.invalid + .f_label {
+    color: #{$col-red};
+  }
 
+  &.textarea {
+    padding: 20px;
+    min-height: 200px;
+    line-height: 1.6em;
+  }
+}
+
+.form_tag_select {
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #{$col-gray300};
+  border-radius: 5px;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #{$col-default-text};
+  background: #{$col-white};
+  outline: none !important;
+  position: relative;
+
+  .option_item {
+    display: none;
+    z-index: 3;
+  }
+  &.active .option_item {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    border: 1px solid #{$col-gray300};
+    border-radius: 5px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba($col-black, 0.3);
+    li {
+      border-top: 1px solid #{$col-gray300};
+      padding: 8px 15px;
+      background: #{$col-white};
+      &:first-child {
+        border-top: none;
+      }
+      &:hover {
+        background: #{$col-gray100};
+      }
+    }
+  }
+  .arr {
+    position: absolute;
+    right: 5px;
+    top: 54%;
+    transform: translate(0, -50%) rotate(180deg);
+    // transform: translate(0, -50%) rotate(180deg);
+    // transition: transform 0.1s ease, opacity 0.1s ease;
+    // transform-origin: center center;
+  }
+
+  &::placeholder {
+    color: #{$col-white};
+  }
+  &:disabled {
+    border: 1px solid #{$col-gray};
+    background: #{$col-gray};
     &::placeholder {
-      color: #{$col-white};
+      color: #{$col-gray300};
     }
-    &:disabled {
-      border: 1px solid #{$col-gray};
-      background: #{$col-gray};
-      &::placeholder {
-        color: #{$col-gray300};
-      }
+  }
+  &.edit:disabled {
+    border: none;
+    background: none;
+    color: #{$col-default-text};
+  }
+  &:focus,
+  &.active {
+    border: 1px solid #{$col-green} !important;
+    color: #{$col-green} !important;
+    &::placeholder {
+      color: #{$col-gray300} !important;
     }
-    &:focus,
-    &.active {
-      border: 1px solid #{$col-green} !important;
-      color: #{$col-green} !important;
-      &::placeholder {
-        color: #{$col-gray300} !important;
-      }
-    }
-    &.isValue {
-      border: 1px solid #{$col-gray300};
-    }
-    &.invalid {
-      color: #{$col-red};
-      border: 1px solid #{$col-red};
-    }
-    &.invalid::selection {
-      color: #{$col-red};
-    }
-    &:disabled + .f_label,
-    &:focus + .f_label,
-    &.active + .f_label,
-    &.isValue + .f_label,
-    &.invalid + .f_label {
-      left: 10px;
-      top: -8px;
-      font-size: 12px;
-      transition: all 0.3s ease;
-    }
-    &:disabled + .f_label {
-      background: none;
-      color: #{$col-gray350};
-    }
-    &:focus + .f_label,
-    &.active + .f_label {
-      color: #{$col-green} !important;
-    }
-    &.isValue + .f_label {
-      color: #{$col-default-text};
-    }
-    &.invalid + .f_label {
-      color: #{$col-red};
-    }
+  }
+  &.isValue {
+    border: 1px solid #{$col-gray300};
+  }
+  &.invalid {
+    color: #{$col-red};
+    border: 1px solid #{$col-red};
+  }
+  &.invalid::selection {
+    color: #{$col-red};
+  }
 
-    &.textarea {
-      min-height: 200px;
-    }
+  &:disabled + .f_label,
+  &:focus + .f_label,
+  &.active + .f_label,
+  &.isValue + .f_label,
+  &.invalid + .f_label {
+    left: 10px;
+    top: -8px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+  }
+  &:disabled + .f_label {
+    background: none;
+    color: #{$col-gray350};
+  }
+  &:focus + .f_label,
+  &.active + .f_label {
+    color: #{$col-green} !important;
+  }
+  &.isValue + .f_label {
+    color: #{$col-default-text};
+  }
+  &.invalid + .f_label {
+    color: #{$col-red};
+  }
+
+  &.textarea {
+    min-height: 200px;
   }
 }
 
@@ -498,6 +509,9 @@ input[type='radio'] {
   border: solid 2px #{$col-default-text};
   background: #{$col-white};
   margin-right: 6px;
+  .only_label {
+    margin-right: 0;
+  }
 }
 .radio-label:after,
 .checkbox-label:after {
@@ -678,6 +692,13 @@ input[type='radio'] {
   left: 35px;
 }
 
+.sigCanvas_box {
+  box-sizing: border-box;
+  background: #{$col-gray300};
+  width: 100%;
+  overflow: hidden;
+}
+
 hr.line {
   border: none;
   height: 1px;
@@ -692,6 +713,9 @@ hr.line {
 }
 .wid20 {
   width: 20%;
+}
+.wid25 {
+  width: 25%;
 }
 .wid30 {
   width: 30%;
@@ -889,7 +913,7 @@ hr.line {
 }
 
 .paging_wrap {
-  margin-top: -30px;
+  margin-top: -20px;
   margin-bottom: 10px;
   position: relative;
   text-align: center;

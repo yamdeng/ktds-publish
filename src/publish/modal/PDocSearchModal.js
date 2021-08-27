@@ -23,8 +23,8 @@ class PWorkDirectionListModal extends React.Component {
         <div className="pop_full_cont_box">
           <div className="box_form">
             <div className="form_table">
-              <div className="form_cell f_wid100">
-                <span className="form_group wid30 c_mr5">
+              <div className="form_cell f_wid30">
+                <span className="form_group wid100 c_mr5">
                   <select name="" id="b" className="form_tag_select ">
                     <option value=""> </option>
                     <option value="">전체1</option>
@@ -35,8 +35,8 @@ class PWorkDirectionListModal extends React.Component {
                   </label>
                 </span>
               </div>
-              <div className="form_table">
-                <span className="form_group wid30 c_mr5">
+              <div className="form_cell f_wid30">
+                <span className="form_group wid100 c_mr5">
                   <select name="" id="b" className="form_tag_select ">
                     <option value=""> </option>
                     <option value="">전체1</option>
@@ -46,7 +46,9 @@ class PWorkDirectionListModal extends React.Component {
                     서류유형
                   </label>
                 </span>
-                <span className="form_group wid30">
+              </div>
+              <div className="form_cell f_wid30">
+                <span className="form_group wid100 c_mr5">
                   <select name="" id="b" className="form_tag_select ">
                     <option value=""> </option>
                     <option value="">전체1</option>
@@ -78,8 +80,8 @@ class PWorkDirectionListModal extends React.Component {
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid50">
-                <span className="form_group f_wid20 c_mr5">
+              <div className="form_cell f_wid60">
+                <span className="form_group wid25 c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -90,7 +92,7 @@ class PWorkDirectionListModal extends React.Component {
                     등록자 ID
                   </label>
                 </span>
-                <span className="form_group f_wid30 c_mr5">
+                <span className="form_group wid20 c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -101,7 +103,7 @@ class PWorkDirectionListModal extends React.Component {
                     등록자 이름
                   </label>
                 </span>
-                <span className="form_group f_wid30 c_mr5">
+                <span className="form_group wid30 c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -112,7 +114,7 @@ class PWorkDirectionListModal extends React.Component {
                     등록자 소속
                   </label>
                 </span>
-                <span className="form_group c_mr5">
+                <span className="form_group">
                   <button className="btn_icon btn_dark_gray">
                     <i class="fas fa-search"></i>
                   </button>
@@ -120,8 +122,8 @@ class PWorkDirectionListModal extends React.Component {
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid50">
-                <span className="form_group f_wid20 c_mr5">
+              <div className="form_cell f_wid100">
+                <span className="form_group wid40 c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -132,7 +134,7 @@ class PWorkDirectionListModal extends React.Component {
                     작업지시 ID
                   </label>
                 </span>
-                <span className="form_group f_wid20 c_mr5">
+                <span className="form_group wid50 c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -147,7 +149,7 @@ class PWorkDirectionListModal extends React.Component {
             </div>
             <div className="form_table">
               <div className="form_cell f_wid100">
-                <span className="form_group f_wid20 c_mr5">
+                <span className="form_group wid30 c_mr5">
                   <select name="" id="b" className="form_tag_select">
                     <option value=""> </option>
                     <option value="">전체1</option>
@@ -157,13 +159,13 @@ class PWorkDirectionListModal extends React.Component {
                     공사유형
                   </label>
                 </span>
-                <span className="form_group f_wid40 c_mr5">
+                <span className="form_group wid40 c_mr5">
                   <input type="text" className="form_tag" placeholder="" />
                   <label className="f_label" for="b">
                     서류유형
                   </label>
                 </span>
-                <span className="form_group f_wid30">
+                <span className="form_group wid25">
                   <input type="text" className="form_tag" placeholder="" />
                   <label className="f_label" for="b">
                     WBS ID
@@ -171,31 +173,6 @@ class PWorkDirectionListModal extends React.Component {
                 </span>
               </div>
             </div>
-            {/* <div className="form_table">
-              <div className="form_cell">
-                <div className="checkbox-wrapper">
-                  <input
-                    type="checkbox"
-                    name="Claude Monet"
-                    id="question-1-option-1"
-                  />
-                  <label className="checkbox-label" for="question-1-option-1">
-                    체크박스
-                  </label>
-                </div>
-                <div className="radio-wrapper">
-                  <input
-                    type="radio"
-                    name="question-2"
-                    value="43200000"
-                    id="question-2-option-1"
-                  />
-                  <label className="radio-label" for="question-2-option-1">
-                    라디오
-                  </label>
-                </div>
-              </div>
-            </div> */}
 
             <p className="c_pt15 right">
               <button className="btn_text btn_green">조회</button>

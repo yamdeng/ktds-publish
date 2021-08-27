@@ -66,8 +66,38 @@ class PDeptMemberList extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>한성유통</td>
-                    <td>한성유통㈜</td>
+                    <td>
+                      <select
+                        name=""
+                        id="b"
+                        disabled
+                        className="form_tag_select center edit"
+                      >
+                        <option value="">한성유통</option>
+                        <option value="">전체</option>
+                        <option value="">전체2</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        className="form_tag center edit"
+                        disabled
+                        value="한성유통㈜"
+                        onChange={this.onChangeInput}
+                        onBlur={this.onChangeInput}
+                      />
+                    </td>
+                    <td>
+                      <i class="fas fa-edit"></i>
+                    </td>
+                    <td>
+                      <i class="fas fa-trash-alt"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
                     <td>
                       <i class="fas fa-edit"></i>
                     </td>
@@ -107,8 +137,34 @@ class PDeptMemberList extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>한성유통</td>
-                    <td>한성유통㈜</td>
+                    <td>
+                      {/* 한성유통 */}
+                      <div className="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          name="Claude Monet"
+                          id="question-1-option-1"
+                        />
+                        <label
+                          className="checkbox-label only_label"
+                          for="question-1-option-1"
+                        ></label>
+                      </div>
+                    </td>
+                    <td>
+                      {/* 한성유통㈜ */}
+                      <input
+                        type="checkbox"
+                        id="switchs"
+                        name="switch"
+                        className="switch_on_off"
+                      />
+                      <label for="switchs" className="switch_label_on_off">
+                        <span className="marble"></span>
+                        <span className="on">NO</span>
+                        <span class="off">YES</span>
+                      </label>
+                    </td>
                     <td>부장</td>
                     <td>
                       <i class="fas fa-edit"></i>

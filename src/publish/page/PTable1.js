@@ -266,13 +266,88 @@ class PTable1 extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Yyyy-MM-DD HH:MI</td>
-                    <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
-                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
-                    <td>공지</td>
-                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
-                    <td>첨부</td>
-                    <td>5</td>
+                    <td>
+                      <input
+                        type="text"
+                        className="form_tag center edit"
+                        disabled
+                        value="Yyyy-MM-DD HH:MI"
+                        onChange={this.onChangeInput}
+                        onBlur={this.onChangeInput}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        className="form_tag center edit"
+                        disabled
+                        value="ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동"
+                        onChange={this.onChangeInput}
+                        onBlur={this.onChangeInput}
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="text"
+                        className="form_tag center edit"
+                        disabled
+                        value="ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ"
+                        onChange={this.onChangeInput}
+                        onBlur={this.onChangeInput}
+                      />
+                    </td>
+                    <td>
+                      {/* 공지 */}
+                      <div className="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          name="Claude Monet"
+                          id="question-1-option-1"
+                        />
+                        <label
+                          className="checkbox-label only_label"
+                          for="question-1-option-1"
+                        ></label>
+                      </div>
+                    </td>
+                    <td>
+                      {/* 한성유통㈜ */}
+                      <input
+                        type="checkbox"
+                        id="switchs"
+                        name="switch"
+                        className="switch_on_off"
+                      />
+                      <label for="switchs" className="switch_label_on_off">
+                        <span className="marble"></span>
+                        <span className="on">NO</span>
+                        <span class="off">YES</span>
+                      </label>
+                    </td>
+                    <td>
+                      <select
+                        name=""
+                        id="b"
+                        disabled
+                        className="form_tag_select center edit"
+                      >
+                        <option value="">첨부</option>
+                        <option value="">전체</option>
+                        <option value="">전체2</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select
+                        name=""
+                        id="b"
+                        disabled
+                        className="form_tag_select center edit"
+                      >
+                        <option value="">5</option>
+                        <option value="">전체</option>
+                        <option value="">전체2</option>
+                      </select>
+                    </td>
                     <td>1</td>
                     <td>
                       <span className="ico_view">보기</span>
