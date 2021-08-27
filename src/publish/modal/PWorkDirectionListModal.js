@@ -19,7 +19,7 @@ class PWorkDirectionListModal extends React.Component {
   render() {
     return (
       <div className="popup-container">
-        <h3 className="pop_title">작업지시서 목록 팝업</h3>
+        <h3 className="pop_title">작업지시서 목록 모달</h3>
         <div className="pop_cont_box">
           <div className="list_form c_mt10">
             <p className="relative c_mb10">

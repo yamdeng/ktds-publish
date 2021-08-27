@@ -19,7 +19,7 @@ class PSafeClothSupplyFormModal extends React.Component {
   render() {
     return (
       <div className="popup-container">
-        <h3 className="pop_title">보호구 지급 대장 폼 팝업</h3>
+        <h3 className="pop_title">보호구 지급 대장 폼 모달</h3>
         <div className="pop_full_cont_box">
           <div className="write_form">
             <div className="form_table">

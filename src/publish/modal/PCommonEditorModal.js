@@ -20,7 +20,7 @@ class PCommonEditorModal extends React.Component {
     return (
       <div className="popup-container size-330">
         <div className="popup-content">
-          <strong>17 : </strong> 공통 에디터 팝업
+          <strong>17 : </strong> 공통 에디터 모달
         </div>
         <div className="popup-footer">
           <div className="btn-group wide">

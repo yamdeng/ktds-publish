@@ -13,4 +13,8 @@ Constant.LABEL_MODAL_CANCEL = '취소';
 Constant.ERROR_TYPE_CORE = 'core';
 Constant.ERROR_TYPE_REACT = 'react';
 
+// form type
+Constant.FORM_TYPE_ADD = 'add';
+Constant.FORM_TYPE_UPDATE = 'update';
+
 export default Constant;
