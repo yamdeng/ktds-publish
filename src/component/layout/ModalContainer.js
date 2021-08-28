@@ -80,7 +80,7 @@ class ModalContainer extends React.Component {
         case ModalType.CONSTRUCTION_ORGANIZE_MODAL:
           modalComponent = <PConstructionOrganizeModal modalData={modalData} />;
           break;
-        case ModalType.COMMON_SIMPLE_DESCRIPTION_MODAL:
+        case ModalType.COMMON_TEXTAREA_MODAL:
           modalComponent = (
             <PCommonSimpleDescriptionModal modalData={modalData} />
           );
@@ -94,7 +94,7 @@ class ModalContainer extends React.Component {
         case ModalType.WORK_ORDER_LIST_MODAL:
           modalComponent = <PWorkDirectionListModal modalData={modalData} />;
           break;
-        case ModalType.DOC_SEARCH_MODAL:
+        case ModalType.SAFE_DOC_SEARCH_MODAL:
           modalComponent = <PDocSearchModal modalData={modalData} />;
           break;
         case ModalType.COMMON_EDITOR_MODAL:

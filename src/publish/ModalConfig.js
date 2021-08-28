@@ -124,7 +124,7 @@ const list = [
     fileName: 'PCommonSimpleDescriptionModal.js',
     pageCount: '9',
     success: true,
-    modalType: ModalType.COMMON_SIMPLE_DESCRIPTION_MODAL,
+    modalType: ModalType.COMMON_TEXTAREA_MODAL,
     isAlert: false,
     isMobileFull: false,
     description: ''
@@ -164,7 +164,7 @@ const list = [
     fileName: 'PDocSearchModal.js',
     pageCount: '13',
     success: true,
-    modalType: ModalType.DOC_SEARCH_MODAL,
+    modalType: ModalType.SAFE_DOC_SEARCH_MODAL,
     isAlert: false,
     isMobileFull: true,
     description:
