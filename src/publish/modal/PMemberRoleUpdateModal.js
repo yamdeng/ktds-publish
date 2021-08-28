@@ -69,8 +69,8 @@ class PMemberRoleUpdateModal extends React.Component {
                     />
                     <label for="switch" className="switch_label_on_off">
                       <span className="marble"></span>{' '}
-                      <span className="on">NO</span>
-                      <span class="off">YES</span>
+                      <span className="off">NO</span>
+                      <span class="on">YES</span>
                     </label>
                   </td>
                 </tr>

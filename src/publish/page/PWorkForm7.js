@@ -19,57 +19,54 @@ class PWorkForm7 extends Component {
           <PWorkFormLeft />
           <div className="work_content">
             <div className="box_form">
-              <div className="form_table">
-                <div className="form_cell f_wid100">
-                  <span className="form_group  form_clear wid60 c_mr5">
-                    <input type="text" className="form_tag" />
-                    <label className="f_label">템플릿 양식</label>
-                    {/* input에 value 값이 있으면 style display로 제어 */}
-                    <span
-                      className="icon icon_clear"
-                      style={{ display: 'block' }}
-                    >
-                      <i class="fas fa-times-circle"></i>
-                    </span>
-                  </span>
-
-                  <button className="btn_icon btn_dark_gray c_mr5">
-                    <i class="fas fa-question"></i>
-                  </button>
-                  <button className="btn_icon btn_green c_mr5">
-                    <i class="fas fa-download"></i>
-                  </button>
-                </div>
-              </div>
-              <div className="form_table">
-                <div className="form_cell f_wid100">
-                  <span className="form_group wid50 c_mr5">
-                    <input
-                      type="text"
-                      className="form_tag center"
-                      disabled
-                      placeholder="xxxxx.pdf - 10kb"
-                    />
-                    <label className="f_label" for="b">
-                      첨부
-                    </label>
-                    {/* input에 value 값이 있으면 style display로 제어 */}
-                    <span
-                      className="icon icon_clear"
-                      style={{ display: 'block' }}
-                    >
-                      <i class="fas fa-times-circle"></i>
-                    </span>
-                  </span>
-                  <button className="btn_icon btn_dark_gray c_mr5">
-                    <i class="fas fa-question"></i>
-                  </button>
-                  <button className="btn_text btn_dark_gray c_mr5">
-                    첨부하기
-                  </button>
-                  <button className="btn_icon btn_gray c_mr5">
-                    <i class="fas fa-times-circle"></i>
-                  </button>
+              <p className="right c_mb10 c_mt10">
+                <button className="btn_text btn_green">추가</button>
+              </p>
+              <div className="tb_wrap_scroll">
+                <div className="horizon_tb">
+                  <table className="tb_list" style={{ minWidth: '1000px' }}>
+                    <caption></caption>
+                    <thead>
+                      <tr>
+                        <th rowspan={2}>지급일</th>
+                        <th rowspan={2}>보호구 명</th>
+                        <th rowspan={2}>안전인증번호</th>
+                        <th rowspan={2}>수량</th>
+                        <th colspan={3}>수령인</th>
+                        <th colspan={3}>지급담당</th>
+                        <th rowspan={2}>수정</th>
+                        <th rowspan={2}>삭제</th>
+                      </tr>
+                      <tr>
+                        <th>사번</th>
+                        <th>이름</th>
+                        <th>소속</th>
+                        <th>사번</th>
+                        <th>이름</th>
+                        <th>소속</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Yyyy-mm-dd</td>
+                        <td>&nbsp;</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>11111111</td>
+                        <td>홍길동</td>
+                        <td>ㅇㅇㅇㅇㅇ</td>
+                        <td>11111111</td>
+                        <td>홍길동</td>
+                        <td>ㅇㅇㅇㅇㅇ</td>
+                        <td>
+                          <i class="fas fa-edit"></i>
+                        </td>
+                        <td>
+                          <i class="fas fa-trash-alt"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

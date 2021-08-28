@@ -169,7 +169,7 @@ const list = [
     component: PWorkForm4,
     url: '/work-form4',
     pageCount: '13',
-    success: false,
+    success: true,
     useIcon: true,
     description:
       '1.위원은 멀티로 등록이 가능하며 추가는 하단의 [찾기], [추가] 버튼을 통해서 등록됩니다.'
@@ -202,7 +202,7 @@ const list = [
     component: PWorkForm7,
     url: '/work-form7',
     pageCount: '16',
-    success: false,
+    success: true,
     useIcon: false,
     description:
       '1.[추가] 버튼시 오픈되는 모달을 통해 테이블에 행이 추가되는 구조입니다\n2.확인자는 기본 사원검색 모달을 통해 선택된 사원 정보인데 "상태"와 "최종처리 일시" 값을 보여줘야하는데 최종 다음행으로 내려서 보여주는 걸로 변경'
@@ -213,7 +213,7 @@ const list = [
     component: PWorkForm8,
     url: '/work-form8',
     pageCount: '17',
-    success: false,
+    success: true,
     useIcon: false,
     description: ''
   },
@@ -223,7 +223,7 @@ const list = [
     component: PWorkForm9,
     url: '/work-form9',
     pageCount: '18',
-    success: false,
+    success: true,
     useIcon: false,
     description: ''
   },
@@ -233,7 +233,7 @@ const list = [
     component: PWorkForm10,
     url: '/work-form10',
     pageCount: '19',
-    success: false,
+    success: true,
     useIcon: false,
     description:
       '양호/불량은 스위치 스타일 or 체크박스 스타일 둘중 하나입니다. 여력되시면 2가지 경우 가이드 부탁드릴게요!'
