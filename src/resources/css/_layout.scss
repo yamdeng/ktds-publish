@@ -28,10 +28,24 @@
 .horizon_tb {
   overflow-x: auto;
 }
+.vertical_sc {
+  overflow-y: auto;
+  max-height: 500px;
+  @include mobile {
+    max-height: inherit;
+    overflow-y: inherit;
+  }
+}
 .tb_list {
   width: 100%;
 
   border-top: 2px solid #{$col-default-text};
+  tr.active {
+    background: #{$col-green} !important;
+    * {
+      color: #{$col-white} !important;
+    }
+  }
   th {
     font-weight: bold;
     border-bottom: 1px solid #{$col-gray300};
@@ -55,11 +69,11 @@
 }
 
 .detail_form {
+  border-top: 2px solid #{$col-default-text};
   margin-bottom: 30px;
 }
 
 .detail_list {
-  border-top: 2px solid #{$col-default-text};
   .lists {
     position: relative;
     padding: 15px 0;
@@ -69,7 +83,7 @@
       left: 0;
       top: 50%;
       transform: translate(0, -50%);
-      width: 80px;
+      width: 100px;
       text-align: left;
       color: #{$col-gray600};
       border-right: 1px solid #{$col-gray200};
@@ -77,7 +91,7 @@
       box-sizing: border-box;
     }
     .cont {
-      padding-left: 100px;
+      padding-left: 120px;
       box-sizing: border-box;
     }
   }
@@ -143,12 +157,11 @@
 }
 
 .group_box_wrap {
-  margin-top: 20px;
+  margin-top: 15px;
   position: relative;
-  padding: 30px 20px;
-  padding-top: 15px;
-  border: 1px solid #{$col-gray200};
-  margin-bottom: 20px;
+  padding: 12px 10px;
+  border: 1px solid #{$col-gray300};
+  border-radius: 5px;
   .txt {
     background: #{$col-white};
     padding: 4px 5px;
@@ -156,6 +169,17 @@
     left: 10px;
     top: -12px;
     font-size: 12px;
+  }
+  @include mobile {
+    &.mobile_block {
+      .form_group {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        &:first-child {
+        }
+      }
+    }
   }
 }
 
@@ -405,6 +429,7 @@
   &:disabled {
     border: 1px solid #{$col-gray};
     background: #{$col-gray};
+    opacity: 1;
     &::placeholder {
       color: #{$col-gray300};
     }
@@ -736,6 +761,9 @@ hr.line {
   &:hover {
     opacity: 0.9;
     transition: opacity 0.2s ease;
+  }
+  @include mobile {
+    padding: 0 10px;
   }
 }
 .btn_icon {

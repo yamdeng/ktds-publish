@@ -13,12 +13,6 @@ class PWorkFormTop extends Component {
       <div className="work_form_top">
         <div className="box_form c_mb20">
           <div className="form_table">
-            {/* 
-              input,select,textarea 실패했을때 invalid
-              label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
-              f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
-              wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
-            */}
             <div className="form_cell f_wid15">
               <span className="form_group form_search form_clear wid70 c_mr5">
                 <input type="text" className="form_tag" />
@@ -48,7 +42,7 @@ class PWorkFormTop extends Component {
               </span>
               <div className="btn_align">
                 <span className="form_group c_mr5">
-                  <button className="btn_text btn_dark_gray">조회</button>
+                  <button className="btn_text btn_green">조회</button>
                 </span>
                 <span className="form_group c_mr5">
                   <button className="btn_icon btn_dark_gray">

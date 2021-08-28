@@ -136,7 +136,7 @@ const list = [
     component: PWorkForm1,
     url: '/work-form1',
     pageCount: '10',
-    success: false,
+    success: true,
     useIcon: true,
     description:
       '0.10~18 페이지는 안전 서류 등록/수정 case로 좌측영역과 상단역역이 공통으로 구성되어있습니다(별도의 파일로 분류함 : PWorkFormLeft.js, PWorkFormTop.js)\n1.[찾기],[조회],[초기화] 버튼은 같은 액션 그룹이라 같이 붙어있으면 됩니다.(찾기와 동시에 조회가 되는 구조여야 될 것 같애서 조회 버튼 필요없을 수 도 있습니다(있다고 가정하시면 됩니다)\n2.파일첨부 각 필드의 마지막에 아래 화살표 아이콘이 있는데 용도가 없어 보여서 삭제\n3.[X] 버튼과 [+] 버튼이 같은 정렬로 있는데 [x] 버튼은 업로된 파일을 삭제하는거고 [+]는 클릭시 파일 다이얼로그가 오픈됨\n4.좌측 하단에 공간이 따로 존재하는데 존재하는 경우와 존재하지 않는 경우 2가지 가이드 필요합니다.\n5.[찾기] 버튼 우측에 있는 등록일시, 등록자 소속 이름, 서류 상태 라벨을 바로 아래로 내립니다.\n3.[?],[X],[+] : 3개 아이콘 필요'
@@ -147,7 +147,7 @@ const list = [
     component: PWorkForm2,
     url: '/work-form2',
     pageCount: '11',
-    success: false,
+    success: true,
     useIcon: true,
     description:
       '1.삭제,변경은 버튼으로 할지 아이콘으로 할지 가이드해주시는데로 그대로 진행\n2.변경 버튼을 누르면 해당 로우는 라벨에서 input으로 변경됨'
@@ -158,7 +158,7 @@ const list = [
     component: PWorkForm3,
     url: '/work-form3',
     pageCount: '12',
-    success: false,
+    success: true,
     useIcon: true,
     description:
       '1.안전관리자 필드는 많은 화면에서 사용하는 "사원검색" 모달을 통해 선택된 결과값을 보여주는 영역입니다.\n2.기획서는 여러 필드로 나와있는데 3개의 필드로 보여주는 경우와 하나의 필드로 보여주는 경우 2가지 경우를 가이드해주시면 좋을 것 같습니다.\n3.하나의 필드일 경우 이름 지책(사번) / 소속 순으로 라벨링되어 보여집니다(기획서에 반영해놓았습니다)'
@@ -180,7 +180,7 @@ const list = [
     component: PWorkForm5,
     url: '/work-form5',
     pageCount: '14',
-    success: false,
+    success: true,
     useIcon: false,
     description:
       '1.교육대상자 수, 교육실시자 수 "계"는 합계로 자동계산되는 영역으로 input으로 할 경우 disabled 상태임\n2.하단에 있는 "교육 실시 사진"은 이미지 첨부 영역임(한개만 등록하는 UI)'
@@ -191,7 +191,7 @@ const list = [
     component: PWorkForm6,
     url: '/work-form6',
     pageCount: '15',
-    success: false,
+    success: true,
     useIcon: false,
     description:
       '1.도급인은 [추가] 버튼을 통해 멀티로 추가되는 UI이고 기존 기획서 상에 [추가] 버튼과 [삭제] 버튼이 누락된걸로 판단됨\n2.확인자 영역의 [?] 버튼은 툴팁 형태로 도움말이 나오는 구조임'

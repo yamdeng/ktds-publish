@@ -48,65 +48,67 @@ class PDeptMemberList extends Component {
               <p className="relative c_mb10">
                 <span className="fs_12">총 nnn 건</span>
               </p>
-              <table className="tb_list">
-                <caption></caption>
-                <colgroup>
-                  <col style={{ width: '40%' }} />
-                  <col style={{ width: '40%' }} />
-                  <col style={{ width: '10%' }} />
-                  <col style={{ width: '10%' }} />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>조직코드</th>
-                    <th>조직 명</th>
-                    <th>편집</th>
-                    <th>삭제</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <select
-                        name=""
-                        id="b"
-                        disabled
-                        className="form_tag_select center edit"
-                      >
-                        <option value="">한성유통</option>
-                        <option value="">전체</option>
-                        <option value="">전체2</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="한성유통㈜"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="vertical_sc">
+                <table className="tb_list">
+                  <caption></caption>
+                  <colgroup>
+                    <col style={{ width: '40%' }} />
+                    <col style={{ width: '40%' }} />
+                    <col style={{ width: '10%' }} />
+                    <col style={{ width: '10%' }} />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>조직코드</th>
+                      <th>조직 명</th>
+                      <th>편집</th>
+                      <th>삭제</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="active">
+                      <td>
+                        <select
+                          name=""
+                          id="b"
+                          disabled
+                          className="form_tag_select center edit"
+                        >
+                          <option value="">한성유통</option>
+                          <option value="">전체</option>
+                          <option value="">전체2</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          className="form_tag center edit"
+                          disabled
+                          value="한성유통㈜"
+                          onChange={this.onChangeInput}
+                          onBlur={this.onChangeInput}
+                        />
+                      </td>
+                      <td>
+                        <i class="fas fa-edit"></i>
+                      </td>
+                      <td>
+                        <i class="fas fa-trash-alt"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <i class="fas fa-edit"></i>
+                      </td>
+                      <td>
+                        <i class="fas fa-trash-alt"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <div className="list_form_btns not_list">
                 <button className="btn_text btn_green">추가</button>
               </div>

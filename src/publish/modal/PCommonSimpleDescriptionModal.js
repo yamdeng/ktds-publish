@@ -21,7 +21,7 @@ class PCommonSimpleDescriptionModal extends React.Component {
       <div className="popup-container">
         <h3 className="pop_title">유예 사유</h3>
         <div className="pop_cont_box">
-          <div className="box_form">
+          <div className="list_form">
             <div className="form_table">
               <div className="form_cell f_wid100">
                 <span className="form_group wid100 c_mr5">

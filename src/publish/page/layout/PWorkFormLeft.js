@@ -45,13 +45,13 @@ class PWorkFormLeft extends Component {
             </li>
           </ul>
           <div className="btns_wrap">
-            <button className="btn_text btn_green  c_mb10">
+            <button className="btn_text btn_dark_gray  c_mb10">
               양식 다운로드
             </button>
-            <button className="btn_text btn_green  c_mb10">
+            <button className="btn_text btn_dark_gray  c_mb10">
               서류 다운로드
             </button>
-            <button className="btn_text btn_green  c_mb10">
+            <button className="btn_text btn_dark_gray  c_mb10">
               작성이력 보기
             </button>
           </div>

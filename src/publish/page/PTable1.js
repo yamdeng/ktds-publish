@@ -162,46 +162,49 @@ class PTable1 extends Component {
               </button>
             </div>
           </div>
-          <div className="form_table">
-            <div className="form_cell f_wid50">
-              <span className="form_group wid20 c_mr5">
-                <input
-                  type="text"
-                  className="form_tag"
-                  disabled="true"
-                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                />
-                <label className="f_label" for="b">
-                  사번
-                </label>
-              </span>
-              <span className="form_group wid20 c_mr5">
-                <input
-                  type="text"
-                  className="form_tag"
-                  disabled="true"
-                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                />
-                <label className="f_label" for="b">
-                  이름
-                </label>
-              </span>
-              <span className="form_group wid30 c_mr5">
-                <input
-                  type="text"
-                  className="form_tag"
-                  disabled="true"
-                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                />
-                <label className="f_label" for="b">
-                  소속
-                </label>
-              </span>
-              <span className="form_group c_mr5">
-                <button className="btn_icon btn_dark_gray">
-                  <i class="fas fa-search"></i>
-                </button>
-              </span>
+          <div className="group_box_wrap mobile_block">
+            <span className="txt">확인자 </span>
+            <div className="form_table">
+              <div className="form_cell f_wid50">
+                <span className="form_group wid20 c_mr5">
+                  <input
+                    type="text"
+                    className="form_tag"
+                    disabled="true"
+                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                  />
+                  <label className="f_label" for="b">
+                    사번
+                  </label>
+                </span>
+                <span className="form_group wid20 c_mr5">
+                  <input
+                    type="text"
+                    className="form_tag"
+                    disabled="true"
+                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                  />
+                  <label className="f_label" for="b">
+                    이름
+                  </label>
+                </span>
+                <span className="form_group wid30 c_mr5">
+                  <input
+                    type="text"
+                    className="form_tag"
+                    disabled="true"
+                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                  />
+                  <label className="f_label" for="b">
+                    소속
+                  </label>
+                </span>
+                <span className="form_group c_mr5">
+                  <button className="btn_icon btn_dark_gray">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </span>
+              </div>
             </div>
           </div>
           <div className="form_table">

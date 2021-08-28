@@ -214,25 +214,34 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
+  @include mobile {
+    flex-direction: column;
+  }
   .work_left_menu {
     width: 200px;
     padding: 0 10px 10px 5px;
     box-sizing: border-box;
-  }
-  .work_content {
-    flex-grow: 1;
-    border-left: 1px solid #{$col-gray100};
-    padding-left: 10px;
-  }
-  @include mobile {
-    flex-direction: column;
-    .work_left_menu {
+    @include mobile {
       width: 100%;
       flex-grow: 1;
       padding: 0;
       padding-bottom: 10px;
       border-bottom: 1px solid #{$col-gray200};
       margin-bottom: 20px;
+    }
+  }
+  .work_content {
+    flex-grow: 1;
+    border-left: 1px solid #{$col-gray100};
+    padding-left: 10px;
+    overflow-y: auto;
+    @include mobile {
+      padding-left: 0;
+      border: none;
+      .box_form {
+        padding: 0;
+        border: none;
+      }
     }
   }
 }
