@@ -65,7 +65,7 @@ class ModalContainer extends React.Component {
         case ModalType.MEMBER_SIMPLE_FORM_MODAL:
           modalComponent = <PMemberSimpleFormModal modalData={modalData} />;
           break;
-        case ModalType.MEMBER_ROLE_UPDATE_MODAL:
+        case ModalType.MEMBER_ROLE_FORM_MODAL:
           modalComponent = <PMemberRoleUpdateModal modalData={modalData} />;
           break;
         case ModalType.BOARD_COMMENT_LIST_MODAL:
@@ -74,7 +74,7 @@ class ModalContainer extends React.Component {
         case ModalType.SAFE_DOC_TEMPLATE_FORM_MODAL:
           modalComponent = <PSafeDocTemplateFormModal modalData={modalData} />;
           break;
-        case ModalType.TEMPLATE_APPLY_MODAL:
+        case ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL:
           modalComponent = <PTemplateApplyModal modalData={modalData} />;
           break;
         case ModalType.CONSTRUCTION_ORGANIZE_MODAL:
@@ -91,7 +91,7 @@ class ModalContainer extends React.Component {
         case ModalType.CHECK_ITEM_FORM_MODAL:
           modalComponent = <PCheckItemFormModal modalData={modalData} />;
           break;
-        case ModalType.WORK_DIRECTION_LIST_MODAL:
+        case ModalType.WORK_ORDER_LIST_MODAL:
           modalComponent = <PWorkDirectionListModal modalData={modalData} />;
           break;
         case ModalType.DOC_SEARCH_MODAL:

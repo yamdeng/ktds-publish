@@ -71,7 +71,7 @@ const list = [
     fileName: 'PMemberRoleUpdateModal.js',
     pageCount: '4',
     success: true,
-    modalType: ModalType.MEMBER_ROLE_UPDATE_MODAL,
+    modalType: ModalType.MEMBER_ROLE_FORM_MODAL,
     isAlert: false,
     isMobileFull: false,
     description:
@@ -104,7 +104,7 @@ const list = [
     fileName: 'PTemplateApplyModal.js',
     pageCount: '7',
     success: true,
-    modalType: ModalType.TEMPLATE_APPLY_MODAL,
+    modalType: ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL,
     isAlert: false,
     isMobileFull: true,
     description: ''
@@ -154,7 +154,7 @@ const list = [
     fileName: 'PWorkDirectionListModal.js',
     pageCount: '12',
     success: true,
-    modalType: ModalType.WORK_DIRECTION_LIST_MODAL,
+    modalType: ModalType.WORK_ORDER_LIST_MODAL,
     isAlert: false,
     isMobileFull: false,
     description: ''
