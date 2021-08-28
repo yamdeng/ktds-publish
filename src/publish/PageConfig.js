@@ -244,7 +244,7 @@ const list = [
     component: PWorkDirectionList,
     url: '/work-directions',
     pageCount: '20',
-    success: false,
+    success: true,
     useIcon: true,
     description: ''
   },
@@ -254,7 +254,7 @@ const list = [
     component: PWorkDirectionForm1,
     url: '/work-direction-form1',
     pageCount: '21',
-    success: false,
+    success: true,
     useIcon: true,
     description: ''
   },
@@ -264,7 +264,7 @@ const list = [
     component: PWorkDirectionForm2,
     url: '/work-direction-form2',
     pageCount: '22',
-    success: false,
+    success: true,
     useIcon: true,
     description: ''
   },

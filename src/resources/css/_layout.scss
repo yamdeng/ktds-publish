@@ -25,6 +25,16 @@
   }
 }
 
+.flex_grow_two_fix {
+  display: flex;
+  & > div {
+    &:first-child {
+      margin-right: 50px;
+    }
+    flex-grow: 1;
+  }
+}
+
 .horizon_tb {
   overflow-x: auto;
 }
@@ -454,6 +464,7 @@
     background: none;
     color: #{$col-default-text};
   }
+
   &:focus,
   &.active {
     border: 1px solid #{$col-green} !important;
@@ -554,9 +565,6 @@ input[type='radio'] {
   border: solid 2px #{$col-default-text};
   background: #{$col-white};
   margin-right: 6px;
-  .only_label {
-    margin-right: 0;
-  }
 }
 .radio-label:after,
 .checkbox-label:after {
@@ -603,6 +611,9 @@ input[type='radio'] {
 }
 .checkbox-wrapper input[type='checkbox']:disabled + .checkbox-label:before {
   background: #{$col-gray300};
+}
+.only_label:before {
+  margin-right: 0;
 }
 
 .label_on_off {
@@ -845,6 +856,12 @@ hr.line {
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
+}
+.abcc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .tabs_wrap {
