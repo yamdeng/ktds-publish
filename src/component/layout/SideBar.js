@@ -1,25 +1,46 @@
 import React, { Component } from 'react';
+import { observer, inject } from 'mobx-react';
+import { withRouter } from 'react-router-dom';
 
 import logo from 'resources/images/ktLogo.png';
-import Menu from 'config/Menu';
+import update from 'immutability-helper';
 
-class PSideBar extends Component {
+/*
+
+  좌측 메뉴
+
+*/
+@withRouter
+@inject('appStore', 'uiStore')
+@observer
+class SideBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      menuList: Menu,
-      webToggle: true,
-      isDarkTheme: false
-    };
-    this.webMenuToggle = this.webMenuToggle.bind(this);
-    this.toggleTheme = this.toggleTheme.bind(this);
-    this.toggleMenu = this.toggleMenu.bind(this);
+    this.state = {};
+
+    // 좌측 최상단 메뉴 메뉴 버튼 토글
+    this.toggleSideMenu = this.toggleSideMenu.bind(this);
+
+    // 메뉴 토글
+    this.toggle1DepthMenu = this.toggle1DepthMenu.bind(this);
+
+    // 메뉴 선택
+    this.selectMenu = this.selectMenu.bind(this);
   }
 
-  webMenuToggle() {
-    this.setState({
-      webToggle: !this.state.webToggle
-    });
+  toggleSideMenu() {
+    let { uiStore } = this.props;
+    uiStore.toggleSideMenu();
+  }
+
+  toggle1DepthMenu(menuName) {
+    let { uiStore } = this.props;
+    uiStore.toggle1DepthMenu(menuName);
+  }
+
+  selectMenu(menuInfo) {
+    let { uiStore } = this.props;
+    uiStore.selectMenu(menuInfo);
   }
 
   toggleTheme() {
@@ -32,16 +53,15 @@ class PSideBar extends Component {
     this.setState({ isDarkTheme: !isDarkTheme });
   }
 
-  toggleMenu(name) {}
-
   componentDidMount() {}
 
   render() {
-    let { menuList } = this.state;
+    let { uiStore } = this.props;
+    let { menuList, displaySideMenu } = uiStore;
     return (
       <React.Fragment>
         <div className="top_menu_toggle">
-          <button className="toggle_btn" onClick={this.webMenuToggle}>
+          <button className="toggle_btn" onClick={this.toggleSideMenu}>
             <i class="fas fa-bars"></i>
           </button>
           <h1 className="">
@@ -55,13 +75,13 @@ class PSideBar extends Component {
               name="switch"
               className="input_on_off"
             />
-            <label for="switch" className="label_on_off">
+            {/* <label for="switch" className="label_on_off">
               <span className="marble"></span> <span className="on">dark</span>
               <span class="off">light</span>
-            </label>
+            </label> */}
           </div>
         </div>
-        <div className={this.state.webToggle ? 'menu_side' : 'menu_side hide'}>
+        <div className={displaySideMenu ? 'menu_side' : 'menu_side hide'}>
           <div className="menu_area">
             <div className="menu_wrap">
               <ul className="dep_1">
@@ -73,7 +93,7 @@ class PSideBar extends Component {
                       <ul class="dep_2">
                         {childs.map((childMenuInfo) => {
                           return (
-                            <li>
+                            <li onClick={() => this.selectMenu(childMenuInfo)}>
                               <p>{childMenuInfo.name}</p>
                             </li>
                           );
@@ -83,7 +103,11 @@ class PSideBar extends Component {
                   }
                   return (
                     <li className={firstDepthMenuInfo.isExpend ? 'active' : ''}>
-                      <p>
+                      <p
+                        onClick={() =>
+                          this.toggle1DepthMenu(firstDepthMenuInfo.name)
+                        }
+                      >
                         <span className="icon ablc">
                           <i class={firstDepthMenuInfo.iconClass}></i>
                         </span>
@@ -100,12 +124,9 @@ class PSideBar extends Component {
                 })}
               </ul>
             </div>
-            {/* <button className="toggle_dark_mode" onClick={this.toggleTheme}>
-              다크모드 토글
-            </button> */}
           </div>
         </div>
-        <span className={this.state.webToggle ? 'menu_bg' : 'menu_bg active'}>
+        <span className={displaySideMenu ? 'menu_bg' : 'menu_bg active'}>
           &nbsp;
         </span>
       </React.Fragment>
@@ -113,4 +134,4 @@ class PSideBar extends Component {
   }
 }
 
-export default PSideBar;
+export default SideBar;

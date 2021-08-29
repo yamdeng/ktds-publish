@@ -1,6 +1,5 @@
 import { observable, action, makeObservable, computed } from 'mobx';
 import ModalService from 'service/ModalService';
-import ApiService from 'service/ApiService';
 import Helper from 'util/Helper';
 import Logger from 'util/Logger';
 
@@ -21,16 +20,18 @@ class AppStore {
   constructor(rootStore) {
     makeObservable(this);
     this.rootStore = rootStore;
-    this.profile = Helper.getByLocalStorage('profile') || null;
-    this.token = Helper.getByLocalStorage('token') || '';
+    // this.profile = Helper.getByLocalStorage('profile') || null;
+    // this.token = Helper.getByLocalStorage('token') || '';
+    this.profile = { name: '이홍석', deptName: '개발팀', positionName: '과장' };
+    this.token = 'test-token';
   }
 
   // 프로필 정보 가져오기
   @action
   getProfile() {
-    ApiService.get('auth/profile').then(({ data }) => {
-      this.setLoginInfo(data);
-    });
+    // ApiService.get('auth/profile').then(({ data }) => {
+    //   this.setLoginInfo(data);
+    // });
   }
 
   // 로그인 회원 정보 / 서버 인증 토큰 최신화

@@ -14,7 +14,7 @@ import { withRouter } from 'react-router-dom';
 
 */
 @withRouter
-@inject('boardStore')
+@inject('appStore')
 @observer
 class BoardList extends Component {
   constructor(props) {
@@ -30,12 +30,11 @@ class BoardList extends Component {
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { appStore } = this.props;
+    let { profile } = appStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>게시판 목록 : BoardList</h2>
-        {info}
       </div>
     );
   }

@@ -16,7 +16,7 @@ import { withRouter } from 'react-router-dom';
 @withRouter
 @inject('boardStore')
 @observer
-class SafeDocStatusList extends Component {
+class SafeDocList extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -41,4 +41,4 @@ class SafeDocStatusList extends Component {
   }
 }
 
-export default SafeDocStatusList;
+export default SafeDocList;

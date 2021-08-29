@@ -14,9 +14,9 @@ import { withRouter } from 'react-router-dom';
 
 */
 @withRouter
-@inject('outsideOrgManageStore')
+@inject('appStore')
 @observer
-class OutSideOrgManage extends Component {
+class OutsideOrgManage extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -30,15 +30,15 @@ class OutSideOrgManage extends Component {
   }
 
   render() {
-    let { outsideOrgManageStore } = this.props;
-    let { info } = outsideOrgManageStore;
+    // let { outsideOrgManageStore } = this.props;
+    // let { info } = outsideOrgManageStore;
     return (
-      <div>
-        <h2>사외 조직/사원 등록 : OutSideOrgManage</h2>
-        {info}
+      <div className="content_area">
+        <h2>사외 조직/사원 등록 : OutsideOrgManage</h2>
+        {/* {info} */}
       </div>
     );
   }
 }
 
-export default OutSideOrgManage;
+export default OutsideOrgManage;

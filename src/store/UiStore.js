@@ -1,6 +1,7 @@
 import { observable, action, makeObservable } from 'mobx';
 import AppHistory from 'util/AppHistory';
-import Helper from 'util/Helper';
+import Menu from 'config/Menu';
+import update from 'immutability-helper';
 
 /*
   
@@ -20,11 +21,21 @@ class UiStore {
   @observable
   currentSideMenuName = '';
 
+  // Side 메뉴 url
+  @observable
+  currentSideMenuUrl = '';
+
   // 이전 라우팅 url
   @observable beforeRouteUrl = null;
 
   // 현재 라우팅 url
   @observable currentRouteUrl = null;
+
+  // 메뉴 목록
+  @observable menuList = Menu;
+
+  // 다크 테마 여부
+  @observable isDarkTheme = false;
 
   constructor(rootStore) {
     makeObservable(this);
@@ -43,16 +54,25 @@ class UiStore {
     this.displayLoadingBar = false;
   }
 
-  // top 헤더, 왼쪽 메뉴 show
+  // 왼쪽 사이드 메뉴 toggle
   @action
-  showSideMenu() {
-    this.displaySideMenu = true;
+  toggleSideMenu() {
+    this.displaySideMenu = !this.displaySideMenu;
   }
 
-  // top 헤더, 왼쪽 메뉴 hide
+  // 왼쪽 1depth 메뉴 toggle
   @action
-  hideSideMenu() {
-    this.displaySideMenu = false;
+  toggle1DepthMenu(menuName) {
+    let searchIndex = this.menuList.findIndex((info) => info.name === menuName);
+    if (searchIndex !== -1) {
+      let selectMenuInfo = this.menuList[searchIndex];
+      let newMenuList = update(this.menuList, {
+        [searchIndex]: {
+          isExpend: { $set: !selectMenuInfo.isExpend }
+        }
+      });
+      this.menuList = newMenuList;
+    }
   }
 
   // 페이지 이동 : replace가 true이면 이전 history replace
@@ -80,33 +100,11 @@ class UiStore {
     this.currentRouteUrl = currentRouteUrl;
   }
 
-  // 현재 route url 수정
-  @action
-  changeOnlyCurrentRouteUrl(currentRouteUrl) {
-    if (this.currentRouteUrl) {
-      this.beforeRouteUrl = this.currentRouteUrl;
-    }
-    this.currentRouteUrl = currentRouteUrl;
-  }
-
   // 상담사 메인 왼쪽 메뉴 active 반영
   @action
-  changeCurrentSideMenuName(currentSideMenuName) {
-    this.currentSideMenuName = currentSideMenuName;
-  }
-
-  // 현재 route url 기준으로 상담사 메인 왼쪽 메뉴 active 반영
-  @action
-  changeCurrentSideMenuNameByRouteUrl(currentRouteUrl) {
-    let activeMenuName = '';
-    if (currentRouteUrl && currentRouteUrl.indexOf('/') !== -1) {
-      if (currentRouteUrl === '/') {
-        activeMenuName = 'stats';
-      } else {
-        activeMenuName = Helper.get1DepthRouteName(currentRouteUrl);
-      }
-    }
-    this.currentSideMenuName = activeMenuName;
+  selectMenu(menuInfo) {
+    let { routeUrl } = menuInfo;
+    this.goPage(routeUrl);
   }
 
   // 모달 전체 close

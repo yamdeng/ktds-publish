@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
-import Login from 'components/Login';
-import Guest from 'components/Guest';
-import Main from 'components/layout/Main';
-import ErrorBoundary from 'components/layout/ErrorBoundary';
+import ReactTooltip from 'react-tooltip';
+import LoadingBarContainer from 'component/layout/LoadingBarContainer';
+import AlertModalContainer from 'component/layout/AlertModalContainer';
+import ModalContainer from 'component/layout/ModalContainer';
+import NotLogin from 'component/NotLogin';
+import Main from 'component/layout/Main';
+import ErrorBoundary from 'component/layout/ErrorBoundary';
 import AppHistory from 'util/AppHistory';
 import Helper from 'util/Helper';
 import Logger from 'util/Logger';
 import Config from 'config/Config';
+import ModalSerivce from 'service/ModalService';
 
 /*
 
@@ -47,13 +51,9 @@ class App extends Component {
       Logger.log('currentRouteUrl : ' + currentRouteUrl);
       Logger.log('beforeRouteUrl : ' + beforeRouteUrl);
       if (beforeRouteUrl && currentRouteUrl !== beforeRouteUrl) {
-        uiStore.closeModal();
+        ModalSerivce.closeAllModal();
       }
-      if (action === 'REPLACE') {
-        uiStore.changeOnlyCurrentRouteUrl(currentRouteUrl);
-      } else {
-        uiStore.changeCurrentRouteUrl(currentRouteUrl);
-      }
+      uiStore.changeCurrentRouteUrl(currentRouteUrl);
       return true;
     });
   }
@@ -74,23 +74,27 @@ class App extends Component {
   }
 
   render() {
-    const { appStore, location } = this.props;
-    const { profile, isGuest } = appStore;
+    const { appStore } = this.props;
+    const { profile } = appStore;
     let mainComponent = null;
-    let pathName = location.pathname;
     if (profile) {
       // 로그인이 되어 있는 경우
-      // 게스트이고 상담 도우미 페이지가 아닐 경우에는 게스트 가이드 페이지를 display
-      if (pathName.indexOf('manual') === -1 && isGuest) {
-        mainComponent = <Guest />;
-      } else {
-        mainComponent = <Main />;
-      }
+      mainComponent = <Main />;
     } else {
       // 로그인 않되어 있는 경우
-      mainComponent = <Login />;
+      mainComponent = <NotLogin />;
     }
-    return <ErrorBoundary>{mainComponent}</ErrorBoundary>;
+    return (
+      <ErrorBoundary>
+        <div>
+          {mainComponent}
+          <LoadingBarContainer />
+          <AlertModalContainer />
+          <ModalContainer />
+          <ReactTooltip />
+        </div>
+      </ErrorBoundary>
+    );
   }
 }
 

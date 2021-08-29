@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router } from 'react-router-dom';
+import { Router } from 'react-router';
 import moment from 'moment';
 import 'moment/locale/ko';
 import { configure } from 'mobx';

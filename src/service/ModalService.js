@@ -26,6 +26,12 @@ class ModalService {
   closeModal() {
     rootStore.modalStore.hideModal();
   }
+
+  // 모달 전체 종료
+  closeAllModal() {
+    rootStore.alertModalStore.hideModal();
+    rootStore.modalStore.hideAllModal();
+  }
 }
 
 export default new ModalService();
