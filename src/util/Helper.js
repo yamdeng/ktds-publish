@@ -4,6 +4,7 @@ import Config from 'config/Config';
 import moment from 'moment';
 import queryString from 'query-string';
 import Logger from 'util/Logger';
+import { v4 as uuidv4 } from 'uuid';
 
 /*
 
@@ -248,6 +249,11 @@ function downloadFile(apiUrl, queryStringObject) {
   window.open(downLoadUrl);
 }
 
+// uuid
+function getUuid() {
+  return uuidv4();
+}
+
 export default {
   saveInfoToLocalStorage,
   getByLocalStorage,
@@ -270,5 +276,6 @@ export default {
   phoneNumberAddHypen,
   emptyHandle,
   focusById,
-  downloadFile
+  downloadFile,
+  getUuid
 };
