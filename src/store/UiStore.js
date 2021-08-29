@@ -2,6 +2,7 @@ import { observable, action, makeObservable } from 'mobx';
 import AppHistory from 'util/AppHistory';
 import Menu from 'config/Menu';
 import update from 'immutability-helper';
+import DeviceUtil from 'util/DeviceUtil';
 
 /*
   
@@ -105,6 +106,9 @@ class UiStore {
   selectMenu(menuInfo) {
     let { routeUrl } = menuInfo;
     this.goPage(routeUrl);
+    if (DeviceUtil.isMobile) {
+      this.displaySideMenu = true;
+    }
   }
 
   // 모달 전체 close
