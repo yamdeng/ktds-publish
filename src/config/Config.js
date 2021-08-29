@@ -26,4 +26,7 @@ Config.defaultTablePageSize = 15;
 // 최대 보여지는 페이징갯수
 Config.maxPagingSize = 10;
 
+// 공통 tree root key
+Config.treeRootKey = '-1';
+
 export default Config;

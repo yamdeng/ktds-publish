@@ -3,6 +3,7 @@ import UiStore from 'store/UiStore';
 import ModalStore from 'store/ModalStore';
 import AlertModalStore from 'store/AlertModalStore';
 import BoardStore from 'store/BoardStore';
+import TestStore from 'store/TestStore';
 
 /*
 
@@ -12,6 +13,10 @@ import BoardStore from 'store/BoardStore';
   alertModalStore : alert, confirm 모달 manage store
   boardStore : 게시판 store
 
+
+
+  testStore : testStore
+
 */
 class RootStore {
   constructor() {
@@ -20,6 +25,8 @@ class RootStore {
     this.alertModalStore = new AlertModalStore(this);
     this.modalStore = new ModalStore(this);
     this.boardStore = new BoardStore(this);
+
+    this.testStore = new TestStore(this);
   }
 }
 
