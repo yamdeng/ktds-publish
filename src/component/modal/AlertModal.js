@@ -49,7 +49,14 @@ class AlertModal extends React.Component {
   render() {
     // let { modalData } = this.props;
     // let { body, okLabel } = modalData;
-    return <div>AlertModal</div>;
+    return (
+      <div className="popup-container">
+        AlertModal
+        <span className="pop_close" onClick={this.ok}>
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+    );
   }
 }
 

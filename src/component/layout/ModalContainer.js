@@ -126,6 +126,9 @@ class ModalContainer extends React.Component {
           ariaHideApp={false}
           overlayClassName={overlayClassName}
           className={contentClassName}
+          onRequestClose={() => {
+            modalStore.hideModal();
+          }}
         >
           {modalComponent}
         </Modal>

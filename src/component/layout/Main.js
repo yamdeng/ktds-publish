@@ -31,6 +31,9 @@ import SafeDocScheduleList from 'component/safe-doc/SafeDocScheduleList';
 import SafeDocList from 'component/safe-doc/SafeDocList';
 import SafeDocForm from 'component/safe-doc/SafeDocForm';
 
+// 아래부터는 테스트 컴포넌트 : 추가되는 컴포넌트는 위에 정의
+import ModalTest from 'component/test/ModalTest';
+
 @withRouter
 @observer
 class Main extends Component {
@@ -180,6 +183,8 @@ class Main extends Component {
               }
             }}
           />
+          {/* 이후 아래는 테스트 라우팅 */}
+          <Route exact path="/test/modal" component={ModalTest} />
         </Switch>
       </>
     );

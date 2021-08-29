@@ -43,6 +43,9 @@ class AlertModalContainer extends React.Component {
         ariaHideApp={false}
         overlayClassName={overlayClassName}
         className={contentClassName}
+        onRequestClose={() => {
+          alertModalStore.hideModal();
+        }}
       >
         {modalComponent}
       </Modal>

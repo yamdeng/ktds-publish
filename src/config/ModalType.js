@@ -51,7 +51,7 @@ ModalType.WORK_ORDER_LIST_MODAL = 'work-order-list-modal';
 // 안전 서류 템플릿 폼 모달 : SafeDocTemplateFormModal
 ModalType.SAFE_DOC_TEMPLATE_FORM_MODAL = 'safe-doc-template-form-modal';
 
-// 템플릿 적용 모달 : SafeDocTemplateApplyFormModal
+// 템플릿 적용 폼 모달 : SafeDocTemplateApplyFormModal
 ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL =
   'safe-doc-template-apply-form-modal';
 

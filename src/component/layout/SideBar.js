@@ -3,7 +3,6 @@ import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 
 import logo from 'resources/images/ktLogo.png';
-import update from 'immutability-helper';
 
 /*
 

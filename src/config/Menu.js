@@ -8,7 +8,7 @@ let Menu = [
   {
     name: '대시보드',
     iconClass: 'fas fa-tachometer-alt',
-    isExpend: true,
+    isExpend: false,
     childs: [
       {
         name: '안전서류 작성 현황',
@@ -23,7 +23,7 @@ let Menu = [
   {
     name: '안전점검 관리',
     iconClass: 'fas fa-tasks',
-    isExpend: true,
+    isExpend: false,
     childs: [
       {
         name: '점검항목 관리(공통)',
@@ -98,6 +98,17 @@ let Menu = [
       {
         name: '사용자 권한 부여',
         routeUrl: '/member-roles'
+      }
+    ]
+  },
+  {
+    name: '개발',
+    iconClass: 'fas fa-code',
+    isExpend: true,
+    childs: [
+      {
+        name: '모달',
+        routeUrl: '/test/modal'
       }
     ]
   }

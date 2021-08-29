@@ -17,7 +17,7 @@ import HOC from 'util/HOC';
 
 @HOC.documentTitle('게시판 관리')
 @withRouter
-@inject('appStore')
+@inject('boardStore')
 @observer
 class BoardList extends Component {
   constructor(props) {
@@ -33,11 +33,12 @@ class BoardList extends Component {
   }
 
   render() {
-    let { appStore } = this.props;
-    let { profile } = appStore;
+    let { boardStore } = this.props;
+    let { info } = boardStore;
     return (
       <div className="content_area">
         <h2>게시판 목록 : BoardList</h2>
+        {info}
       </div>
     );
   }
