@@ -33,6 +33,10 @@ import SafeDocForm from 'component/safe-doc/SafeDocForm';
 
 // 아래부터는 테스트 컴포넌트 : 추가되는 컴포넌트는 위에 정의
 import ModalTest from 'component/test/ModalTest';
+import TableTest1 from 'component/test/TableTest1';
+import TableTest2 from 'component/test/TableTest2';
+import FormTest1 from 'component/test/FormTest1';
+import FormTest2 from 'component/test/FormTest2';
 
 @withRouter
 @observer
@@ -185,6 +189,10 @@ class Main extends Component {
           />
           {/* 이후 아래는 테스트 라우팅 */}
           <Route exact path="/test/modal" component={ModalTest} />
+          <Route exact path="/test/table1" component={TableTest1} />
+          <Route exact path="/test/table2" component={TableTest2} />
+          <Route exact path="/test/form1" component={FormTest1} />
+          <Route exact path="/test/form2" component={FormTest2} />
         </Switch>
       </>
     );

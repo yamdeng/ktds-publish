@@ -109,6 +109,22 @@ let Menu = [
       {
         name: '모달',
         routeUrl: '/test/modal'
+      },
+      {
+        name: '테이블1',
+        routeUrl: '/test/table1'
+      },
+      {
+        name: '테이블2',
+        routeUrl: '/test/table2'
+      },
+      {
+        name: '폼1',
+        routeUrl: '/test/form1'
+      },
+      {
+        name: '폼2',
+        routeUrl: '/test/form2'
       }
     ]
   }
