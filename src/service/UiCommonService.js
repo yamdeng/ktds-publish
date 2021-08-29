@@ -17,13 +17,18 @@ class UiCommonService {
   }
 
   // 등록 서류 검색 모달 오픈
-  openDocSelectModal(selectHandleFunction) {
-    ModalService.openModal(ModalType.MEMBER_SELECT_MODAL, {
+  openSafeDocSearchModal(selectHandleFunction) {
+    ModalService.openModal(ModalType.SAFE_DOC_SEARCH_MODAL, {
       selectHandler: selectHandleFunction
     });
   }
 
   // 공사 번호 검색 모달 오픈
+  openConstructionSearchModal(selectHandleFunction) {
+    ModalService.openModal(ModalType.CONSTRUCTION_SEARCH_MODAL, {
+      selectHandler: selectHandleFunction
+    });
+  }
 }
 
 export default new UiCommonService();

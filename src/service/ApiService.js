@@ -3,7 +3,8 @@ import Api from 'util/Api';
 /*
 
   ajax 서버 api 요청 공통 인터페이스
-   : config는 axios에 전달되는 정보(headers, timeout, disableLoadingBar ..)
+   : config는 axios에 전달되는 정보
+    (headers, timeout, disableLoadingBar, disableServerErrorHandle, disableServerCommonErrorHandle)
 
 */
 
