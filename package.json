@@ -96,7 +96,7 @@
     "build:publish": "cross-env ENTRY_NAME=publish node scripts/build.js",
     "test": "node scripts/test.js",
     "build-heroku": "cross-env ENTRY_NAME=publish node scripts/build.js",
-    "start-heroku": "cross-env ENTRY_NAME=publish APP_ENV=publish PORT=80 node scripts/start.js",
+    "start-heroku": "cross-env ENTRY_NAME=publish APP_ENV=publish PORT=80 node scripts/start.js"
   },
   "eslintConfig": {
     "extends": [
