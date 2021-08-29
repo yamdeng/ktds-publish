@@ -5,7 +5,7 @@ import { observer, inject } from 'mobx-react';
 @withRouter
 @inject('modalStore')
 @observer
-class PWorkDirectionListModal extends React.Component {
+class PDocSearchModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -260,4 +260,4 @@ class PWorkDirectionListModal extends React.Component {
   }
 }
 
-export default PWorkDirectionListModal;
+export default PDocSearchModal;

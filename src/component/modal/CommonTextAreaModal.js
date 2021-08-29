@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
+import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
@@ -31,25 +32,47 @@ class CommonTextAreaModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    // [확인] 버튼 handle
-    this.ok = this.ok.bind(this);
+    this.close = this.close.bind(this);
   }
 
-  ok() {
-    let { modalData } = this.props;
-    if (modalData.ok) {
-      modalData.ok();
-      this.props.alertModalStore.hideModal();
-    } else {
-      this.props.alertModalStore.hideModal();
-    }
+  close() {
+    this.props.modalStore.hideModal();
   }
 
   render() {
-    // let { modalData } = this.props;
-    // let { body, okLabel } = modalData;
-    return <div>CommonTextAreaModal</div>;
+    return (
+      <div className="popup-container">
+        <h3 className="pop_title">유예 사유</h3>
+        <div className="pop_cont_box">
+          <div className="list_form">
+            <div className="form_table">
+              <div className="form_cell f_wid100">
+                <span className="form_group wid100 c_mr5">
+                  <textarea
+                    name=""
+                    id=""
+                    className="form_tag textarea"
+                  ></textarea>
+                  <label className="f_label" for="b">
+                    내용 *
+                  </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="pop_btns">
+          <button className="btn_text btn_dark_gray" onClick={this.close}>
+            닫기
+          </button>
+          <button className="btn_text btn_green" onClick={this.close}>
+            저장
+          </button>
+        </div>
+        <ModalTopCloseButton />
+      </div>
+    );
   }
 }
 

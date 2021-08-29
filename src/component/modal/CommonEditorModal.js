@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
+import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
@@ -31,25 +32,23 @@ class CommonEditorModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    // [확인] 버튼 handle
-    this.ok = this.ok.bind(this);
+    this.close = this.close.bind(this);
   }
 
-  ok() {
-    let { modalData } = this.props;
-    if (modalData.ok) {
-      modalData.ok();
-      this.props.alertModalStore.hideModal();
-    } else {
-      this.props.alertModalStore.hideModal();
-    }
+  close() {
+    this.props.modalStore.hideModal();
   }
 
   render() {
     // let { modalData } = this.props;
     // let { body, okLabel } = modalData;
-    return <div>CommonEditorModal</div>;
+    return (
+      <div className="popup-container">
+        CommonEditorModal
+        <br />
+        <ModalTopCloseButton />
+      </div>
+    );
   }
 }
 

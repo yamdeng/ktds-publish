@@ -20,4 +20,8 @@ Constant.FORM_TYPE_UPDATE = 'update';
 // form new id
 Constant.FORM_NEW_ID = 'new';
 
+// modalType
+Constant.MODAL_TYPE_ALERT = 'alert';
+Constant.MODAL_TYPE_FULL = 'full';
+
 export default Constant;

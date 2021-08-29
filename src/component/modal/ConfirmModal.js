@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
+import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
@@ -31,19 +32,11 @@ class ConfirmModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    // [확인] 버튼 handle
-    this.ok = this.ok.bind(this);
+    this.close = this.close.bind(this);
   }
 
-  ok() {
-    let { modalData } = this.props;
-    if (modalData.ok) {
-      modalData.ok();
-      this.props.alertModalStore.hideModal();
-    } else {
-      this.props.alertModalStore.hideModal();
-    }
+  close() {
+    this.props.modalStore.hideModal();
   }
 
   render() {
@@ -51,10 +44,20 @@ class ConfirmModal extends React.Component {
     // let { body, okLabel } = modalData;
     return (
       <div className="popup-container">
-        ConfirmModal
-        <span className="pop_close" onClick={this.ok}>
-          <i class="fas fa-times"></i>
-        </span>
+        <h3 className="pop_title">confirm modal</h3>
+        <p className="pop_cont">
+          3.title이 존재하는 경우와 존재하지 않는 경우가 존재(confirm도
+          마찬가지)
+        </p>
+        <div className="pop_btns">
+          <button className="btn_text btn_dark_gray" onClick={this.close}>
+            취소
+          </button>
+          <button className="btn_text btn_green" onClick={this.close}>
+            확인
+          </button>
+        </div>
+        <ModalTopCloseButton isAlertModal={true} />
       </div>
     );
   }

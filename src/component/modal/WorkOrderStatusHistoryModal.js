@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
+import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
@@ -31,25 +32,28 @@ class WorkOrderStatusHistoryModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    // [확인] 버튼 handle
-    this.ok = this.ok.bind(this);
+    this.close = this.close.bind(this);
   }
 
-  ok() {
-    let { modalData } = this.props;
-    if (modalData.ok) {
-      modalData.ok();
-      this.props.alertModalStore.hideModal();
-    } else {
-      this.props.alertModalStore.hideModal();
-    }
+  close() {
+    this.props.modalStore.hideModal();
   }
 
   render() {
-    // let { modalData } = this.props;
-    // let { body, okLabel } = modalData;
-    return <div>WorkOrderStatusHistoryModal</div>;
+    return (
+      <div className="popup-container">
+        <div>작업 지시 요청 이력 모달(화면이 없음)</div>
+        <div className="pop_btns">
+          <button className="btn_text btn_dark_gray" onClick={this.close}>
+            닫기
+          </button>
+          <button className="btn_text btn_green" onClick={this.close}>
+            저장
+          </button>
+        </div>
+        <ModalTopCloseButton />
+      </div>
+    );
   }
 }
 

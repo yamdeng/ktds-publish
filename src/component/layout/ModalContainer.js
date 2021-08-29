@@ -15,7 +15,7 @@ import WorkOrderStatusHistoryModal from 'component/modal/WorkOrderStatusHistoryM
 import CommonMapModal from 'component/modal/CommonMapModal';
 import CommonEditorModal from 'component/modal/CommonEditorModal';
 import CommonSignModal from 'component/modal/CommonSignModal';
-import WokrOrderListModal from 'component/modal/WokrOrderListModal';
+import WorkOrderListModal from 'component/modal/WorkOrderListModal';
 import SafeDocTemplateFormModal from 'component/modal/SafeDocTemplateFormModal';
 import SafeDocTemplateApplyFormModal from 'component/modal/SafeDocTemplateApplyFormModal';
 import ConstructionSearchModal from 'component/modal/ConstructionSearchModal';
@@ -91,7 +91,7 @@ class ModalContainer extends React.Component {
           modalComponent = <CommonSignModal modalData={modalData} />;
           break;
         case ModalType.WORK_ORDER_LIST_MODAL:
-          modalComponent = <WokrOrderListModal modalData={modalData} />;
+          modalComponent = <WorkOrderListModal modalData={modalData} />;
           break;
         case ModalType.SAFE_DOC_TEMPLATE_FORM_MODAL:
           modalComponent = <SafeDocTemplateFormModal modalData={modalData} />;

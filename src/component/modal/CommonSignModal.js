@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
+import SignatureCanvas from 'react-signature-canvas';
+import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
@@ -31,25 +33,45 @@ class CommonSignModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    // [확인] 버튼 handle
-    this.ok = this.ok.bind(this);
+    this.close = this.close.bind(this);
   }
 
-  ok() {
-    let { modalData } = this.props;
-    if (modalData.ok) {
-      modalData.ok();
-      this.props.alertModalStore.hideModal();
-    } else {
-      this.props.alertModalStore.hideModal();
-    }
+  close() {
+    this.props.modalStore.hideModal();
   }
+
+  componentDidMount() {}
 
   render() {
-    // let { modalData } = this.props;
-    // let { body, okLabel } = modalData;
-    return <div>CommonSignModal</div>;
+    return (
+      <div className="popup-container">
+        <h3 className="pop_title">공통 결재 모달</h3>
+        <div className="pop_full_cont_box">
+          <div className="write_form">
+            <div className="sigCanvas_box">
+              <SignatureCanvas
+                penColor="green"
+                canvasProps={{
+                  width: 500,
+                  height: 200,
+                  className: 'sigCanvas'
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="pop_btns">
+          <button className="btn_text btn_dark_gray" onClick={this.close}>
+            닫기
+          </button>
+          <button className="btn_text btn_green" onClick={this.close}>
+            저장
+          </button>
+        </div>
+        <ModalTopCloseButton />
+      </div>
+    );
   }
 }
 

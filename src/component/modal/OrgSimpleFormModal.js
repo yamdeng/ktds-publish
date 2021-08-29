@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
+import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
@@ -119,9 +120,7 @@ class OrgSimpleFormModal extends React.Component {
             저장
           </button>
         </div>
-        <span className="pop_close" onClick={this.close}>
-          <i class="fas fa-times"></i>
-        </span>
+        <ModalTopCloseButton />
       </div>
     );
   }

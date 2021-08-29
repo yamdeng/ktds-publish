@@ -45,7 +45,7 @@ ModalType.COMMON_EDITOR_MODAL = 'common-editor-modal';
 // 결재 모달 : CommonSignModal
 ModalType.COMMON_SIGN_MODAL = 'common-sign-modal';
 
-// 작업 지시서 목록 모달 : WokrOrderListModal
+// 작업 지시서 목록 모달 : WorkOrderListModal
 ModalType.WORK_ORDER_LIST_MODAL = 'work-order-list-modal';
 
 // 안전 서류 템플릿 폼 모달 : SafeDocTemplateFormModal
@@ -56,7 +56,7 @@ ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL =
   'safe-doc-template-apply-form-modal';
 
 // 등록 공사 찾기 모달 : ConstructionSearchModal
-ModalType.CONSTRUCTION_SEARCH_MODAL = 'construction-search-modal';
+ModalType.CONSTRUCTION_SEARCH_MODAL = 'safe-doc-search-modal';
 
 // 공사 편성 모달 : ConstructionOrganizeModal
 ModalType.CONSTRUCTION_ORGANIZE_MODAL = 'construction-organize-modal';

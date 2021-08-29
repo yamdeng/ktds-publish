@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
+import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
@@ -51,10 +52,17 @@ class AlertModal extends React.Component {
     // let { body, okLabel } = modalData;
     return (
       <div className="popup-container">
-        AlertModal
-        <span className="pop_close" onClick={this.ok}>
-          <i class="fas fa-times"></i>
-        </span>
+        <h3 className="pop_title">alert modal</h3>
+        <p className="pop_cont">
+          3.title이 존재하는 경우와 존재하지 않는 경우가 존재(confirm도
+          마찬가지)
+        </p>
+        <div className="pop_btns">
+          <button className="btn_text btn_green" onClick={this.ok}>
+            확인
+          </button>
+        </div>
+        <ModalTopCloseButton isAlertModal={true} />
       </div>
     );
   }

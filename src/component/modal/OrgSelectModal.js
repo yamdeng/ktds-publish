@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import { Tree } from 'antd';
+import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
@@ -222,9 +223,7 @@ class OrgSelectModal extends React.Component {
             확인
           </button>
         </div>
-        <span className="pop_close" onClick={this.close}>
-          <i class="fas fa-times"></i>
-        </span>
+        <ModalTopCloseButton />
       </div>
     );
   }
