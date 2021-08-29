@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
+import HOC from 'util/HOC';
 
 /*
 
@@ -13,6 +14,8 @@ import { withRouter } from 'react-router-dom';
      -outsideOrgManageStore
 
 */
+
+@HOC.documentTitle('사외 조직/사원 등록')
 @withRouter
 @inject('appStore')
 @observer

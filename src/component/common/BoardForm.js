@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
+import HOC from 'util/HOC';
 
 /*
 
@@ -15,6 +16,8 @@ import { withRouter } from 'react-router-dom';
      -boardStore
 
 */
+
+@HOC.documentTitle('게시판 폼')
 @withRouter
 @inject('boardStore')
 @observer

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
+import HOC from 'util/HOC';
 
 /*
 
-    이름 : 점검결과 등록 수정
+    이름 : 점검결과 폼
 
     route
      -/check-results/new
@@ -15,6 +16,8 @@ import { withRouter } from 'react-router-dom';
      -boardStore
 
 */
+
+@HOC.documentTitle('점검결과 폼')
 @withRouter
 @inject('boardStore')
 @observer

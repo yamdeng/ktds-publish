@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
+import HOC from 'util/HOC';
 
 /*
 
-    이름 : 안전서류 등록/수정 폼
+    이름 : 안전서류 폼
 
     route
      -/safe-docs/new
@@ -16,6 +17,8 @@ import { withRouter } from 'react-router-dom';
      -boardStore
 
 */
+
+@HOC.documentTitle('안전서류 폼')
 @withRouter
 @inject('boardStore')
 @observer

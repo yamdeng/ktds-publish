@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
+import HOC from 'util/HOC';
 
 /*
 
-    이름 : 안전 / 보건 담당자 지정
+    이름 : 안전보건 담당자 관리
 
     route : /safe-managers
 
@@ -13,6 +14,8 @@ import { withRouter } from 'react-router-dom';
      -boardStore
 
 */
+
+@HOC.documentTitle('안전보건 담당자 관리')
 @withRouter
 @inject('boardStore')
 @observer

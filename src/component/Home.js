@@ -1,5 +1,18 @@
 import React, { Component } from 'react';
+import HOC from 'util/HOC';
 
+/*
+
+    이름 : 홈
+
+    route : /
+
+    store
+     -boardStore
+
+*/
+
+@HOC.documentTitle('KT-SAFEDOC')
 class Home extends Component {
   constructor(props) {
     super(props);
