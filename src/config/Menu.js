@@ -12,7 +12,7 @@ let Menu = [
     childs: [
       {
         name: '안전서류 작성 현황',
-        routeUrl: '/safe-doc-statuses'
+        routeUrl: '/safe-docs'
       },
       {
         name: '작업지시 현황',
