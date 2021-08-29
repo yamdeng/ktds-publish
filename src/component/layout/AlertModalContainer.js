@@ -2,8 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import Modal from 'react-modal';
-import AlertModal from 'components/modal/AlertModal';
-import ConfirmModal from 'components/modal/ConfirmModal';
+import AlertModal from 'component/modal/AlertModal';
+import ConfirmModal from 'component/modal/ConfirmModal';
 import ModalType from 'config/ModalType';
 
 /*

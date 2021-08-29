@@ -8,12 +8,13 @@ import 'moment/locale/ko';
 import { configure } from 'mobx';
 import { Provider } from 'mobx-react';
 import rootStore from 'store/RootStore';
-import { registerLocale } from 'react-datepicker';
+import { registerLocale, setDefaultLocale } from 'react-datepicker';
 import ko from 'date-fns/locale/ko';
 
 import 'resources/css/import.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 registerLocale('ko', ko);
+setDefaultLocale('ko');
 
 // moment 전역 locale 설정
 moment.locale('ko');

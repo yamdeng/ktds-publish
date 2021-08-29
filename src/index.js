@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { HashRouter as Router } from 'react-router-dom';
+import moment from 'moment';
+import 'moment/locale/ko';
+import { configure } from 'mobx';
+import { Provider } from 'mobx-react';
+import rootStore from 'store/RootStore';
+import { registerLocale, setDefaultLocale } from 'react-datepicker';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import AppHistory from 'util/AppHistory';
+import ko from 'date-fns/locale/ko';
+import 'resources/css/import.scss';
+import 'react-datepicker/dist/react-datepicker.css';
+registerLocale('ko', ko);
+setDefaultLocale('ko');
+
+// moment 전역 locale 설정
+moment.locale('ko');
+
+// state의 상태는 action을 통해서만 가능하게끔 셋팅
+configure({
+  enforceActions: 'action'
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider {...rootStore}>
+    <Router history={AppHistory}>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
