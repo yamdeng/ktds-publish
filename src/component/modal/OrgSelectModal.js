@@ -50,7 +50,6 @@ class OrgSelectModal extends React.Component {
 
   selectTree(selectedKeys, tree) {
     let info = tree.node.info;
-    debugger;
   }
 
   changeOrgName(event) {
@@ -62,9 +61,7 @@ class OrgSelectModal extends React.Component {
     this.setState({ orgName: '' });
   }
 
-  search() {
-    debugger;
-  }
+  search() {}
 
   componentDidMount() {
     let { testStore } = this.props;

@@ -1,6 +1,5 @@
 import { observable, action } from 'mobx';
-import Config from '../config/Config';
-import _ from 'lodash';
+import Config from 'config/Config';
 
 class ListStore {
   // 검색 데이터
