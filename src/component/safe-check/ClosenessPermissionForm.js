@@ -35,7 +35,7 @@ class ClosenessPermissionForm extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>밀폐 허가서 작업 등록 : ClosenessPermissionForm</h2>
         {info}
       </div>

@@ -36,7 +36,7 @@ class SafeDocForm extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>안전서류 등록/수정 폼 : SafeDocForm</h2>
         {info}
       </div>

@@ -36,7 +36,7 @@ class WorkOrderForm extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>작업 지시 등록 / 수정 / 상세 : WorkOrderForm</h2>
         {info}
       </div>

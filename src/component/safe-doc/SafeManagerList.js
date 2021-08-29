@@ -33,7 +33,7 @@ class SafeManagerList extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>안전 / 보건 담당자 지정 : SafeManagerList</h2>
         {info}
       </div>

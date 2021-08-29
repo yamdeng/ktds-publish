@@ -33,7 +33,7 @@ class CheckResultList extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>점검결과 현황 : CheckResultList</h2>
         {info}
       </div>

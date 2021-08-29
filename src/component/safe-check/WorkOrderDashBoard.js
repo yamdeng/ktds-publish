@@ -33,7 +33,7 @@ class WorkOrderDashBoard extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>작업지시서 현황 : WorkOrderDashBoard</h2>
         {info}
       </div>

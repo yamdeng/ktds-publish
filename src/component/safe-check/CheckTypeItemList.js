@@ -33,7 +33,7 @@ class CheckTypeItemList extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>점검 항목 관리(점검유형별) : CheckTypeItemList</h2>
         {info}
       </div>

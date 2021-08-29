@@ -33,7 +33,7 @@ class WorkApproveRequestList extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>작업 지시 승인 : WorkApproveRequestList</h2>
         {info}
       </div>

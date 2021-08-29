@@ -5,11 +5,9 @@ import { withRouter } from 'react-router-dom';
 
 /*
 
-    이름 : 점검결과 등록 수정
+    이름 : 밀폐 허가서 작업 관리
 
-    route
-     -/check-results/new
-     -/check-results/:id/update
+    route : /closeness-permissions
 
     store
      -boardStore
@@ -18,7 +16,7 @@ import { withRouter } from 'react-router-dom';
 @withRouter
 @inject('boardStore')
 @observer
-class CheckResultForm extends Component {
+class ClosenessPermissionList extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -36,11 +34,11 @@ class CheckResultForm extends Component {
     let { info } = boardStore;
     return (
       <div className="content_area">
-        <h2>점검결과 등록/수정 : CheckResultForm</h2>
+        <h2>밀폐 허가서 작업 관리 : ClosenessPermissionList</h2>
         {info}
       </div>
     );
   }
 }
 
-export default CheckResultForm;
+export default ClosenessPermissionList;

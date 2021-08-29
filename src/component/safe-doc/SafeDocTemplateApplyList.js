@@ -33,7 +33,7 @@ class SafeDocTemplateApplyList extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>안전서류 템플릿 적용 : SafeDocTemplateApplyList</h2>
         {info}
       </div>

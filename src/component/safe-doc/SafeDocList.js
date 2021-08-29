@@ -33,7 +33,7 @@ class SafeDocList extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>안전서류 작성 현황 : SafeDocStatusList</h2>
         {info}
       </div>

@@ -35,7 +35,7 @@ class BoardForm extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>게시판 폼 : BoardForm</h2>
         {info}
       </div>

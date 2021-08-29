@@ -33,7 +33,7 @@ class MemberRoleList extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>권한부여 : MemberRoleList</h2>
         {info}
       </div>

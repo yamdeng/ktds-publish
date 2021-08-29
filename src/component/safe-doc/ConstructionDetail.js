@@ -33,7 +33,7 @@ class ConstructionDetail extends Component {
     let { boardStore } = this.props;
     let { info } = boardStore;
     return (
-      <div>
+      <div className="content_area">
         <h2>공사 상세 : ConstructionDetail</h2>
         {info}
       </div>
