@@ -2,7 +2,7 @@ import AppStore from 'store/AppStore';
 import UiStore from 'store/UiStore';
 import ModalStore from 'store/ModalStore';
 import AlertModalStore from 'store/AlertModalStore';
-import BoardStore from 'store/BoardStore';
+import BoardStore from 'store/common/BoardStore';
 import TestStore from 'store/TestStore';
 
 /*
