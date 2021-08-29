@@ -4,6 +4,8 @@ import { observer, inject } from 'mobx-react';
 import { Tree } from 'antd';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 import Config from 'config/Config';
+import SearchInput from 'component/ui/SearchInput';
+import SearchButton from 'component/ui/SearchButton';
 
 /*
 
@@ -34,9 +36,12 @@ import Config from 'config/Config';
 class OrgSelectModal extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { orgName: '' };
     this.close = this.close.bind(this);
     this.selectTree = this.selectTree.bind(this);
+    this.changeOrgName = this.changeOrgName.bind(this);
+    this.clearInput = this.clearInput.bind(this);
+    this.search = this.search.bind(this);
   }
 
   close() {
@@ -48,6 +53,19 @@ class OrgSelectModal extends React.Component {
     debugger;
   }
 
+  changeOrgName(event) {
+    let value = event.target.value;
+    this.setState({ orgName: value });
+  }
+
+  clearInput() {
+    this.setState({ orgName: '' });
+  }
+
+  search() {
+    debugger;
+  }
+
   componentDidMount() {
     let { testStore } = this.props;
     testStore.loadTree({ key: Config.treeRootKey });
@@ -56,6 +74,7 @@ class OrgSelectModal extends React.Component {
   render() {
     let { testStore } = this.props;
     let { treeList } = testStore;
+    let { orgName } = this.state;
     return (
       <div className="popup-container">
         <h3 className="pop_title">조직 선택 모달</h3>
@@ -85,20 +104,14 @@ class OrgSelectModal extends React.Component {
                 뒤에 클리어 아이콘을 추가하려면 .form_clear 와 icon icon_clear 추가
               */}
                     <span className="form_group form_search form_clear wid70 c_mr5">
-                      <input type="text" className="form_tag" />
-                      <label className="f_label">조직 명</label>
-                      <span className="icon icon_search">
-                        <i class="fas fa-search"></i>
-                      </span>
-                      {/* input에 value 값이 있으면 style display로 제어 */}
-                      <span
-                        className="icon icon_clear"
-                        style={{ display: 'block' }}
-                      >
-                        <i class="fas fa-times-circle"></i>
-                      </span>
+                      <SearchInput
+                        value={orgName}
+                        label="조직명"
+                        clearInput={this.clearInput}
+                        changeValue={this.changeOrgName}
+                      />
                     </span>
-                    <button className="btn_text btn_dark_gray">조회</button>
+                    <SearchButton search={this.search} />
                   </div>
                 </div>
               </div>

@@ -3,7 +3,7 @@ import React from 'react';
 /*
 
     search input 좌측 공통 버튼
-     : <SearchButton search={() => {}}
+     : <SearchButton search={() => {}} />
 
     props
      -search : 버튼 handler 함수

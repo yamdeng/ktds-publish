@@ -1,10 +1,11 @@
 import React from 'react';
 import Helper from 'util/Helper';
+import SearchInputClear from './SearchInputClear';
 
 /*
 
     검색 필드 공통
-     : <SearchInputClear inputId='', value={''} label='' clearInput={() => {}} changeValue={() => {}} className='' />
+     : <SearchInput inputId='' value={''} label='' clearInput={() => {}} changeValue={() => {}} className='' />
 
     props
      -inputId(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
@@ -16,14 +17,14 @@ import Helper from 'util/Helper';
 
 */
 
-class SearchInputClear extends React.Component {
+class SearchInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   render() {
-    let { inputId, value, label, changeInputValue, clearInput } = this.props;
+    let { inputId, value, label, changeValue, clearInput } = this.props;
     let labelId = inputId ? inputId : Helper.getUuid();
     return (
       <React.Fragment>
@@ -32,7 +33,7 @@ class SearchInputClear extends React.Component {
           type="text"
           className="form_tag"
           value={value}
-          onChange={changeInputValue}
+          onChange={changeValue}
         />
         <label className="f_label" for={labelId}>
           {label}
@@ -40,18 +41,24 @@ class SearchInputClear extends React.Component {
         <span className="icon icon_search">
           <i class="fas fa-search"></i>
         </span>
-        <SearchInputClear clearInput={clearInput} />
+        <SearchInputClear clearInput={clearInput} value={value} />
         {/* input type을 search로 사용했을 경우 아래 마크업을 사용*/}
         {/* <input
+          id={labelId}
           type="search"
           className="form_tag"
           value={value}
-          onChange={changeInputValue}
+          onChange={changeValue}
         />
-        <label className="f_label">{label}</label> */}
+        <label className="f_label" for={labelId}>
+          {label}
+        </label>
+        <span className="icon icon_search">
+          <i class="fas fa-search"></i>
+        </span> */}
       </React.Fragment>
     );
   }
 }
 
-export default SearchInputClear;
+export default SearchInput;
