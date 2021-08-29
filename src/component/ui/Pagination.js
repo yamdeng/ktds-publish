@@ -28,7 +28,7 @@ class Pagination extends React.Component {
           <i class="fas fa-angle-double-left"></i>
         </span>
         <span
-          className="p_arr_l"
+          className="p_web p_arr_l"
           style={{ display: prevPage ? '' : 'none' }}
           onClick={() => {
             store.changeCurrentPage(prevPage);
@@ -66,11 +66,31 @@ class Pagination extends React.Component {
           return pageComponent;
         })}
         {/* mobile pagind */}
-        <span className="p_mobile">{currentPage}</span>
+        <span
+          className="p_mobile p_arr_r"
+          style={{ display: currentPage !== 1 ? '' : 'none' }}
+          onClick={() => {
+            store.changeCurrentPage(currentPage - 1);
+          }}
+        >
+          <i class="fas fa-angle-left"></i>
+        </span>
+        <span className="p_mobile mbold" style={{ color: '#2dbab6' }}>
+          {currentPage}
+        </span>
         <span className="p_mobile">/</span>
         <span className="p_mobile">{lastPage}</span>
         <span
-          className="p_arr_r"
+          className="p_mobile p_arr_r"
+          style={{ display: currentPage !== lastPage ? '' : 'none' }}
+          onClick={() => {
+            store.changeCurrentPage(currentPage + 1);
+          }}
+        >
+          <i class="fas fa-angle-right"></i>
+        </span>
+        <span
+          className="p_web p_arr_r"
           style={{ display: nextPage ? '' : 'none' }}
           onClick={() => {
             store.changeCurrentPage(nextPage);
