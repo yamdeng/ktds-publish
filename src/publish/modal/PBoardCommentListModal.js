@@ -51,7 +51,7 @@ class PBoardCommentListModal extends React.Component {
             </div>
           </div>
           <div className="list_form">
-            <div className="form_table c_pt30">
+            <div className="form_table c_pt50">
               <div className="form_cell f_wid100">
                 <span className="form_group wid100 c_mr5">
                   <textarea
