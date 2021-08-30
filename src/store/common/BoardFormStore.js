@@ -1,4 +1,4 @@
-import { observable, action, makeObservable, runInAction } from 'mobx';
+import { observable, action, makeObservable, override } from 'mobx';
 import FormStore from 'store/ui/FormStore';
 
 /*
@@ -17,7 +17,7 @@ class BoardFormStore extends FormStore {
     this.rootStore = rootStore;
   }
 
-  @action
+  @override
   save() {}
 
   @action

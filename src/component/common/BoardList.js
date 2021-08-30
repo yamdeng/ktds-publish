@@ -21,7 +21,7 @@ import PageSizeSelect from 'component/ui/PageSizeSelect';
 
 @HOC.documentTitle('게시판 관리')
 @withRouter
-@inject('boardListStore')
+@inject('uiStore', 'boardListStore')
 @observer
 class BoardList extends Component {
   constructor(props) {
@@ -31,6 +31,7 @@ class BoardList extends Component {
     };
     this.customClick = this.customClick.bind(this);
     this.enterSearch = this.enterSearch.bind(this);
+    this.goAddPage = this.goAddPage.bind(this);
   }
 
   customClick() {
@@ -43,6 +44,11 @@ class BoardList extends Component {
     if (e.keyCode === 13) {
       this.search();
     }
+  }
+
+  goAddPage() {
+    const { uiStore } = this.props;
+    uiStore.goPage('/boards/new');
   }
 
   componentDidMount() {
@@ -192,6 +198,11 @@ class BoardList extends Component {
                 </tbody>
               </table>
             </div>
+          </div>
+          <div className="list_form_btns">
+            <button className="btn_text btn_green" onClick={this.goAddPage}>
+              등록
+            </button>
           </div>
         </div>
         <Pagination store={boardListStore} />

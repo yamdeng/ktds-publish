@@ -3,6 +3,7 @@ import UiStore from 'store/UiStore';
 import ModalStore from 'store/ModalStore';
 import AlertModalStore from 'store/AlertModalStore';
 import BoardListStore from 'store/common/BoardListStore';
+import BoardFormStore from 'store/common/BoardFormStore';
 import TestStore from 'store/TestStore';
 import OrgSelectModalStore from 'store/modal/OrgSelectModalStore';
 
@@ -29,6 +30,7 @@ class RootStore {
     this.alertModalStore = new AlertModalStore(this);
     this.modalStore = new ModalStore(this);
     this.boardListStore = new BoardListStore(this);
+    this.boardFormStore = new BoardFormStore(this);
 
     // 모달 store
     this.orgSelectModalStore = new OrgSelectModalStore(this);

@@ -21,7 +21,7 @@ import SearchInput from 'component/ui/SearchInput';
 
 @HOC.documentTitle('게시판 폼')
 @withRouter
-@inject('boardListStore')
+@inject('boardFormStore')
 @observer
 class BoardForm extends Component {
   constructor(props) {
@@ -32,6 +32,7 @@ class BoardForm extends Component {
   componentDidMount() {}
 
   render() {
+    let { boardFormStore } = this.props;
     return (
       <div className="content_area">
         <h3>게시판 등록</h3>
