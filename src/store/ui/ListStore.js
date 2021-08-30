@@ -124,9 +124,9 @@ class ListStore {
     this.search();
   }
 
-  // 정보 clear
+  // 목록 clear
   @action
-  clear() {
+  clearList() {
     this.list = [];
     this.currentPage = 1;
     this.lastPage = 0;

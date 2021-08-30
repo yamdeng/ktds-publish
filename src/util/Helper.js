@@ -254,6 +254,158 @@ function getUuid() {
   return uuidv4();
 }
 
+function checkValidation(inputData, customErrorMessage, formData) {
+  let validResult = { isValid: true, errorMessage: '' };
+  let inputValue = inputData.value;
+  if (inputData.touched || !inputData.byPassValid) {
+    if (inputData.isRequired) {
+      // 0은 isRequired에 포함되지 않음
+      if (!inputValue && !isNumber(inputValue)) {
+        validResult.isValid = false;
+        validResult.errorMessage = inputData.notRequiredMessage
+          ? inputData.notRequiredMessage
+          : customErrorMessage || '필수 정보입니다';
+        return validResult;
+      } else if (inputValue && inputValue.trim && !inputValue.trim()) {
+        validResult.isValid = false;
+        validResult.errorMessage = inputData.notRequiredMessage
+          ? inputData.notRequiredMessage
+          : customErrorMessage || '필수 정보입니다';
+      } else if (inputData.isArray && inputValue.length === 0) {
+        validResult.isValid = false;
+        validResult.errorMessage = inputData.notRequiredMessage
+          ? inputData.notRequiredMessage
+          : customErrorMessage || '필수 정보입니다';
+        return validResult;
+      }
+    }
+
+    if (inputData.isNumber) {
+      inputValue += '';
+      let removeComma = inputValue.replace(/,/g, '');
+      if (isNaN(removeComma)) {
+        validResult.isValid = false;
+        validResult.errorMessage = customErrorMessage || '숫자가 아닙니다';
+        return validResult;
+      }
+    }
+
+    if (inputValue && inputData.maxLength) {
+      if (inputValue && inputValue.length > inputData.maxLength) {
+        validResult.isValid = false;
+        validResult.errorMessage =
+          customErrorMessage ||
+          '입력값을 초과하였습니다(' + inputData.maxLength + '자리)';
+        return validResult;
+      }
+    }
+
+    if (inputValue && inputData.minLength) {
+      if (inputValue && inputValue.length < inputData.minLength) {
+        validResult.isValid = false;
+        validResult.errorMessage =
+          customErrorMessage ||
+          '최소 ' + inputData.minLength + '자리 이상 입력하여야 합니다';
+        return validResult;
+      }
+    }
+
+    if (inputValue && inputData.max) {
+      if (Number(inputValue) > inputData.max) {
+        validResult.isValid = false;
+        validResult.errorMessage =
+          customErrorMessage ||
+          '쵀대값을 초과하였습니다(' + inputData.max + '이하)';
+        return validResult;
+      }
+    }
+
+    if (inputValue && inputData.min) {
+      if (Number(inputValue) < inputData.min) {
+        validResult.isValid = false;
+        validResult.errorMessage =
+          customErrorMessage ||
+          '최소값보다 큰값을 입력하여야 합니다(' + inputData.min + '이상)';
+        return validResult;
+      }
+    }
+
+    if (inputValue && inputData.pattern) {
+      if (!inputData.pattern.test(inputValue)) {
+        validResult.isValid = false;
+        validResult.errorMessage = inputData.notPatternMessage
+          ? inputData.notPatternMessage
+          : customErrorMessage || '양식에 맞지 않습니다';
+        return validResult;
+      }
+    }
+
+    if (inputValue && inputData.checkSameFiled) {
+      if (formData) {
+        if (formData[inputData.checkSameFiled].value !== inputValue) {
+          validResult.isValid = false;
+          validResult.errorMessage = inputData.notSameMessage;
+        }
+        return validResult;
+      }
+    }
+  }
+  return validResult;
+}
+
+// os 클립보드에 textarea에 저장된 정보 복사
+function copyToClipboard(id) {
+  let textArea = document.getElementById(id);
+  if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+    let range, selection;
+    range = document.createRange();
+    range.selectNodeContents(textArea);
+    selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    textArea.setSelectionRange(0, 999999);
+  } else {
+    textArea.select();
+  }
+  document.execCommand('copy');
+  alert('복사되었습니다');
+}
+
+// 첫번째 글자 대문자로 변경
+function capitalizeFirstLetter(value) {
+  if (value) {
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  }
+  return '';
+}
+
+// route url 기준으로 full url 추출
+const getAppLink = function (routeUrl) {
+  let linkUrl =
+    location.protocol +
+    '//' +
+    location.host +
+    process.env.PUBLIC_URL +
+    '/index.html#' +
+    routeUrl;
+  return linkUrl;
+};
+
+// 기간 date 날짜 검증 : 아규먼트는 moment 객체임
+const validteRangeDate = function (startDate, endDate) {
+  // 시작일은 종료일보다 클 수 없고 종료일은 시작일보다 작을 수 없습니다.
+  let success = true;
+  let startDiffDays = startDate.diff(endDate, 'days');
+  if (startDiffDays > 0) {
+    success = false;
+  }
+  let endDiffDays = endDate.diff(startDate, 'days');
+  if (endDiffDays < 0) {
+    success = false;
+  }
+  return success;
+};
+
 export default {
   saveInfoToLocalStorage,
   getByLocalStorage,
@@ -277,5 +429,10 @@ export default {
   emptyHandle,
   focusById,
   downloadFile,
-  getUuid
+  getUuid,
+  checkValidation,
+  copyToClipboard,
+  capitalizeFirstLetter,
+  getAppLink,
+  validteRangeDate
 };
