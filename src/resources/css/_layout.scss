@@ -331,6 +331,18 @@
     background: none;
     color: #{$col-default-text};
   }
+  &.date:disabled {
+    color: #{$col-default-text};
+    background: #{$col-white};
+    border: 1px solid #{$col-gray300};
+    + .f_label {
+      color: #{$col-default-text};
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 14px;
+    }
+  }
   &.fix_data:disabled {
     border: none;
     border-bottom: 1px solid #{$col-gray300};
@@ -371,7 +383,8 @@
   &:focus + .f_label,
   &.active + .f_label,
   &:not([value='']) + .f_label,
-  &.invalid + .f_label {
+  &.invalid + .f_label,
+  &.date:disabled:not([value='']) + .f_label {
     left: 10px;
     top: -8px;
     font-size: 12px;
@@ -569,12 +582,12 @@ input[type='radio'] {
 .radio-label:after,
 .checkbox-label:after {
   position: absolute;
-  top: 3px;
+  top: 8px;
   left: 3px;
   display: flex;
   content: ' ';
-  height: 11px;
-  width: 11px;
+  height: 7px;
+  width: 7px;
   background: #{$col-default-text};
   transform: scale(0);
   transition: transform 0.3s ease;
@@ -582,7 +595,7 @@ input[type='radio'] {
 .checkbox-label:after {
   height: 5px;
   width: 12px;
-  top: 3px;
+  top: 8px;
   left: 1px;
   border-bottom: solid 3px #{$col-default-text};
   border-left: solid 3px #{$col-default-text};
@@ -788,6 +801,10 @@ hr.line {
     opacity: 0.9;
     transition: opacity 0.2s ease;
   }
+  &:disabled {
+    opacity: 0.5;
+    background: #{$col-gray350};
+  }
   @include mobile {
     padding: 0 10px;
   }
@@ -802,6 +819,10 @@ hr.line {
   &:hover {
     opacity: 0.9;
     transition: opacity 0.2s ease;
+  }
+  &:disabled {
+    opacity: 0.5;
+    background: #{$col-gray350};
   }
 }
 

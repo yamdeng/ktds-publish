@@ -274,7 +274,7 @@ const list = [
     component: PConfinedSpaceForm1,
     url: '/confined-space-form1',
     pageCount: '23',
-    success: false,
+    success: true,
     useIcon: false,
     description: ''
   },
@@ -284,7 +284,7 @@ const list = [
     component: PConfinedSpaceForm2,
     url: '/confined-space-form2',
     pageCount: '24',
-    success: false,
+    success: true,
     useIcon: false,
     description: ''
   },
@@ -294,7 +294,7 @@ const list = [
     component: PConfinedSpaceForm3,
     url: '/confined-space-form3',
     pageCount: '25',
-    success: false,
+    success: true,
     useIcon: true,
     description: ''
   },
@@ -324,7 +324,7 @@ const list = [
     component: PSafeCheckList,
     url: '/safe-checks',
     pageCount: '28',
-    success: false,
+    success: true,
     useIcon: false,
     description: ''
   },

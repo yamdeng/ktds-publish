@@ -122,8 +122,9 @@ class PWorkDirectionForm1 extends Component {
               <span className="form_group wid30 c_mr5">
                 <input
                   type="text"
-                  className="form_tag"
-                  value={this.state.inputValue}
+                  className="form_tag date"
+                  disabled
+                  value=""
                   onChange={this.onChangeInput}
                   onBlur={this.onChangeInput}
                 />
@@ -135,7 +136,8 @@ class PWorkDirectionForm1 extends Component {
               <span className="form_group wid20 c_mr5">
                 <input
                   type="text"
-                  className="form_tag"
+                  className="form_tag date"
+                  disabled
                   value={this.state.inputValue}
                   onChange={this.onChangeInput}
                   onBlur={this.onChangeInput}
@@ -149,7 +151,8 @@ class PWorkDirectionForm1 extends Component {
               <span className="form_group wid20">
                 <input
                   type="text"
-                  className="form_tag"
+                  className="form_tag date"
+                  disabled
                   value={this.state.inputValue}
                   onChange={this.onChangeInput}
                   onBlur={this.onChangeInput}
