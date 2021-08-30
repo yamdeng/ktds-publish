@@ -1,12 +1,12 @@
 import React from 'react';
+import ApiService from 'service/ApiService';
 import Helper from 'util/Helper';
-import Code from 'config/Code';
 
 /*
 
     code 콤보 박스 공통
-     : <CodeSelect inputId='' inputName='' value={''} label='직책코드' 
-          codeType='rankType' changeValue={() => {}} required={true} codeList={[]}/>
+     : <CodeSelectApi inputId='' inputName='' value={''} label='직책코드' 
+        codeType='rankType' changeValue={() => {}} emptyValueText=''/>
 
     props
      -inputId(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
@@ -14,31 +14,27 @@ import Code from 'config/Code';
      -label : input label
      -value : code value
      -changeCodeValue : code 값 변경 handler 함수
-     -codeType(option) : Code.js에 정의된 타입명
-     -codeList(option) : []
-     -required(option) : 필수 값 여부
+     -codeType : api 요청을 날릴 codeType
+     -emptyValueText(option) : 기본값('선택해주세요')
 
 */
 
-class CodeSelect extends React.Component {
+class CodeSelectApi extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { codeList: [] };
+  }
+
+  componentDidMount() {
+    let { codeType } = this.props;
+    // TODO : ApiService call
   }
 
   render() {
-    let {
-      label,
-      value,
-      changeValue,
-      inputId,
-      inputName,
-      codeType,
-      codeList,
-      required
-    } = this.props;
+    let { label, value, changeValue, inputId, inputName, emptyValueText } =
+      this.props;
+    let { codeList } = this.state;
     let labelId = inputId ? inputId : Helper.getUuid();
-    let resultCodeList = codeType ? Code[codeType] : codeList;
     return (
       <React.Fragment>
         <select
@@ -48,17 +44,20 @@ class CodeSelect extends React.Component {
           value={value}
           onChange={changeValue}
         >
-          {resultCodeList.map((codeInfo) => {
+          <option value="">
+            {emptyValueText ? emptyValueText : '선택해주세요'}
+          </option>
+          {codeList.map((codeInfo) => {
             let { value, name } = codeInfo;
             return <option value={value}>{name}</option>;
           })}
         </select>
         <label className="f_label" for={labelId}>
-          {label} {required ? <span class="required">*</span> : null}
+          {label}
         </label>
       </React.Fragment>
     );
   }
 }
 
-export default CodeSelect;
+export default CodeSelectApi;

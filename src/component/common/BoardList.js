@@ -4,6 +4,9 @@ import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
 import Pagination from 'component/ui/Pagination';
+import SearchInput from 'component/ui/SearchInput';
+import CodeSelect from 'component/ui/CodeSelect';
+import PageSizeSelect from 'component/ui/PageSizeSelect';
 
 /*
 
@@ -59,17 +62,12 @@ class BoardList extends Component {
             */}
             <div className="form_cell f_wid50">
               <span className="form_group form_search form_clear wid70 c_mr5">
-                <input type="text" className="form_tag" />
-                <label className="f_label">
-                  검색어 <span className="required">*</span>
-                </label>
-                <span className="icon icon_search">
-                  <i class="fas fa-search"></i>
-                </span>
-                {/* input에 value 값이 있으면 style display로 제어 */}
-                <span className="icon icon_clear" style={{ display: 'block' }}>
-                  <i class="fas fa-times-circle"></i>
-                </span>
+                <SearchInput
+                  value={''}
+                  label="제목"
+                  clearInput={this.clearInput}
+                  changeValue={this.changeTitle}
+                />
               </span>
               <div className="checkbox-wrapper">
                 <input
@@ -82,6 +80,26 @@ class BoardList extends Component {
                 </label>
               </div>
             </div>
+            <div className="form_cell f_wid30">
+              <span className="form_group wid100">
+                <CodeSelect
+                  value={''}
+                  label="게시유형"
+                  codeType="boardType"
+                  changeValue={() => {}}
+                />
+              </span>
+            </div>
+            <div className="form_cell f_wid20">
+              <span className="form_group wid100">
+                <CodeSelect
+                  value={''}
+                  label="공개"
+                  codeType="publicType"
+                  changeValue={() => {}}
+                />
+              </span>
+            </div>
           </div>
           <p className="c_pt15 right">
             <button className="btn_text btn_green">조회</button>
@@ -90,11 +108,7 @@ class BoardList extends Component {
         <div className="list_form c_mt10">
           <p className="relative c_mb10">
             <span className="form_group c_mr5" style={{ width: '100px' }}>
-              <select name="" id="b" className="form_tag_select ">
-                <option value="">목록 10개</option>
-                <option value="">전체1</option>
-                <option value="">전체2</option>
-              </select>
+              <PageSizeSelect store={boardListStore} />
             </span>
             <span className="fs_12">총 nnn 건</span>
           </p>

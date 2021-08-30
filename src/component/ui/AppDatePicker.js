@@ -6,11 +6,12 @@ import Config from 'config/Config';
 /*
 
     date-picker 공통
-     : <AppDatePicker inputId='startDate' label='직책코드'
+     : <AppDatePicker inputId='startDate' inputName='startDate' label='직책코드'
         value='2021-09-01' valueFormat='YYYY-MM-DD' changeDate={(date) => {}} required={true} />
 
     props
      -inputId(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
+     -inputName(option) : name 속성 값
      -label : input label
      -value : '2021-03-03'(string)
      -valueFormat(option) : date 문자열 값 포맷(기본값 : 'YYYY-MM-DD')
@@ -26,8 +27,15 @@ class AppDatePicker extends React.Component {
   }
 
   render() {
-    let { inputId, label, value, valueFormat, changeDate, required } =
-      this.props;
+    let {
+      inputId,
+      inputName,
+      label,
+      value,
+      valueFormat,
+      changeDate,
+      required
+    } = this.props;
     let labelId = inputId ? inputId : Helper.getUuid();
     valueFormat = valueFormat || Config.defaultDateDisplayFormat;
     const CustomDatePickerInput = React.forwardRef(
@@ -37,6 +45,7 @@ class AppDatePicker extends React.Component {
             <input
               autoComplete="off"
               id={labelId}
+              name={inputName}
               type="text"
               className="form_tag"
               ref={ref}

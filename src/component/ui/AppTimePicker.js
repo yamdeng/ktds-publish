@@ -11,6 +11,7 @@ import Config from 'config/Config';
 
     props
      -inputId(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
+     -inputName(option) : name 속성 값
      -label : input label
      -value : '14:59'(string)
      -valueFormat(option) : date 문자열 값 포맷(기본값 : 'HH:mm')
@@ -26,8 +27,15 @@ class AppTimePicker extends React.Component {
   }
 
   render() {
-    let { inputId, label, value, valueFormat, changeTime, required } =
-      this.props;
+    let {
+      inputId,
+      inputName,
+      label,
+      value,
+      valueFormat,
+      changeTime,
+      required
+    } = this.props;
     let labelId = inputId ? inputId : Helper.getUuid();
     valueFormat = valueFormat || Config.defaultDateDisplayFormat;
     const CustomDatePickerInput = React.forwardRef(
@@ -35,6 +43,7 @@ class AppTimePicker extends React.Component {
         return (
           <React.Fragment>
             <input
+              name={inputName}
               autoComplete="off"
               id={labelId}
               type="text"
