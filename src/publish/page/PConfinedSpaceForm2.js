@@ -37,111 +37,126 @@ class PConfinedSpaceForm2 extends Component {
                 <span className="icon icon_search">
                   <i class="fas fa-search"></i>
                 </span>
-                {/* input에 value 값이 있으면 style display로 제어 */}
-                <span className="icon icon_clear" style={{ display: 'block' }}>
-                  <i class="fas fa-times-circle"></i>
-                </span>
-              </span>
-              <button className="btn_text btn_dark_gray c_mr5">승인신청</button>
-              <button className="btn_text btn_dark_gray">이력보기</button>
-            </div>
-          </div>
-
-          <div className="form_table">
-            <div className="form_cell">
-              <span className="form_group wid40">
-                <select name="" id="b" className="form_tag_select ">
-                  <option value=""> </option>
-                  <option value="">전체1</option>
-                  <option value="">전체2</option>
-                </select>
-                <label className="f_label" for="b">
-                  작성일시
-                </label>
               </span>
             </div>
           </div>
-
           <div className="form_table">
-            <div className="form_cell">
-              <span className="form_group form_search form_clear wid50 c_mr5">
+            <div className="form_cell ">
+              <span className="form_group wid100 ">
                 <input type="text" className="form_tag" />
                 <label className="f_label">작성자</label>
-                <span className="icon icon_search">
-                  <i class="fas fa-search"></i>
+              </span>
+            </div>
+          </div>
+          <div className="form_table">
+            <div className="form_cell ">
+              <span className="form_group wid100">
+                <input type="text" className="form_tag" />
+                <label className="f_label">작업 내용</label>
+              </span>
+            </div>
+          </div>
+          <div className="form_table">
+            <div className="form_cell">
+              <span className="form_group wid30 c_mr5">
+                <input
+                  type="text"
+                  className="form_tag date"
+                  disabled
+                  value=""
+                  onChange={this.onChangeInput}
+                  onBlur={this.onChangeInput}
+                />
+                <label className="f_label">작업일시</label>
+                <span className="icon icon_calendar">
+                  <i class="fas fa-calendar-alt"></i>
                 </span>
-                {/* input에 value 값이 있으면 style display로 제어 */}
-                <span className="icon icon_clear" style={{ display: 'block' }}>
-                  <i class="fas fa-times-circle"></i>
+              </span>
+              <span className="form_group wid20 c_mr5">
+                <input
+                  type="text"
+                  className="form_tag date"
+                  disabled
+                  value={this.state.inputValue}
+                  onChange={this.onChangeInput}
+                  onBlur={this.onChangeInput}
+                />
+                <label className="f_label">HH:MM</label>
+                <span className="icon icon_calendar">
+                  <i class="fas fa-clock"></i>
                 </span>
+              </span>
+              <span className="form_group center c_mr5">-</span>
+              <span className="form_group wid20">
+                <input
+                  type="text"
+                  className="form_tag date"
+                  disabled
+                  value={this.state.inputValue}
+                  onChange={this.onChangeInput}
+                  onBlur={this.onChangeInput}
+                />
+                <label className="f_label">HH:MM</label>
+                <span className="icon icon_calendar">
+                  <i class="fas fa-clock"></i>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div className="form_table">
+            <div className="form_cell ">
+              <span className="form_group wid100">
+                <input type="text" className="form_tag" />
+                <label className="f_label">위 치</label>
               </span>
             </div>
           </div>
 
           <p className="c_pt15 right">
             <button className="btn_text btn_green c_mr5">조회</button>
-            <button className="btn_text btn_blue c_mr5">가져오기</button>
-            <button className="btn_text btn_blue">이력</button>
+            <button className="btn_text btn_blue c_mr5">승인요청</button>
+            <button className="btn_text btn_blue">작업허가서 출력</button>
           </p>
         </div>
         <ul className="tabs_wrap">
           <li className="">작업정보</li>
-          <li className="active">작업조</li>
+          <li className="active">안전조치 요구사항</li>
+          <li className="">산소 및 유해가스 농도 측정</li>
         </ul>
         <div className="box_form tabs_cont">
-          <div className="tb_wrap_scroll">
+          <div className="tb_wrap_scroll c_mt15">
             <div className="horizon_tb">
-              <div
-                className="flex_grow_two_fix c_pt30 relative"
-                style={{ width: '800px' }}
-              >
-                <div className="">
-                  <table className="tb_list">
-                    <caption></caption>
-                    <thead>
-                      <tr>
-                        <th>사번</th>
-                        <th>이름</th>
-                        <th>직책/호칭</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>11111114</td>
-                        <td>ㅇㅇㅇ</td>
-                        <td>과장/팀장</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div className="">
-                  <table className="tb_list">
-                    <caption></caption>
-                    <thead>
-                      <tr>
-                        <th>사번</th>
-                        <th>이름</th>
-                        <th>직책/호칭</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>11111114</td>
-                        <td>ㅇㅇㅇ</td>
-                        <td>과장/팀장</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div className="abcc c_pt30">
-                  <p style={{ fontSize: '20px' }}>
-                    <i class="fas fa-arrow-circle-right"></i>
-                  </p>
-                  <p style={{ fontSize: '20px' }} className="c_mt10">
-                    <i class="fas fa-arrow-circle-left"></i>
-                  </p>
-                </div>
-              </div>
+              <table className="tb_list">
+                <caption></caption>
+                <thead>
+                  <tr>
+                    <th>확인항목</th>
+                    <th>해당여부</th>
+                    <th>확인 결과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>안전담당자지정 및 감시인 배치</td>
+                    <td>
+                      <div className="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          name="Claude Monet"
+                          id="question-1-option-1"
+                        />
+                        <label
+                          className="checkbox-label"
+                          for="question-1-option-1"
+                        >
+                          해당여부
+                        </label>
+                      </div>
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
           <p className="c_pt15 right">
