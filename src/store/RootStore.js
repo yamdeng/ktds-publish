@@ -13,6 +13,7 @@ import OrgSelectModalStore from 'store/modal/OrgSelectModalStore';
   modalStore : 중간, full 모달 manage store
   alertModalStore : alert, confirm 모달 manage store
   boardListStore : 게시판 목록 store
+  boardFormStore : 게시판 폼 store
 
 
   모달 store

@@ -18,23 +18,11 @@ class BoardFormStore extends FormStore {
   }
 
   @action
-  search() {
-    setTimeout(() => {
-      runInAction(() => {
-        let list = [];
-        for (let index = 0; index < 15; index++) {
-          list.push({ title: '', key: index });
-        }
-        this.list = list;
-        this.changePageInfo(183);
-      });
-    }, 1000);
-  }
+  save() {}
 
   @action
   clear() {
-    this.clearList();
-    this.info = '';
+    this.clearForm();
   }
 }
 
