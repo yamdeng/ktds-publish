@@ -115,7 +115,7 @@ class ModalHome extends Component {
             >
               mobile-full
             </th>
-            <th
+            {/* <th
               style={{
                 border: '1px solid black',
                 borderCollapse: 'collapse',
@@ -124,7 +124,7 @@ class ModalHome extends Component {
               }}
             >
               설명
-            </th>
+            </th> */}
           </tr>
           {filetedMenu.map((info, index) => {
             let backgroundColor = '';
@@ -201,7 +201,7 @@ class ModalHome extends Component {
                 >
                   {info.isMobileFull ? 'O' : 'X'}
                 </td>
-                <td
+                {/* <td
                   style={{
                     backgroundColor: '#2196f3',
                     border: '1px solid black',
@@ -214,7 +214,7 @@ class ModalHome extends Component {
                       info.description
                     )
                   }}
-                ></td>
+                ></td> */}
               </tr>
             );
           })}

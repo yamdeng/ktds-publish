@@ -7,6 +7,46 @@ import _ from 'lodash';
 import ModalService from 'service/ModalService';
 import ApiService from 'service/ApiService';
 
+/*
+
+
+  formData.memberId = {
+    inputName: 'memberId',
+    value: '',
+    touched: false,
+    isRequired: true,
+    isValid: true,
+    errorMessage: '',
+    notRequiredMessage: '',
+    notPatternMessage: '',
+    isNumber: true,
+    maxLength: 10,
+    minLength: 5,
+    max: 1000,
+    min: 10,
+    pattern: ''
+  };
+
+  // 기본 예시
+  formData.memberId = {
+    inputName: 'memberId',
+    value: null,
+    touched: false,
+    isRequired: true,
+    isValid: true
+  };
+
+  formData.count = {
+    inputName: 'count',
+    value: null,
+    touched: false,
+    isRequired: true,
+    isValid: true,
+    isNumber: true
+  };
+
+*/
+
 class FormStore {
   // 폼 data
   @observable formData = null;

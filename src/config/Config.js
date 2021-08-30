@@ -22,7 +22,7 @@ Config.scrollAnimationTimeout = 500;
 Config.maxImageUploadSize = 5242880;
 
 // 1페이지에 보여지는 리스트 갯수
-Config.defaultPageSize = 15;
+Config.defaultPageSize = 10;
 
 // 최대 보여지는 페이징갯수
 Config.maxPagingSize = 10;

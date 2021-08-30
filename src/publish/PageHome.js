@@ -137,7 +137,7 @@ s
             >
               아이콘여부
             </th>
-            <th
+            {/* <th
               style={{
                 border: '1px solid black',
                 borderCollapse: 'collapse',
@@ -146,7 +146,7 @@ s
               }}
             >
               설명
-            </th>
+            </th> */}
           </tr>
           {filetedList.map((info, index) => {
             let backgroundColor = '';
@@ -239,7 +239,7 @@ s
                 >
                   {info.useIcon ? '사용' : '미사용'}
                 </td>
-                <td
+                {/* <td
                   style={{
                     backgroundColor: '#2196f3',
                     border: '1px solid black',
@@ -252,7 +252,7 @@ s
                       info.description
                     )
                   }}
-                ></td>
+                ></td> */}
               </tr>
             );
           })}
