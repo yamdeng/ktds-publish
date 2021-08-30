@@ -574,8 +574,8 @@ input[type='radio'] {
 .checkbox-label:before {
   display: flex;
   content: ' ';
-  height: 13px;
-  width: 13px;
+  height: 14px;
+  width: 14px;
   border: solid 2px #{$col-default-text};
   background: #{$col-white};
   margin-right: 6px;
@@ -596,7 +596,7 @@ input[type='radio'] {
 .checkbox-label:after {
   height: 5px;
   width: 12px;
-  top: 8px;
+  top: 5px;
   left: 1px;
   border-bottom: solid 3px #{$col-default-text};
   border-left: solid 3px #{$col-default-text};
