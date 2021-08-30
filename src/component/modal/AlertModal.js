@@ -36,8 +36,8 @@ class AlertModal extends React.Component {
   ok() {
     let { modalData, alertModalStore } = this.props;
     if (modalData.ok) {
-      modalData.ok();
       alertModalStore.hideModal();
+      modalData.ok();
     } else {
       alertModalStore.hideModal();
     }

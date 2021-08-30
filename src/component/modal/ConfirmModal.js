@@ -41,8 +41,8 @@ class ConfirmModal extends React.Component {
   ok() {
     let { modalData, alertModalStore } = this.props;
     if (modalData.ok) {
-      modalData.ok();
       alertModalStore.hideModal();
+      modalData.ok();
     } else {
       alertModalStore.hideModal();
     }
@@ -51,8 +51,8 @@ class ConfirmModal extends React.Component {
   cancel() {
     let { modalData, alertModalStore } = this.props;
     if (modalData.cancel) {
-      modalData.cancel();
       alertModalStore.hideModal();
+      modalData.cancel();
     } else {
       alertModalStore.hideModal();
     }

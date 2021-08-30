@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
 import SearchInput from 'component/ui/SearchInput';
 import SearchButton from 'component/ui/SearchButton';
+import ModalService from 'service/ModalService';
+import ModalType from 'config/ModalType';
 
 /*
 
@@ -19,7 +21,7 @@ import SearchButton from 'component/ui/SearchButton';
 
 @HOC.documentTitle('사외 조직/사원 등록')
 @withRouter
-@inject('appStore')
+@inject('testStore')
 @observer
 class OutsideOrgManage extends Component {
   constructor(props) {
@@ -28,13 +30,31 @@ class OutsideOrgManage extends Component {
 
     // test handler
     this.testHandle = this.testHandle.bind(this);
+
+    this.openOrgAddPopup = this.openOrgAddPopup.bind(this);
+    this.openMemberAddPopup = this.openMemberAddPopup.bind(this);
   }
 
   testHandle(info) {
     // const { outsideOrgManageStore } = this.props;
   }
 
+  openOrgAddPopup() {
+    ModalService.openModal(ModalType.ORG_SIMPLE_FORM_MODAL, {});
+  }
+
+  openMemberAddPopup() {
+    ModalService.openModal(ModalType.MEMBER_SIMPLE_FORM_MODAL, {});
+  }
+
+  componentDidMount() {
+    const { testStore } = this.props;
+    testStore.search();
+  }
+
   render() {
+    let { testStore } = this.props;
+    let { list } = testStore;
     return (
       <div className="content_area">
         <h3>사외 조직/사원 등록</h3>
@@ -73,51 +93,30 @@ class OutsideOrgManage extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="active">
-                      <td>
-                        <select
-                          name=""
-                          id="b"
-                          disabled
-                          className="form_tag_select center edit"
-                        >
-                          <option value="">한성유통</option>
-                          <option value="">전체</option>
-                          <option value="">전체2</option>
-                        </select>
-                      </td>
-                      <td>
-                        <input
-                          type="text"
-                          className="form_tag center edit"
-                          disabled
-                          value="한성유통㈜"
-                          onChange={this.onChangeInput}
-                          onBlur={this.onChangeInput}
-                        />
-                      </td>
-                      <td>
-                        <i class="fas fa-edit"></i>
-                      </td>
-                      <td>
-                        <i class="fas fa-trash-alt"></i>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td>
-                        <i class="fas fa-edit"></i>
-                      </td>
-                      <td>
-                        <i class="fas fa-trash-alt"></i>
-                      </td>
-                    </tr>
+                    {list.map((info) => {
+                      return (
+                        <tr className="">
+                          <td>123123-12312</td>
+                          <td>한성유통</td>
+                          <td>
+                            <i class="fas fa-edit"></i>
+                          </td>
+                          <td>
+                            <i class="fas fa-trash-alt"></i>
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
               <div className="list_form_btns not_list">
-                <button className="btn_text btn_green">추가</button>
+                <button
+                  className="btn_text btn_green"
+                  onClick={this.openOrgAddPopup}
+                >
+                  추가
+                </button>
               </div>
             </div>
           </div>
@@ -145,47 +144,30 @@ class OutsideOrgManage extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      {/* 한성유통 */}
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label only_label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      {/* 한성유통㈜ */}
-                      <input
-                        type="checkbox"
-                        id="switchs"
-                        name="switch"
-                        className="switch_on_off"
-                      />
-                      <label for="switchs" className="switch_label_on_off">
-                        <span className="marble"></span>
-                        <span className="off">NO</span>
-                        <span class="on">YES</span>
-                      </label>
-                    </td>
-                    <td>부장</td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
+                  {list.map((info) => {
+                    return (
+                      <tr>
+                        <td>111123-22</td>
+                        <td>김철수</td>
+                        <td>부장</td>
+                        <td>
+                          <i class="fas fa-edit"></i>
+                        </td>
+                        <td>
+                          <i class="fas fa-trash-alt"></i>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
               <div className="list_form_btns not_list">
-                <button className="btn_text btn_green">추가</button>
+                <button
+                  className="btn_text btn_green"
+                  onClick={this.openMemberAddPopup}
+                >
+                  추가
+                </button>
               </div>
             </div>
           </div>
