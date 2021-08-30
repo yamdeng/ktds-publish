@@ -59,7 +59,7 @@
   font-weight: bold;
   padding-bottom: 10px;
   border-bottom: 1px solid #{$col-gray300};
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   @include mobile {
     padding: 20px 0;
     margin: 0 20px;
@@ -118,9 +118,10 @@
 }
 
 .pop_cont {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  padding-top: 10px;
   @include mobile {
-    padding: 20px 30px 80px;
+    padding: 20px 30px 40px;
   }
 }
 
@@ -146,9 +147,10 @@
 
 .pop_close {
   position: absolute;
-  right: 30px;
-  top: 20px;
+  right: 15px;
+  top: 7px;
   font-size: 20px;
+  color: #{$col-gray600};
   @include mobile {
     right: 20px;
   }

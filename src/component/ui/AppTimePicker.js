@@ -35,12 +35,16 @@ class AppTimePicker extends React.Component {
         return (
           <React.Fragment>
             <input
+              autoComplete="off"
               id={labelId}
               type="text"
               className="form_tag"
               ref={ref}
               value={value}
-              disabled
+              onClick={(event) => {
+                event.preventDefault();
+                onClick();
+              }}
             />
             <label className="f_label" for={labelId}>
               {label} {required ? <span class="required">*</span> : null}

@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import ReactTooltip from 'react-tooltip';
 import HOC from 'util/HOC';
+import AppDatePicker from 'component/ui/AppDatePicker';
+import AppTimePicker from 'component/ui/AppTimePicker';
 
 /*
 
@@ -172,11 +174,44 @@ class FormTest1 extends Component {
                 </span>
               </span>
               <span className="form_group wid40">
-                <DatePicker
+                {/* <DatePicker
                   selected={new Date()}
                   dateFormat="yyyy-MM-dd"
                   onChange={(date) => {}}
                   customInput={<ExampleCustomInput />}
+                /> */}
+                <AppDatePicker
+                  inputId="startDate"
+                  label="공개종료기간333"
+                  value={null}
+                  valueFormat="YYYY-MM-DD"
+                  changeDate={(date) => {}}
+                  required={true}
+                />
+              </span>
+            </div>
+          </div>
+          {/* yamdeng date */}
+          <hr className="line" />
+          <div className="form_table">
+            <div className="form_cell f_wid100">
+              <span className="form_group wid40 c_mr5">
+                <DatePicker onChange={(date) => {}} />
+                <label className="f_label" for="b">
+                  공개시작기간3 *
+                </label>
+                <span className="icon icon_calendar">
+                  <i class="fas fa-calendar-alt"></i>
+                </span>
+              </span>
+              <span className="form_group wid40">
+                <AppTimePicker
+                  inputId="startTime"
+                  label="시작시간"
+                  value="14:59"
+                  valueFormat="HH:mm"
+                  changeTime={(date) => {}}
+                  required={true}
                 />
               </span>
             </div>
