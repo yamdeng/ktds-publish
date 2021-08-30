@@ -125,42 +125,44 @@ class OutsideOrgManage extends Component {
               <p className="relative c_mb10">
                 <span className="fs_12">총 nnn 건</span>
               </p>
-              <table className="tb_list">
-                <caption></caption>
-                <colgroup>
-                  <col style={{ width: '40%' }} />
-                  <col style={{ width: '25%' }} />
-                  <col style={{ width: '15%' }} />
-                  <col style={{ width: '10%' }} />
-                  <col style={{ width: '10%' }} />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>사번</th>
-                    <th>성명</th>
-                    <th>호칭</th>
-                    <th>편집</th>
-                    <th>삭제</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {list.map((info) => {
-                    return (
-                      <tr>
-                        <td>111123-22</td>
-                        <td>김철수</td>
-                        <td>부장</td>
-                        <td>
-                          <i class="fas fa-edit"></i>
-                        </td>
-                        <td>
-                          <i class="fas fa-trash-alt"></i>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+              <div className="vertical_sc">
+                <table className="tb_list">
+                  <caption></caption>
+                  <colgroup>
+                    <col style={{ width: '40%' }} />
+                    <col style={{ width: '25%' }} />
+                    <col style={{ width: '15%' }} />
+                    <col style={{ width: '10%' }} />
+                    <col style={{ width: '10%' }} />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>사번</th>
+                      <th>성명</th>
+                      <th>호칭</th>
+                      <th>편집</th>
+                      <th>삭제</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {list.map((info) => {
+                      return (
+                        <tr>
+                          <td>111123-22</td>
+                          <td>김철수</td>
+                          <td>부장</td>
+                          <td>
+                            <i class="fas fa-edit"></i>
+                          </td>
+                          <td>
+                            <i class="fas fa-trash-alt"></i>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
               <div className="list_form_btns not_list">
                 <button
                   className="btn_text btn_green"

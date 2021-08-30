@@ -172,7 +172,7 @@
     }
     @include mobile {
       flex-grow: 1;
-      padding: 30px;
+      padding: 0;
     }
   }
 }
@@ -266,4 +266,9 @@
       transform: rotate(360deg);
     }
   }
+}
+
+.react-datepicker-popper[data-placement^='top'] .react-datepicker__triangle,
+.react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle {
+  transform: translate3d(36px, 0px, 0px) !important;
 }
