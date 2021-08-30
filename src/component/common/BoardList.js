@@ -30,11 +30,19 @@ class BoardList extends Component {
       isSelectClick: false
     };
     this.customClick = this.customClick.bind(this);
+    this.enterSearch = this.enterSearch.bind(this);
   }
+
   customClick() {
     this.setState({
       isSelectClick: !this.state.isSelectClick
     });
+  }
+
+  enterSearch(e) {
+    if (e.keyCode === 13) {
+      this.search();
+    }
   }
 
   componentDidMount() {
@@ -133,103 +141,20 @@ class BoardList extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="Yyyy-MM-DD HH:MI"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      {/* 공지 */}
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label only_label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      {/* 한성유통㈜ */}
-                      <input
-                        type="checkbox"
-                        id="switchs"
-                        name="switch"
-                        className="switch_on_off"
-                      />
-                      <label for="switchs" className="switch_label_on_off">
-                        <span className="marble"></span>
-                        <span className="off">NO</span>
-                        <span class="on">YES</span>
-                      </label>
-                    </td>
-                    <td>
-                      <select
-                        name=""
-                        id="b"
-                        disabled
-                        className="form_tag_select center edit"
-                      >
-                        <option value="">첨부</option>
-                        <option value="">전체</option>
-                        <option value="">전체2</option>
-                      </select>
-                    </td>
-                    <td>
-                      <select
-                        name=""
-                        id="b"
-                        disabled
-                        className="form_tag_select center edit"
-                      >
-                        <option value="">5</option>
-                        <option value="">전체</option>
-                        <option value="">전체2</option>
-                      </select>
-                    </td>
-                    <td>1</td>
-                    <td>
-                      <span className="ico_view">보기</span>
-                    </td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
-                  <tr>
                     <td>Yyyy-MM-DD HH:MI</td>
                     <td>{'ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동'}</td>
-                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
+                    <td>
+                      <a
+                        href=""
+                        style={{ textDecoration: 'underline' }}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          alert('aaa');
+                        }}
+                      >
+                        1111
+                      </a>
+                    </td>
                     <td>공지</td>
                     <td>Yyyy-mm-dd~yyyy-mm-dd</td>
                     <td>첨부</td>
