@@ -36,7 +36,7 @@ class BoardStore extends ListStore {
     }, 1000);
   }
 
-  @override
+  @action
   clear() {
     this.clearList();
     this.info = '';

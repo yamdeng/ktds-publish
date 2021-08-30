@@ -14,6 +14,7 @@ Config.apiTimeout = 30000;
 
 // date 기본 display format
 Config.defaultDateDisplayFormat = 'YYYY-MM-DD';
+Config.defaultTimeDisplayFormat = 'HH:mm';
 
 Config.scrollAnimationTimeout = 500;
 

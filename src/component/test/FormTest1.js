@@ -25,15 +25,29 @@ class FormTest1 extends Component {
   componentDidMount() {}
 
   render() {
-    const ExampleCustomInput = React.forwardRef(({ value, onClick }, ref) => (
-      <input
-        type="text"
-        className="form_tag"
-        onClick={onClick}
-        ref={ref}
-        value={value}
-      />
-    ));
+    const ExampleCustomInput = React.forwardRef(({ value, onClick }, ref) => {
+      // debugger;
+      console.log('value : ' + value);
+      return (
+        <React.Fragment>
+          <input
+            for="aaa"
+            type="text"
+            className="form_tag"
+            onClick={onClick}
+            ref={ref}
+            value={value}
+            disabled
+          />
+          <label className="f_label" for="aaa">
+            공개종료기간 *
+          </label>
+          <span className="icon icon_calendar" onClick={onClick}>
+            <i class="fas fa-calendar-alt"></i>
+          </span>
+        </React.Fragment>
+      );
+    });
     return (
       <div className="content_area">
         <h3>폼 case 1</h3>
@@ -159,16 +173,11 @@ class FormTest1 extends Component {
               </span>
               <span className="form_group wid40">
                 <DatePicker
-                  locale="ko"
+                  selected={new Date()}
+                  dateFormat="yyyy-MM-dd"
                   onChange={(date) => {}}
                   customInput={<ExampleCustomInput />}
                 />
-                <label className="f_label" for="b">
-                  공개종료기간2 *
-                </label>
-                <span className="icon icon_calendar">
-                  <i class="fas fa-calendar-alt"></i>
-                </span>
               </span>
             </div>
           </div>

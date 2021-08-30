@@ -142,6 +142,24 @@ const convertMessageDate = function (messageDate) {
   return dateString;
 };
 
+// '2021-09-01' ---> new Date 타입으로 변경
+const stringToDate = function (dateString, format) {
+  let resultDate = null;
+  if (dateString) {
+    resultDate = moment(dateString, format).toDate();
+  }
+  return resultDate;
+};
+
+// '14:59' ---> new Date 타입으로 변경
+const stringToTime = function (timeString, format) {
+  let resultDate = null;
+  if (timeString) {
+    resultDate = moment(timeString, format).toDate();
+  }
+  return resultDate;
+};
+
 // div id기준으로 스크롤 하단으로
 function scrollBottomByDivId(divId, timeout) {
   let divElement = document.getElementById(divId);
@@ -418,6 +436,8 @@ export default {
   isToday,
   convertDate,
   convertMessageDate,
+  stringToDate,
+  stringToTime,
   scrollBottomByDivId,
   scrollTopByDivId,
   scrollLeftByDivId,
