@@ -13,7 +13,7 @@ class PWorkFormLeft extends Component {
       <div className="work_left_menu">
         <div className="">
           <ul className="task_menu">
-            <li className="item">
+            <li className="item active">
               서류 업로드
               <span className="abrc">
                 <i class="fas fa-chevron-right"></i>

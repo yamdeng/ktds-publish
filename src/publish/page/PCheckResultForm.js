@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class PCheckResultForm extends Component {
   constructor(props) {
@@ -105,28 +106,30 @@ class PCheckResultForm extends Component {
             </div>
           </div>
           <div className="group_box_wrap">
-            <span className="txt">교육대상자 수 </span>
+            <span className="txt">점검방법</span>
             <div className="form_table">
               <div className="form_table">
-                <div className="form_cell f_wid50">
-                  <span className="form_group wid20 c_mr5">
-                    <input type="text" className="form_tag" />
-                    <label className="f_label" for="b">
-                      남
-                    </label>
-                  </span>
-                  <span className="form_group wid20 c_mr5">
-                    <input type="text" className="form_tag" />
-                    <label className="f_label" for="b">
-                      여
-                    </label>
-                  </span>
-                  <span className="form_group wid20">
-                    <input type="text" className="form_tag" disabled="true" />
-                    <label className="f_label" for="b">
-                      계
-                    </label>
-                  </span>
+                <div className="radio-wrapper c_mr30">
+                  <input
+                    type="radio"
+                    name="question-2"
+                    value="43200000"
+                    id="question-2-option-1"
+                  />
+                  <label className="radio-label" for="question-2-option-1">
+                    비대면
+                  </label>
+                </div>
+                <div className="radio-wrapper">
+                  <input
+                    type="radio"
+                    name="question-2"
+                    value="43200000"
+                    id="question-2-option-1"
+                  />
+                  <label className="radio-label" for="question-2-option-1">
+                    대면
+                  </label>
                 </div>
               </div>
             </div>
@@ -143,6 +146,15 @@ class PCheckResultForm extends Component {
                   작업 유형
                 </label>
               </span>
+              <span className="form_group wid40 ">
+                <input
+                  type="text"
+                  className="form_tag"
+                  disabled
+                  value="자동출력"
+                />
+                <label className="f_label">최종 점검결과</label>
+              </span>
             </div>
           </div>
 
@@ -150,204 +162,93 @@ class PCheckResultForm extends Component {
             <button className="btn_text btn_green">조회</button>
           </p>
         </div>
-        <div className="list_form c_mt10">
-          <p className="relative c_mb10">
-            <span className="form_group c_mr5" style={{ width: '100px' }}>
-              <select name="" id="b" className="form_tag_select ">
-                <option value="">목록 10개</option>
-                <option value="">전체1</option>
-                <option value="">전체2</option>
-              </select>
-            </span>
-            <span className="fs_12">총 nnn 건</span>
-          </p>
+        <div className="group_box_wrap">
+          <span className="txt">점검방법</span>
+          <p className="c_mt20 c_mb10">공통</p>
           <div className="tb_wrap_scroll">
             <div className="horizon_tb">
-              <table className="tb_list" style={{ minWidth: '1000px' }}>
+              <table className="tb_list" style={{ minWidth: '500px' }}>
                 <caption></caption>
                 <thead>
                   <tr>
-                    <th rowspan={2}>
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
-                    </th>
-                    <th rowspan={2}>작업지시ID</th>
-                    <th rowspan={2}>작업 명</th>
-                    <th rowspan={2}>작업 조직</th>
-                    <th colSpan={3}>점검자</th>
-                    <th rowspan={2}>점검 유형</th>
-                    <th rowspan={2}>점검일</th>
-                    <th rowspan={2}>점검결과</th>
-                    <th rowspan={2}>편집</th>
-                    <th rowspan={2}>상세</th>
-                  </tr>
-                  <tr>
-                    <th>사번</th>
-                    <th>이름</th>
-                    <th>소속</th>
+                    <th>항목</th>
+                    <th style={{ width: '10%' }}>결과</th>
+                    <th style={{ width: '10%' }}>미흡내역</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
+                    <td className="left">
+                      ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
                     </td>
+                    <td>양호/미흡</td>
                     <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="Yyyy-MM-DD HH:MI"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      {/* 공지 */}
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label only_label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      {/* 한성유통㈜ */}
-                      <input
-                        type="checkbox"
-                        id="switchs"
-                        name="switch"
-                        className="switch_on_off"
-                      />
-                      <label for="switchs" className="switch_label_on_off">
-                        <span className="marble"></span>
-                        <span className="off">NO</span>
-                        <span class="on">YES</span>
-                      </label>
-                    </td>
-                    <td>
-                      <select
-                        name=""
-                        id="b"
-                        disabled
-                        className="form_tag_select center edit"
-                      >
-                        <option value="">첨부</option>
-                        <option value="">전체</option>
-                        <option value="">전체2</option>
-                      </select>
-                    </td>
-                    <td>
-                      <select
-                        name=""
-                        id="b"
-                        disabled
-                        className="form_tag_select center edit"
-                      >
-                        <option value="">5</option>
-                        <option value="">전체</option>
-                        <option value="">전체2</option>
-                      </select>
-                    </td>
-                    <td>1</td>
-                    <td>
-                      <select
-                        name=""
-                        id="b"
-                        disabled
-                        className="form_tag_select center edit"
-                      >
-                        <option value="">첨부</option>
-                        <option value="">전체</option>
-                        <option value="">전체2</option>
-                      </select>
-                    </td>
-
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-eye"></i>
+                      <Link>등록</Link>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
-
-          <div className="list_form_btns">
-            <button className="btn_text btn_blue c_mr5">엑셀다운</button>
-            <button className="btn_text btn_blue c_mr5">점검결과 등록</button>
-            <button className="btn_text btn_green">삭제</button>
+          <p className="c_mt20 c_mb10">고공 작업</p>
+          <div className="tb_wrap_scroll">
+            <div className="horizon_tb">
+              <table className="tb_list" style={{ minWidth: '500px' }}>
+                <caption></caption>
+                <thead>
+                  <tr>
+                    <th>항목</th>
+                    <th style={{ width: '10%' }}>결과</th>
+                    <th style={{ width: '10%' }}>미흡내역</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="left">
+                      ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+                    </td>
+                    <td>양호/미흡</td>
+                    <td>
+                      <Link>등록</Link>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <div className="paging_wrap">
-          <span className="p_web">
-            <i class="fas fa-angle-double-left"></i>
-          </span>
-          <span className="p_arr_l">
-            <i class="fas fa-angle-left"></i>
-          </span>
-          {/* web paging */}
-          <span className="p_web">1</span>
-          <span className="p_web">2</span>
-          <span className="p_web">3</span>
-          <span className="p_web">4</span>
-          {/* mobile pagind */}
-          <span className="p_mobile">1</span>
-          <span className="p_mobile">/</span>
-          <span className="p_mobile">10</span>
-          <span className="p_arr_r">
-            <i class="fas fa-angle-right"></i>
-          </span>
-          <span className="p_web">
-            <i class="fas fa-angle-double-right"></i>
-          </span>
+        <div className="form_table">
+          <div className="form_cell ">
+            <span className="form_group wid30 c_mr5">
+              <input type="text" className="form_tag" />
+              <label className="f_label">
+                점검자 <span className="required">*</span>
+              </label>
+            </span>
+            <span className="form_group wid50">
+              <input type="text" className="form_tag" />
+            </span>
+          </div>
         </div>
+        <div className="form_table">
+          <div className="form_cell ">
+            <span className="form_group wid30 c_mr5">
+              <input type="text" className="form_tag" />
+              <label className="f_label">
+                확인자 <span className="required">*</span>
+              </label>
+            </span>
+            <span className="form_group wid50 c_mr5">
+              <input type="text" className="form_tag" />
+            </span>
+            <button className="btn_icon btn_dark_gray">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <p className="c_pt15 right">
+          <button className="btn_text btn_green">저장</button>
+        </p>
       </div>
     );
   }
