@@ -28,6 +28,28 @@ class CodeSelectApi extends React.Component {
   componentDidMount() {
     let { codeType } = this.props;
     // TODO : ApiService call
+    setTimeout(() => {
+      this.setState({
+        codeList: [
+          {
+            name: '전체',
+            value: ''
+          },
+          {
+            name: '공지',
+            value: '공지'
+          },
+          {
+            name: '질문',
+            value: '질문'
+          },
+          {
+            name: '자료',
+            value: '자료'
+          }
+        ]
+      });
+    }, 1500);
   }
 
   render() {
