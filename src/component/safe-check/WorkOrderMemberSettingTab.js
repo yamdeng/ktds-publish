@@ -13,11 +13,11 @@ import { withRouter } from 'react-router-dom';
      -/work-orders/:id : 상세화면도 폼화면을 사용시
 
     store
-     -boardStore
+     -boardListStore
 
 */
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class WorkOrderMemberSettingTab extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class WorkOrderMemberSettingTab extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div>
         <h2>작업 지시 폼(작업조 탭) : WorkOrderMemberSettingTab</h2>

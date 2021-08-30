@@ -10,11 +10,11 @@ import { withRouter } from 'react-router-dom';
     route : /constructions/:id
 
     store
-     -boardStore
+     -boardListStore
 
 */
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class ConstructionSeniorTab extends Component {
   constructor(props) {
@@ -26,12 +26,12 @@ class ConstructionSeniorTab extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div>
         <h2>공사 상세(안전선임자 탭) : ConstructionSeniorTab</h2>

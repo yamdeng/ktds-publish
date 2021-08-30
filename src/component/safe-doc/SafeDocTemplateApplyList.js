@@ -11,13 +11,13 @@ import HOC from 'util/HOC';
     route : /safe-doc-template-applys
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('안전서류 템플릿 적용')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class SafeDocTemplateApplyList extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class SafeDocTemplateApplyList extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>안전서류 템플릿 적용 : SafeDocTemplateApplyList</h2>

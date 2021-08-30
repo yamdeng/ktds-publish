@@ -12,11 +12,11 @@ import { withRouter } from 'react-router-dom';
      -/closeness-permissions/:id/update
 
     store
-     -boardStore
+     -boardListStore
 
 */
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class ClosenessBasicTab extends Component {
   constructor(props) {
@@ -28,12 +28,12 @@ class ClosenessBasicTab extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div>
         <h2>밀폐 허가서 작업 등록(작업정보 탭) : ClosenessBasicTab</h2>

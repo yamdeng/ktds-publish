@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 /*
 
     목록 페이징 공통
-     : <Pagination store={boardStore}}
+     : <Pagination store={boardListStore}}
 
     props
      -store : 페이징 데이터를 컨트롤할 store

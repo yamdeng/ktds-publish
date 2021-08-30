@@ -11,13 +11,13 @@ import HOC from 'util/HOC';
     route : /work-orders
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('작업 지시 관리')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class WorkOrderList extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class WorkOrderList extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>작업 지시 관리 : WorkOrderList</h2>

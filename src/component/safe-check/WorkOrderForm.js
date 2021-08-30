@@ -14,13 +14,13 @@ import HOC from 'util/HOC';
      -/work-orders/:id : 상세화면도 폼화면을 사용
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('작업 지시 폼/상세')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class WorkOrderForm extends Component {
   constructor(props) {
@@ -32,12 +32,12 @@ class WorkOrderForm extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>작업 지시 등록 / 수정 / 상세 : WorkOrderForm</h2>

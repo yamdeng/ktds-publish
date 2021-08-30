@@ -11,13 +11,13 @@ import HOC from 'util/HOC';
     route : /closeness-permissions
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('밀폐 허가서 작업 관리')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class ClosenessPermissionList extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class ClosenessPermissionList extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>밀폐 허가서 작업 관리 : ClosenessPermissionList</h2>

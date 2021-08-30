@@ -12,13 +12,13 @@ import Pagination from 'component/ui/Pagination';
     route : /boards
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('게시판 관리')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class BoardList extends Component {
   constructor(props) {
@@ -35,17 +35,17 @@ class BoardList extends Component {
   }
 
   componentDidMount() {
-    const { boardStore } = this.props;
-    boardStore.search();
+    const { boardListStore } = this.props;
+    boardListStore.search();
   }
 
   componentWillUnmount() {
-    const { boardStore } = this.props;
-    boardStore.clear();
+    const { boardListStore } = this.props;
+    boardListStore.clear();
   }
 
   render() {
-    let { boardStore } = this.props;
+    let { boardListStore } = this.props;
     return (
       <div className="content_area">
         <h3>테이블 case 1</h3>
@@ -255,7 +255,7 @@ class BoardList extends Component {
             </div>
           </div>
         </div>
-        <Pagination store={boardStore} />
+        <Pagination store={boardListStore} />
       </div>
     );
   }

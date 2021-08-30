@@ -11,13 +11,13 @@ import HOC from 'util/HOC';
     route : /safe-doc-schedules
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('안전서류 일정 관리')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class SafeDocScheduleList extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class SafeDocScheduleList extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>안전서류 일정관리 : SafeDocScheduleList</h2>

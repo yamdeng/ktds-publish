@@ -6,6 +6,7 @@ import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 import Config from 'config/Config';
 import SearchInput from 'component/ui/SearchInput';
 import SearchButton from 'component/ui/SearchButton';
+import Pagination from 'component/ui/Pagination';
 
 /*
 
@@ -18,12 +19,6 @@ import SearchButton from 'component/ui/SearchButton';
       okLabel(option) : 버튼 라벨명(기본값은 '확인')
       ok(option) : [확인] 버튼 핸들러 함수(기본은 모달 닫히게끔)
     }
-
-    state
-     -tagList : 태그 목록
-
-    props
-     -tagList : 태그 목록
 
     store
      -alertModalStore, modalStore
@@ -66,6 +61,7 @@ class OrgSelectModal extends React.Component {
   componentDidMount() {
     let { testStore } = this.props;
     testStore.loadTree({ key: Config.treeRootKey });
+    testStore.search();
   }
 
   render() {
@@ -88,18 +84,7 @@ class OrgSelectModal extends React.Component {
             <div className="pop_cont_form">
               <div className="box_form">
                 <div className="form_table">
-                  {/* 
-              input,select,textarea 실패했을때 invalid
-              label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
-              f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
-              wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
-            */}
                   <div className="form_cell f_wid70">
-                    {/* 
-                기본은 form_group
-                앞에 돋보기 아이콘을 추가하려면 .form_search 와 icon icon_search 추가
-                뒤에 클리어 아이콘을 추가하려면 .form_clear 와 icon icon_clear 추가
-              */}
                     <span className="form_group form_search form_clear wid70 c_mr5">
                       <SearchInput
                         value={orgName}
@@ -114,7 +99,8 @@ class OrgSelectModal extends React.Component {
               </div>
               <div className="list_form c_mt10">
                 <p className="relative c_mb10">
-                  <span className="fs_12">총 nnn 건</span>
+                  {/* Helper.convertNumberValue 사용 */}
+                  <span className="fs_12">총 1000 건</span>
                 </p>
                 <table className="tb_list">
                   <caption></caption>
@@ -180,6 +166,7 @@ class OrgSelectModal extends React.Component {
                   </tbody>
                 </table>
               </div>
+              <Pagination store={testStore} />
             </div>
           </div>
         </div>

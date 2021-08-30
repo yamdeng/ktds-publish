@@ -13,13 +13,13 @@ import HOC from 'util/HOC';
      -/check-results/:id/update
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('점검결과 폼')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class CheckResultForm extends Component {
   constructor(props) {
@@ -31,12 +31,12 @@ class CheckResultForm extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>점검결과 등록/수정 : CheckResultForm</h2>

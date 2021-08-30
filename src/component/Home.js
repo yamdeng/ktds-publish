@@ -8,7 +8,7 @@ import HOC from 'util/HOC';
     route : /
 
     store
-     -boardStore
+     -boardListStore
 
 */
 

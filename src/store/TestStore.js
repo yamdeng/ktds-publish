@@ -1,13 +1,14 @@
 import { observable, action, makeObservable, runInAction } from 'mobx';
 import Config from 'config/Config';
 import LoadingBar from 'util/LoadingBar';
+import ListStore from 'store/ui/ListStore';
 
 /*
   
   test store
 
 */
-class TestStore {
+class TestStore extends ListStore {
   @observable
   info = {};
 
@@ -22,6 +23,7 @@ class TestStore {
   ];
 
   constructor(rootStore) {
+    super();
     makeObservable(this);
     this.rootStore = rootStore;
   }
@@ -114,6 +116,12 @@ class TestStore {
       }
       return node;
     });
+  }
+
+  @action
+  search() {
+    this.list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    this.changePageInfo(183);
   }
 
   @action

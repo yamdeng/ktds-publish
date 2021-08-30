@@ -13,13 +13,13 @@ import HOC from 'util/HOC';
      -/boards/:id/update : 수정
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('게시판 폼')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class BoardForm extends Component {
   constructor(props) {
@@ -31,12 +31,12 @@ class BoardForm extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>게시판 폼 : BoardForm</h2>

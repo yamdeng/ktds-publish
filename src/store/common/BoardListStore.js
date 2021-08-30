@@ -1,18 +1,12 @@
-import {
-  observable,
-  action,
-  makeObservable,
-  override,
-  runInAction
-} from 'mobx';
+import { observable, action, makeObservable, runInAction } from 'mobx';
 import ListStore from 'store/ui/ListStore';
 
 /*
   
-  게시판 store
+  게시판 목록 store
 
 */
-class BoardStore extends ListStore {
+class BoardListStore extends ListStore {
   @observable
   info = '';
 
@@ -43,4 +37,4 @@ class BoardStore extends ListStore {
   }
 }
 
-export default BoardStore;
+export default BoardListStore;

@@ -11,13 +11,13 @@ import HOC from 'util/HOC';
     route : /constructions
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('공사 상세')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class ConstructionList extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class ConstructionList extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>공사 관리 : ConstructionList</h2>

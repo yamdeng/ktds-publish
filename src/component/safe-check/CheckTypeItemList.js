@@ -11,13 +11,13 @@ import HOC from 'util/HOC';
     route : /check-type-items
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('점검 항목 관리(점검유형별)')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class CheckTypeItemList extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class CheckTypeItemList extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>점검 항목 관리(점검유형별) : CheckTypeItemList</h2>

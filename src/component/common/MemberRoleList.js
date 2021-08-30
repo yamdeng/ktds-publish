@@ -11,13 +11,13 @@ import HOC from 'util/HOC';
     route : /member-roles
 
     store
-     -boardStore
+     -boardListStore
 
 */
 
 @HOC.documentTitle('권한 부여')
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class MemberRoleList extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class MemberRoleList extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div className="content_area">
         <h2>권한부여 : MemberRoleList</h2>

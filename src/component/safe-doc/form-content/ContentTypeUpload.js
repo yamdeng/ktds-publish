@@ -13,11 +13,11 @@ import { withRouter } from 'react-router-dom';
      -/safe-docs/:id/update
 
     store
-     -boardStore
+     -boardListStore
 
 */
 @withRouter
-@inject('boardStore')
+@inject('boardListStore')
 @observer
 class ContentTypeUpload extends Component {
   constructor(props) {
@@ -29,12 +29,12 @@ class ContentTypeUpload extends Component {
   }
 
   testHandle(info) {
-    // const { boardStore } = this.props;
+    // const { boardListStore } = this.props;
   }
 
   render() {
-    let { boardStore } = this.props;
-    let { info } = boardStore;
+    let { boardListStore } = this.props;
+    let { info } = boardListStore;
     return (
       <div>
         <h2>업로드 유형 : ContentTypeUpload</h2>
