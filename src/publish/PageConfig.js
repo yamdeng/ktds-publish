@@ -304,7 +304,7 @@ const list = [
     component: PCheckResultList,
     url: '/check-results',
     pageCount: '26',
-    success: false,
+    success: true,
     useIcon: true,
     description: ''
   },
@@ -324,7 +324,7 @@ const list = [
     component: PSafeCheckList,
     url: '/safe-checks',
     pageCount: '28',
-    success: true,
+    success: false,
     useIcon: false,
     description: ''
   },
@@ -334,7 +334,7 @@ const list = [
     component: PWorkReportList,
     url: '/work-reports',
     pageCount: '29',
-    success: false,
+    success: true,
     useIcon: true,
     description:
       '1.좌측을 트리로할지 결정이 않났습니다. 이건 일단 작업 보류 해주세용'

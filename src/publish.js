@@ -11,9 +11,10 @@ import rootStore from 'store/RootStore';
 import { registerLocale, setDefaultLocale } from 'react-datepicker';
 import ko from 'date-fns/locale/ko';
 
-import 'resources/css/import.scss';
 import 'antd/dist/antd.css';
 import 'react-datepicker/dist/react-datepicker.css';
+import 'resources/css/import.scss';
+
 registerLocale('ko', ko);
 setDefaultLocale('ko');
 
