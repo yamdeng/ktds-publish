@@ -97,10 +97,6 @@ class PModalContainer extends React.Component {
       case ModalType.COMMON_MAP_MODAL:
         modalComponent = <PCommonMapModal modalData={modalData} />;
         break;
-      // case ModalType.MANUAL_VIEWER_MODAL:
-      //   modalComponent = <PManualViewerModal modalData={modalData} />;
-      //   contentClassName = `${contentClassName} full-modal-overlay`;
-      //   break;
       default:
         break;
     }

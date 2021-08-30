@@ -16,107 +16,134 @@ const modalList = [
   {
     name: '공통 alert 모달',
     modalType: ModalType.ALERT_MODAL,
-    isAlertModal: true
+    isAlertModal: true,
+    modalData: {
+      title: '제목aaaa',
+      body: 'ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ asdasdasd asd asd asd asd asd as as asd s ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ abcdefghijklmnopqr ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ asdasdasd asd asd asd asd asd as as asd s ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ abcdefghijklmnopqr'
+    }
   },
   {
     name: '공통 confirm 모달',
     modalType: ModalType.CONFRIM_MODAL,
-    isAlertModal: true
+    isAlertModal: true,
+    modalData: {
+      title: '제목aaaa',
+      body: 'ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ asdasdasd asd asd asd asd asd as as asd s ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ abcdefghijklmnopqr ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ asdasdasd asd asd asd asd asd as as asd s ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ abcdefghijklmnopqr'
+    }
   },
   {
     name: '조직 선택 모달',
     modalType: ModalType.ORG_SELECT_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '사원 선택 모달',
     modalType: ModalType.MEMBER_SELECT_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '조직 폼 모달',
     modalType: ModalType.ORG_SIMPLE_FORM_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '사원 폼 모달',
     modalType: ModalType.MEMBER_SIMPLE_FORM_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '댓글 목록 모달',
     modalType: ModalType.BOARD_COMMENT_LIST_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '권한 수정 모달',
     modalType: ModalType.MEMBER_ROLE_FORM_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '점검 항목 폼 모달',
     modalType: ModalType.CHECK_ITEM_FORM_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '작업 지시 요청 이력 모달',
     modalType: ModalType.WORK_ORDER_STATUS_HISTORY_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '지도 모달',
     modalType: ModalType.COMMON_MAP_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '에디터 모달',
     modalType: ModalType.COMMON_EDITOR_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '결제 모달',
     modalType: ModalType.COMMON_SIGN_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '작업지시서 목록 모달',
     modalType: ModalType.WORK_ORDER_LIST_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '안전서류 템플릿 폼 모달',
     modalType: ModalType.SAFE_DOC_TEMPLATE_FORM_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '템플릿 적용 폼 모달',
     modalType: ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '등록 공사 찾기 모달',
     modalType: ModalType.CONSTRUCTION_SEARCH_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '공사 편성 모달',
     modalType: ModalType.CONSTRUCTION_ORGANIZE_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: 'textarea 모달',
     modalType: ModalType.COMMON_TEXTAREA_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '등록 서류 검색 모달',
     modalType: ModalType.SAFE_DOC_SEARCH_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   },
   {
     name: '보호구 지급 대장 폼 모달',
     modalType: ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL,
-    isAlertModal: false
+    isAlertModal: false,
+    modalData: {}
   }
 ];
 
@@ -142,9 +169,9 @@ class ModalTest extends Component {
 
   openAlertModal(modalType, modalData) {
     if (modalType === ModalType.ALERT_MODAL) {
-      ModalService.alert(modalType, modalData);
+      ModalService.alert(modalData);
     } else {
-      ModalService.confirm(modalType, modalData);
+      ModalService.confirm(modalData);
     }
   }
 
@@ -165,9 +192,12 @@ class ModalTest extends Component {
                 }}
                 onClick={() => {
                   if (modalInfo.isAlertModal) {
-                    this.openAlertModal(modalInfo.modalType, {});
+                    this.openAlertModal(
+                      modalInfo.modalType,
+                      modalInfo.modalData
+                    );
                   } else {
-                    this.openModal(modalInfo.modalType, {});
+                    this.openModal(modalInfo.modalType, modalInfo.modalData);
                   }
                 }}
               >

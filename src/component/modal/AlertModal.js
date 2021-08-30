@@ -2,6 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
+import ReactHelper from 'util/ReactHelper';
+import Constant from 'config/Constant';
 
 /*
 
@@ -9,24 +11,18 @@ import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
     modalData 설명
     {
-      title : 모달 타이틀
-      body(required) : 모달 body(html string)
+      title(option) : 모달 타이틀
+      body : 모달 body(html string)
       okLabel(option) : 버튼 라벨명(기본값은 '확인')
       ok(option) : [확인] 버튼 핸들러 함수(기본은 모달 닫히게끔)
     }
 
-    state
-     -tagList : 태그 목록
-
-    props
-     -tagList : 태그 목록
-
     store
-     -alertModalStore, modalStore
+     -alertModalStore
 
 */
 @withRouter
-@inject('alertModalStore', 'modalStore')
+@inject('alertModalStore')
 @observer
 class AlertModal extends React.Component {
   constructor(props) {
@@ -38,28 +34,29 @@ class AlertModal extends React.Component {
   }
 
   ok() {
-    let { modalData } = this.props;
+    let { modalData, alertModalStore } = this.props;
     if (modalData.ok) {
       modalData.ok();
-      this.props.alertModalStore.hideModal();
+      alertModalStore.hideModal();
     } else {
-      this.props.alertModalStore.hideModal();
+      alertModalStore.hideModal();
     }
   }
 
   render() {
-    // let { modalData } = this.props;
-    // let { body, okLabel } = modalData;
+    let { modalData } = this.props;
+    let { title, body, okLabel } = modalData;
+    body = ReactHelper.convertEnterStringToBrTag(body);
+    okLabel = okLabel || Constant.LABEL_MODAL_OK;
     return (
       <div className="popup-container">
-        <h3 className="pop_title">alert modal</h3>
-        <p className="pop_cont">
-          3.title이 존재하는 경우와 존재하지 않는 경우가 존재(confirm도
-          마찬가지)
-        </p>
+        <h3 className="pop_title" style={{ display: title ? '' : 'none' }}>
+          {title}
+        </h3>
+        <p className="pop_cont" dangerouslySetInnerHTML={{ __html: body }} />
         <div className="pop_btns">
           <button className="btn_text btn_green" onClick={this.ok}>
-            확인
+            {okLabel}
           </button>
         </div>
         <ModalTopCloseButton isAlertModal={true} />

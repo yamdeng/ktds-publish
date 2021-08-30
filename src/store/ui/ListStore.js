@@ -98,7 +98,6 @@ class ListStore {
     let lastPageStep = Math.ceil(totalPageSize / maxPagingSize);
     let isNextPageStep = currentPageStep < lastPageStep;
     let nextPage = isNextPageStep ? currentPageStep * maxPagingSize + 1 : null;
-
     let isPrevPageStep = currentPageStep > 1;
     let prevPage = isPrevPageStep
       ? (currentPageStep - 2) * maxPagingSize + 1
@@ -114,6 +113,13 @@ class ListStore {
   @action
   changeSort(sortInfo) {
     this.sortInfo = sortInfo;
+    this.currentPage = 1;
+    this.search();
+  }
+
+  // [검색] 아이콘 선택시 : currentPage를 초기화시키기 위한
+  @action
+  enterSearch() {
     this.currentPage = 1;
     this.search();
   }
