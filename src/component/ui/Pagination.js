@@ -15,19 +15,9 @@ import { observer } from 'mobx-react';
 class Pagination extends React.Component {
   render() {
     const { store } = this.props;
-    let {
-      prevPage,
-      nextPage,
-      displayPageInfos,
-      currentPage,
-      lastPage,
-      totalCount
-    } = store;
+    let { prevPage, nextPage, displayPageInfos, currentPage, lastPage } = store;
     return (
-      <div
-        className="paging_wrap"
-        style={{ display: totalCount ? '' : 'none' }}
-      >
+      <div className="paging_wrap">
         <span
           className="p_web"
           style={{ display: prevPage ? '' : 'none' }}
@@ -75,6 +65,17 @@ class Pagination extends React.Component {
           }
           return pageComponent;
         })}
+        {displayPageInfos.length === 0 ? (
+          <React.Fragment>
+            <span className="p_arr_l">
+              <i class="fas fa-angle-left"></i>
+            </span>
+            <span className="p_web">1</span>
+            <span className="p_arr_r">
+              <i class="fas fa-angle-right"></i>
+            </span>
+          </React.Fragment>
+        ) : null}
         {/* mobile pagind */}
         <span
           className="p_mobile p_arr_r"
