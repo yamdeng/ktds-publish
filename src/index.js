@@ -1,3 +1,5 @@
+import 'antd/dist/antd.css';
+import 'react-datepicker/dist/react-datepicker.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router';
@@ -12,8 +14,6 @@ import App from './App';
 import AppHistory from 'util/AppHistory';
 import ko from 'date-fns/locale/ko';
 import 'resources/css/import.scss';
-// import 'antd/dist/antd.css';
-import 'react-datepicker/dist/react-datepicker.css';
 registerLocale('ko', ko);
 setDefaultLocale('ko');
 
