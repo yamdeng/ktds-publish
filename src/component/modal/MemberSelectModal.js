@@ -85,6 +85,23 @@ class MemberSelectModal extends React.Component {
                 treeData={treeList}
                 loadData={(treeInfo) => testStore.loadTree(treeInfo)}
                 onSelect={this.selectTree}
+                switcherIcon={<span className="folder"></span>}
+                titleRender={(noteData) => {
+                  const { depth, title, children, id, companies } = noteData;
+                  let className = '';
+                  if (depth === 1) {
+                    className = 'folder';
+                  } else {
+                    if (!children || (children && !children.length)) {
+                      className = 'bridge';
+                    }
+                  }
+                  return (
+                    <div>
+                      <span className={className}>{title}</span>
+                    </div>
+                  );
+                }}
               />
             </div>
             <div className="pop_cont_form">
