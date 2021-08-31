@@ -277,10 +277,10 @@
 // tree
 
 .tree_wrap {
-  overflow: hidden;
   box-sizing: border-box;
   width: 200px;
-  overflow-x: auto;
+  max-height: 500px;
+  overflow: auto;
   @include mobile {
     display: none;
   }

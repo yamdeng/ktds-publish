@@ -400,6 +400,9 @@ class PTable1 extends Component {
                       <i class="fas fa-trash-alt"></i>
                     </td>
                   </tr>
+                  <tr>
+                    <td colSpan={11}>데이터가 존재하지 않습니다.</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
