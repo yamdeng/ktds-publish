@@ -37,6 +37,7 @@ import TableTest1 from 'component/test/TableTest1';
 import TableTest2 from 'component/test/TableTest2';
 import FormTest1 from 'component/test/FormTest1';
 import FormTest2 from 'component/test/FormTest2';
+import SearchField1 from 'component/test/SearchField1';
 
 @withRouter
 @observer
@@ -193,6 +194,7 @@ class Main extends Component {
           <Route exact path="/test/table2" component={TableTest2} />
           <Route exact path="/test/form1" component={FormTest1} />
           <Route exact path="/test/form2" component={FormTest2} />
+          <Route exact path="/test/search-field1" component={SearchField1} />
         </Switch>
       </>
     );

@@ -63,22 +63,18 @@ class BoardList extends Component {
 
   render() {
     let { boardListStore } = this.props;
+    let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // list = [];
     return (
       <div className="content_area">
-        <h3>테이블 case 1</h3>
+        <h3>게시판 관리</h3>
         <div className="box_form">
           <div className="form_table">
-            {/* 
-              input,select,textarea 실패했을때 invalid
-              label 에 for 와 tag들의 id는 동일하게 넣어줘야함.
-              f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
-              wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
-            */}
-            <div className="form_cell f_wid50">
-              <span className="form_group form_search form_clear wid70 c_mr5">
+            <div className="form_cell f_wid60">
+              <span className="form_group form_search form_clear wid60 c_mr5">
                 <SearchInput
                   value={''}
-                  label="제목"
+                  label="검색어"
                   clearInput={this.clearInput}
                   changeValue={this.changeTitle}
                 />
@@ -94,6 +90,8 @@ class BoardList extends Component {
                 </label>
               </div>
             </div>
+          </div>
+          <div className="form_table">
             <div className="form_cell f_wid30">
               <span className="form_group wid100">
                 <CodeSelect
@@ -104,20 +102,22 @@ class BoardList extends Component {
                 />
               </span>
             </div>
-            <div className="form_cell f_wid20">
+            <div className="form_cell f_wid30">
               <span className="form_group wid100">
                 <CodeSelect
                   value={''}
-                  label="공개"
-                  codeType="publicType"
+                  label="게시유형"
+                  codeType="boardType"
                   changeValue={() => {}}
                 />
               </span>
             </div>
+            <div className="form_cell f_wid50">
+              <p className="c_pt15 right">
+                <button className="btn_text btn_green">조회</button>
+              </p>
+            </div>
           </div>
-          <p className="c_pt15 right">
-            <button className="btn_text btn_green">조회</button>
-          </p>
         </div>
         <div className="list_form c_mt10">
           <p className="relative c_mb10">
@@ -127,7 +127,7 @@ class BoardList extends Component {
             <span className="fs_12">총 nnn 건</span>
           </p>
           <div className="tb_wrap_scroll">
-            <div className="horizon_tb">
+            <div className="horizon_tb vertical_sc">
               <table className="tb_list" style={{ minWidth: '1000px' }}>
                 <caption></caption>
                 <thead>
@@ -146,55 +146,48 @@ class BoardList extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Yyyy-MM-DD HH:MI</td>
-                    <td>{'ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동'}</td>
-                    <td>
-                      <a
-                        href=""
-                        style={{ textDecoration: 'underline' }}
-                        onClick={(event) => {
-                          event.preventDefault();
-                          alert('aaa');
-                        }}
-                      >
-                        1111
-                      </a>
-                    </td>
-                    <td>공지</td>
-                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
-                    <td>첨부</td>
-                    <td>5</td>
-                    <td>1</td>
-                    <td>
-                      <span className="ico_view">보기</span>
-                    </td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Yyyy-MM-DD HH:MI</td>
-                    <td>{'ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동'}</td>
-                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
-                    <td>공지</td>
-                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
-                    <td>첨부</td>
-                    <td>5</td>
-                    <td>1</td>
-                    <td>
-                      <span className="ico_view">보기</span>
-                    </td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
+                  {!list.length ? (
+                    <tr>
+                      <td colSpan={11}>데이터가 존재하지 않습니다.</td>
+                    </tr>
+                  ) : null}
+                  {list.map((info) => {
+                    return (
+                      <tr>
+                        <td>Yyyy-MM-DD HH:MI</td>
+                        <td>{'ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동'}</td>
+                        <td>
+                          <a
+                            href=""
+                            style={{ textDecoration: 'underline' }}
+                            onClick={(event) => {
+                              event.preventDefault();
+                              alert('aaa');
+                            }}
+                          >
+                            1111
+                          </a>
+                        </td>
+                        <td>공지</td>
+                        <td>Yyyy-mm-dd~yyyy-mm-dd</td>
+                        <td>첨부</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>
+                          <i class="fas fa-eye"></i>
+                          {/* <a href="">
+                            <i class="fas fa-eye"></i>
+                          </a> */}
+                        </td>
+                        <td>
+                          <i class="fas fa-edit"></i>
+                        </td>
+                        <td>
+                          <i class="fas fa-trash-alt"></i>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>

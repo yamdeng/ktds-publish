@@ -105,6 +105,7 @@ class FormTest1 extends Component {
                 <label className="f_label" for="b">
                   유형 *
                 </label>
+                {/* <span class="invalid_txt">유효하지 않습니다.</span> */}
               </span>
             </div>
           </div>

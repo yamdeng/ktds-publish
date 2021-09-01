@@ -40,6 +40,7 @@ class BoardCommentListModal extends React.Component {
   }
 
   render() {
+    let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
     return (
       <div className="popup-container">
         <h3 className="pop_title">댓글/답글 내역</h3>
@@ -51,28 +52,33 @@ class BoardCommentListModal extends React.Component {
                 <caption></caption>
                 <thead>
                   <tr>
-                    <th style={{ width: '15%' }}>등록일시</th>
+                    <th style={{ width: '20%' }}>등록일시</th>
                     <th style={{ width: '25%' }}>등록자</th>
-                    <th style={{ width: '60%' }}>내용</th>
+                    <th style={{ width: '55%' }}>내용</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Yyyy-MM-DD HH:MI</td>
-                    <td>{'ㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동'}</td>
-                    <td className="left">
-                      <div className="ellipsis">
-                        <a
-                          href=""
-                          onClick={(event) => {
-                            event.preventDefault();
-                          }}
-                        >
-                          ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
+                  {list.map((info) => {
+                    return (
+                      <tr>
+                        <td>Yyyy-MM-DD HH:MI</td>
+                        <td>{'ㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동>asdasd> asdasd'}</td>
+                        <td className="left">
+                          <div className="ellipsis">
+                            <a
+                              href=""
+                              onClick={(event) => {
+                                event.preventDefault();
+                              }}
+                            >
+                              ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ
+                              ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
@@ -93,10 +99,12 @@ class BoardCommentListModal extends React.Component {
               </div>
             </div>
             <div className="list_form_btns_fix">
-              <button className="btn_text btn_blue c_mr5">
+              <button className="btn_text btn_green c_mr5" disabled={true}>
                 댓글/답글 달기
               </button>
-              <button className="btn_text btn_green c_mr5">수정하기</button>
+              <button className="btn_text btn_green c_mr5" disabled={true}>
+                수정하기
+              </button>
               <button className="btn_text btn_green">삭제하기</button>
             </div>
           </div>
@@ -106,9 +114,9 @@ class BoardCommentListModal extends React.Component {
           <button className="btn_text btn_dark_gray" onClick={this.close}>
             닫기
           </button>
-          <button className="btn_text btn_green" onClick={this.close}>
+          {/* <button className="btn_text btn_green" onClick={this.close}>
             저장
-          </button>
+          </button> */}
         </div>
         <ModalTopCloseButton />
       </div>

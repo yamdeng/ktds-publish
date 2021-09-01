@@ -5,7 +5,6 @@ import { Tree } from 'antd';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 import Config from 'config/Config';
 import SearchInput from 'component/ui/SearchInput';
-import SearchButton from 'component/ui/SearchButton';
 import Pagination from 'component/ui/Pagination';
 
 /*
@@ -95,7 +94,7 @@ class OrgSelectModal extends React.Component {
                         changeValue={this.changeOrgName}
                       />
                     </span>
-                    <SearchButton search={this.search} />
+                    <button className="btn_text btn_green">조회</button>
                   </div>
                 </div>
               </div>

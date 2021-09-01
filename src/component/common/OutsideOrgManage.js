@@ -4,7 +4,6 @@ import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
 import SearchInput from 'component/ui/SearchInput';
-import SearchButton from 'component/ui/SearchButton';
 import ModalService from 'service/ModalService';
 import ModalType from 'config/ModalType';
 
@@ -55,6 +54,7 @@ class OutsideOrgManage extends Component {
   render() {
     let { testStore } = this.props;
     let { list } = testStore;
+    // list = [];
     return (
       <div className="content_area">
         <h3>사외 조직/사원 등록</h3>
@@ -65,7 +65,7 @@ class OutsideOrgManage extends Component {
               <span className="form_group form_search form_clear wid70 c_mr5">
                 <SearchInput label="조직명" />
               </span>
-              <SearchButton />
+              <button className="btn_text btn_green">조회</button>
             </div>
           </div>
         </div>
@@ -93,9 +93,9 @@ class OutsideOrgManage extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {list.map((info) => {
+                    {list.map((info, index) => {
                       return (
-                        <tr className="">
+                        <tr className={index === 2 ? 'active' : ''}>
                           <td>123123-12312</td>
                           <td>한성유통</td>
                           <td>
@@ -107,6 +107,11 @@ class OutsideOrgManage extends Component {
                         </tr>
                       );
                     })}
+                    {!list.length ? (
+                      <tr>
+                        <td colSpan={4}>데이터가 존재하지 않습니다.</td>
+                      </tr>
+                    ) : null}
                   </tbody>
                 </table>
               </div>
@@ -160,6 +165,11 @@ class OutsideOrgManage extends Component {
                         </tr>
                       );
                     })}
+                    {!list.length ? (
+                      <tr>
+                        <td colSpan={4}>데이터가 존재하지 않습니다.</td>
+                      </tr>
+                    ) : null}
                   </tbody>
                 </table>
               </div>

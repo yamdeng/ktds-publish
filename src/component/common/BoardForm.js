@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
-import SearchButton from 'component/ui/SearchButton';
+import CodeSelect from 'component/ui/CodeSelect';
 import SearchInput from 'component/ui/SearchInput';
+
+import AppDatePicker from 'component/ui/AppDatePicker';
 
 /*
 
@@ -35,19 +37,19 @@ class BoardForm extends Component {
     let { boardFormStore } = this.props;
     return (
       <div className="content_area">
-        <h3>게시판 등록</h3>
+        <h3>게시판 등록 / 수정</h3>
         <div className="write_form">
           <div className="form_table">
-            <div className="form_cell f_wid20">
+            <div className="form_cell f_wid30">
               <span className="form_group form_search form_clear wid70 c_mr5">
                 <SearchInput
                   value={''}
-                  label="제목"
+                  label="게시판 번호"
                   clearInput={this.clearInput}
                   changeValue={this.changeTitle}
                 />
               </span>
-              <SearchButton />
+              <button className="btn_text btn_green">조회</button>
             </div>
             <div className="form_cell f_wid20">
               <span className="form_group wid100 c_mr5">
@@ -66,13 +68,14 @@ class BoardForm extends Component {
           <div className="form_table">
             <div className="form_cell f_wid50">
               <span className="form_group f_wid50 c_mr5">
-                <select name="" id="b" className="form_tag_select ">
-                  <option value=""> </option>
-                  <option value="">전체1</option>
-                  <option value="">전체2</option>
-                </select>
+                <CodeSelect
+                  value={''}
+                  label="게시유형"
+                  codeType="boardType"
+                  changeValue={() => {}}
+                />
                 <label className="f_label" for="b">
-                  유형 *
+                  유형 <span className="required">*</span>
                 </label>
               </span>
             </div>
@@ -81,14 +84,11 @@ class BoardForm extends Component {
           <div className="form_table">
             <div className="form_cell f_wid100">
               <span className="form_group wid100 c_mr5">
-                <input
-                  type="text"
-                  className="form_tag"
-                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                />
+                <input type="text" className="form_tag invalid" />
                 <label className="f_label" for="b">
-                  제목 *
+                  제목 <span className="required">*</span>
                 </label>
+                <span class="invalid_txt">유효하지 않습니다.</span>
               </span>
             </div>
           </div>
@@ -99,11 +99,12 @@ class BoardForm extends Component {
                 <textarea
                   name=""
                   id=""
-                  className="form_tag textarea"
+                  className="form_tag textarea invalid"
                 ></textarea>
                 <label className="f_label" for="b">
-                  내용 *
+                  내용 <span className="required">*</span>
                 </label>
+                <span class="invalid_txt">유효하지 않습니다.</span>
               </span>
             </div>
           </div>
@@ -111,27 +112,29 @@ class BoardForm extends Component {
           <div className="form_table">
             <div className="form_cell f_wid100">
               <span className="form_group wid40 c_mr5">
-                <input type="text" className="form_tag" />
-                <label className="f_label" for="b">
-                  공개시작기간 *
-                </label>
-                <span className="icon icon_calendar">
-                  <i class="fas fa-calendar-alt"></i>
-                </span>
+                <AppDatePicker
+                  inputId="startDate"
+                  label="공개시작기간"
+                  value={null}
+                  valueFormat="YYYY-MM-DD"
+                  changeDate={(date) => {}}
+                  required={true}
+                />
               </span>
               <span className="form_group wid40">
-                <input type="text" className="form_tag" />
-                <label className="f_label" for="b">
-                  공개종료기간 *
-                </label>
-                <span className="icon icon_calendar">
-                  <i class="fas fa-calendar-alt"></i>
-                </span>
+                <AppDatePicker
+                  inputId="endDate"
+                  label="공개종료기간"
+                  value={null}
+                  valueFormat="YYYY-MM-DD"
+                  changeDate={(date) => {}}
+                  required={true}
+                />
               </span>
             </div>
           </div>
-          {/* <hr className="line" /> */}
-          {/* <div className="form_table">
+          <hr className="line" />
+          <div className="form_table">
             <div className="form_cell f_wid100">
               <span className="form_group wid50 c_mr5">
                 <input
@@ -143,13 +146,41 @@ class BoardForm extends Component {
                 <label className="f_label" for="b">
                   첨부
                 </label>
+                {/* input에 value 값이 있으면 style display로 제어 */}
                 <span className="icon icon_clear" style={{ display: 'block' }}>
                   <i class="fas fa-times-circle"></i>
                 </span>
               </span>
-              <button className="btn_text btn_dark_gray c_mr5">첨부하기</button>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-plus"></i>
+              </button>
             </div>
-          </div> */}
+          </div>
+          <div className="form_table">
+            <div className="form_cell f_wid100">
+              <span className="form_group wid50 c_mr5">
+                <input
+                  type="text"
+                  className="form_tag center"
+                  disabled
+                  placeholder="xxxxx.pdf - 10kb"
+                />
+                <label className="f_label" for="b">
+                  첨부
+                </label>
+                {/* input에 value 값이 있으면 style display로 제어 */}
+                <span className="icon icon_clear" style={{ display: 'block' }}>
+                  <i class="fas fa-times-circle"></i>
+                </span>
+              </span>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-plus"></i>
+              </button>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-times-circle"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <p className="c_pt15 right">
           <button className="btn_text btn_white c_mr5">취소</button>

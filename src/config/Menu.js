@@ -111,6 +111,10 @@ let Menu = [
         routeUrl: '/test/modal'
       },
       {
+        name: '검색 필드',
+        routeUrl: '/test/search-field1'
+      },
+      {
         name: '테이블1',
         routeUrl: '/test/table1'
       },
