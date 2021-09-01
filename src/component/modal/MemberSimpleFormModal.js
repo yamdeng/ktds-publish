@@ -42,7 +42,7 @@ class MemberSimpleFormModal extends React.Component {
   render() {
     return (
       <div className="popup-container">
-        <h3 className="pop_title">confirm modal</h3>
+        <h3 className="pop_title">사원 등록/수정</h3>
         <div className="pop_cont_box">
           <div className="box_form">
             <div className="form_table">
@@ -60,14 +60,9 @@ class MemberSimpleFormModal extends React.Component {
             */}
                 <span className="form_group form_clear wid100 ">
                   <input type="text" className="form_tag" />
-                  <label className="f_label">사번(이메일)</label>
-                  {/* input에 value 값이 있으면 style display로 제어 */}
-                  <span
-                    className="icon icon_clear"
-                    style={{ display: 'block' }}
-                  >
-                    <i class="fas fa-times-circle"></i>
-                  </span>
+                  <label className="f_label">
+                    사번(이메일) <span className="required">*</span>
+                  </label>
                 </span>
               </div>
             </div>
@@ -80,14 +75,15 @@ class MemberSimpleFormModal extends React.Component {
             */}
                 <span className="form_group form_clear wid100 ">
                   <input type="text" className="form_tag" />
-                  <label className="f_label">성 명</label>
-                  {/* input에 value 값이 있으면 style display로 제어 */}
-                  <span
+                  <label className="f_label">
+                    성 명 <span className="required">*</span>
+                  </label>
+                  {/* <span
                     className="icon icon_clear"
                     style={{ display: 'block' }}
                   >
                     <i class="fas fa-times-circle"></i>
-                  </span>
+                  </span> */}
                 </span>
               </div>
             </div>
@@ -95,14 +91,9 @@ class MemberSimpleFormModal extends React.Component {
               <div className="form_cell f_wid100 c_pr0">
                 <span className="form_group form_clear wid100 ">
                   <input type="text" className="form_tag" />
-                  <label className="f_label">호 칭</label>
-                  {/* input에 value 값이 있으면 style display로 제어 */}
-                  <span
-                    className="icon icon_clear"
-                    style={{ display: 'block' }}
-                  >
-                    <i class="fas fa-times-circle"></i>
-                  </span>
+                  <label className="f_label">
+                    호 칭 <span className="required">*</span>
+                  </label>
                 </span>
               </div>
             </div>

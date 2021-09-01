@@ -78,7 +78,7 @@ class MemberSelectModal extends React.Component {
     let { orgName } = this.state;
     return (
       <div className="popup-container">
-        <h3 className="pop_title">조직 선택</h3>
+        <h3 className="pop_title">사원 선택</h3>
         <div className="pop_full_cont_box">
           <div className="pop_flex_group">
             <div className="tree_wrap">
@@ -113,7 +113,7 @@ class MemberSelectModal extends React.Component {
                     <span className="form_group form_search form_clear wid70 c_mr5">
                       <SearchInput
                         value={orgName}
-                        label="조직명"
+                        label="이름"
                         clearInput={this.clearInput}
                         changeValue={this.changeOrgName}
                       />
