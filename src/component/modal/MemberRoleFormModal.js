@@ -3,8 +3,8 @@ import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 import SearchInput from 'component/ui/SearchInput';
-import ModalService from 'service/ModalService';
-import ModalType from 'config/ModalType';
+import UiCommonService from 'service/UiCommonService';
+import SwitchButton from 'component/ui/SwitchButton';
 
 /*
 
@@ -45,12 +45,15 @@ class MemberRoleFormModal extends React.Component {
   }
 
   openOrgSelectModal() {
-    ModalService.openModal(ModalType.ORG_SELECT_MODAL, {
-      selectHandler: this.selectOrgByModal
-    });
+    // ModalService.openModal(ModalType.ORG_SELECT_MODAL, {
+    //   selectHandler: this.selectOrgByModal
+    // });
+    UiCommonService.openOrgSelectModal(this.selectOrgByModal);
   }
 
-  selectOrgByModal(orgInfo) {}
+  selectOrgByModal(orgInfo) {
+    debugger;
+  }
 
   render() {
     let list = [1, 2, 3, 4, 5, 6, 7];
@@ -97,18 +100,14 @@ class MemberRoleFormModal extends React.Component {
                     <tr>
                       <td>한성유통</td>
                       <td>
-                        <input
-                          type="checkbox"
-                          id="switch"
-                          name="switch"
-                          className="switch_on_off"
-                          checked={false}
+                        <SwitchButton
+                          inputId=""
+                          inputName=""
+                          value={true}
+                          changeValue={() => {}}
+                          yesLabel="YES"
+                          noLabel="NO"
                         />
-                        <label for="switch" className="switch_label_on_off">
-                          <span className="marble"></span>{' '}
-                          <span className="off">NO</span>
-                          <span className="on">YES</span>
-                        </label>
                       </td>
                     </tr>
                   );
