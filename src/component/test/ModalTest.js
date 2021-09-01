@@ -18,7 +18,7 @@ const modalList = [
     modalType: ModalType.ALERT_MODAL,
     isAlertModal: true,
     modalData: {
-      title: '제목aaaa',
+      title2: '제목aaaa',
       body: 'ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ asdasdasd asd asd asd asd asd as as asd s ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ abcdefghijklmnopqr ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ asdasdasd asd asd asd asd asd as as asd s ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ abcdefghijklmnopqr'
     }
   },

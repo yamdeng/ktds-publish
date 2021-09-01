@@ -63,7 +63,7 @@ class OutsideOrgManage extends Component {
           <div className="form_table">
             <div className="form_cell f_wid70">
               <span className="form_group form_search form_clear wid70 c_mr5">
-                <SearchInput />
+                <SearchInput label="조직명" />
               </span>
               <SearchButton />
             </div>

@@ -25,6 +25,8 @@ import Pagination from 'component/ui/Pagination';
 
 */
 
+let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 @withRouter
 @inject('modalStore', 'testStore')
 @observer
@@ -70,7 +72,7 @@ class OrgSelectModal extends React.Component {
     let { orgName } = this.state;
     return (
       <div className="popup-container">
-        <h3 className="pop_title">조직 선택 모달</h3>
+        <h3 className="pop_title">조직 선택</h3>
         <div className="pop_full_cont_box">
           <div className="pop_flex_group">
             <div className="tree_wrap">
@@ -111,58 +113,15 @@ class OrgSelectModal extends React.Component {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
-                    <tr>
-                      <td>한성유통</td>
-                      <td>한성유통㈜</td>
-                    </tr>
+                    {/* 10개 */}
+                    {list.map((info) => {
+                      return (
+                        <tr>
+                          <td>한성유통</td>
+                          <td>한성유통㈜</td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>

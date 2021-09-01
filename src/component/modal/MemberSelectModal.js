@@ -31,6 +31,8 @@ import Config from 'config/Config';
 
 */
 
+let list = [1, 2, 3, 4];
+
 @withRouter
 @inject('modalStore', 'testStore')
 @observer
@@ -76,7 +78,7 @@ class MemberSelectModal extends React.Component {
     let { orgName } = this.state;
     return (
       <div className="popup-container">
-        <h3 className="pop_title">조직 선택 모달</h3>
+        <h3 className="pop_title">조직 선택</h3>
         <div className="pop_full_cont_box">
           <div className="pop_flex_group">
             <div className="tree_wrap">
@@ -136,30 +138,16 @@ class MemberSelectModal extends React.Component {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>11111111</td>
-                      <td>홍길동</td>
-                      <td>{'KT>전남광역본부>순천지점'}</td>
-                      <td>팀장/과장</td>
-                    </tr>
-                    <tr>
-                      <td>11111111</td>
-                      <td>홍길동</td>
-                      <td>{'KT>전남광역본부>순천지점'}</td>
-                      <td>팀장/과장</td>
-                    </tr>
-                    <tr>
-                      <td>11111111</td>
-                      <td>홍길동</td>
-                      <td>{'KT>전남광역본부>순천지점'}</td>
-                      <td>팀장/과장</td>
-                    </tr>
-                    <tr>
-                      <td>11111111</td>
-                      <td>홍길동</td>
-                      <td>{'KT>전남광역본부>순천지점'}</td>
-                      <td>팀장/과장</td>
-                    </tr>
+                    {list.map((info) => {
+                      return (
+                        <tr>
+                          <td>11111111</td>
+                          <td>홍길동</td>
+                          <td>{'KT>전남광역본부>순천지점'}</td>
+                          <td>팀장/과장</td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
