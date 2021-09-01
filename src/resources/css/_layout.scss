@@ -59,13 +59,13 @@
   th {
     font-weight: bold;
     border-bottom: 1px solid #{$col-gray300};
-    padding: 12px 0;
+    padding: 11px 0;
     background: #{$col-white};
   }
   td {
     border-bottom: 1px solid #{$col-gray300};
     text-align: center;
-    padding: 12px 10px;
+    padding: 11px 10px;
   }
   tr:nth-child(even) {
     background: #{$col-gray};
