@@ -63,6 +63,18 @@ class BoardForm extends Component {
                 <label className="f_label">작성일시</label>
               </span>
             </div>
+            {/* <div className="form_cell f_wid50">
+              <span className="form_group wid100 c_mr5">
+                <input type="text" className="form_tag " disabled />
+                <label className="f_label">작성자</label>
+              </span>
+            </div>
+            <div className="form_cell f_wid50">
+              <span className="form_group wid100 c_mr5">
+                <input type="text" className="form_tag " disabled />
+                <label className="f_label">작성일시</label>
+              </span>
+            </div> */}
           </div>
           <hr className="line" />
           <div className="form_table">

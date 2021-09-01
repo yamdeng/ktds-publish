@@ -32,6 +32,7 @@ class BoardList extends Component {
     this.customClick = this.customClick.bind(this);
     this.enterSearch = this.enterSearch.bind(this);
     this.goAddPage = this.goAddPage.bind(this);
+    this.goDetailPage = this.goDetailPage.bind(this);
   }
 
   customClick() {
@@ -49,6 +50,11 @@ class BoardList extends Component {
   goAddPage() {
     const { uiStore } = this.props;
     uiStore.goPage('/boards/new');
+  }
+
+  goDetailPage() {
+    const { uiStore } = this.props;
+    uiStore.goPage('/boards/111');
   }
 
   componentDidMount() {
@@ -162,7 +168,7 @@ class BoardList extends Component {
                             style={{ textDecoration: 'underline' }}
                             onClick={(event) => {
                               event.preventDefault();
-                              alert('aaa');
+                              this.goDetailPage();
                             }}
                           >
                             1111

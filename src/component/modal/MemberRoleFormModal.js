@@ -2,6 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
+import SearchInput from 'component/ui/SearchInput';
+import ModalService from 'service/ModalService';
+import ModalType from 'config/ModalType';
 
 /*
 
@@ -33,41 +36,49 @@ class MemberRoleFormModal extends React.Component {
     super(props);
     this.state = {};
     this.close = this.close.bind(this);
+    this.openOrgSelectModal = this.openOrgSelectModal.bind(this);
+    this.selectOrgByModal = this.selectOrgByModal.bind(this);
   }
 
   close() {
     this.props.modalStore.hideModal();
   }
 
+  openOrgSelectModal() {
+    ModalService.openModal(ModalType.ORG_SELECT_MODAL, {
+      selectHandler: this.selectOrgByModal
+    });
+  }
+
+  selectOrgByModal(orgInfo) {}
+
   render() {
+    let list = [1, 2, 3, 4, 5, 6, 7];
     return (
       <div className="popup-container">
-        <h3 className="pop_title">confirm modal</h3>
+        <h3 className="pop_title">권한 부여</h3>
         <div className="pop_cont_box">
           <div className="box_form">
             <div className="form_table">
               <div className="form_cell f_wid100">
-                {/* 
-                기본은 form_group
-                앞에 돋보기 아이콘을 추가하려면 .form_search 와 icon icon_search 추가
-                뒤에 클리어 아이콘을 추가하려면 .form_clear 와 icon icon_clear 추가
-              */}
-                <span className="form_group form_search wid20 c_mr5">
-                  <input type="text" className="form_tag" />
-                  <label className="f_label">사번</label>
-                  {/* input에 value 값이 있으면 style display로 제어 */}
-                  <span
-                    className="icon icon_clear"
-                    style={{ display: 'block' }}
-                  >
-                    <i class="fas fa-times-circle"></i>
-                  </span>
+                <span className="form_group form_search wid30 c_mr5">
+                  <SearchInput
+                    value={''}
+                    label="사번"
+                    clearInput={this.clearInput}
+                    changeValue={this.changeTitle}
+                  />
                 </span>
                 <span className="form_group form_search wid50 c_mr5">
                   <input type="text" className="form_tag" disabled />
-                  <label className="f_label">조직풀명</label>
+                  <label className="f_label">조직명</label>
                 </span>
-                <button className="btn_text btn_dark_gray">조회</button>
+                <button
+                  className="btn_icon btn_dark_gray "
+                  onClick={this.openOrgSelectModal}
+                >
+                  <i class="fas fa-search"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -81,38 +92,27 @@ class MemberRoleFormModal extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>한성유통</td>
-                  <td>
-                    <input
-                      type="checkbox"
-                      id="switch"
-                      name="switch"
-                      className="switch_on_off"
-                    />
-                    <label for="switch" className="switch_label_on_off">
-                      <span className="marble"></span>{' '}
-                      <span className="off">NO</span>
-                      <span class="on">YES</span>
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>한성유통</td>
-                  <td>
-                    <div className="checkbox-wrapper">
-                      <input
-                        type="checkbox"
-                        name="Claude Monet"
-                        id="question-1-option-1"
-                      />
-                      <label
-                        className="checkbox-label"
-                        for="question-1-option-1"
-                      ></label>
-                    </div>
-                  </td>
-                </tr>
+                {list.map((info) => {
+                  return (
+                    <tr>
+                      <td>한성유통</td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          id="switch"
+                          name="switch"
+                          className="switch_on_off"
+                          checked={false}
+                        />
+                        <label for="switch" className="switch_label_on_off">
+                          <span className="marble"></span>{' '}
+                          <span className="off">NO</span>
+                          <span className="on">YES</span>
+                        </label>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>

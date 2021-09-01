@@ -45,7 +45,8 @@ class ModalContainer extends React.Component {
       let modalComponent = null;
       let overlayClassName = '';
       let contentClassName = '';
-      let { modalType, modalData } = historyData;
+      let modalData = historyData;
+      let { modalType } = modalData;
       overlayClassName = 'middle-modal-overlay';
       contentClassName = modalType + '-content';
       switch (modalType) {

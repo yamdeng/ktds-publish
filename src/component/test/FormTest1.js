@@ -28,7 +28,6 @@ class FormTest1 extends Component {
 
   render() {
     const ExampleCustomInput = React.forwardRef(({ value, onClick }, ref) => {
-      // debugger;
       console.log('value : ' + value);
       return (
         <React.Fragment>

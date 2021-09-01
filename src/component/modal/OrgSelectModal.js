@@ -6,6 +6,7 @@ import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 import Config from 'config/Config';
 import SearchInput from 'component/ui/SearchInput';
 import Pagination from 'component/ui/Pagination';
+import ModalService from 'service/ModalService';
 
 /*
 
@@ -38,6 +39,7 @@ class OrgSelectModal extends React.Component {
     this.changeOrgName = this.changeOrgName.bind(this);
     this.clearInput = this.clearInput.bind(this);
     this.search = this.search.bind(this);
+    this.ok = this.ok.bind(this);
   }
 
   close() {
@@ -58,6 +60,13 @@ class OrgSelectModal extends React.Component {
   }
 
   search() {}
+
+  ok() {
+    let { modalData } = this.props;
+    let { selectHandler } = modalData;
+    ModalService.closeModal();
+    selectHandler({ orgName: 'asdasdads' });
+  }
 
   componentDidMount() {
     let { testStore } = this.props;
@@ -133,7 +142,7 @@ class OrgSelectModal extends React.Component {
           <button className="btn_text btn_dark_gray" onClick={this.close}>
             취소
           </button>
-          <button className="btn_text btn_green" onClick={this.close}>
+          <button className="btn_text btn_green" onClick={this.ok}>
             확인
           </button>
         </div>
