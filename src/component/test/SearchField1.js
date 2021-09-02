@@ -223,6 +223,119 @@ class SearchField1 extends Component {
             </div>
           </div>
         </div>
+        {/* 3 행 */}
+        <div className="box_form">
+          <div className="form_table">
+            <div className="form_cell f_wid40">
+              <span className="form_group form_search form_clear wid25 c_mr5">
+                <SearchInput
+                  value={''}
+                  label="작업ID"
+                  clearInput={this.clearInput}
+                  changeValue={this.changeTitle}
+                />
+              </span>
+              <span className="form_group form_search wid60">
+                <SearchInput
+                  value={''}
+                  label="작업명"
+                  clearInput={this.clearInput}
+                  changeValue={this.changeTitle}
+                />
+              </span>
+            </div>
+            <div className="form_cell f_wid60">
+              <span className="form_group form_search form_clear wid25 c_mr5">
+                <SearchInput
+                  value={''}
+                  label="등록자 사번"
+                  clearInput={this.clearInput}
+                  changeValue={this.changeTitle}
+                />
+              </span>
+              <span className="form_group wid40 c_mr5">
+                <input type="text" className="form_tag" disabled />
+                <label className="f_label">등록자</label>
+              </span>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-search"></i>
+              </button>
+              <button className="btn_text btn_dark_gray">본인</button>
+            </div>
+          </div>
+
+          <div className="form_table">
+            <div className="form_cell f_wid40">
+              <span className="form_group form_search form_clear wid60 c_mr5">
+                <input
+                  type="text"
+                  className="form_tag"
+                  disabled
+                  placeholder="조직을 선택해주세요"
+                />
+                <label className="f_label" for="b">
+                  작업 조직
+                </label>
+              </span>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div className="form_cell f_wid60">
+              <span className="form_group form_search form_clear wid25 c_mr5">
+                <SearchInput
+                  value={''}
+                  label="승인자 사번"
+                  clearInput={this.clearInput}
+                  changeValue={this.changeTitle}
+                />
+              </span>
+              <span className="form_group wid40 c_mr5">
+                <input type="text" className="form_tag" disabled />
+                <label className="f_label">승인자</label>
+              </span>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-search"></i>
+              </button>
+              <button className="btn_text btn_dark_gray">본인</button>
+            </div>
+          </div>
+
+          <div className="form_table">
+            <div className="form_cell f_wid40">
+              <span className="form_group wid60">
+                <CodeSelect
+                  value={''}
+                  label="상태"
+                  codeType="boardType"
+                  changeValue={() => {}}
+                />
+              </span>
+            </div>
+            <div className="form_cell f_wid60">
+              <span className="form_group form_search form_clear wid25 c_mr5">
+                <SearchInput
+                  value={''}
+                  label="작업자 사번"
+                  clearInput={this.clearInput}
+                  changeValue={this.changeTitle}
+                />
+              </span>
+              <span className="form_group wid40 c_mr5">
+                <input type="text" className="form_tag" disabled />
+                <label className="f_label">작업자</label>
+              </span>
+              <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-search"></i>
+              </button>
+              <button className="btn_text btn_dark_gray">본인</button>
+            </div>
+          </div>
+
+          <p className="c_pt15 right">
+            <button className="btn_text btn_green">조회</button>
+          </p>
+        </div>
       </div>
     );
   }

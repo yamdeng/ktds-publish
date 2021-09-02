@@ -155,7 +155,7 @@ class MemberRoleList extends Component {
                   <tr>
                     <th>사번</th>
                     <th>이름</th>
-                    <th>소석</th>
+                    <th>소속</th>
                     <th>부여권한</th>
                     <th>편집</th>
                   </tr>
