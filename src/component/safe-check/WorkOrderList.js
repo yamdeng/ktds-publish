@@ -77,7 +77,7 @@ class WorkOrderList extends Component {
           {/* 2행 */}
           <div className="form_table">
             <div className="form_cell f_wid40">
-              <span className="form_group form_search form_clear wid80 c_mr5">
+              <span className="form_group form_search form_clear wid75 c_mr5">
                 <input
                   type="text"
                   className="form_tag"

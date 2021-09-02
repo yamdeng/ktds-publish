@@ -34,11 +34,11 @@ class WorkOrderMemberSettingTab extends Component {
 
   render() {
     let { boardListStore } = this.props;
-    let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
     return (
       <div className="box_form tabs_cont">
         <div className="tb_wrap_scroll">
-          <div className="horizon_tb">
+          <div className="horizon_tb vertical_sc">
             <div
               className="flex_grow_two_fix c_pt30 relative"
               style={{ width: '800px' }}

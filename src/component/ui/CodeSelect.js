@@ -56,7 +56,7 @@ class CodeSelect extends React.Component {
         <label className="f_label" for={labelId}>
           {label} {required ? <span class="required">*</span> : null}
         </label>
-        <span class="invalid_txt">유효하지 않습니다.</span>
+        {/* <span class="invalid_txt">유효하지 않습니다.</span> */}
       </React.Fragment>
     );
   }

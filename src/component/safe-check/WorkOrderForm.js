@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
-import AppDatePicker from 'component/ui/AppDatePicker';
-import AppTimePicker from 'component/ui/AppTimePicker';
-import CodeSelect from 'component/ui/CodeSelect';
 import SearchInput from 'component/ui/SearchInput';
 import WorkOrderBasicTab from 'component/safe-check/WorkOrderBasicTab';
 import WorkOrderMemberSettingTab from 'component/safe-check/WorkOrderMemberSettingTab';
@@ -64,8 +61,8 @@ class WorkOrderForm extends Component {
                 />
                 <label className="f_label">진행상태</label>
               </span>
-              <button className="btn_text btn_blue c_mr5">승인신청</button>
-              <button className="btn_text btn_blue">이력보기</button>
+              <button className="btn_text btn_dark_gray c_mr5">승인신청</button>
+              <button className="btn_text btn_dark_gray">이력보기</button>
             </div>
           </div>
           <div className="form_table">
