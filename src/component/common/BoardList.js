@@ -164,11 +164,6 @@ class BoardList extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {!list.length ? (
-                    <tr>
-                      <td colSpan={11}>데이터가 존재하지 않습니다.</td>
-                    </tr>
-                  ) : null}
                   {list.map((info) => {
                     return (
                       <tr>
@@ -217,6 +212,11 @@ class BoardList extends Component {
                       </tr>
                     );
                   })}
+                  {!list.length ? (
+                    <tr>
+                      <td colSpan={11}>데이터가 존재하지 않습니다.</td>
+                    </tr>
+                  ) : null}
                 </tbody>
               </table>
             </div>

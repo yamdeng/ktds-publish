@@ -147,6 +147,11 @@ class MemberSelectModal extends React.Component {
                         </tr>
                       );
                     })}
+                    {!list.length ? (
+                      <tr>
+                        <td colSpan={4}>데이터가 존재하지 않습니다.</td>
+                      </tr>
+                    ) : null}
                   </tbody>
                 </table>
               </div>
