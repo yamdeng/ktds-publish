@@ -10,8 +10,7 @@ import BoardList from 'component/common/BoardList';
 import BoardForm from 'component/common/BoardForm';
 import BoardDetail from 'component/common/BoardDetail';
 import MemberRoleList from 'component/common/MemberRoleList';
-import CheckCommonItemList from 'component/safe-check/CheckCommonItemList';
-import CheckTypeItemList from 'component/safe-check/CheckTypeItemList';
+import CheckItemList from 'component/safe-check/CheckItemList';
 import WorkOrderList from 'component/safe-check/WorkOrderList';
 import WorkOrderForm from 'component/safe-check/WorkOrderForm';
 import WorkApproveRequestList from 'component/safe-check/WorkApproveRequestList';
@@ -73,12 +72,7 @@ class Main extends Component {
           />
           <Route exact path="/boards/:id/update" component={BoardForm} />
           <Route exact path="/member-roles" component={MemberRoleList} />
-          <Route
-            exact
-            path="/check-common-items"
-            component={CheckCommonItemList}
-          />
-          <Route exact path="/check-type-items" component={CheckTypeItemList} />
+          <Route exact path="/check-items" component={CheckItemList} />
           <Route exact path="/work-orders" component={WorkOrderList} />
           <Route
             exact

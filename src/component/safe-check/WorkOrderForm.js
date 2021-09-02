@@ -102,7 +102,7 @@ class WorkOrderForm extends Component {
         {/* 탭 상단 */}
         <ul className="tabs_wrap">
           <li className="active">작업정보</li>
-          <li className="disabled">작업조</li>
+          <li className="">작업조</li>
         </ul>
         {/* 탭 내용 */}
         <WorkOrderBasicTab />

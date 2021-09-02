@@ -13,10 +13,6 @@ let Menu = [
       {
         name: '안전서류 작성 현황',
         routeUrl: '/safe-docs'
-      },
-      {
-        name: '작업지시 현황',
-        routeUrl: '/work-order-dashboard'
       }
     ]
   },
@@ -26,12 +22,8 @@ let Menu = [
     isExpend: false,
     childs: [
       {
-        name: '점검항목 관리(공통)',
-        routeUrl: '/check-common-items'
-      },
-      {
-        name: '점검항목 관리(유형별)',
-        routeUrl: '/check-type-items'
+        name: '점검항목 관리',
+        routeUrl: '/check-items'
       },
       {
         name: '작업지시 관리',
