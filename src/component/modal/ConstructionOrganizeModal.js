@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
+import CodeSelect from 'component/ui/CodeSelect';
 
 /*
 
@@ -56,23 +57,24 @@ class ConstructionOrganizeModal extends React.Component {
             <div className="form_table">
               <div className="form_cell f_wid100 c_pr0">
                 <span className="form_group form_clear wid100 ">
-                  <input type="text" className="form_tag" disabled />
-                  <label className="f_label">공사 유형</label>
+                  <CodeSelect
+                    value={''}
+                    label="공사유형"
+                    codeType="boardType"
+                    changeValue={() => {}}
+                  />
                 </span>
               </div>
             </div>
             <div className="form_table">
               <div className="form_cell f_wid100 c_pr0">
                 <span className="form_group form_clear wid100 ">
-                  <input type="text" className="form_tag" />
-                  <label className="f_label">공사 년도</label>
-                  {/* input에 value 값이 있으면 style display로 제어 */}
-                  <span
-                    className="icon icon_clear"
-                    style={{ display: 'block' }}
-                  >
-                    <i class="fas fa-calendar"></i>
-                  </span>
+                  <CodeSelect
+                    value={''}
+                    label="공사년도"
+                    codeType="yearList"
+                    changeValue={() => {}}
+                  />
                 </span>
               </div>
             </div>

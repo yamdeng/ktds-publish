@@ -54,6 +54,18 @@ Code.pageSizeList = [
   }
 ];
 
+// 년도 목록
+Code.yearList = [
+  {
+    name: '2021년',
+    value: '2021'
+  },
+  {
+    name: '2022년',
+    value: '2022'
+  }
+];
+
 // 코드명 가져오기 : value 기준
 Code.getCodeNameByValue = function (codeCategory, codeValue) {
   let codeName = null;
