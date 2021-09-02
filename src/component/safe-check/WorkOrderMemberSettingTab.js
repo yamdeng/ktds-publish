@@ -38,7 +38,7 @@ class WorkOrderMemberSettingTab extends Component {
     return (
       <div className="box_form tabs_cont">
         <div className="tb_wrap_scroll">
-          <div className="horizon_tb vertical_sc">
+          <div className="horizon_tb vertical_sc_middle">
             <div
               className="flex_grow_two_fix c_pt30 relative"
               style={{ width: '800px' }}

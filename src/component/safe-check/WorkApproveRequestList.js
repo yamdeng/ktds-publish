@@ -80,7 +80,7 @@ class WorkApproveRequestList extends Component {
             <span className="fs_12">총 nnn 건</span>
           </p>
           <div className="tb_wrap_scroll">
-            <div className="horizon_tb vertical_sc_middle">
+            <div className="horizon_tb vertical_sc">
               <table className="tb_list" style={{ minWidth: '1200px' }}>
                 <caption></caption>
                 <thead>
