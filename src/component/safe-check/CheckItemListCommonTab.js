@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
-import CodeSelect from 'component/ui/CodeSelect';
 import EmptyBasicInput from 'component/ui/EmptyBasicInput';
 import ModalService from 'service/ModalService';
 import ModalType from 'config/ModalType';

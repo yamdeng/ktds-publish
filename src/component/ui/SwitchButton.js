@@ -1,6 +1,5 @@
 import React from 'react';
 import Helper from 'util/Helper';
-import Code from 'config/Code';
 
 /*
 

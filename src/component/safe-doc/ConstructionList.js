@@ -33,11 +33,6 @@ class ConstructionList extends Component {
       this.openConstructionOrganizeModal.bind(this);
   }
 
-  goAddPage() {
-    const { uiStore } = this.props;
-    uiStore.goPage('/work-orders/new');
-  }
-
   openConstructionOrganizeModal() {
     ModalService.openModal(ModalType.CONSTRUCTION_ORGANIZE_MODAL, {});
   }

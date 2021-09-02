@@ -4,10 +4,7 @@ import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
 import Pagination from 'component/ui/Pagination';
-import SearchInput from 'component/ui/SearchInput';
 import PageSizeSelect from 'component/ui/PageSizeSelect';
-import ModalService from 'service/ModalService';
-import ModalType from 'config/ModalType';
 import UiCommonService from 'service/UiCommonService';
 
 /*
@@ -28,36 +25,8 @@ import UiCommonService from 'service/UiCommonService';
 class SafeManagerList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isSelectClick: false
-    };
+    this.state = {};
     this.openSelectMemberModal = this.openSelectMemberModal.bind(this);
-  }
-
-  customClick() {
-    this.setState({
-      isSelectClick: !this.state.isSelectClick
-    });
-  }
-
-  enterSearch(e) {
-    if (e.keyCode === 13) {
-      this.search();
-    }
-  }
-
-  goAddPage() {
-    // const { uiStore } = this.props;
-    // uiStore.goPage('/boards/new');
-  }
-
-  goDetailPage() {
-    const { uiStore } = this.props;
-    uiStore.goPage('/boards/111');
-  }
-
-  openRoleFormModal() {
-    ModalService.openModal(ModalType.MEMBER_ROLE_FORM_MODAL, {});
   }
 
   openSelectMemberModal() {

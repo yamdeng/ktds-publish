@@ -20,13 +20,6 @@ class ConstructionSeniorTab extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    // test handler
-    this.testHandle = this.testHandle.bind(this);
-  }
-
-  testHandle(info) {
-    // const { boardListStore } = this.props;
   }
 
   render() {

@@ -27,15 +27,8 @@ class OutsideOrgManage extends Component {
     super(props);
     this.state = {};
 
-    // test handler
-    this.testHandle = this.testHandle.bind(this);
-
     this.openOrgAddPopup = this.openOrgAddPopup.bind(this);
     this.openMemberAddPopup = this.openMemberAddPopup.bind(this);
-  }
-
-  testHandle(info) {
-    // const { outsideOrgManageStore } = this.props;
   }
 
   openOrgAddPopup() {

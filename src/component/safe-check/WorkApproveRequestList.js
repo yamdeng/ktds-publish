@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
-import CodeSelect from 'component/ui/CodeSelect';
 import PageSizeSelect from 'component/ui/PageSizeSelect';
 import SearchInput from 'component/ui/SearchInput';
 import Pagination from 'component/ui/Pagination';

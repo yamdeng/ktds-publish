@@ -2,7 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
-import SearchInput from 'component/ui/SearchInput';
 import CodeSelect from 'component/ui/CodeSelect';
 
 /*
