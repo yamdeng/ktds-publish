@@ -79,6 +79,10 @@ let Menu = [
       {
         name: '안전보건 담당자 관리',
         routeUrl: '/safe-managers'
+      },
+      {
+        name: '안전서류 일정 관리',
+        routeUrl: '/safe-doc-schedules'
       }
     ]
   },

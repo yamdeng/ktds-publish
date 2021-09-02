@@ -54,7 +54,7 @@ class CommonTextAreaModal extends React.Component {
                     className="form_tag textarea"
                   ></textarea>
                   <label className="f_label" for="b">
-                    내용 *
+                    내용 <span className="required">*</span>
                   </label>
                 </span>
               </div>
