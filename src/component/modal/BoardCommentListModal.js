@@ -46,7 +46,7 @@ class BoardCommentListModal extends React.Component {
         <h3 className="pop_title">댓글/답글 내역</h3>
         <div className="pop_full_cont_box">
           <div className="tb_wrap_scroll">
-            <div className="horizon_tb">
+            <div className="horizon_tb vertical_sc_small">
               {/* 말줄임이 들어가는 테이블은 tb_fix가 추가되야함. */}
               <table className="tb_list tb_fix" style={{ minWidth: '500px' }}>
                 <caption></caption>
@@ -62,7 +62,11 @@ class BoardCommentListModal extends React.Component {
                     return (
                       <tr>
                         <td>Yyyy-MM-DD HH:MI</td>
-                        <td>{'ㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동>asdasd> asdasd'}</td>
+                        <td>
+                          <div className="ellipsis">
+                            {'ㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동>asdasd> asdasd'}
+                          </div>
+                        </td>
                         <td className="left">
                           <div className="ellipsis">
                             <a

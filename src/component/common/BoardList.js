@@ -7,6 +7,8 @@ import Pagination from 'component/ui/Pagination';
 import SearchInput from 'component/ui/SearchInput';
 import CodeSelect from 'component/ui/CodeSelect';
 import PageSizeSelect from 'component/ui/PageSizeSelect';
+import ModalService from 'service/ModalService';
+import ModalType from 'config/ModalType';
 
 /*
 
@@ -33,6 +35,8 @@ class BoardList extends Component {
     this.enterSearch = this.enterSearch.bind(this);
     this.goAddPage = this.goAddPage.bind(this);
     this.goDetailPage = this.goDetailPage.bind(this);
+    this.deleteBoard = this.deleteBoard.bind(this);
+    this.openBoardCommentListModal = this.openBoardCommentListModal.bind(this);
   }
 
   customClick() {
@@ -55,6 +59,14 @@ class BoardList extends Component {
   goDetailPage() {
     const { uiStore } = this.props;
     uiStore.goPage('/boards/111');
+  }
+
+  deleteBoard() {
+    ModalService.confirm({ body: '삭제하시겠습니까?' });
+  }
+
+  openBoardCommentListModal() {
+    ModalService.openModal(ModalType.BOARD_COMMENT_LIST_MODAL, {});
   }
 
   componentDidMount() {
@@ -177,7 +189,18 @@ class BoardList extends Component {
                         <td>공지</td>
                         <td>Yyyy-mm-dd~yyyy-mm-dd</td>
                         <td>첨부</td>
-                        <td>5</td>
+                        <td>
+                          <a
+                            href=""
+                            style={{ textDecoration: 'underline' }}
+                            onClick={(event) => {
+                              event.preventDefault();
+                              this.openBoardCommentListModal();
+                            }}
+                          >
+                            1
+                          </a>
+                        </td>
                         <td>1</td>
                         <td>
                           <i class="fas fa-eye"></i>
@@ -188,7 +211,7 @@ class BoardList extends Component {
                         <td>
                           <i class="fas fa-edit"></i>
                         </td>
-                        <td>
+                        <td onClick={this.deleteBoard}>
                           <i class="fas fa-trash-alt"></i>
                         </td>
                       </tr>

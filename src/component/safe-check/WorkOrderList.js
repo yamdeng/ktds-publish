@@ -117,7 +117,7 @@ class WorkOrderList extends Component {
             <span className="fs_12">총 nnn 건</span>
           </p>
           <div className="tb_wrap_scroll">
-            <div className="horizon_tb">
+            <div className="horizon_tb vertical_sc_middle">
               <table className="tb_list" style={{ minWidth: '1200px' }}>
                 <caption></caption>
                 <thead>
@@ -150,39 +150,43 @@ class WorkOrderList extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>123123123</td>
-                    <td>YYYY-MM-DD HH:mm</td>
-                    <td>안용성/개발팀</td>
-                    <td>SAFE-DOC KT!!!</td>
-                    <td>asdasd 지사</td>
-                    <td>YYYY-MM-Dd</td>
-                    <td>작성중</td>
-                    <td>등록</td>
-                    <td>양호</td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-eye"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
+                  {list.map((info) => {
+                    return (
+                      <tr>
+                        <td>
+                          <div className="checkbox-wrapper">
+                            <input
+                              type="checkbox"
+                              name="Claude Monet"
+                              id="question-1-option-1"
+                            />
+                            <label
+                              className="checkbox-label"
+                              for="question-1-option-1"
+                            ></label>
+                          </div>
+                        </td>
+                        <td>123123123</td>
+                        <td>YYYY-MM-DD HH:mm</td>
+                        <td>안용성/개발팀</td>
+                        <td>SAFE-DOC KT!!!</td>
+                        <td>asdasd 지사</td>
+                        <td>YYYY-MM-Dd</td>
+                        <td>작성중</td>
+                        <td>등록</td>
+                        <td>양호</td>
+                        <td>
+                          <i class="fas fa-edit"></i>
+                        </td>
+                        <td>
+                          <i class="fas fa-eye"></i>
+                        </td>
+                        <td>
+                          <i class="fas fa-trash-alt"></i>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
