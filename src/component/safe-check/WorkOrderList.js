@@ -21,12 +21,18 @@ import Pagination from 'component/ui/Pagination';
 
 @HOC.documentTitle('작업 지시 관리')
 @withRouter
-@inject('boardListStore')
+@inject('boardListStore', 'uiStore')
 @observer
 class WorkOrderList extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.goAddPage = this.goAddPage.bind(this);
+  }
+
+  goAddPage() {
+    const { uiStore } = this.props;
+    uiStore.goPage('/work-orders/new');
   }
 
   componentDidMount() {}
@@ -194,7 +200,12 @@ class WorkOrderList extends Component {
 
           <div className="list_form_btns">
             <button className="btn_text btn_green c_mr5">엑셀다운</button>
-            <button className="btn_text btn_green c_mr5">작업 등록</button>
+            <button
+              className="btn_text btn_green c_mr5"
+              onClick={this.goAddPage}
+            >
+              작업 등록
+            </button>
             <button className="btn_text btn_green c_mr5">승인 요청</button>
             <button className="btn_text btn_green">취소 요청</button>
           </div>

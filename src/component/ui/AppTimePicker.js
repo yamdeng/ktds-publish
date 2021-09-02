@@ -47,7 +47,7 @@ class AppTimePicker extends React.Component {
               autoComplete="off"
               id={labelId}
               type="text"
-              className="form_tag"
+              className="form_tag date"
               ref={ref}
               value={value}
               onClick={(event) => {
@@ -59,8 +59,9 @@ class AppTimePicker extends React.Component {
               {label} {required ? <span class="required">*</span> : null}
             </label>
             <span className="icon icon_calendar" onClick={onClick}>
-              <i class="fas fa-calendar-alt"></i>
+              <i class="fas fa-clock"></i>
             </span>
+            {/* <span class="invalid_txt">유효하지 않습니다.</span> */}
           </React.Fragment>
         );
       }

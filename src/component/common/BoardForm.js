@@ -85,10 +85,8 @@ class BoardForm extends Component {
                   label="게시유형"
                   codeType="boardType"
                   changeValue={() => {}}
+                  required={true}
                 />
-                <label className="f_label" for="b">
-                  유형 <span className="required">*</span>
-                </label>
               </span>
             </div>
           </div>
