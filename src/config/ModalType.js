@@ -33,6 +33,9 @@ ModalType.MEMBER_ROLE_FORM_MODAL = 'member-role-form-modal';
 // 점검 항목 폼 모달 : CheckItemFormModal
 ModalType.CHECK_ITEM_FORM_MODAL = 'check-item-form-modal';
 
+// 점검 항목 분류 폼 모달 : CheckItemTypeFormModal
+ModalType.CHECK_ITEM_TYPE_FORM_MODAL = 'check-item-type-form-modal';
+
 // 작업 지시 요청 이력 모달 : WORK_ORDER_STATUS_HISTORY_MODAL
 ModalType.WORK_ORDER_STATUS_HISTORY_MODAL = 'work-order-status-history-modal';
 

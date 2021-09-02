@@ -5,7 +5,7 @@ import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 /*
 
-    점검 항목 폼 모달 : ModalType.CHECK_ITEM_FORM_MODAL
+    점검 항목 공사유형별 분류 폼 모달 : ModalType.CHECK_ITEM_TYPE_FORM_MODAL
 
     modalData 설명
     {
@@ -28,7 +28,7 @@ import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 @withRouter
 @inject('alertModalStore', 'modalStore')
 @observer
-class CheckItemFormModal extends React.Component {
+class CheckItemTypeFormModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -42,38 +42,14 @@ class CheckItemFormModal extends React.Component {
   render() {
     return (
       <div className="popup-container">
-        <h3 className="pop_title">점검 항목 등록/수정</h3>
+        <h3 className="pop_title">분류 등록/수정</h3>
         <div className="pop_full_cont_box">
           <div className="write_form">
             <div className="form_table">
               <div className="form_cell f_wid100 c_pr0">
                 <span className="form_group form_clear wid100 ">
                   <input type="text" className="form_tag" disabled />
-                  <label className="f_label">항목 ID</label>
-                </span>
-              </div>
-            </div>
-            <div className="form_table">
-              <div className="form_cell f_wid100">
-                <span className="form_group wid40 c_mr5">
-                  <select name="" id="b" className="form_tag_select ">
-                    <option value="0">00</option>
-                    <option value="1">전체1</option>
-                    <option value="2">전체2</option>
-                  </select>
-                  <label className="f_label" for="b">
-                    작업 부문
-                  </label>
-                </span>
-                <span className="form_group wid40">
-                  <select name="" id="b" className="form_tag_select ">
-                    <option value=""> </option>
-                    <option value="">전체1</option>
-                    <option value="">전체2</option>
-                  </select>
-                  <label className="f_label" for="b">
-                    공사 유형
-                  </label>
+                  <label className="f_label">분류 ID</label>
                 </span>
               </div>
             </div>
@@ -108,21 +84,7 @@ class CheckItemFormModal extends React.Component {
                 <span className="form_group wid100">
                   <input type="text" className="form_tag" />
                   <label className="f_label" for="b">
-                    항목 명
-                  </label>
-                </span>
-              </div>
-            </div>
-            <div className="form_table">
-              <div className="form_cell f_wid100">
-                <span className="form_group wid100 c_mr5">
-                  <textarea
-                    name=""
-                    id=""
-                    className="form_tag textarea"
-                  ></textarea>
-                  <label className="f_label" for="b">
-                    내용 *
+                    분류명
                   </label>
                 </span>
               </div>
@@ -144,4 +106,4 @@ class CheckItemFormModal extends React.Component {
   }
 }
 
-export default CheckItemFormModal;
+export default CheckItemTypeFormModal;

@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
 import CodeSelect from 'component/ui/CodeSelect';
 import EmptyBasicInput from 'component/ui/EmptyBasicInput';
+import ModalService from 'service/ModalService';
+import ModalType from 'config/ModalType';
 
 /*
 
@@ -27,16 +29,17 @@ class CheckItemListCommonTab extends Component {
     this.state = {};
 
     // test handler
-    this.testHandle = this.testHandle.bind(this);
+    this.openFormModal = this.openFormModal.bind(this);
   }
 
-  testHandle(info) {
-    // const { boardListStore } = this.props;
+  openFormModal(info) {
+    ModalService.openModal(ModalType.CHECK_ITEM_FORM_MODAL, {});
   }
 
   render() {
     let { boardListStore } = this.props;
     let { info } = boardListStore;
+    let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     return (
       <React.Fragment>
         <div className="list_form c_mt15">
@@ -79,35 +82,44 @@ class CheckItemListCommonTab extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>123456789</td>
-                    <td>고공작업</td>
-                    <td>작업을 해보자 해보자 해보자 해보자</td>
-                    <td>Yes</td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                  </tr>
+                  {list.map((info) => {
+                    return (
+                      <tr>
+                        <td>
+                          <div className="checkbox-wrapper">
+                            <input
+                              type="checkbox"
+                              name="Claude Monet"
+                              id="question-1-option-1"
+                            />
+                            <label
+                              className="checkbox-label"
+                              for="question-1-option-1"
+                            ></label>
+                          </div>
+                        </td>
+                        <td>123456789</td>
+                        <td>고공작업</td>
+                        <td>작업을 해보자 해보자 해보자 해보자</td>
+                        <td>Yes</td>
+                        <td onClick={this.openFormModal}>
+                          <i class="fas fa-edit"></i>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
           </div>
           <div className="list_form_btns">
             <button className="btn_text btn_green c_mr5">엑셀다운</button>
-            <button className="btn_text btn_green c_mr5">추가</button>
+            <button
+              className="btn_text btn_green c_mr5"
+              onClick={this.openFormModal}
+            >
+              추가
+            </button>
             <button className="btn_text btn_green c_mr5">미사용 처리</button>
             <button className="btn_text btn_green c_mr5">사용 처리</button>
             <button className="btn_text btn_green c_mr5">순위저장</button>

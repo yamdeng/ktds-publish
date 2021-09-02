@@ -11,6 +11,7 @@ import MemberSimpleFormModal from 'component/modal/MemberSimpleFormModal';
 import BoardCommentListModal from 'component/modal/BoardCommentListModal';
 import MemberRoleFormModal from 'component/modal/MemberRoleFormModal';
 import CheckItemFormModal from 'component/modal/CheckItemFormModal';
+import CheckItemTypeFormModal from 'component/modal/CheckItemTypeFormModal';
 import WorkOrderStatusHistoryModal from 'component/modal/WorkOrderStatusHistoryModal';
 import CommonMapModal from 'component/modal/CommonMapModal';
 import CommonEditorModal from 'component/modal/CommonEditorModal';
@@ -77,6 +78,10 @@ class ModalContainer extends React.Component {
         case ModalType.CHECK_ITEM_FORM_MODAL:
           modalComponent = <CheckItemFormModal modalData={modalData} />;
           break;
+        case ModalType.CHECK_ITEM_TYPE_FORM_MODAL:
+          modalComponent = <CheckItemTypeFormModal modalData={modalData} />;
+          break;
+
         case ModalType.WORK_ORDER_STATUS_HISTORY_MODAL:
           modalComponent = (
             <WorkOrderStatusHistoryModal modalData={modalData} />

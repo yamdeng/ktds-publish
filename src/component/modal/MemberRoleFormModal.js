@@ -99,7 +99,7 @@ class MemberRoleFormModal extends React.Component {
                   return (
                     <tr>
                       <td>한성유통</td>
-                      <td>
+                      <td className="c_pt0 c_pb0">
                         <SwitchButton
                           inputId=""
                           inputName=""

@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
 import CodeSelect from 'component/ui/CodeSelect';
 import EmptyBasicInput from 'component/ui/EmptyBasicInput';
+import ModalService from 'service/ModalService';
+import ModalType from 'config/ModalType';
 
 /*
 
@@ -17,7 +19,7 @@ import EmptyBasicInput from 'component/ui/EmptyBasicInput';
 
 */
 
-@HOC.documentTitle('점검 항목 관리(공통탭)')
+@HOC.documentTitle('점검 항목 관리(공사유형별)')
 @withRouter
 @inject('boardListStore')
 @observer
@@ -27,7 +29,16 @@ class CheckItemListTypeTab extends Component {
     this.state = {};
 
     // test handler
-    this.testHandle = this.testHandle.bind(this);
+    this.openTypeFormModal = this.openTypeFormModal.bind(this);
+    this.openItemFormModal = this.openItemFormModal.bind(this);
+  }
+
+  openTypeFormModal() {
+    ModalService.openModal(ModalType.CHECK_ITEM_TYPE_FORM_MODAL, {});
+  }
+
+  openItemFormModal() {
+    ModalService.openModal(ModalType.CHECK_ITEM_FORM_MODAL, {});
   }
 
   testHandle(info) {
@@ -58,7 +69,7 @@ class CheckItemListTypeTab extends Component {
                   changeValue={() => {}}
                 />
               </span>
-              <button className="btn_text btn_dark_gray">조회</button>
+              <button className="btn_text btn_green">조회</button>
             </div>
           </div>
         </div>
@@ -128,7 +139,12 @@ class CheckItemListTypeTab extends Component {
           </div>
           <div className="list_form_btns">
             <button className="btn_text btn_green c_mr5">엑셀다운</button>
-            <button className="btn_text btn_green c_mr5">그룹 추가</button>
+            <button
+              className="btn_text btn_green c_mr5"
+              onClick={this.openTypeFormModal}
+            >
+              그룹 추가
+            </button>
             <button className="btn_text btn_green c_mr5">순위 저장</button>
             <button className="btn_text btn_green">삭제</button>
           </div>
@@ -208,7 +224,12 @@ class CheckItemListTypeTab extends Component {
             </div>
           </div>
           <div className="list_form_btns">
-            <button className="btn_text btn_green c_mr5">항목 추가</button>
+            <button
+              className="btn_text btn_green c_mr5"
+              onClick={this.openTypeFormModal}
+            >
+              항목 추가
+            </button>
             <button className="btn_text btn_green c_mr5">순위 저장</button>
             <button className="btn_text btn_green">삭제</button>
           </div>
