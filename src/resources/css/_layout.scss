@@ -46,6 +46,14 @@
     overflow-y: inherit;
   }
 }
+.vertical_sc_small {
+  overflow-y: auto;
+  max-height: 400px;
+  @include mobile {
+    max-height: inherit;
+    overflow-y: inherit;
+  }
+}
 .tb_list {
   width: 100%;
 
