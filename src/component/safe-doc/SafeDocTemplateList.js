@@ -204,6 +204,24 @@ class SafeDocTemplateList extends Component {
             </div>
           </div>
           <div className="list_form_btns">
+            <button
+              className="btn_text btn_green c_mr5"
+              onClick={this.openFormModal}
+            >
+              엑셀다운
+            </button>
+            <button
+              className="btn_text btn_green c_mr5"
+              onClick={this.openFormModal}
+            >
+              미사용 처리
+            </button>
+            <button
+              className="btn_text btn_green c_mr5"
+              onClick={this.openFormModal}
+            >
+              사용 처리
+            </button>
             <button className="btn_text btn_green" onClick={this.openFormModal}>
               등록
             </button>
