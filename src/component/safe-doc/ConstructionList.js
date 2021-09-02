@@ -79,7 +79,7 @@ class ConstructionList extends Component {
               <span className="form_group wid100">
                 <CodeSelect
                   value={''}
-                  label="카테고리"
+                  label="공사유형"
                   codeType="boardType"
                   changeValue={() => {}}
                 />
@@ -89,7 +89,7 @@ class ConstructionList extends Component {
               <span className="form_group wid100">
                 <CodeSelect
                   value={''}
-                  label="사용여부"
+                  label="진행상태"
                   codeType="boardType"
                   changeValue={() => {}}
                 />

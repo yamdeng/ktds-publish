@@ -116,35 +116,55 @@ class SafeDocScheduleList extends Component {
           </p>
           <div className="tb_wrap_scroll">
             <div className="horizon_tb vertical_sc">
-              <table className="tb_list" style={{ minWidth: '900px' }}>
+              <table className="tb_list" style={{ minWidth: '600px' }}>
                 <caption></caption>
                 <thead>
                   <tr>
-                    <th>공사ID</th>
-                    <th>공사유형</th>
-                    <th>공사명</th>
-                    <th>공사 기간</th>
-                    <th>공사조직</th>
-                    <th>책임자</th>
-                    <th>공사유형</th>
-                    <th>연계번호</th>
-                    <th>협의체</th>
+                    <th style={{ width: '5%' }}>
+                      <div className="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          name="Claude Monet"
+                          id="question-1-option-1"
+                        />
+                        <label
+                          className="checkbox-label"
+                          for="question-1-option-1"
+                        ></label>
+                      </div>
+                    </th>
+                    <th>템플릿</th>
+                    <th>작성주기</th>
+                    <th>작성 요청 기간</th>
+                    <th>작성상태</th>
                     <th>상세</th>
+                    <th>이동</th>
                   </tr>
                 </thead>
                 <tbody>
                   {list.map((info) => {
                     return (
                       <tr>
-                        <td>123123123</td>
-                        <td>직영</td>
-                        <td>순천지점_2021_직영</td>
+                        <td>
+                          <div className="checkbox-wrapper">
+                            <input
+                              type="checkbox"
+                              name="Claude Monet"
+                              id="question-1-option-1"
+                            />
+                            <label
+                              className="checkbox-label"
+                              for="question-1-option-1"
+                            ></label>
+                          </div>
+                        </td>
+                        <td>안전보건 관리책임자 선임 서류</td>
+                        <td>년</td>
                         <td>2021-01-01 ~ 2021-01-01</td>
-                        <td>{'전남광명본부 > 순천지점'}</td>
-                        <td>김지점</td>
-                        <td>직영</td>
-                        <td>SRM_01</td>
-                        <td>3</td>
+                        <td>작성중</td>
+                        <td>
+                          <i class="fas fa-eye"></i>
+                        </td>
                         <td>
                           <i class="fas fa-eye"></i>
                         </td>
@@ -153,7 +173,7 @@ class SafeDocScheduleList extends Component {
                   })}
                   {!list.length ? (
                     <tr>
-                      <td colSpan={10}>데이터가 존재하지 않습니다.</td>
+                      <td colSpan={7}>데이터가 존재하지 않습니다.</td>
                     </tr>
                   ) : null}
                 </tbody>
