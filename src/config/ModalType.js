@@ -56,7 +56,7 @@ ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL =
   'safe-doc-template-apply-form-modal';
 
 // 등록 공사 찾기 모달 : ConstructionSearchModal
-ModalType.CONSTRUCTION_SEARCH_MODAL = 'safe-doc-search-modal';
+ModalType.CONSTRUCTION_SEARCH_MODAL = 'construction-search-modal';
 
 // 공사 편성 모달 : ConstructionOrganizeModal
 ModalType.CONSTRUCTION_ORGANIZE_MODAL = 'construction-organize-modal';

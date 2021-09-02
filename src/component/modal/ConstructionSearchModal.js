@@ -2,6 +2,10 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
+import Pagination from 'component/ui/Pagination';
+import SearchInput from 'component/ui/SearchInput';
+import CodeSelect from 'component/ui/CodeSelect';
+import PageSizeSelect from 'component/ui/PageSizeSelect';
 
 /*
 
@@ -26,7 +30,7 @@ import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
 
 */
 @withRouter
-@inject('alertModalStore', 'modalStore')
+@inject('alertModalStore', 'modalStore', 'boardListStore')
 @observer
 class ConstructionSearchModal extends React.Component {
   constructor(props) {
@@ -40,231 +44,106 @@ class ConstructionSearchModal extends React.Component {
   }
 
   render() {
+    let { boardListStore } = this.props;
+    let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     return (
       <div className="popup-container">
-        <h3 className="pop_title">등록 서류 검색 (모달 모달)</h3>
+        <h3 className="pop_title">등록 과제 검색</h3>
         <div className="pop_full_cont_box">
           <div className="box_form">
             <div className="form_table">
-              <div className="form_cell f_wid30">
+              <div className="form_cell f_wid50">
                 <span className="form_group wid100 c_mr5">
-                  <select name="" id="b" className="form_tag_select ">
-                    <option value=""> </option>
-                    <option value="">전체1</option>
-                    <option value="">전체2</option>
-                  </select>
-                  <label className="f_label" for="b">
-                    서류분류
-                  </label>
+                  <CodeSelect
+                    value={''}
+                    label="공사유형"
+                    codeType="boardType"
+                    changeValue={() => {}}
+                  />
                 </span>
               </div>
-              <div className="form_cell f_wid30">
-                <span className="form_group wid100 c_mr5">
-                  <select name="" id="b" className="form_tag_select ">
-                    <option value=""> </option>
-                    <option value="">전체1</option>
-                    <option value="">전체2</option>
-                  </select>
-                  <label className="f_label" for="b">
-                    서류유형
-                  </label>
-                </span>
-              </div>
-              <div className="form_cell f_wid30">
-                <span className="form_group wid100 c_mr5">
-                  <select name="" id="b" className="form_tag_select ">
-                    <option value=""> </option>
-                    <option value="">전체1</option>
-                    <option value="">전체2</option>
-                  </select>
-                  <label className="f_label" for="b">
-                    진행상태
-                  </label>
+              <div className="form_cell f_wid3=50">
+                <span className="form_group form_search form_clear wid100 c_mr5">
+                  <SearchInput
+                    value={''}
+                    label="공사명"
+                    clearInput={this.clearInput}
+                    changeValue={this.changeTitle}
+                  />
                 </span>
               </div>
             </div>
 
             <div className="form_table">
-              <div className="form_cell f_wid50">
-                <span className="form_group wid70 c_mr5">
+              <div className="form_cell f_wid70">
+                <span className="form_group wid80 c_mr5">
                   <input
                     type="text"
                     className="form_tag"
                     disabled
-                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                    placeholder="조직을 선택해주세요"
                   />
                   <label className="f_label" for="b">
-                    공사번호
+                    조직
                   </label>
                 </span>
                 <button className="btn_icon btn_dark_gray">
                   <i class="fas fa-search"></i>
                 </button>
               </div>
-            </div>
-            <div className="form_table">
-              <div className="form_cell f_wid60">
-                <span className="form_group wid25 c_mr5">
-                  <input
-                    type="text"
-                    className="form_tag"
-                    disabled="true"
-                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                  />
-                  <label className="f_label" for="b">
-                    등록자 ID
-                  </label>
-                </span>
-                <span className="form_group wid20 c_mr5">
-                  <input
-                    type="text"
-                    className="form_tag"
-                    disabled="true"
-                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                  />
-                  <label className="f_label" for="b">
-                    등록자 이름
-                  </label>
-                </span>
-                <span className="form_group wid30 c_mr5">
-                  <input
-                    type="text"
-                    className="form_tag"
-                    disabled="true"
-                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                  />
-                  <label className="f_label" for="b">
-                    등록자 소속
-                  </label>
-                </span>
-                <span className="form_group">
-                  <button className="btn_icon btn_dark_gray">
-                    <i class="fas fa-search"></i>
-                  </button>
-                </span>
+              <div className="form_cell f_wid30">
+                <p className="right">
+                  <button className="btn_text btn_green">조회</button>
+                </p>
               </div>
             </div>
-            <div className="form_table">
-              <div className="form_cell f_wid100">
-                <span className="form_group wid40 c_mr5">
-                  <input
-                    type="text"
-                    className="form_tag"
-                    disabled="true"
-                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                  />
-                  <label className="f_label" for="b">
-                    작업지시 ID
-                  </label>
-                </span>
-                <span className="form_group wid50 c_mr5">
-                  <input
-                    type="text"
-                    className="form_tag"
-                    disabled="true"
-                    placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
-                  />
-                  <label className="f_label" for="b">
-                    작업지시 명
-                  </label>
-                </span>
-              </div>
-            </div>
-            <div className="form_table">
-              <div className="form_cell f_wid100">
-                <span className="form_group wid30 c_mr5">
-                  <select name="" id="b" className="form_tag_select">
-                    <option value=""> </option>
-                    <option value="">전체1</option>
-                    <option value="">전체2</option>
-                  </select>
-                  <label className="f_label" for="b">
-                    공사유형
-                  </label>
-                </span>
-                <span className="form_group wid40 c_mr5">
-                  <input type="text" className="form_tag" placeholder="" />
-                  <label className="f_label" for="b">
-                    서류유형
-                  </label>
-                </span>
-                <span className="form_group wid25">
-                  <input type="text" className="form_tag" placeholder="" />
-                  <label className="f_label" for="b">
-                    WBS ID
-                  </label>
-                </span>
-              </div>
-            </div>
-
-            <p className="c_pt15 right">
-              <button className="btn_text btn_green">조회</button>
-            </p>
           </div>
           <div className="list_form c_mt10">
             <p className="relative c_mb10">
               <span className="form_group c_mr5" style={{ width: '100px' }}>
-                <select name="" id="b" className="form_tag_select ">
-                  <option value="">목록 10개</option>
-                  <option value="">전체1</option>
-                  <option value="">전체2</option>
-                </select>
+                <PageSizeSelect store={boardListStore} />
               </span>
               <span className="fs_12">총 nnn 건</span>
             </p>
             <div className="tb_wrap_scroll">
               <div className="horizon_tb">
-                <table className="tb_list" style={{ minWidth: '1000px' }}>
+                <table className="tb_list" style={{ minWidth: '500px' }}>
                   <caption></caption>
                   <thead>
                     <tr>
                       <th>등록일시</th>
-                      <th>등록ID</th>
-                      <th>서류유형</th>
-                      <th>등록자사번</th>
-                      <th>등록자 명</th>
-                      <th>소속</th>
-                      <th>진행상태</th>
+                      <th>공사ID</th>
+                      <th>공사명</th>
+                      <th>공사기간</th>
+                      <th>담당 조직</th>
+                      <th>공사유형</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>2020-01-02 23:00</td>
-                      <td>123456789</td>
-                      <td>XXXXXXXXXXXXXXXXXX</td>
-                      <td>11010101</td>
-                      <td>홍길동</td>
-                      <td>{'ㅇㅇㅇㅇㅇ>ㅇㅇㅇㅇㅇ'}</td>
-                      <td>작성중</td>
-                    </tr>
+                    {list.map((info) => {
+                      return (
+                        <tr>
+                          <td>2020-01-02 23:00</td>
+                          <td>123456789</td>
+                          <td>XXXXXXXXXXXXXXXXXX</td>
+                          <td>2020-01-02 ~ 2020-01-02</td>
+                          <td>{'서초지점'}</td>
+                          <td>직영</td>
+                        </tr>
+                      );
+                    })}
+
+                    {!list.length ? (
+                      <tr>
+                        <td colSpan={6}>데이터가 존재하지 않습니다.</td>
+                      </tr>
+                    ) : null}
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
-          <div className="paging_wrap">
-            <span className="p_web">
-              <i class="fas fa-angle-double-left"></i>
-            </span>
-            <span className="p_arr_l">
-              <i class="fas fa-angle-left"></i>
-            </span>
-            {/* web paging */}
-            <span className="p_web">1</span>
-            <span className="p_web">2</span>
-            <span className="p_web">3</span>
-            <span className="p_web">4</span>
-            {/* mobile pagind */}
-            <span className="p_mobile">1</span>
-            <span className="p_mobile">/</span>
-            <span className="p_mobile">10</span>
-            <span className="p_arr_r">
-              <i class="fas fa-angle-right"></i>
-            </span>
-            <span className="p_web">
-              <i class="fas fa-angle-double-right"></i>
-            </span>
-          </div>
+          <Pagination store={boardListStore} />
         </div>
 
         <div className="pop_btns">
