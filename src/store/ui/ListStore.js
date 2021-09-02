@@ -1,5 +1,6 @@
-import { observable, action } from 'mobx';
+import { observable, action, computed, toJS } from 'mobx';
 import Config from 'config/Config';
+import update from 'immutability-helper';
 
 class ListStore {
   // 검색 데이터
@@ -122,6 +123,57 @@ class ListStore {
   enterSearch() {
     this.currentPage = 1;
     this.search();
+  }
+
+  // 체크박스 전체 체크
+  @computed
+  get checkedAllList() {
+    let allChecked = false;
+    let list = toJS(this.list);
+    let checkedCount = 0;
+    for (let index = 0; index < list.length; index++) {
+      if (list[index].checked) {
+        checkedCount = checkedCount + 1;
+      }
+    }
+    if (checkedCount === list.length) {
+      allChecked = true;
+    }
+    return allChecked;
+  }
+
+  // 테이블 전체 선택 박스 toggle
+  @action
+  toggleTableAllChecked() {
+    let list = toJS(this.list);
+    let newList = [];
+    if (this.checkedAllList) {
+      // 전체 해제
+      list.map((info) => {
+        info.checked = false;
+        return info;
+      });
+    } else {
+      // 전체 선택
+      list.map((info) => {
+        info.checked = true;
+        return info;
+      });
+    }
+    this.list = newList;
+  }
+
+  // 테이블 개별행 체크박스 toggle
+  @action
+  toggleTableChecked(index) {
+    let list = toJS(this.list);
+    let searchInfo = list[index];
+    let newList = update(list, {
+      [index]: {
+        checked: { $set: !searchInfo.checked }
+      }
+    });
+    this.list = newList;
   }
 
   // 목록 clear
