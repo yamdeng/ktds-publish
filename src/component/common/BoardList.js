@@ -188,7 +188,10 @@ class BoardList extends Component {
                         </td>
                         <td>공지</td>
                         <td>Yyyy-mm-dd~yyyy-mm-dd</td>
-                        <td>첨부</td>
+                        <td>
+                          {/* <i class="fas fa-paperclip"></i> */}
+                          <i class="fas fa-file-alt"></i>
+                        </td>
                         <td>
                           <a
                             href=""
@@ -204,9 +207,6 @@ class BoardList extends Component {
                         <td>1</td>
                         <td>
                           <i class="fas fa-eye"></i>
-                          {/* <a href="">
-                            <i class="fas fa-eye"></i>
-                          </a> */}
                         </td>
                         <td>
                           <i class="fas fa-edit"></i>

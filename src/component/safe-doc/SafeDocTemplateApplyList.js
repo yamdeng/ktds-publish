@@ -30,45 +30,12 @@ import UiCommonService from 'service/UiCommonService';
 class SafeDocTemplateApplyList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isSelectClick: false
-    };
-    this.customClick = this.customClick.bind(this);
-    this.enterSearch = this.enterSearch.bind(this);
-    this.goAddPage = this.goAddPage.bind(this);
-    this.goDetailPage = this.goDetailPage.bind(this);
-    this.openRoleFormModal = this.openRoleFormModal.bind(this);
-    this.openOrgSelectModal = this.openOrgSelectModal.bind(this);
+    this.state = {};
+    this.openFormModal = this.openFormModal.bind(this);
   }
 
-  customClick() {
-    this.setState({
-      isSelectClick: !this.state.isSelectClick
-    });
-  }
-
-  enterSearch(e) {
-    if (e.keyCode === 13) {
-      this.search();
-    }
-  }
-
-  goAddPage() {
-    // const { uiStore } = this.props;
-    // uiStore.goPage('/boards/new');
-  }
-
-  goDetailPage() {
-    const { uiStore } = this.props;
-    uiStore.goPage('/boards/111');
-  }
-
-  openRoleFormModal() {
-    ModalService.openModal(ModalType.MEMBER_ROLE_FORM_MODAL, {});
-  }
-
-  openOrgSelectModal() {
-    UiCommonService.openOrgSelectModal(() => {});
+  openFormModal() {
+    ModalService.openModal(ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL, {});
   }
 
   componentDidMount() {
@@ -149,10 +116,7 @@ class SafeDocTemplateApplyList extends Component {
             </div>
           </div>
           <div className="list_form_btns">
-            <button
-              className="btn_text btn_green"
-              onClick={this.openRoleFormModal}
-            >
+            <button className="btn_text btn_green" onClick={this.openFormModal}>
               추가
             </button>
           </div>

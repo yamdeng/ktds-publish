@@ -105,8 +105,8 @@ class WorkOrderForm extends Component {
           <li className="disabled">작업조</li>
         </ul>
         {/* 탭 내용 */}
-        {/* <WorkOrderBasicTab /> */}
-        <WorkOrderMemberSettingTab />
+        <WorkOrderBasicTab />
+        {/* <WorkOrderMemberSettingTab /> */}
       </div>
     );
   }

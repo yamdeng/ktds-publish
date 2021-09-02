@@ -161,34 +161,32 @@ class BoardForm extends Component {
                   <i class="fas fa-times-circle"></i>
                 </span>
               </span>
+              {/* <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-folder-open"></i>
+              </button> */}
               <button className="btn_icon btn_dark_gray c_mr5">
-                <i class="fas fa-plus"></i>
+                <i class="fas fa-times-circle"></i>
               </button>
             </div>
           </div>
           <div className="form_table">
-            <div className="form_cell f_wid100">
+            <div className="form_cell f_wid100 c_pt5">
               <span className="form_group wid50 c_mr5">
-                <input
-                  type="text"
-                  className="form_tag center"
-                  disabled
-                  placeholder="xxxxx.pdf - 10kb"
-                />
-                <label className="f_label" for="b">
-                  첨부
-                </label>
+                <input type="hidden" className="form_tag" />
+                {/* <label className="f_label" for="b">
+                  첨부2
+                </label> */}
                 {/* input에 value 값이 있으면 style display로 제어 */}
-                <span className="icon icon_clear" style={{ display: 'block' }}>
+                {/* <span className="icon icon_clear" style={{ display: 'block' }}>
                   <i class="fas fa-times-circle"></i>
-                </span>
+                </span> */}
               </span>
               <button className="btn_icon btn_dark_gray c_mr5">
+                <i class="fas fa-folder-open"></i>
+              </button>
+              {/* <button className="btn_icon btn_dark_gray c_mr5">
                 <i class="fas fa-plus"></i>
-              </button>
-              <button className="btn_icon btn_dark_gray c_mr5">
-                <i class="fas fa-times-circle"></i>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
