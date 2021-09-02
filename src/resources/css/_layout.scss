@@ -46,9 +46,17 @@
     overflow-y: inherit;
   }
 }
-.vertical_sc_small {
+.vertical_sc_middle {
   overflow-y: auto;
   max-height: 400px;
+  @include mobile {
+    max-height: inherit;
+    overflow-y: inherit;
+  }
+}
+.vertical_sc_small {
+  overflow-y: auto;
+  max-height: 300px;
   @include mobile {
     max-height: inherit;
     overflow-y: inherit;
