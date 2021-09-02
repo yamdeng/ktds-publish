@@ -23,7 +23,7 @@ import ModalType from 'config/ModalType';
 
 @HOC.documentTitle('공사 관리')
 @withRouter
-@inject('boardListStore')
+@inject('boardListStore', 'uiStore')
 @observer
 class ConstructionList extends Component {
   constructor(props) {
@@ -140,7 +140,11 @@ class ConstructionList extends Component {
                         <td>직영</td>
                         <td>SRM_01</td>
                         <td>3</td>
-                        <td>
+                        <td
+                          onClick={() =>
+                            this.props.uiStore.goPage('/constructions/123')
+                          }
+                        >
                           <i class="fas fa-eye"></i>
                         </td>
                       </tr>
