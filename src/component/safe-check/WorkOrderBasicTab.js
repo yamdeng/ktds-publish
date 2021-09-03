@@ -134,7 +134,7 @@ class WorkOrderBasicTab extends Component {
             </span>
           </div>
         </div>
-        <div className="group_box_wrap c_mt25">
+        <div className="group_box_wrap invalid c_mt25">
           <p className="txt">작업계획서</p>
           <div className="form_table">
             <div className="form_cell f_wid100">
@@ -171,6 +171,7 @@ class WorkOrderBasicTab extends Component {
               {/* <span class="invalid_txt">유효하지 않습니다.</span> */}
             </div>
           </div>
+          <span class="invalid_txt">유효하지 않습니다.</span>
         </div>
         <p className="c_pt15 right">
           <button className="btn_text btn_green">저장</button>

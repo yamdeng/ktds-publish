@@ -103,7 +103,9 @@ class SearchField1 extends Component {
             </div>
             <div className="form_cell f_wid50">
               <p className="c_pt15 right">
-                <button className="btn_text btn_green">조회1</button>
+                <button className="btn_text btn_green mobile_full">
+                  조회1
+                </button>
               </p>
             </div>
           </div>

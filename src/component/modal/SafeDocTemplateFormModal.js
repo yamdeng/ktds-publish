@@ -52,7 +52,7 @@ class SafeDocTemplateFormModal extends React.Component {
                   <input type="text" className="form_tag" disabled />
                   <label className="f_label">템플릿 ID</label>
                 </span>
-                <span className="form_group wid15 c_mr5">
+                <span className="form_group c_mr5">
                   <button className="btn_text btn_white_bor">사용중</button>
                 </span>
               </div>
@@ -134,8 +134,8 @@ class SafeDocTemplateFormModal extends React.Component {
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid100 c_pt20">
-                <span className="form_group  form_clear wid60 c_mr5">
+              <div className="form_cell c_pt20">
+                <span className="form_group  form_clear wid50 c_mr5">
                   <input
                     type="text"
                     className="form_tag center"

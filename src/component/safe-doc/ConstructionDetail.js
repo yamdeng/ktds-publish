@@ -51,7 +51,7 @@ class ConstructionDetail extends Component {
               <button className="btn_icon btn_dark_gray c_mr5">
                 <i class="fas fa-search"></i>
               </button>
-              <button className="btn_text btn_green">조회</button>
+              <button className="btn_text btn_green mobile_full">조회</button>
             </div>
           </div>
         </div>

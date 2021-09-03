@@ -207,6 +207,7 @@ class TableTest1 extends Component {
               </div>
             </div>
           </div>
+          <input type="search" className="" />
           <div className="form_table">
             <div className="form_cell">
               <div className="checkbox-wrapper">
@@ -234,7 +235,7 @@ class TableTest1 extends Component {
           </div>
 
           <p className="c_pt15 right">
-            <button className="btn_text btn_green">조회</button>
+            <button className="btn_text btn_green mobile_full">조회</button>
           </p>
         </div>
         <div className="list_form c_mt10">

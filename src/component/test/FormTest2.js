@@ -62,7 +62,9 @@ class FormTest2 extends Component {
                   <i class="fas fa-times-circle"></i>
                 </span>
               </span>
-              <button className="btn_text btn_dark_gray">조회</button>
+              <button className="btn_text btn_dark_gray mobile_full">
+                조회
+              </button>
             </div>
             <div className="form_cell f_wid20">
               <span className="form_group wid100 c_mr5">

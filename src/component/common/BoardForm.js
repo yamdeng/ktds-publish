@@ -49,7 +49,7 @@ class BoardForm extends Component {
                   changeValue={this.changeTitle}
                 />
               </span>
-              <button className="btn_text btn_green">조회</button>
+              <button className="btn_text btn_green mobile_full">조회</button>
             </div>
             <div className="form_cell f_wid20">
               <span className="form_group wid100 c_mr5">

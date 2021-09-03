@@ -92,7 +92,7 @@ class ConstructionList extends Component {
             </div>
             <div className="form_cell f_wid40">
               <p className="c_pt15 right">
-                <button className="btn_text btn_green">조회</button>
+                <button className="btn_text btn_green mobile_full">조회</button>
               </p>
             </div>
           </div>

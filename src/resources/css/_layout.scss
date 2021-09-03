@@ -60,6 +60,10 @@
   @include mobile {
     max-height: inherit;
     overflow-y: inherit;
+    &.mobile_fix {
+      overflow-y: auto;
+      max-height: 300px;
+    }
   }
 }
 .tb_list {
@@ -189,6 +193,19 @@
   padding: 12px 10px;
   border: 1px solid #{$col-gray300};
   border-radius: 5px;
+  &.invalid {
+    border: 1px solid #{$col-red};
+    p {
+      color: #{$col-red};
+    }
+  }
+  .invalid_txt {
+    position: absolute;
+    left: 11px;
+    top: 63px;
+    font-size: 11px;
+    color: #{$col-red};
+  }
   .txt {
     background: #{$col-white};
     padding: 4px 5px;
@@ -250,6 +267,9 @@
     color: #{$col-red};
     &.textarea {
       top: 202px;
+      @include mobile {
+        top: 102px;
+      }
     }
   }
 
@@ -347,21 +367,21 @@
     color: #{$col-white};
   }
   &:disabled {
-    border: 1px solid #{$col-gray};
+    border: none !important;
     background: #{$col-gray};
     &::placeholder {
       color: #{$col-gray300};
     }
   }
   &.edit:disabled {
-    border: none;
+    border: none !important;
     background: none;
     color: #{$col-default-text};
   }
   &.date:disabled {
     color: #{$col-default-text};
     background: #{$col-white};
-    border: 1px solid #{$col-gray300};
+    border: none !important;
     + .f_label {
       color: #{$col-default-text};
       position: absolute;
@@ -371,8 +391,8 @@
     }
   }
   &.fix_data:disabled {
-    border: none;
-    border-bottom: 1px solid #{$col-gray300};
+    border: none !important;
+    border-bottom: 1px solid #{$col-gray300} !important;
     background: none;
     border-radius: 0;
     color: #{$col-default-text};
@@ -426,17 +446,22 @@
     color: #{$col-green} !important;
   }
   &:not([value='']) + .f_label {
-    color: #{$col-default-text};
+    color: #{$col-gray300};
   }
   &.invalid + .f_label {
     color: #{$col-red};
   }
 
   &.textarea {
-    padding: 20px;
+    padding: 10px;
     height: 200px;
     max-height: 200px;
     line-height: 1.6em;
+    text-indent: 0;
+    @include mobile {
+      height: 100px;
+      max-height: 100px;
+    }
   }
 }
 
@@ -452,6 +477,10 @@
   background: #{$col-white};
   outline: none !important;
   position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(../images/chevron-down-solid.svg) no-repeat right 10px center;
+  background-size: 10px;
 
   .option_item {
     display: none;
@@ -493,7 +522,7 @@
     color: #{$col-white};
   }
   &:disabled {
-    border: 1px solid #{$col-gray};
+    border: none !important;
     background: #{$col-gray};
     opacity: 1;
     &::placeholder {
@@ -501,7 +530,7 @@
     }
   }
   &.edit:disabled {
-    border: none;
+    border: none !important;
     background: none;
     color: #{$col-default-text};
   }
@@ -553,7 +582,7 @@
 
 .form_search {
   .form_tag {
-    text-indent: 20px;
+    text-indent: 25px;
   }
   .f_label {
     left: 25px;
@@ -606,12 +635,12 @@ input[type='radio'] {
 .radio-label:after,
 .checkbox-label:after {
   position: absolute;
-  top: 8px;
+  top: 4px;
   left: 3px;
   display: flex;
   content: ' ';
-  height: 7px;
-  width: 7px;
+  height: 8px;
+  width: 8px;
   background: #{$col-default-text};
   transform: scale(0);
   transition: transform 0.3s ease;
@@ -828,6 +857,11 @@ hr.line {
   &:disabled {
     opacity: 0.5;
     background: #{$col-gray350};
+  }
+  @include mobile {
+    &.mobile_full {
+      width: 100%;
+    }
   }
 }
 .btn_icon {

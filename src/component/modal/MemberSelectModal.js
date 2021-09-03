@@ -117,7 +117,9 @@ class MemberSelectModal extends React.Component {
                         changeValue={this.changeOrgName}
                       />
                     </span>
-                    <button className="btn_text btn_green">조회</button>
+                    <button className="btn_text btn_green mobile_full">
+                      조회
+                    </button>
                   </div>
                 </div>
               </div>
