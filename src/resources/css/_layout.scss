@@ -223,6 +223,9 @@
     padding-right: 10px;
     padding-top: 15px;
     position: relative;
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }
 
@@ -545,10 +548,6 @@
   }
   &.invalid + .f_label {
     color: #{$col-red};
-  }
-
-  &.textarea {
-    min-height: 200px;
   }
 }
 
