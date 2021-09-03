@@ -71,7 +71,7 @@
 
 .pop_cont_box {
   position: relative;
-  max-height: 650px;
+  max-height: 900px;
   overflow-y: auto;
   @include mobile {
     padding: 20px;
@@ -84,7 +84,7 @@
 
 .pop_full_cont_box {
   position: relative;
-  max-height: 600px;
+  max-height: 900px;
   overflow-y: auto;
   overflow-x: hidden;
   padding-top: 20px;
@@ -279,7 +279,7 @@
 .tree_wrap {
   box-sizing: border-box;
   width: 200px;
-  max-height: 500px;
+  max-height: 900px;
   overflow: auto;
   @include mobile {
     display: none;
