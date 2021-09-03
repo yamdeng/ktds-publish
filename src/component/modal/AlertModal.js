@@ -50,7 +50,9 @@ class AlertModal extends React.Component {
     okLabel = okLabel || Constant.LABEL_MODAL_OK;
     return (
       <div className="popup-container">
-        <h3 className="pop_title">{title} - title</h3>
+        <h3 className="pop_title" style={{ display: title ? '' : 'none' }}>
+          {title}
+        </h3>
         <p className="pop_cont" dangerouslySetInnerHTML={{ __html: body }} />
         <div className="pop_btns">
           <button className="btn_text btn_green" onClick={this.ok}>
