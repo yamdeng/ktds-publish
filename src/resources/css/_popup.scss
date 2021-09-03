@@ -62,7 +62,6 @@
   font-weight: bold;
   padding-bottom: 10px;
   border-bottom: 1px solid #{$col-gray300};
-  margin-bottom: 20px;
   padding-right: 40px;
   @include mobile {
     padding: 20px 40px 20px 0;
@@ -85,16 +84,17 @@
 
 .pop_full_cont_box {
   position: relative;
-  max-height: 500px;
+  max-height: 600px;
   overflow-y: auto;
   overflow-x: hidden;
+  padding-top: 20px;
   .list_form,
   .tb_wrap_scroll {
     margin-bottom: 30px;
   }
   .write_form {
     border-bottom: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-bottom: 0 !important;
   }
   @include mobile {
@@ -112,7 +112,7 @@
 }
 .pop_full_cont_box + .pop_btns {
   border-top: 1px solid #{$col-gray350};
-  padding-top: 10px;
+  padding-top: 20px;
   @include mobile {
     border-top: none;
   }
@@ -122,10 +122,10 @@
 }
 
 .pop_cont {
+  margin-top: 30px;
   padding-bottom: 30px;
-  padding-right: 50px;
   @include mobile {
-    padding: 20px 40px 60px 20px;
+    padding: 0 40px 70px 20px;
   }
 }
 
@@ -151,13 +151,10 @@
 
 .pop_close {
   position: absolute;
-  right: 30px;
-  top: 20px;
+  right: 12px;
+  top: 10px;
   font-size: 20px;
   color: #{$col-gray600};
-  @include mobile {
-    right: 20px;
-  }
 }
 
 .pop_flex_group {

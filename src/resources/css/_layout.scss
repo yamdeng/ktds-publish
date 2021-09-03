@@ -230,7 +230,7 @@
   .checkbox-wrapper,
   .radio-wrapper {
     vertical-align: top;
-    margin-top: 12px;
+    margin-top: 11px;
   }
 }
 
@@ -245,7 +245,11 @@
     top: 37px;
     font-size: 11px;
     color: #{$col-red};
+    &.textarea {
+      top: 202px;
+    }
   }
+
   .icon {
     &.icon_search {
       position: absolute;
@@ -273,7 +277,7 @@
   .f_label {
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 8px;
     background: #{$col-white};
     padding: 2px 4px 4px;
     line-height: 1em;
@@ -286,8 +290,8 @@
 }
 
 .form_tag {
-  height: 38px;
-  line-height: 38px;
+  height: 35px;
+  line-height: 35px;
   border: 1px solid #{$col-gray300};
   border-radius: 5px;
   padding: 0 10px;
@@ -298,7 +302,9 @@
   outline: none !important;
   position: relative;
   text-indent: 10px;
-
+  &.date {
+    caret-color: #{$col-white};
+  }
   .option_item {
     display: none;
     z-index: 3;
@@ -357,7 +363,7 @@
       color: #{$col-default-text};
       position: absolute;
       left: 10px;
-      top: 10px;
+      top: 8px;
       font-size: 14px;
     }
   }
@@ -425,14 +431,15 @@
 
   &.textarea {
     padding: 20px;
-    min-height: 200px;
+    height: 200px;
+    max-height: 200px;
     line-height: 1.6em;
   }
 }
 
 .form_tag_select {
-  height: 38px;
-  line-height: 38px;
+  height: 35px;
+  line-height: 35px;
   border: 1px solid #{$col-gray300};
   border-radius: 5px;
   padding: 0 10px;
@@ -809,7 +816,7 @@ hr.line {
 }
 
 .btn_text {
-  height: 38px;
+  height: 35px;
   padding: 0 20px;
   border: none;
   border-radius: 5px;
@@ -823,12 +830,9 @@ hr.line {
     opacity: 0.5;
     background: #{$col-gray350};
   }
-  @include mobile {
-    padding: 0 10px;
-  }
 }
 .btn_icon {
-  height: 38px;
+  height: 35px;
   padding: 0 15px;
   border: none;
   border-radius: 5px;

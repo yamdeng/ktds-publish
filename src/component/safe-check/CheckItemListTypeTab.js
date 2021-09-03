@@ -76,7 +76,7 @@ class CheckItemListTypeTab extends Component {
         <div className="list_form">
           <p className="relative c_mb10">
             <EmptyBasicInput />
-            {/* TODO : 38px는 button, input 기준 높이인데 변경시 수정 : Empty 컴포넌트 필요 */}
+            {/* TODO : 35px는 button, input 기준 높이인데 변경시 수정 : Empty 컴포넌트 필요 */}
             <span className="fs_12">총 nnn 건</span>
           </p>
 

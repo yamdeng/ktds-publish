@@ -408,7 +408,7 @@ class PTable1 extends Component {
             </div>
           </div>
 
-          <div className="list_form_btns">
+          <div className="list_form_btns_fix">
             <button className="btn_text btn_blue c_mr5">미사용 처리</button>
             <button className="btn_text btn_blue c_mr5">사용 처리</button>
             <button className="btn_text btn_green">등록</button>

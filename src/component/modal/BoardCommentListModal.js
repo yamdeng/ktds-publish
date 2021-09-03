@@ -94,11 +94,12 @@ class BoardCommentListModal extends React.Component {
                   <textarea
                     name=""
                     id=""
-                    className="form_tag textarea"
+                    className="form_tag textarea invalid"
                   ></textarea>
                   <label className="f_label" for="b">
                     댓글/답글
                   </label>
+                  <span class="invalid_txt textarea">유효하지 않습니다.</span>
                 </span>
               </div>
             </div>

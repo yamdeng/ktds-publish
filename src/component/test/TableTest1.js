@@ -30,7 +30,7 @@ class TableTest1 extends Component {
             */}
             <div className="form_cell f_wid50">
               <span className="form_group form_search form_clear wid70 c_mr5">
-                <input type="text" className="form_tag" />
+                <input type="search" className="form_tag" />
                 <label className="f_label">
                   검색어 <span className="required">*</span>
                 </label>
