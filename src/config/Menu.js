@@ -125,6 +125,10 @@ let Menu = [
       {
         name: '폼2',
         routeUrl: '/test/form2'
+      },
+      {
+        name: '폼3',
+        routeUrl: '/test/form3'
       }
     ]
   }
