@@ -272,7 +272,7 @@ function getUuid() {
   return uuidv4();
 }
 
-function checkValidation(inputData, customErrorMessage, formData) {
+function checkValidation(inputData, customErrorMessage) {
   let validResult = { isValid: true, errorMessage: '' };
   let inputValue = inputData.value;
   if (inputData.touched || !inputData.byPassValid) {
@@ -354,16 +354,6 @@ function checkValidation(inputData, customErrorMessage, formData) {
         validResult.errorMessage = inputData.notPatternMessage
           ? inputData.notPatternMessage
           : customErrorMessage || '양식에 맞지 않습니다';
-        return validResult;
-      }
-    }
-
-    if (inputValue && inputData.checkSameFiled) {
-      if (formData) {
-        if (formData[inputData.checkSameFiled].value !== inputValue) {
-          validResult.isValid = false;
-          validResult.errorMessage = inputData.notSameMessage;
-        }
         return validResult;
       }
     }

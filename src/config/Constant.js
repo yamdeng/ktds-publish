@@ -24,4 +24,8 @@ Constant.FORM_NEW_ID = 'new';
 Constant.MODAL_TYPE_ALERT = 'alert';
 Constant.MODAL_TYPE_FULL = 'full';
 
+// 파일 업로드 상태
+Constant.FILE_UPLOAD_STATUS_NEW = 'new';
+Constant.FILE_UPLOAD_STATUS_ORI = 'ori';
+
 export default Constant;

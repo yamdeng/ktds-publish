@@ -95,11 +95,11 @@ class FormStore {
   }
 
   // input focus 벗어났을때
-  onBlur(inputName) {
+  handleInputOnBlur(inputName) {
     let beforeFormData = toJS(this.formData);
     let inputData = beforeFormData[inputName];
     inputData.touched = true;
-    let validResult = Helper.checkValidation(inputData, '', beforeFormData);
+    let validResult = Helper.checkValidation(inputData);
     let updateInputData = update(inputData, {
       $merge: {
         touched: true,
@@ -125,7 +125,7 @@ class FormStore {
       inputValue = inputValue ? inputData.trueValue : inputData.falseValue;
     }
     inputData.value = inputValue;
-    let validResult = Helper.checkValidation(inputData, '', beforeFormData);
+    let validResult = Helper.checkValidation(inputData);
     let updateInputData = update(inputData, {
       $merge: {
         touched: true,
@@ -169,66 +169,44 @@ class FormStore {
 
   // formData 전체 validate
   @action
-  validate(disableFocus) {
-    let validationFormData = toJS(this.formData);
-    let firstErrorInputData = null;
+  validate() {
+    let formData = toJS(this.formData);
     let successValidation = true;
-    let inputKeys = _.keys(validationFormData);
+    let inputKeys = _.keys(formData);
     inputKeys.forEach((inputName) => {
-      let inputData = validationFormData[inputName];
+      let inputData = formData[inputName];
       inputData.touched = true;
-      let validResult = Helper.checkValidation(
-        inputData,
-        '',
-        validationFormData
-      );
+      let validResult = Helper.checkValidation(inputData);
       inputData.errorMessage = validResult.errorMessage;
       inputData.isValid = validResult.isValid;
-      if (!firstErrorInputData && !inputData.isValid) {
-        firstErrorInputData = inputData;
+      if (!inputData.isValid) {
         successValidation = false;
       }
     });
-    if (firstErrorInputData && !disableFocus) {
-      let contentWrapOffsetTop = 0;
-      let contentWrapElement = $('.content_wrap, .content_no_menu_wrap');
-      if (contentWrapElement && contentWrapElement.length) {
-        contentWrapOffsetTop = 170;
-      }
-      try {
-        if ($('#' + firstErrorInputData.inputName)) {
-          $('#' + firstErrorInputData.inputName).focus();
-          $('html, body').animate({
-            scrollTop:
-              $('#' + firstErrorInputData.inputName).offset().top -
-              contentWrapOffsetTop
-          });
-        }
-      } catch (e) {
-        alert('validate input 포커스 에러');
-      }
-    }
-    this.changeFormData(validationFormData);
+    this.changeFormData(formData);
     return successValidation;
   }
 
-  // 저장
-  @action
-  save(formType, detailId) {
-    if (!this.validate()) {
-      return;
-    }
+  getApiParam() {
     let formData = this.formData;
     let inputKeys = _.keys(formData);
     let apiParam = {};
     inputKeys.forEach((key) => {
       let inputData = formData[key];
-      if (!inputData.apiParamExpect) {
-        apiParam[key] = inputData.value;
-      }
+      apiParam[key] = inputData.value;
     });
-    if (formType === Constant.FORM_TYPE_UPDATE) {
-      return ApiService.put(this.apiUrl + '/' + detailId, apiParam);
+    return apiParam;
+  }
+
+  // 저장
+  @action
+  save() {
+    if (!this.validate()) {
+      return;
+    }
+    let apiParam = this.getApiParam();
+    if (this.formType === Constant.FORM_TYPE_UPDATE) {
+      return ApiService.put(this.apiUrl + '/' + this.detailId, apiParam);
     } else {
       return ApiService.post(this.apiUrl, apiParam);
     }
@@ -236,11 +214,7 @@ class FormStore {
 
   // 이미지 파일 업로드
   @action
-  uploadFile(fileObject, fileLocation, fileMaxSize, inputName, maxLength) {
-    if (!Helper.checkImageFileUploadExtension(fileObject)) {
-      ModalService.alert({ body: '이미지만 첨부 가능합니다.' });
-      return;
-    }
+  uploadFile(fileObject, fileMaxSize, inputName) {
     if (
       !Helper.checkFileUploadMaxSize(
         fileObject,
@@ -251,36 +225,28 @@ class FormStore {
       return;
     }
     let formData = toJS(this.formData);
-    inputName = inputName || 'imageList';
-    let imageList = formData[inputName].value;
-    maxLength = maxLength || 10;
-    if (imageList.length >= maxLength) {
-      ModalService.alert({
-        body: '사진은 ' + maxLength + '개까지만 첨부 가능합니다.'
-      });
-      return;
-    }
+    let fileList = formData[inputName].value;
     let fileFormData = new FormData();
     fileFormData.append('upload_file', fileObject);
-    fileFormData.append('fileType', Constant.FILE_UPLOAD_TYPE_IMAGE);
-    fileFormData.append('fileLocation', fileLocation);
+    // fileFormData.append('fileType', Constant.FILE_UPLOAD_TYPE_IMAGE);
+    // fileFormData.append('fileLocation', fileLocation);
     ApiService.post('common/uploadFile', fileFormData, {}).then((response) => {
       let data = response.data;
-      imageList.push({
+      fileList.push({
         status: Constant.FILE_UPLOAD_STATUS_NEW,
         fileName: data.fileName,
         fileThumbnail: data.thumb,
         fileSeq: data.tempFileSeq,
         fileUrl: data.fileUrl
       });
-      this.changeInput(inputName, imageList);
+      this.changeInput(inputName, fileList);
     });
   }
 
   // 폼 clear
   @action
   clearForm() {
-    this.formData = null;
+    this.initFormData();
     this.formType = Constant.FORM_TYPE_ADD;
     this.detailId = null;
     this.detailInfo = null;
