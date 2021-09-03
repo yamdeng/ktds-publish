@@ -94,11 +94,12 @@ body {
         color: #{$col-gray600};
       }
       &:hover {
-        background: #{$col-gray100};
+        background: #{$col-gray200};
       }
     }
     li.active > p {
       color: #{$col-black};
+      background: #{$col-gray100};
     }
     > li {
       > p {
@@ -108,7 +109,7 @@ body {
         span {
           padding-right: 20px;
           font-size: 12px;
-          svg {
+          &.abrc .fas {
             transform: rotate(0deg);
             transition: transform 0.3s ease;
           }
@@ -122,60 +123,65 @@ body {
             box-sizing: border-box;
             text-align: center;
             padding-right: 0;
-            padding-top: 8px;
+            padding-top: 5px;
             margin-right: 5px;
             margin-left: 15px;
           }
         }
       }
       .dep_2 {
-        display: none;
+        overflow: hidden;
+        max-height: 0;
+        display: block;
+        transition: max-height 0.3s ease-out;
+        > li {
+          > p {
+            padding: 15px 30px 15px 50px;
+            font-size: 14px;
+            position: relative;
+            span {
+              padding-right: 20px;
+              font-size: 12px;
+              &.abrc .fas {
+                transform: rotate(0deg);
+                transition: transform 0.3s ease;
+              }
+            }
+          }
+        }
       }
       &.active {
         > p {
           span {
-            svg {
+            &.abrc .fas {
               transform: rotate(90deg);
               transition: transform 0.3s ease;
             }
           }
         }
         .dep_2 {
-          display: block;
-          > li {
+          max-height: 500px;
+          transition: max-height 0.3s ease-out;
+
+          .dep_3 {
+            display: none;
+            padding: 5px 0;
+          }
+          &.active {
             > p {
-              padding: 15px 30px 15px 50px;
-              font-size: 14px;
-              position: relative;
               span {
-                padding-right: 20px;
-                font-size: 12px;
-                svg {
-                  transform: rotate(0deg);
+                &.abrc .fas {
+                  transform: rotate(90deg);
                   transition: transform 0.3s ease;
                 }
               }
             }
             .dep_3 {
-              display: none;
-              padding: 5px 0;
-            }
-            &.active {
-              > p {
-                span {
-                  svg {
-                    transform: rotate(90deg);
-                    transition: transform 0.3s ease;
-                  }
-                }
-              }
-              .dep_3 {
-                display: block;
-                padding-bottom: 10px;
-                > li {
-                  > p {
-                    padding: 15px 30px 15px 70px;
-                  }
+              display: block;
+              padding-bottom: 10px;
+              > li {
+                > p {
+                  padding: 15px 30px 15px 70px;
                 }
               }
             }

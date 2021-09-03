@@ -304,7 +304,7 @@
     background: #{$col-white};
     padding: 2px 4px 4px;
     line-height: 1em;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     display: inline-block;
     .required {
       color: #{$col-red};
@@ -435,7 +435,7 @@
     left: 10px;
     top: -8px;
     font-size: 12px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
   &:disabled + .f_label {
     background: none;
