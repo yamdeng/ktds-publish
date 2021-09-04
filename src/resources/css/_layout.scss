@@ -367,21 +367,21 @@
     color: #{$col-white};
   }
   &:disabled {
-    border: none !important;
+    border: 1px solid #{$col-gray};
     background: #{$col-gray};
     &::placeholder {
       color: #{$col-gray300};
     }
   }
   &.edit:disabled {
-    border: none !important;
+    border: none;
     background: none;
     color: #{$col-default-text};
   }
   &.date:disabled {
     color: #{$col-default-text};
     background: #{$col-white};
-    border: none !important;
+    border: 1px solid #{$col-gray300};
     + .f_label {
       color: #{$col-default-text};
       position: absolute;
@@ -391,8 +391,8 @@
     }
   }
   &.fix_data:disabled {
-    border: none !important;
-    border-bottom: 1px solid #{$col-gray300} !important;
+    border: none;
+    border-bottom: 1px solid #{$col-gray300};
     background: none;
     border-radius: 0;
     color: #{$col-default-text};
@@ -446,7 +446,7 @@
     color: #{$col-green} !important;
   }
   &:not([value='']) + .f_label {
-    color: #{$col-gray300};
+    color: #{$col-default-text};
   }
   &.invalid + .f_label {
     color: #{$col-red};
@@ -522,7 +522,7 @@
     color: #{$col-white};
   }
   &:disabled {
-    border: none !important;
+    border: 1px solid #{$col-gray};
     background: #{$col-gray};
     opacity: 1;
     &::placeholder {
@@ -530,7 +530,7 @@
     }
   }
   &.edit:disabled {
-    border: none !important;
+    border: none;
     background: none;
     color: #{$col-default-text};
   }
