@@ -150,16 +150,12 @@ class FormStore {
   @action
   setFormData(detailInfo) {
     this.detailInfo = detailInfo;
-    this.formType = Constant.FORM_TYPE_EDIT;
+    this.formType = Constant.FORM_TYPE_UPDATE;
     let formData = toJS(this.formData);
     let formDataKeys = _.keys(formData);
     formDataKeys.forEach((inputKey) => {
       let inputData = formData[inputKey];
-      if (inputData.isArray) {
-        inputData.value = detailInfo[inputKey] || [];
-      } else {
-        inputData.value = detailInfo[inputKey];
-      }
+      inputData.value = detailInfo[inputKey];
     });
     this.formData = formData;
   }
@@ -202,6 +198,7 @@ class FormStore {
       return;
     }
     let apiParam = this.getApiParam();
+    debugger;
     // if (this.formType === Constant.FORM_TYPE_UPDATE) {
     //   return ApiService.put(this.apiUrl + '/' + this.detailId, apiParam);
     // } else {

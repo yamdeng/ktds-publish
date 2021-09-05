@@ -1,6 +1,13 @@
-import { action, makeObservable, observable, override } from 'mobx';
+import {
+  action,
+  makeObservable,
+  observable,
+  override,
+  runInAction
+} from 'mobx';
 import FormStore from 'store/ui/FormStore';
 import Helper from 'util/Helper';
+import ApiService from 'service/ApiService';
 
 /*
   
@@ -77,6 +84,30 @@ class GuideFormStore extends FormStore {
     if (success) {
     }
     return success;
+  }
+
+  // 상세 정보 가져와서 formData에 맵핑시키기
+  @action
+  getFormData(detailId) {
+    this.detailId = detailId;
+    ApiService.get('boards/' + detailId).then((response) => {
+      runInAction(() => {
+        let data = response.data;
+        this.setFormData(data);
+      });
+    });
+  }
+
+  // 상세 정보 가져오기
+  @action
+  getDetail(detailId) {
+    this.detailId = detailId;
+    ApiService.get('boards/' + detailId).then((response) => {
+      runInAction(() => {
+        let data = response.data;
+        this.detailInfo = data;
+      });
+    });
   }
 
   @action

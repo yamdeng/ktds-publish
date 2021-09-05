@@ -9,6 +9,7 @@ import SearchInput from 'component/ui/SearchInput';
 import AppDatePicker from 'component/ui/AppDatePicker';
 import AppTimePicker from 'component/ui/AppTimePicker';
 import ReactHelper from 'util/ReactHelper';
+import Constant from 'config/Constant';
 
 /*
 
@@ -53,13 +54,19 @@ class GuideForm1 extends Component {
     guideFormStore.save();
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    let { guideFormStore } = this.props;
+    let detailId = this.props.match.params.detailId;
+    if (detailId !== Constant.FORM_NEW_ID) {
+      // guideFormStore.getFormData(detailId);
+    }
+  }
 
   render() {
-    let { guideFormStore } = this.props;
+    let { guideFormStore, save } = this.props;
     let { formData, isFormValid } = guideFormStore;
-    // let { handleInputOnChange, handleInputOnBlur } = this.props;
-    let { handleInputOnChange, handleInputOnBlur } = this;
+    let { handleInputOnChange, handleInputOnBlur } = this.props;
+    // let { handleInputOnChange, handleInputOnBlur } = this;
 
     return (
       <div className="content_area">
@@ -259,14 +266,17 @@ class GuideForm1 extends Component {
               </button>
             </div>
           </div>
+          <span class="invalid_txt" style={{ color: '#ed2129' }}>
+            유효하지 않습니다.
+          </span>
         </div>
         {/* 하단 버튼 */}
         <p className="c_pt15 right">
           <button className="btn_text btn_white c_mr5">취소</button>
           <button
             className="btn_text btn_green "
-            disabled2={!isFormValid}
-            onClick={this.save}
+            disabled={!isFormValid}
+            onClick={save}
           >
             등록
           </button>

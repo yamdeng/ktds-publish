@@ -49,9 +49,10 @@ const focusHandle = () => (WrappedComponent) =>
 // form validate 처리를 store 기반으로 처리
 const formStore = () => (WrappedComponent) =>
   class WithSubscription extends React.PureComponent {
+    currentFormStore = null;
+
     constructor(props) {
       super(props);
-      this.state = { currentFormStore: null };
 
       // input onChange event
       this.handleInputOnChange = this.handleInputOnChange.bind(this);
@@ -61,6 +62,9 @@ const formStore = () => (WrappedComponent) =>
 
       // currentFormStore set
       this.setCurrentFormStore = this.setCurrentFormStore.bind(this);
+
+      // save
+      this.save = this.save.bind(this);
     }
 
     handleInputOnChange(event) {
@@ -96,6 +100,13 @@ const formStore = () => (WrappedComponent) =>
       this.currentFormStore = formStore;
     }
 
+    save() {
+      let currentFormStore = this.currentFormStore;
+      if (currentFormStore) {
+        currentFormStore.save();
+      }
+    }
+
     componentWillUnmount() {
       let currentFormStore = this.currentFormStore;
       if (currentFormStore && currentFormStore.clear) {
@@ -110,6 +121,7 @@ const formStore = () => (WrappedComponent) =>
           setCurrentFormStore={this.setCurrentFormStore}
           handleInputOnChange={this.handleInputOnChange}
           handleInputOnBlur={this.handleInputOnBlur}
+          save={this.save}
         />
       );
     }
