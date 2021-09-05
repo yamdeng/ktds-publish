@@ -11,7 +11,7 @@ import SubjectCouncilTab from 'component/safe-doc/SubjectCouncilTab';
 
     이름 : 공사 상세
 
-    route : /constructions/:id
+    route : /subjects/:id
 
     store
      -boardListStore

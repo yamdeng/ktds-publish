@@ -14,7 +14,7 @@ import ModalType from 'config/ModalType';
 
     이름 : 공사 관리
 
-    route : /constructions
+    route : /subjects
 
     store
      -boardListStore
@@ -136,7 +136,7 @@ class SubjectList extends Component {
                         <td>3</td>
                         <td
                           onClick={() =>
-                            this.props.uiStore.goPage('/constructions/123')
+                            this.props.uiStore.goPage('/subjects/123')
                           }
                         >
                           <i class="fas fa-eye"></i>

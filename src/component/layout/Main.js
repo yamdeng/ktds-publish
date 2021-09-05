@@ -160,8 +160,8 @@ class Main extends Component {
             component={SafeDocTemplateApplyList}
           />
           <Route exact path="/safe-managers" component={SafeManagerList} />
-          <Route exact path="/constructions" component={SubjectList} />
-          <Route exact path="/constructions/:id" component={SubjectDetail} />
+          <Route exact path="/subjects" component={SubjectList} />
+          <Route exact path="/subjects/:id" component={SubjectDetail} />
           <Route
             exact
             path="/safe-doc-schedules"

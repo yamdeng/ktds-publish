@@ -59,10 +59,10 @@ ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL =
   'safe-doc-template-apply-form-modal';
 
 // 등록 공사 찾기 모달 : SubjectSearchModal
-ModalType.SUBJECT_SEARCH_MODAL = 'construction-search-modal';
+ModalType.SUBJECT_SEARCH_MODAL = 'subject-search-modal';
 
 // 공사 편성 모달 : SubjectOrganizeModal
-ModalType.SUBJECT_ORGANIZE_MODAL = 'construction-organize-modal';
+ModalType.SUBJECT_ORGANIZE_MODAL = 'subject-organize-modal';
 
 // 유예 사유 모달(공통 모달) : CommonTextAreaModal
 ModalType.COMMON_TEXTAREA_MODAL = 'common-textarea-modal';

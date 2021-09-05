@@ -66,7 +66,7 @@ let Menu = [
       },
       {
         name: '공사 관리',
-        routeUrl: '/constructions'
+        routeUrl: '/subjects'
       },
       {
         name: '안전보건 담당자 관리',

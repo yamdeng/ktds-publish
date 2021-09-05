@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 
     이름 : 공사 상세(안전협의체 탭)
 
-    route : /constructions/:id
+    route : /subjects/:id
 
     store
      -boardListStore
