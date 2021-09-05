@@ -5,17 +5,17 @@ import Config from 'config/Config';
 
 /*
 
-    time-picker 공통
-     : <AppTimePicker inputId='startTime' label='직책코드'
-        value='14:59' valueFormat='HH:mm' changeTime={(date) => {}} required={true} />
+    date-picker 공통
+     : <AppDatePicker id='startDate' name='startDate' label='직책코드'
+        value='2021-09-01' valueFormat='YYYY-MM-DD' onChange={(date) => {}} required={true} />
 
     props
-     -inputId(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
-     -inputName(option) : name 속성 값
+     -id(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
+     -name(option) : name 속성 값
      -label : input label
-     -value : '14:59'(string)
-     -valueFormat(option) : date 문자열 값 포맷(기본값 : 'HH:mm')
-     -changeTime : 날짜 값 변경 handler 함수
+     -value : '2021-03-03'(string)
+     -valueFormat(option) : date 문자열 값 포맷(기본값 : 'YYYY-MM-DD')
+     -onChange : 날짜 값 변경 handler 함수
      -required(option) : 필수 값 여부
 
 */
@@ -28,32 +28,39 @@ class AppTimePicker extends React.Component {
 
   render() {
     let {
-      inputId,
-      inputName,
+      id,
+      name,
       label,
       value,
       valueFormat,
-      changeTime,
-      required
+      onChange,
+      required,
+      errorMessage,
+      onBlur,
+      onlySearch,
+      displayFormat
     } = this.props;
-    let labelId = inputId ? inputId : Helper.getUuid();
-    valueFormat = valueFormat || Config.defaultDateDisplayFormat;
+    let labelId = id ? id : Helper.getUuid();
+    valueFormat = valueFormat || Config.defaultTimeValueFormat;
     const CustomDatePickerInput = React.forwardRef(
       ({ value, onClick }, ref) => {
         return (
           <React.Fragment>
             <input
-              name={inputName}
               autoComplete="off"
               id={labelId}
+              name={name}
               type="text"
-              className="form_tag date"
+              className={
+                errorMessage ? 'form_tag date invalid' : 'form_tag date'
+              }
               ref={ref}
               value={value}
               onClick={(event) => {
                 event.preventDefault();
                 onClick();
               }}
+              onBlur={onBlur}
             />
             <label className="f_label" for={labelId}>
               {label} {required ? <span class="required">*</span> : null}
@@ -61,23 +68,37 @@ class AppTimePicker extends React.Component {
             <span className="icon icon_calendar" onClick={onClick}>
               <i class="fas fa-clock"></i>
             </span>
-            {/* <span class="invalid_txt">유효하지 않습니다.</span> */}
+            <span
+              style={{ display: errorMessage ? '' : 'none' }}
+              class="invalid_txt"
+            >
+              {errorMessage}
+            </span>
           </React.Fragment>
         );
       }
     );
-    let selectedTime = Helper.stringToTime(value, valueFormat);
+    let selectedDate = Helper.stringToTime(value, valueFormat);
     return (
       <React.Fragment>
         <DatePicker
+          selected={selectedDate}
+          dateFormat={
+            displayFormat ? displayFormat : Config.defaultTimeDisplayFormat
+          }
+          onChange={(date) => {
+            let result = Helper.dateToString(date, valueFormat);
+            if (onlySearch) {
+              onChange(result);
+            } else {
+              onChange({ target: { name: name, value: result } });
+            }
+          }}
+          customInput={<CustomDatePickerInput />}
           showTimeSelect
           showTimeSelectOnly
           timeIntervals={60}
           timeCaption="시간"
-          selected={selectedTime}
-          dateFormat="HH:mm aa"
-          onChange={changeTime}
-          customInput={<CustomDatePickerInput />}
         />
       </React.Fragment>
     );

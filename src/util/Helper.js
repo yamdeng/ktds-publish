@@ -110,7 +110,7 @@ const convertNumberValue = function (value) {
 const getTodayString = function () {
   let todayString;
   let today = moment();
-  todayString = today.format('YYYY년 MM월 DD일');
+  todayString = today.format('YYYY-MM-DD');
   return todayString;
 };
 
@@ -158,6 +158,10 @@ const stringToTime = function (timeString, format) {
     resultDate = moment(timeString, format).toDate();
   }
   return resultDate;
+};
+
+const dateToString = function (date, format) {
+  return moment(date).format(format);
 };
 
 // div id기준으로 스크롤 하단으로
@@ -226,7 +230,7 @@ const checkImageFileUploadExtension = function (fileObject) {
 // 이미지 파일 업로드 max 용량 체크
 const checkFileUploadMaxSize = function (fileObject, maxSize) {
   let fileSize = fileObject.size;
-  maxSize = maxSize ? maxSize : Config.maxImageUploadSize;
+  maxSize = maxSize ? maxSize : Config.maxFileUploadSize;
   if (fileSize <= maxSize) {
     return true;
   } else {
@@ -414,6 +418,18 @@ const validteRangeDate = function (startDate, endDate) {
   return success;
 };
 
+const getDefaultInputData = function (inputName, required) {
+  let inputData = {
+    inputName: inputName,
+    touched: false,
+    isRequired: required,
+    isValid: true,
+    errorMessage: '',
+    value: ''
+  };
+  return inputData;
+};
+
 export default {
   saveInfoToLocalStorage,
   getByLocalStorage,
@@ -428,6 +444,7 @@ export default {
   convertMessageDate,
   stringToDate,
   stringToTime,
+  dateToString,
   scrollBottomByDivId,
   scrollTopByDivId,
   scrollLeftByDivId,
@@ -444,5 +461,6 @@ export default {
   copyToClipboard,
   capitalizeFirstLetter,
   getAppLink,
-  validteRangeDate
+  validteRangeDate,
+  getDefaultInputData
 };

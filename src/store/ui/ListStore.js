@@ -73,9 +73,16 @@ class ListStore {
     }
   }
 
+  // 검색 이후 공통 로직 : 차후에 일괄적으로 바꾸기 위한 용도
+  @action
+  setList(data) {
+    let { content, totalElements } = data;
+    this.changePageInfo(totalElements, content);
+  }
+
   // 검색정보 : list, pageable 추출
   @action
-  changePageInfo(totalCount) {
+  changePageInfo(totalCount, list) {
     let maxPagingSize = Config.maxPagingSize;
     let totalPageSize = Math.ceil(totalCount / this.pageSize);
     let currentPageStep = Math.floor(this.currentPage / maxPagingSize);
@@ -108,6 +115,9 @@ class ListStore {
     this.nextPage = nextPage;
     this.lastPage = Math.ceil(totalCount / this.pageSize);
     this.totalCount = totalCount;
+    if (list) {
+      this.list = list;
+    }
   }
 
   // 목록 정렬 정보 변경

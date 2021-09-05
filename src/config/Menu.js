@@ -107,6 +107,14 @@ let Menu = [
         routeUrl: '/test/modal'
       },
       {
+        name: '(가이드) 테이블1',
+        routeUrl: '/test/guide/table1'
+      },
+      {
+        name: '(가이드) form1',
+        routeUrl: '/test/guide/form1'
+      },
+      {
         name: '검색 필드',
         routeUrl: '/test/search-field1'
       },
@@ -125,10 +133,6 @@ let Menu = [
       {
         name: '폼2',
         routeUrl: '/test/form2'
-      },
-      {
-        name: '폼3',
-        routeUrl: '/test/form3'
       }
     ]
   }

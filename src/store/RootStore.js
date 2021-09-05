@@ -4,7 +4,9 @@ import ModalStore from 'store/ModalStore';
 import AlertModalStore from 'store/AlertModalStore';
 import BoardListStore from 'store/common/BoardListStore';
 import BoardFormStore from 'store/common/BoardFormStore';
-import TestStore from 'store/TestStore';
+import TestStore from 'store/test/TestStore';
+import GuideListStore from 'store/test/GuideListStore.js';
+import GuideFormStore from 'store/test/GuideFormStore.js';
 import OrgSelectModalStore from 'store/modal/OrgSelectModalStore';
 
 /*
@@ -37,6 +39,8 @@ class RootStore {
 
     // test store
     this.testStore = new TestStore(this);
+    this.guideListStore = new GuideListStore(this);
+    this.guideFormStore = new GuideFormStore(this);
   }
 }
 

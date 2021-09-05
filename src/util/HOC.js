@@ -50,13 +50,16 @@ const formStore = () => (WrappedComponent) =>
   class WithSubscription extends React.PureComponent {
     constructor(props) {
       super(props);
-      this.state = {};
+      this.state = { currentFormStore: null };
 
       // input onChange event
       this.handleInputOnChange = this.handleInputOnChange.bind(this);
 
       // input onBlur event
       this.handleInputOnBlur = this.handleInputOnBlur.bind(this);
+
+      // currentFormStore set
+      this.setCurrentFormStore = this.setCurrentFormStore.bind(this);
     }
 
     handleInputOnChange(event) {
@@ -88,20 +91,24 @@ const formStore = () => (WrappedComponent) =>
       }
     }
 
+    setCurrentFormStore(formStore) {
+      this.currentFormStore = formStore;
+    }
+
     componentWillUnmount() {
-      let formStore = this.formStore;
-      if (formStore && formStore.clear) {
-        formStore.clear();
+      let currentFormStore = this.currentFormStore;
+      if (currentFormStore && currentFormStore.clear) {
+        currentFormStore.clear();
       }
     }
 
     render() {
-      let { currentFocusName } = this.state;
       return (
         <WrappedComponent
           {...this.props}
-          currentFocusName={currentFocusName}
-          handleFocusByInputName={this.handleFocusByInputName}
+          setCurrentFormStore={this.setCurrentFormStore}
+          handleInputOnChange={this.handleInputOnChange}
+          handleInputOnBlur={this.handleInputOnBlur}
         />
       );
     }

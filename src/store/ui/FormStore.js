@@ -1,4 +1,4 @@
-import { observable, action, toJS } from 'mobx';
+import { observable, action, toJS, computed } from 'mobx';
 import Config from 'config/Config';
 import Constant from 'config/Constant';
 import update from 'immutability-helper';
@@ -38,7 +38,7 @@ import ApiService from 'service/ApiService';
 
   formData.count = {
     inputName: 'count',
-    value: null,
+    value: 0,
     touched: false,
     isRequired: true,
     isValid: true,
@@ -121,9 +121,6 @@ class FormStore {
   changeInput(inputName, inputValue) {
     let beforeFormData = toJS(this.formData);
     let inputData = beforeFormData[inputName];
-    if (inputData.trueValue) {
-      inputValue = inputValue ? inputData.trueValue : inputData.falseValue;
-    }
     inputData.value = inputValue;
     let validResult = Helper.checkValidation(inputData);
     let updateInputData = update(inputData, {
@@ -205,11 +202,12 @@ class FormStore {
       return;
     }
     let apiParam = this.getApiParam();
-    if (this.formType === Constant.FORM_TYPE_UPDATE) {
-      return ApiService.put(this.apiUrl + '/' + this.detailId, apiParam);
-    } else {
-      return ApiService.post(this.apiUrl, apiParam);
-    }
+    debugger;
+    // if (this.formType === Constant.FORM_TYPE_UPDATE) {
+    //   return ApiService.put(this.apiUrl + '/' + this.detailId, apiParam);
+    // } else {
+    //   return ApiService.post(this.apiUrl, apiParam);
+    // }
   }
 
   // 이미지 파일 업로드
@@ -218,7 +216,7 @@ class FormStore {
     if (
       !Helper.checkFileUploadMaxSize(
         fileObject,
-        fileMaxSize || Config.defaultFileUploadSize
+        fileMaxSize || Config.maxFileUploadSize
       )
     ) {
       ModalService.alert({ body: '용량을 확인해주세요(5MB 이하).' });
@@ -241,6 +239,24 @@ class FormStore {
       });
       this.changeInput(inputName, fileList);
     });
+  }
+
+  @computed
+  get isFormValid() {
+    let formData = toJS(this.formData);
+    let successValidation = true;
+    let inputKeys = _.keys(formData);
+    inputKeys.forEach((inputName) => {
+      let inputData = formData[inputName];
+      inputData.touched = true;
+      let validResult = Helper.checkValidation(inputData);
+      inputData.errorMessage = validResult.errorMessage;
+      inputData.isValid = validResult.isValid;
+      if (!inputData.isValid) {
+        successValidation = false;
+      }
+    });
+    return successValidation;
   }
 
   // 폼 clear
