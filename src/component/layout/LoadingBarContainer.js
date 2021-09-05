@@ -10,11 +10,11 @@ class LoadingBarContainer extends React.Component {
     let { uiStore } = this.props;
     let { displayLoadingBar } = uiStore;
     return (
-      <div id="loading-bar-container">
-        <div
-          className="loading-bar"
-          style={{ display: displayLoadingBar ? '' : 'none' }}
-        >
+      <div
+        id="loading-bar-container"
+        style={{ display: displayLoadingBar ? '' : 'none' }}
+      >
+        <div className="loading-bar">
           <div></div>
           <div></div>
           <div></div>
