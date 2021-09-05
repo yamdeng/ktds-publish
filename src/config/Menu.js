@@ -115,6 +115,10 @@ let Menu = [
         routeUrl: '/test/guide/form1'
       },
       {
+        name: '(가이드-state) form2',
+        routeUrl: '/test/guide/form2'
+      },
+      {
         name: '검색 필드',
         routeUrl: '/test/search-field1'
       },

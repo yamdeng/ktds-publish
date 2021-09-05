@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { observer, inject } from 'mobx-react';
+import { observer } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
 import CodeSelect from 'component/ui/CodeSelect';
@@ -9,57 +9,61 @@ import SearchInput from 'component/ui/SearchInput';
 import AppDatePicker from 'component/ui/AppDatePicker';
 import AppTimePicker from 'component/ui/AppTimePicker';
 import ReactHelper from 'util/ReactHelper';
+import Helper from 'util/Helper';
 
 /*
 
-    이름 : 가이드 폼1
+    이름 : 가이드 폼2
 
     route
-     -/test/guide/form1
-
-    store
-     -guideFormStore
+     -/test/guide/form2
 
 */
 
+let formData = {};
+
+// input명과 필수 여부 전달
+formData.title = Helper.getDefaultInputData('title', true);
+formData.content = Helper.getDefaultInputData('content', true);
+formData.boardType = Helper.getDefaultInputData('boardType', true);
+formData.startDate = Object.assign(
+  Helper.getDefaultInputData('startDate', true),
+  { value: Helper.getTodayString() }
+);
+formData.endDate = Helper.getDefaultInputData('endDate', true);
+formData.startTime = Helper.getDefaultInputData('startTime', true);
+formData.endTime = Helper.getDefaultInputData('endTime', true);
+
 @HOC.documentTitle('가이드 폼1')
-@HOC.formStore()
+@HOC.formState(formData)
 @withRouter
-@inject('guideFormStore')
 @observer
-class GuideForm1 extends Component {
+class GuideForm2 extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
-
-    // HOC 사용
-    this.props.setCurrentFormStore(this.props.guideFormStore);
-
-    // 현재 formStore 셋팅
-    // this.currentFormStore = this.props.guideFormStore;
+    this.state = { formData: formData };
 
     // 공통 인풋 변경 핸들러
-    // this.handleInputOnChange = ReactHelper.handleInputOnChange.bind(this);
+    this.handleInputOnChange =
+      ReactHelper.handleInputOnChangeToState.bind(this);
 
     // 공통 인풋 변경 핸들러
-    // this.handleInputOnBlur = ReactHelper.handleInputOnBlur.bind(this);
+    this.handleInputOnBlur = ReactHelper.handleInputOnBlurToState.bind(this);
 
-    // [저장] 버튼 핸들러
-    this.save = this.save.bind(this);
-  }
-
-  save() {
-    let { guideFormStore } = this.props;
-    guideFormStore.save();
+    // 전체 form validate 성공 여부
+    this.isFormValid = ReactHelper.isFormValidToState.bind(this);
+    this.validate = ReactHelper.validateToState.bind(this);
+    this.save = ReactHelper.saveToState.bind(this);
+    this.getApiParam = ReactHelper.getApiParamToState.bind(this);
   }
 
   componentDidMount() {}
 
   render() {
-    let { guideFormStore } = this.props;
-    let { formData, isFormValid } = guideFormStore;
+    // let { formData, isFormValid, save } = this.props;
     // let { handleInputOnChange, handleInputOnBlur } = this.props;
-    let { handleInputOnChange, handleInputOnBlur } = this;
+    let { handleInputOnChange, handleInputOnBlur, save, isFormValid } = this;
+    let { formData } = this.state;
 
     return (
       <div className="content_area">
@@ -265,8 +269,8 @@ class GuideForm1 extends Component {
           <button className="btn_text btn_white c_mr5">취소</button>
           <button
             className="btn_text btn_green "
-            disabled2={!isFormValid}
-            onClick={this.save}
+            disabled={!isFormValid()}
+            onClick={save}
           >
             등록
           </button>
@@ -276,4 +280,4 @@ class GuideForm1 extends Component {
   }
 }
 
-export default GuideForm1;
+export default GuideForm2;

@@ -40,6 +40,7 @@ import FormTest2 from 'component/test/FormTest2';
 import SearchField1 from 'component/test/SearchField1';
 import GuideTable1 from 'component/test/guide/GuideTable1';
 import GuideForm1 from 'component/test/guide/GuideForm1';
+import GuideForm2 from 'component/test/guide/GuideForm2';
 
 // 개발 가이드
 
@@ -193,6 +194,7 @@ class Main extends Component {
           <Route exact path="/test/search-field1" component={SearchField1} />
           <Route exact path="/test/guide/table1" component={GuideTable1} />
           <Route exact path="/test/guide/form1" component={GuideForm1} />
+          <Route exact path="/test/guide/form2" component={GuideForm2} />
         </Switch>
       </>
     );

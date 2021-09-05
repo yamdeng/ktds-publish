@@ -202,7 +202,6 @@ class FormStore {
       return;
     }
     let apiParam = this.getApiParam();
-    debugger;
     // if (this.formType === Constant.FORM_TYPE_UPDATE) {
     //   return ApiService.put(this.apiUrl + '/' + this.detailId, apiParam);
     // } else {

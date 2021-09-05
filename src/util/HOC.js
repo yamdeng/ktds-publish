@@ -1,6 +1,7 @@
 import React from 'react';
 import update from 'immutability-helper';
 import Helper from 'util/Helper';
+import _ from 'lodash';
 
 const HOC = {};
 
@@ -114,17 +115,32 @@ const formStore = () => (WrappedComponent) =>
     }
   };
 
-const formState = () => (WrappedComponent) =>
+const formState = (formData) => (WrappedComponent) =>
   class WithSubscription extends React.PureComponent {
     constructor(props) {
       super(props);
-      this.state = {};
+      this.state = { formData: formData };
 
       // input onChange event
       this.handleInputOnChange = this.handleInputOnChange.bind(this);
 
       // input onBlur event
       this.handleInputOnBlur = this.handleInputOnBlur.bind(this);
+
+      // changeFormData
+      this.changeFormData = this.changeFormData.bind(this);
+
+      // 전체 form validate 성공 여부
+      this.isFormValid = this.isFormValid.bind(this);
+
+      // validate
+      this.validate = this.validate.bind(this);
+
+      // save
+      this.save = this.save.bind(this);
+
+      // getApiParam
+      this.getApiParam = this.getApiParam.bind(this);
     }
 
     handleInputOnChange(event) {
@@ -142,7 +158,7 @@ const formState = () => (WrappedComponent) =>
       ) {
         inputValue = inputValue.slice(0, event.target.maxLength);
       }
-      let beforeFormData = this.state.formData;
+      let beforeFormData = Object.assign({}, this.state.formData);
       let inputData = beforeFormData[inputName];
       inputData.value = inputValue;
       let validResult = Helper.checkValidation(inputData);
@@ -165,7 +181,7 @@ const formState = () => (WrappedComponent) =>
 
     handleInputOnBlur(event) {
       let inputName = event.target.name;
-      let beforeFormData = this.state.formData;
+      let beforeFormData = Object.assign({}, this.state.formData);
       let inputData = beforeFormData[inputName];
       inputData.touched = true;
       let validResult = Helper.checkValidation(inputData);
@@ -185,13 +201,77 @@ const formState = () => (WrappedComponent) =>
       this.setState({ formData: newFormData });
     }
 
+    changeFormData(formData) {
+      this.setState({ formData: formData });
+    }
+
+    isFormValid() {
+      let formData = Object.assign({}, this.state.formData);
+      let successValidation = true;
+      let inputKeys = _.keys(formData);
+      inputKeys.forEach((inputName) => {
+        let inputData = Object.assign({}, formData[inputName]);
+        inputData.touched = true;
+        let validResult = Helper.checkValidation(inputData);
+        inputData.errorMessage = validResult.errorMessage;
+        inputData.isValid = validResult.isValid;
+        if (!inputData.isValid) {
+          successValidation = false;
+        }
+      });
+      return successValidation;
+    }
+
+    validate() {
+      let formData = Object.assign({}, this.state.formData);
+      let successValidation = true;
+      let inputKeys = _.keys(formData);
+      inputKeys.forEach((inputName) => {
+        let inputData = Object.assign({}, formData[inputName]);
+        inputData.touched = true;
+        let validResult = Helper.checkValidation(inputData);
+        inputData.errorMessage = validResult.errorMessage;
+        inputData.isValid = validResult.isValid;
+        if (!inputData.isValid) {
+          successValidation = false;
+        }
+      });
+      this.setState({ formData: formData });
+      return successValidation;
+    }
+
+    save() {
+      if (!this.validate()) {
+        return;
+      }
+      let apiParam = this.getApiParam();
+      debugger;
+    }
+
+    getApiParam() {
+      let formData = Object.assign({}, this.state.formData);
+      let inputKeys = _.keys(formData);
+      let apiParam = {};
+      inputKeys.forEach((inputName) => {
+        let inputData = Object.assign({}, formData[inputName]);
+        apiParam[inputName] = inputData.value;
+      });
+      return apiParam;
+    }
+
     render() {
-      let { currentFocusName } = this.state;
+      let { formData } = this.state;
       return (
         <WrappedComponent
           {...this.props}
-          currentFocusName={currentFocusName}
-          handleFocusByInputName={this.handleFocusByInputName}
+          formData={formData}
+          isFormValid={this.isFormValid}
+          validate={this.validate}
+          save={this.save}
+          getApiParam={this.getApiParam}
+          changeFormData={this.changeFormData}
+          handleInputOnChange={this.handleInputOnChange}
+          handleInputOnBlur={this.handleInputOnBlur}
         />
       );
     }
