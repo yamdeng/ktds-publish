@@ -53,13 +53,13 @@ class SafeDocTemplateFormModal extends React.Component {
                   <label className="f_label">템플릿 ID</label>
                 </span>
                 <span className="form_group c_mr5">
-                  <button className="btn_text btn_white_bor">사용중</button>
+                  <button className="btn_text btn_status">사용중</button>
                 </span>
               </div>
             </div>
             <div className="form_table">
               <div className="form_cell f_wid70">
-                <span className="form_group form_search form_clear wid100 c_mr5">
+                <span className="form_group form_clear wid100 c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -149,6 +149,7 @@ class SafeDocTemplateFormModal extends React.Component {
                   >
                     <i class="fas fa-times-circle"></i>
                   </span>
+                  <span class="invalid_txt">{'에러메시지'}</span>
                 </span>
                 <button className="btn_icon btn_dark_gray c_mr5">
                   <i class="fas fa-question"></i>
@@ -169,23 +170,24 @@ class SafeDocTemplateFormModal extends React.Component {
                 </span>
               </div>
             </div>
-            <div className="group_box_wrap">
+            <div className="group_box_wrap invalid">
               <p className="txt">결재선</p>
+              {/* 결재선이 하나도 없는 경우 */}
               <div className="form_table">
                 <div className="form_cell f_wid100">
                   <span className="form_group wid60 c_mr5">
-                    <CodeSelect
-                      value={''}
-                      label="결재선 추가"
-                      codeType="boardType"
-                      changeValue={() => {}}
+                    <input
+                      type="text"
+                      className="form_tag center"
+                      disabled
+                      placeholder="결재선을 추가해주세요"
                     />
+                    <label className="f_label" for="b">
+                      결재선 추가
+                    </label>
                   </span>
-                  {/* <button className="btn_icon btn_dark_gray c_mr5">
-                    <i class="fas fa-plus"></i>
-                  </button> */}
                   <button className="btn_icon btn_dark_gray c_mr5">
-                    <i class="fas fa-minus"></i>
+                    <i class="fas fa-plus"></i>
                   </button>
                 </div>
               </div>
@@ -204,10 +206,21 @@ class SafeDocTemplateFormModal extends React.Component {
                   </button>
                   <button className="btn_icon btn_dark_gray c_mr5">
                     <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div className="form_table">
+                <div className="form_cell f_wid100">
+                  <span className="form_group wid60 c_mr5"></span>
+                  <button className="btn_icon btn_dark_gray c_mr5">
+                    <i class="fas fa-plus"></i>
                   </button>
                 </div>
               </div>
             </div>
+            <span class="invalid_txt" style={{ color: '#ed2129' }}>
+              유효하지 않습니다.
+            </span>
           </div>
         </div>
 

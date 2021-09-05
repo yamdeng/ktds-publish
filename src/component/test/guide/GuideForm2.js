@@ -10,6 +10,7 @@ import AppDatePicker from 'component/ui/AppDatePicker';
 import AppTimePicker from 'component/ui/AppTimePicker';
 import ReactHelper from 'util/ReactHelper';
 import Helper from 'util/Helper';
+import Constant from 'config/Constant';
 
 /*
 
@@ -20,50 +21,63 @@ import Helper from 'util/Helper';
 
 */
 
-let formData = {};
-
-// input명과 필수 여부 전달
-formData.title = Helper.getDefaultInputData('title', true);
-formData.content = Helper.getDefaultInputData('content', true);
-formData.boardType = Helper.getDefaultInputData('boardType', true);
-formData.startDate = Object.assign(
-  Helper.getDefaultInputData('startDate', true),
-  { value: Helper.getTodayString() }
-);
-formData.endDate = Helper.getDefaultInputData('endDate', true);
-formData.startTime = Helper.getDefaultInputData('startTime', true);
-formData.endTime = Helper.getDefaultInputData('endTime', true);
-
 @HOC.documentTitle('가이드 폼1')
-@HOC.formState(formData)
+@HOC.formState()
 @withRouter
 @observer
 class GuideForm2 extends Component {
+  formData = {};
   constructor(props) {
     super(props);
+
+    let formData = {};
+
+    // input명과 필수 여부 전달
+    formData.title = Helper.getDefaultInputData('title', true);
+    formData.content = Helper.getDefaultInputData('content', true);
+    formData.boardType = Helper.getDefaultInputData('boardType', true);
+    formData.startDate = Object.assign(
+      Helper.getDefaultInputData('startDate', true),
+      { value: Helper.getTodayString() }
+    );
+    formData.endDate = Helper.getDefaultInputData('endDate', true);
+    formData.startTime = Helper.getDefaultInputData('startTime', true);
+    formData.endTime = Helper.getDefaultInputData('endTime', true);
+    this.formData = formData;
     this.state = { formData: formData };
 
+    this.props.changeFormData(formData);
     // 공통 인풋 변경 핸들러
-    this.handleInputOnChange =
-      ReactHelper.handleInputOnChangeToState.bind(this);
+    // this.handleInputOnChange =
+    //   ReactHelper.handleInputOnChangeToState.bind(this);
 
     // 공통 인풋 변경 핸들러
-    this.handleInputOnBlur = ReactHelper.handleInputOnBlurToState.bind(this);
+    // this.handleInputOnBlur = ReactHelper.handleInputOnBlurToState.bind(this);
 
     // 전체 form validate 성공 여부
-    this.isFormValid = ReactHelper.isFormValidToState.bind(this);
-    this.validate = ReactHelper.validateToState.bind(this);
-    this.save = ReactHelper.saveToState.bind(this);
-    this.getApiParam = ReactHelper.getApiParamToState.bind(this);
+    // this.isFormValid = ReactHelper.isFormValidToState.bind(this);
+    // this.validate = ReactHelper.validateToState.bind(this);
+    // this.save = ReactHelper.saveToState.bind(this);
+    // this.getApiParam = ReactHelper.getApiParamToState.bind(this);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    let detailId = this.props.match.params.detailId;
+    if (detailId !== Constant.FORM_NEW_ID) {
+      this.detailId = detailId;
+      this.formType = Constant.FORM_TYPE_UPDATE;
+      // ApiService.get('boards/' + detailId).then((response) => {
+      //   this.setFormData(data);
+      // });
+    }
+  }
 
   render() {
-    // let { formData, isFormValid, save } = this.props;
-    // let { handleInputOnChange, handleInputOnBlur } = this.props;
-    let { handleInputOnChange, handleInputOnBlur, save, isFormValid } = this;
-    let { formData } = this.state;
+    let { formData, isFormValid, save } = this.props;
+    formData = formData ? formData : this.formData;
+    let { handleInputOnChange, handleInputOnBlur } = this.props;
+    // let { handleInputOnChange, handleInputOnBlur, save, isFormValid } = this;
+    // let { formData } = this.state;
 
     return (
       <div className="content_area">

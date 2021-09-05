@@ -155,7 +155,11 @@ class FormStore {
     let formDataKeys = _.keys(formData);
     formDataKeys.forEach((inputKey) => {
       let inputData = formData[inputKey];
-      inputData.value = detailInfo[inputKey];
+      if (inputData.isArray) {
+        inputData.value = detailInfo[inputKey] || [];
+      } else {
+        inputData.value = detailInfo[inputKey];
+      }
     });
     this.formData = formData;
   }
@@ -186,7 +190,15 @@ class FormStore {
     let apiParam = {};
     inputKeys.forEach((key) => {
       let inputData = formData[key];
-      apiParam[key] = inputData.value;
+      if (inputData.isObject) {
+        if (inputData.value) {
+          apiParam[key] = inputData.value[inputData.keyName];
+        } else {
+          apiParam[key] = null;
+        }
+      } else {
+        apiParam[key] = inputData.value;
+      }
     });
     return apiParam;
   }
@@ -235,6 +247,55 @@ class FormStore {
       });
       this.changeInput(inputName, fileList);
     });
+  }
+
+  // errorMessage 수동적으로 반영
+  @action
+  changeInputErrorMessage(inputName, errorMessage) {
+    let beforeFormData = toJS(this.formData);
+    let inputData = beforeFormData[inputName];
+    let updateInputData = update(inputData, {
+      $merge: {
+        errorMessage: errorMessage,
+        isValid: false
+      }
+    });
+    let updateFormData = update(beforeFormData, {
+      $merge: {
+        [inputName]: updateInputData
+      }
+    });
+    this.formData = updateFormData;
+  }
+
+  // errorMessage 수동적으로 반영(멀티)
+  @action
+  changeInputErrorMessageArray(errorInfoArray) {
+    let updateFormData = toJS(this.formData);
+    if (errorInfoArray.length) {
+      let firstErrorInputData = null;
+      errorInfoArray.forEach((errorInfo) => {
+        let inputName = errorInfo.name;
+        let errorMessage = errorInfo.errorMessage;
+        let inputData = updateFormData[inputName];
+        let updateInputData = update(inputData, {
+          $merge: {
+            errorMessage: errorMessage,
+            isValid: false,
+            byPassValid: false
+          }
+        });
+        if (!firstErrorInputData) {
+          firstErrorInputData = updateInputData;
+        }
+        updateFormData = update(updateFormData, {
+          $merge: {
+            [inputName]: updateInputData
+          }
+        });
+      });
+    }
+    this.formData = updateFormData;
   }
 
   @computed

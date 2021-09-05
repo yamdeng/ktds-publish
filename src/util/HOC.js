@@ -214,6 +214,7 @@ const formState = (formData) => (WrappedComponent) =>
     }
 
     changeFormData(formData) {
+      debugger;
       this.setState({ formData: formData });
     }
 

@@ -299,6 +299,21 @@ function checkValidation(inputData, customErrorMessage) {
           ? inputData.notRequiredMessage
           : customErrorMessage || '필수 정보입니다';
         return validResult;
+      } else if (inputData.isArray && inputValue.length === 0) {
+        for (
+          let inputArrayIndex = 0;
+          inputArrayIndex < inputData.value.length;
+          inputArrayIndex++
+        ) {
+          let info = inputData.isArray[inputArrayIndex];
+          if (!info) {
+            validResult.isValid = false;
+            validResult.errorMessage = inputData.notRequiredMessage
+              ? inputData.notRequiredMessage
+              : customErrorMessage || '필수 정보입니다';
+            return validResult;
+          }
+        }
       }
     }
 
@@ -418,14 +433,21 @@ const validteRangeDate = function (startDate, endDate) {
   return success;
 };
 
-const getDefaultInputData = function (inputName, required) {
+const getDefaultInputData = function (inputName, required, value) {
+  if (!value) {
+    if (isNumber(value)) {
+      value = 0;
+    } else {
+      value = '';
+    }
+  }
   let inputData = {
     inputName: inputName,
     touched: false,
     isRequired: required,
     isValid: true,
     errorMessage: '',
-    value: ''
+    value: value
   };
   return inputData;
 };

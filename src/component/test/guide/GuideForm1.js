@@ -10,6 +10,7 @@ import AppDatePicker from 'component/ui/AppDatePicker';
 import AppTimePicker from 'component/ui/AppTimePicker';
 import ReactHelper from 'util/ReactHelper';
 import Constant from 'config/Constant';
+import ReactTooltip from 'react-tooltip';
 
 /*
 
@@ -82,7 +83,16 @@ class GuideForm1 extends Component {
                   changeValue={this.changeTitle}
                 />
               </span>
-              <button className="btn_text btn_green mobile_full">조회</button>
+              <ReactTooltip id="toolTip" type="info">
+                <span>조회입니다</span>
+              </ReactTooltip>
+              <button
+                className="btn_text btn_green"
+                data-tip
+                data-for="toolTip"
+              >
+                조회
+              </button>
             </div>
             <div className="form_cell f_wid20">
               <span className="form_group wid100 c_mr5">
@@ -202,6 +212,7 @@ class GuideForm1 extends Component {
               </span>
             </div>
           </div>
+          <hr className="line" />
           {/* 공개시작 시간, 공개종료 시간 */}
           <div className="form_table">
             <div className="form_cell f_wid100">
@@ -233,42 +244,156 @@ class GuideForm1 extends Component {
               </span>
             </div>
           </div>
-          <hr className="line" />
-          {/* 파일 첨부 영역 */}
           <div className="form_table">
-            <div className="form_cell f_wid100">
-              <span className="form_group wid50 c_mr5">
+            <div className="form_cell c_pb0 c_pt0">
+              <div className="radio-wrapper c_mr30">
                 <input
-                  type="text"
-                  className="form_tag center"
-                  disabled
-                  placeholder="xxxxx.pdf - 10kb"
+                  type="radio"
+                  id="useYn1"
+                  name={formData.useYn.inputName}
+                  value="Y"
+                  checked={formData.useYn.value === 'Y'}
+                  onChange={handleInputOnChange}
                 />
-                <label className="f_label" for="b">
-                  첨부
+                <label className="radio-label" for="useYn1">
+                  사용
                 </label>
-                <span className="icon icon_clear" style={{ display: 'block' }}>
-                  <i class="fas fa-times-circle"></i>
+              </div>
+              <div className="radio-wrapper">
+                <input
+                  type="radio"
+                  id="useYn2"
+                  name={formData.useYn.inputName}
+                  value="N"
+                  checked={formData.useYn.value === 'N'}
+                  onChange={handleInputOnChange}
+                />
+                <label className="radio-label" for="useYn2">
+                  미사용
+                </label>
+              </div>
+            </div>
+          </div>
+          <hr className="line" />
+          <div className="group_box_wrap invalid c_mt25">
+            <p className="txt">작업계획서</p>
+            <div className="form_table">
+              <div className="form_cell f_wid100">
+                <div className="checkbox-wrapper c_mr10 c_mt5">
+                  <input
+                    type="checkbox"
+                    name="checked1"
+                    id="checked1"
+                    checked={formData.checked1.value}
+                    onChange={handleInputOnChange}
+                  />
+                  <label className="checkbox-label" for="checked1">
+                    오거크레인 카고트럭
+                  </label>
+                </div>
+                <div className="checkbox-wrapper c_mt5">
+                  <input
+                    type="checkbox"
+                    name="checked2"
+                    id="checked2"
+                    checked={formData.checked2.value}
+                    onChange={handleInputOnChange}
+                  />
+                  <label className="checkbox-label" for="checked2">
+                    운반용 화물트럭
+                  </label>
+                </div>
+                {/* <span class="invalid_txt">유효하지 않습니다.</span> */}
+              </div>
+            </div>
+            <span class="invalid_txt">유효하지 않습니다.</span>
+          </div>
+          <hr className="line" />
+          {/* 파일첨부가 하나도 없을 경우 */}
+          <div className="group_box_wrap invalid c_mt25">
+            <p className="txt">파일 첨부</p>
+            <div className="form_table">
+              <div className="form_cell f_wid100">
+                <span className="form_group wid70 c_mr5">
+                  <input
+                    type="text"
+                    className="form_tag center"
+                    disabled
+                    placeholder="파일을 첨부해주세요"
+                  />
+                  <label className="f_label" for="b">
+                    첨부
+                  </label>
                 </span>
-              </span>
-              <button className="btn_icon btn_dark_gray c_mr5">
-                <i class="fas fa-times-circle"></i>
-              </button>
+                <button className="btn_icon btn_dark_gray c_mr5">
+                  <i class="fas fa-folder-open"></i>
+                </button>
+              </div>
             </div>
           </div>
-          <div className="form_table">
-            <div className="form_cell f_wid100 c_pt5">
-              <span className="form_group wid50 c_mr5">
-                <input type="hidden" className="form_tag" />
-              </span>
-              <button className="btn_icon btn_dark_gray c_mr5">
-                <i class="fas fa-folder-open"></i>
-              </button>
+          {/* 파일 첨부 영역 */}
+          <div className="group_box_wrap invalid c_mt25">
+            <p className="txt">파일 첨부</p>
+            <div className="form_table">
+              <div className="form_cell f_wid100">
+                <span className="form_group wid70 c_mr5">
+                  <input
+                    type="text"
+                    className="form_tag center"
+                    disabled
+                    placeholder="xxxxx.pdf - 10kb"
+                  />
+                  <label className="f_label" for="b">
+                    첨부
+                  </label>
+                  <span
+                    className="icon icon_clear"
+                    style={{ display: 'block' }}
+                  >
+                    <i class="fas fa-times-circle"></i>
+                  </span>
+                </span>
+                <button className="btn_icon btn_dark_gray c_mr5">
+                  <i class="fas fa-times-circle"></i>
+                </button>
+              </div>
+            </div>
+            <div className="form_table">
+              <div className="form_cell f_wid100">
+                <span className="form_group wid70 c_mr5">
+                  <input
+                    type="text"
+                    className="form_tag center"
+                    disabled
+                    placeholder="xxxxx.pdf - 10kb"
+                  />
+                  <label className="f_label" for="b">
+                    첨부
+                  </label>
+                  <span
+                    className="icon icon_clear"
+                    style={{ display: 'block' }}
+                  >
+                    <i class="fas fa-times-circle"></i>
+                  </span>
+                </span>
+                <button className="btn_icon btn_dark_gray c_mr5">
+                  <i class="fas fa-times-circle"></i>
+                </button>
+              </div>
+            </div>
+            <div className="form_table">
+              <div className="form_cell f_wid100 c_pt5">
+                <span className="form_group wid70 c_mr5">
+                  <input type="hidden" className="form_tag" />
+                </span>
+                <button className="btn_icon btn_dark_gray c_mr5">
+                  <i class="fas fa-folder-open"></i>
+                </button>
+              </div>
             </div>
           </div>
-          <span class="invalid_txt" style={{ color: '#ed2129' }}>
-            유효하지 않습니다.
-          </span>
+          <span style={{ color: '#ed2129' }}>유효하지 않습니다.</span>
         </div>
         {/* 하단 버튼 */}
         <p className="c_pt15 right">
