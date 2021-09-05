@@ -262,13 +262,13 @@
   .invalid_txt {
     position: absolute;
     left: 11px;
-    top: 37px;
+    top: 34px;
     font-size: 11px;
     color: #{$col-red};
     &.textarea {
-      top: 202px;
+      top: 199px;
       @include mobile {
-        top: 102px;
+        top: 99px;
       }
     }
   }
