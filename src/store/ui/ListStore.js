@@ -176,6 +176,15 @@ class ListStore {
     this.list = newList;
   }
 
+  // 페이지 파리미터 공통
+  getApiParam() {
+    let apiParam = {
+      size: this.pageSize,
+      page: this.currentPage
+    };
+    return apiParam;
+  }
+
   // 목록 clear
   @action
   clearList() {

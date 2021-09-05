@@ -162,6 +162,24 @@ class TableTest1 extends Component {
               </button>
             </div>
           </div>
+          <div className="form_table">
+            <div className="form_cell f_wid50">
+              <span className="form_group wid70 c_mr5">
+                <input
+                  type="text"
+                  className="form_tag"
+                  disabled
+                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                />
+                <label className="f_label" for="b">
+                  공사번호2
+                </label>
+              </span>
+              <button className="btn_icon btn_dark_gray">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
           <div className="group_box_wrap mobile_block">
             <span className="txt">확인자 </span>
             <div className="form_table">
