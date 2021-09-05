@@ -12,6 +12,7 @@ import SearchInputClear from './SearchInputClear';
      -value : input value(값 여부에 따라 버튼 보이고 않보이게
      -label : input label
      -changeValue : input 값 변경 handler 함수
+     -onEnter(option) : 엔터키 핸들러
 
 */
 
@@ -22,7 +23,7 @@ class SearchInput extends React.Component {
   }
 
   render() {
-    let { inputId, value, label, changeValue } = this.props;
+    let { inputId, value, label, changeValue, onEnter } = this.props;
     let labelId = inputId ? inputId : Helper.getUuid();
     return (
       <React.Fragment>
@@ -32,6 +33,7 @@ class SearchInput extends React.Component {
           className="form_tag"
           value={value}
           onChange={changeValue}
+          onKeyPress={onEnter}
         />
         <label className="f_label" for={labelId}>
           {label}
