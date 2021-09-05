@@ -153,6 +153,9 @@ const formState = (formData) => (WrappedComponent) =>
 
       // getApiParam
       this.getApiParam = this.getApiParam.bind(this);
+
+      // setFormData
+      this.setFormData = this.setFormData.bind(this);
     }
 
     handleInputOnChange(event) {
@@ -272,6 +275,8 @@ const formState = (formData) => (WrappedComponent) =>
       return apiParam;
     }
 
+    setFormData(data) {}
+
     render() {
       let { formData } = this.state;
       return (
@@ -285,6 +290,7 @@ const formState = (formData) => (WrappedComponent) =>
           changeFormData={this.changeFormData}
           handleInputOnChange={this.handleInputOnChange}
           handleInputOnBlur={this.handleInputOnBlur}
+          setFormData={this.setFormData}
         />
       );
     }
