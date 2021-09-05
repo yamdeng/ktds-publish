@@ -111,10 +111,10 @@ const list = [
   },
   {
     title: '공사 편성 모달',
-    fileName: 'PConstructionOrganizeModal.js',
+    fileName: 'PSubjectOrganizeModal.js',
     pageCount: '8',
     success: true,
-    modalType: ModalType.CONSTRUCTION_ORGANIZE_MODAL,
+    modalType: ModalType.SUBJECT_ORGANIZE_MODAL,
     isAlert: false,
     isMobileFull: false,
     description: ''

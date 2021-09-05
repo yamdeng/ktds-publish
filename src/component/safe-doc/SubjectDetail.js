@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 import HOC from 'util/HOC';
-import ConstructionSeniorTab from 'component/safe-doc/ConstructionSeniorTab';
-import ConstructionCommitteeTab from 'component/safe-doc/ConstructionCommitteeTab';
-import ConstructionCouncilTab from 'component/safe-doc/ConstructionCouncilTab';
+import SubjectSeniorTab from 'component/safe-doc/SubjectSeniorTab';
+import SubjectCommitteeTab from 'component/safe-doc/SubjectCommitteeTab';
+import SubjectCouncilTab from 'component/safe-doc/SubjectCouncilTab';
 
 /*
 
@@ -22,7 +22,7 @@ import ConstructionCouncilTab from 'component/safe-doc/ConstructionCouncilTab';
 @withRouter
 @inject('boardListStore')
 @observer
-class ConstructionDetail extends Component {
+class SubjectDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -90,12 +90,12 @@ class ConstructionDetail extends Component {
           <li className="three ">협의체</li>
         </ul>
         {/* 탭 내용 */}
-        {/* <ConstructionSeniorTab /> */}
-        {/* <ConstructionCommitteeTab /> */}
-        <ConstructionCouncilTab />
+        {/* <SubjectSeniorTab /> */}
+        {/* <SubjectCommitteeTab /> */}
+        <SubjectCouncilTab />
       </div>
     );
   }
 }
 
-export default ConstructionDetail;
+export default SubjectDetail;

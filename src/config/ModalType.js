@@ -58,11 +58,11 @@ ModalType.SAFE_DOC_TEMPLATE_FORM_MODAL = 'safe-doc-template-form-modal';
 ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL =
   'safe-doc-template-apply-form-modal';
 
-// 등록 공사 찾기 모달 : ConstructionSearchModal
-ModalType.CONSTRUCTION_SEARCH_MODAL = 'construction-search-modal';
+// 등록 공사 찾기 모달 : SubjectSearchModal
+ModalType.SUBJECT_SEARCH_MODAL = 'construction-search-modal';
 
-// 공사 편성 모달 : ConstructionOrganizeModal
-ModalType.CONSTRUCTION_ORGANIZE_MODAL = 'construction-organize-modal';
+// 공사 편성 모달 : SubjectOrganizeModal
+ModalType.SUBJECT_ORGANIZE_MODAL = 'construction-organize-modal';
 
 // 유예 사유 모달(공통 모달) : CommonTextAreaModal
 ModalType.COMMON_TEXTAREA_MODAL = 'common-textarea-modal';

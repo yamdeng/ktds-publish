@@ -9,7 +9,7 @@ import PageSizeSelect from 'component/ui/PageSizeSelect';
 
 /*
 
-    등록 공사 찾기 모달 : ModalType.CONSTRUCTION_SEARCH_MODAL
+    등록 공사 찾기 모달 : ModalType.SUBJECT_SEARCH_MODAL
 
     modalData 설명
     {
@@ -32,7 +32,7 @@ import PageSizeSelect from 'component/ui/PageSizeSelect';
 @withRouter
 @inject('alertModalStore', 'modalStore', 'boardListStore')
 @observer
-class ConstructionSearchModal extends React.Component {
+class SubjectSearchModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -162,4 +162,4 @@ class ConstructionSearchModal extends React.Component {
   }
 }
 
-export default ConstructionSearchModal;
+export default SubjectSearchModal;

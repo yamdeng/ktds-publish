@@ -24,8 +24,8 @@ import WorkOrderDashBoard from 'component/safe-check/WorkOrderDashBoard';
 import SafeDocTemplateList from 'component/safe-doc/SafeDocTemplateList';
 import SafeDocTemplateApplyList from 'component/safe-doc/SafeDocTemplateApplyList';
 import SafeManagerList from 'component/safe-doc/SafeManagerList';
-import ConstructionList from 'component/safe-doc/ConstructionList';
-import ConstructionDetail from 'component/safe-doc/ConstructionDetail';
+import SubjectList from 'component/safe-doc/SubjectList';
+import SubjectDetail from 'component/safe-doc/SubjectDetail';
 import SafeDocScheduleList from 'component/safe-doc/SafeDocScheduleList';
 import SafeDocList from 'component/safe-doc/SafeDocList';
 import SafeDocForm from 'component/safe-doc/SafeDocForm';
@@ -160,12 +160,8 @@ class Main extends Component {
             component={SafeDocTemplateApplyList}
           />
           <Route exact path="/safe-managers" component={SafeManagerList} />
-          <Route exact path="/constructions" component={ConstructionList} />
-          <Route
-            exact
-            path="/constructions/:id"
-            component={ConstructionDetail}
-          />
+          <Route exact path="/constructions" component={SubjectList} />
+          <Route exact path="/constructions/:id" component={SubjectDetail} />
           <Route
             exact
             path="/safe-doc-schedules"

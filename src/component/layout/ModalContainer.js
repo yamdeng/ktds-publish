@@ -19,8 +19,8 @@ import CommonSignModal from 'component/modal/CommonSignModal';
 import WorkOrderListModal from 'component/modal/WorkOrderListModal';
 import SafeDocTemplateFormModal from 'component/modal/SafeDocTemplateFormModal';
 import SafeDocTemplateApplyFormModal from 'component/modal/SafeDocTemplateApplyFormModal';
-import ConstructionSearchModal from 'component/modal/ConstructionSearchModal';
-import ConstructionOrganizeModal from 'component/modal/ConstructionOrganizeModal';
+import SubjectSearchModal from 'component/modal/SubjectSearchModal';
+import SubjectOrganizeModal from 'component/modal/SubjectOrganizeModal';
 import CommonTextAreaModal from 'component/modal/CommonTextAreaModal';
 import SafeDocSearchModal from 'component/modal/SafeDocSearchModal';
 import SafeClothSupplyFormModal from 'component/modal/SafeClothSupplyFormModal';
@@ -107,11 +107,11 @@ class ModalContainer extends React.Component {
             <SafeDocTemplateApplyFormModal modalData={modalData} />
           );
           break;
-        case ModalType.CONSTRUCTION_SEARCH_MODAL:
-          modalComponent = <ConstructionSearchModal modalData={modalData} />;
+        case ModalType.SUBJECT_SEARCH_MODAL:
+          modalComponent = <SubjectSearchModal modalData={modalData} />;
           break;
-        case ModalType.CONSTRUCTION_ORGANIZE_MODAL:
-          modalComponent = <ConstructionOrganizeModal modalData={modalData} />;
+        case ModalType.SUBJECT_ORGANIZE_MODAL:
+          modalComponent = <SubjectOrganizeModal modalData={modalData} />;
           break;
         case ModalType.COMMON_TEXTAREA_MODAL:
           modalComponent = <CommonTextAreaModal modalData={modalData} />;

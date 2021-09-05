@@ -117,13 +117,13 @@ const modalList = [
   },
   {
     name: '등록 공사 찾기 모달',
-    modalType: ModalType.CONSTRUCTION_SEARCH_MODAL,
+    modalType: ModalType.SUBJECT_SEARCH_MODAL,
     isAlertModal: false,
     modalData: {}
   },
   {
     name: '공사 편성 모달',
-    modalType: ModalType.CONSTRUCTION_ORGANIZE_MODAL,
+    modalType: ModalType.SUBJECT_ORGANIZE_MODAL,
     isAlertModal: false,
     modalData: {}
   },

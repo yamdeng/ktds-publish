@@ -24,8 +24,8 @@ class UiCommonService {
   }
 
   // 공사 번호 검색 모달 오픈
-  openConstructionSearchModal(selectHandleFunction) {
-    ModalService.openModal(ModalType.CONSTRUCTION_SEARCH_MODAL, {
+  openSubjectSearchModal(selectHandleFunction) {
+    ModalService.openModal(ModalType.SUBJECT_SEARCH_MODAL, {
       selectHandler: selectHandleFunction
     });
   }

@@ -16,7 +16,7 @@ import { withRouter } from 'react-router-dom';
 @withRouter
 @inject('boardListStore')
 @observer
-class ConstructionCouncilTab extends Component {
+class SubjectCouncilTab extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -93,4 +93,4 @@ class ConstructionCouncilTab extends Component {
   }
 }
 
-export default ConstructionCouncilTab;
+export default SubjectCouncilTab;

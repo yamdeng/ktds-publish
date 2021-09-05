@@ -25,16 +25,15 @@ import ModalType from 'config/ModalType';
 @withRouter
 @inject('boardListStore', 'uiStore')
 @observer
-class ConstructionList extends Component {
+class SubjectList extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.openConstructionOrganizeModal =
-      this.openConstructionOrganizeModal.bind(this);
+    this.openSubjectOrganizeModal = this.openSubjectOrganizeModal.bind(this);
   }
 
-  openConstructionOrganizeModal() {
-    ModalService.openModal(ModalType.CONSTRUCTION_ORGANIZE_MODAL, {});
+  openSubjectOrganizeModal() {
+    ModalService.openModal(ModalType.SUBJECT_ORGANIZE_MODAL, {});
   }
 
   componentDidMount() {}
@@ -159,13 +158,13 @@ class ConstructionList extends Component {
             <button className="btn_text btn_green c_mr5">엑셀다운</button>
             <button
               className="btn_text btn_green c_mr5"
-              onClick={this.openConstructionOrganizeModal}
+              onClick={this.openSubjectOrganizeModal}
             >
               년도 직영공사 편성
             </button>
             <button
               className="btn_text btn_green"
-              onClick={this.openConstructionOrganizeModal}
+              onClick={this.openSubjectOrganizeModal}
             >
               년도 도급공사 편성
             </button>
@@ -177,4 +176,4 @@ class ConstructionList extends Component {
   }
 }
 
-export default ConstructionList;
+export default SubjectList;

@@ -13,7 +13,7 @@ import PMemberRoleUpdateModal from 'publish/modal/PMemberRoleUpdateModal';
 import PBoardCommentListModal from 'publish/modal/PBoardCommentListModal';
 import PSafeDocTemplateFormModal from 'publish/modal/PSafeDocTemplateFormModal';
 import PTemplateApplyModal from 'publish/modal/PTemplateApplyModal';
-import PConstructionOrganizeModal from 'publish/modal/PConstructionOrganizeModal';
+import PSubjectOrganizeModal from 'publish/modal/PSubjectOrganizeModal';
 import PCommonSimpleDescriptionModal from 'publish/modal/PCommonSimpleDescriptionModal';
 import PSafeClothSupplyFormModal from 'publish/modal/PSafeClothSupplyFormModal';
 import PCheckItemFormModal from 'publish/modal/PCheckItemFormModal';
@@ -68,8 +68,8 @@ class PModalContainer extends React.Component {
       case ModalType.SAFE_DOC_TEMPLATE_APPLY_FORM_MODAL:
         modalComponent = <PTemplateApplyModal modalData={modalData} />;
         break;
-      case ModalType.CONSTRUCTION_ORGANIZE_MODAL:
-        modalComponent = <PConstructionOrganizeModal modalData={modalData} />;
+      case ModalType.SUBJECT_ORGANIZE_MODAL:
+        modalComponent = <PSubjectOrganizeModal modalData={modalData} />;
         break;
       case ModalType.COMMON_TEXTAREA_MODAL:
         modalComponent = (

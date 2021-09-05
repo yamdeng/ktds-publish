@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 /*
 
-    이름 : 공사 상세(안전선임자 탭)
+    이름 : 공사 상세(안전위원회 탭)
 
     route : /constructions/:id
 
@@ -16,7 +16,7 @@ import { withRouter } from 'react-router-dom';
 @withRouter
 @inject('boardListStore')
 @observer
-class ConstructionSeniorTab extends Component {
+class SubjectCommitteeTab extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -69,4 +69,4 @@ class ConstructionSeniorTab extends Component {
   }
 }
 
-export default ConstructionSeniorTab;
+export default SubjectCommitteeTab;
