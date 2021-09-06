@@ -127,7 +127,7 @@ class BoardForm extends Component {
                   label="공개시작기간"
                   value={null}
                   valueFormat="YYYY-MM-DD"
-                  changeDate={(date) => {}}
+                  onChange={(date) => {}}
                   required={true}
                 />
               </span>
@@ -137,7 +137,7 @@ class BoardForm extends Component {
                   label="공개종료기간"
                   value={null}
                   valueFormat="YYYY-MM-DD"
-                  changeDate={(date) => {}}
+                  onChange={(date) => {}}
                   required={true}
                 />
               </span>

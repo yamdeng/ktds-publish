@@ -187,7 +187,7 @@ class FormTest1 extends Component {
                   label="공개종료기간333"
                   value={null}
                   valueFormat="YYYY-MM-DD"
-                  changeDate={(date) => {}}
+                  onChange={(date) => {}}
                   required={true}
                 />
               </span>

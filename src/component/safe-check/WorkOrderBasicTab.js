@@ -80,7 +80,7 @@ class WorkOrderBasicTab extends Component {
                 label="작업일시"
                 value={null}
                 valueFormat="YYYY-MM-DD"
-                changeDate={(date) => {}}
+                onChange={(date) => {}}
                 required={true}
               />
             </span>
