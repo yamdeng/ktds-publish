@@ -152,6 +152,19 @@ class ListStore {
     return allChecked;
   }
 
+  @computed
+  checkedItem() {
+    let itemChecked = false;
+    let list = toJS(this.list);
+    for (let index = 0; index < list.length; index++) {
+      if (list[index].checked) {
+        itemChecked = true;
+        break;
+      }
+    }
+    return itemChecked;
+  }
+
   // 테이블 전체 선택 박스 toggle
   @action
   toggleTableAllChecked() {
@@ -159,13 +172,13 @@ class ListStore {
     let newList = [];
     if (this.checkedAllList) {
       // 전체 해제
-      list.map((info) => {
+      newList = list.map((info) => {
         info.checked = false;
         return info;
       });
     } else {
       // 전체 선택
-      list.map((info) => {
+      newList = list.map((info) => {
         info.checked = true;
         return info;
       });
@@ -184,6 +197,11 @@ class ListStore {
       }
     });
     this.list = newList;
+  }
+
+  getCheckedList() {
+    let list = toJS(this.list);
+    return list.filter((e) => e.checked);
   }
 
   // 페이지 파리미터 공통
