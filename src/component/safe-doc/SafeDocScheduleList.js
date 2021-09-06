@@ -59,7 +59,7 @@ class SafeDocScheduleList extends Component {
                   value={'111111'}
                   label="공사ID"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
             </div>
@@ -86,7 +86,7 @@ class SafeDocScheduleList extends Component {
                   value={''}
                   label="템플릿"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -96,7 +96,7 @@ class SafeDocScheduleList extends Component {
                   value={''}
                   label="일정상태"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>

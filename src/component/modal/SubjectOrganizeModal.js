@@ -61,7 +61,7 @@ class SubjectOrganizeModal extends React.Component {
                     value={''}
                     label="공사유형"
                     codeType="boardType"
-                    changeValue={() => {}}
+                    onChange={() => {}}
                   />
                 </span>
               </div>
@@ -73,7 +73,7 @@ class SubjectOrganizeModal extends React.Component {
                     value={''}
                     label="공사년도"
                     codeType="yearList"
-                    changeValue={() => {}}
+                    onChange={() => {}}
                   />
                 </span>
               </div>

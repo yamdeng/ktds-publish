@@ -69,7 +69,7 @@ class MemberRoleFormModal extends React.Component {
                     value={''}
                     label="사번"
                     clearInput={this.clearInput}
-                    changeValue={this.changeTitle}
+                    onChange={this.changeTitle}
                   />
                 </span>
                 <span className="form_group form_search wid50 c_mr5">
@@ -101,10 +101,10 @@ class MemberRoleFormModal extends React.Component {
                       <td>한성유통</td>
                       <td className="c_pt0 c_pb0">
                         <SwitchButton
-                          inputId=""
+                          id=""
                           inputName=""
                           value={true}
-                          changeValue={() => {}}
+                          onChange={() => {}}
                           yesLabel="YES"
                           noLabel="NO"
                         />

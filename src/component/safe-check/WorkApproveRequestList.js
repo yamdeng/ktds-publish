@@ -52,7 +52,7 @@ class WorkApproveRequestList extends Component {
                   value={'111111'}
                   label="승인자 사번"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
             </div>

@@ -89,7 +89,7 @@ class SafeDocTemplateList extends Component {
                   value={''}
                   label="템플릿명"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
             </div>
@@ -101,7 +101,7 @@ class SafeDocTemplateList extends Component {
                   value={''}
                   label="카테고리"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -111,7 +111,7 @@ class SafeDocTemplateList extends Component {
                   value={''}
                   label="사용여부"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>

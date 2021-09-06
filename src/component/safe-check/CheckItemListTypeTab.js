@@ -58,7 +58,7 @@ class CheckItemListTypeTab extends Component {
                   value={''}
                   label="작업부문"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
               <span className="form_group wid30 c_mr5">
@@ -66,7 +66,7 @@ class CheckItemListTypeTab extends Component {
                   value={''}
                   label="작업유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
               <button className="btn_text btn_green mobile_full">조회</button>

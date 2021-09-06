@@ -54,7 +54,7 @@ class SubjectList extends Component {
                   value={'111111'}
                   label="공사명"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
             </div>
@@ -75,7 +75,7 @@ class SubjectList extends Component {
                   value={''}
                   label="공사유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -85,7 +85,7 @@ class SubjectList extends Component {
                   value={''}
                   label="진행상태"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>

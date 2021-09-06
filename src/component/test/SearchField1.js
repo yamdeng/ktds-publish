@@ -45,7 +45,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="검색어"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <div className="checkbox-wrapper">
@@ -65,7 +65,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -75,7 +75,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="공개"
                   codeType="publicType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -87,7 +87,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -97,7 +97,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -117,7 +117,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -127,7 +127,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -162,7 +162,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="검색어"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <div className="checkbox-wrapper">
@@ -182,7 +182,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -192,7 +192,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="공개"
                   codeType="publicType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -204,7 +204,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -214,7 +214,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -234,7 +234,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="작업ID"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <span className="form_group form_search wid60">
@@ -242,7 +242,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="작업명"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
             </div>
@@ -252,7 +252,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="등록자 사번"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <span className="form_group wid40 c_mr5">
@@ -289,7 +289,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="승인자 사번"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <span className="form_group wid40 c_mr5">
@@ -310,7 +310,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="상태"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -320,7 +320,7 @@ class SearchField1 extends Component {
                   value={''}
                   label="작업자 사번"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <span className="form_group wid40 c_mr5">

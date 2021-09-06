@@ -5,13 +5,13 @@ import SearchInputClear from './SearchInputClear';
 /*
 
     검색 필드 공통
-     : <SearchInput inputId='' value={''} label='' changeValue={() => {}}/>
+     : <SearchInput id='' value={''} label='' onChange={() => {}}/>
 
     props
-     -inputId(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
+     -id(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
      -value : input value(값 여부에 따라 버튼 보이고 않보이게
      -label : input label
-     -changeValue : input 값 변경 handler 함수
+     -onChange : input 값 변경 handler 함수
      -onEnter(option) : 엔터키 핸들러
 
 */
@@ -23,8 +23,8 @@ class SearchInput extends React.Component {
   }
 
   render() {
-    let { inputId, value, label, changeValue, onEnter } = this.props;
-    let labelId = inputId ? inputId : Helper.getUuid();
+    let { id, value, label, onChange, onEnter } = this.props;
+    let labelId = id ? id : Helper.getUuid();
     return (
       <React.Fragment>
         <input
@@ -32,7 +32,7 @@ class SearchInput extends React.Component {
           type="text"
           className="form_tag"
           value={value}
-          onChange={changeValue}
+          onChange={onChange}
           onKeyPress={onEnter}
         />
         <label className="f_label" for={labelId}>
@@ -42,7 +42,7 @@ class SearchInput extends React.Component {
           <i class="fas fa-search"></i>
         </span>
         <SearchInputClear
-          clearInput={() => changeValue({ target: { value: '' } })}
+          clearInput={() => onChange({ target: { value: '' } })}
           value={value}
         />
       </React.Fragment>

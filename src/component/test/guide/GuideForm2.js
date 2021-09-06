@@ -90,7 +90,7 @@ class GuideForm2 extends Component {
                   value={''}
                   label="게시판 번호"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <button className="btn_text btn_green mobile_full">조회</button>

@@ -46,7 +46,7 @@ class BoardForm extends Component {
                   value={''}
                   label="게시판 번호"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <button className="btn_text btn_green mobile_full">조회</button>
@@ -84,7 +84,7 @@ class BoardForm extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                   required={true}
                 />
               </span>
@@ -123,7 +123,7 @@ class BoardForm extends Component {
             <div className="form_cell f_wid100">
               <span className="form_group wid40 c_mr5">
                 <AppDatePicker
-                  inputId="startDate"
+                  id="startDate"
                   label="공개시작기간"
                   value={null}
                   valueFormat="YYYY-MM-DD"
@@ -133,7 +133,7 @@ class BoardForm extends Component {
               </span>
               <span className="form_group wid40">
                 <AppDatePicker
-                  inputId="endDate"
+                  id="endDate"
                   label="공개종료기간"
                   value={null}
                   valueFormat="YYYY-MM-DD"

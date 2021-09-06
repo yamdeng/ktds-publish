@@ -46,7 +46,7 @@ class WorkOrderForm extends Component {
                   value={''}
                   label="작업지시 ID"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <button className="btn_text btn_green mobile_full">조회</button>

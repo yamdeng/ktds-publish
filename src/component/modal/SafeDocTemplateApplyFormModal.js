@@ -53,7 +53,7 @@ class SafeDocTemplateApplyFormModal extends React.Component {
                     value={''}
                     label="템플릿"
                     codeType="boardType"
-                    changeValue={() => {}}
+                    onChange={() => {}}
                     required={true}
                   />
                 </span>

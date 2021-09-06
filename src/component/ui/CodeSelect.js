@@ -1,6 +1,7 @@
 import React from 'react';
 import Helper from 'util/Helper';
 import Code from 'config/Code';
+import rootStore from 'store/RootStore';
 
 /*
 
@@ -37,10 +38,17 @@ class CodeSelect extends React.Component {
       codeList,
       required,
       errorMessage,
-      onBlur
+      onBlur,
+      isFrontCode,
+      emptyPlaceHolderText
     } = this.props;
     let labelId = id ? id : Helper.getUuid();
-    let resultCodeList = codeType ? Code[codeType] : codeList;
+    let resultCodeList = [];
+    if (isFrontCode) {
+      resultCodeList = codeType ? Code[codeType] : codeList;
+    } else {
+      // resultCodeList = rootStore.appStore.getCodeByGrpCode(codeType) || [];
+    }
     return (
       <React.Fragment>
         <select
@@ -55,6 +63,9 @@ class CodeSelect extends React.Component {
           onChange={onChange}
           onBlur={onBlur}
         >
+          {emptyPlaceHolderText ? (
+            <option value="">{emptyPlaceHolderText}</option>
+          ) : null}
           {resultCodeList.map((codeInfo) => {
             let { value, name } = codeInfo;
             return <option value={value}>{name}</option>;

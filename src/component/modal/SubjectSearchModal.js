@@ -58,7 +58,7 @@ class SubjectSearchModal extends React.Component {
                     value={''}
                     label="공사유형"
                     codeType="boardType"
-                    changeValue={() => {}}
+                    onChange={() => {}}
                   />
                 </span>
               </div>
@@ -68,7 +68,7 @@ class SubjectSearchModal extends React.Component {
                     value={''}
                     label="공사명"
                     clearInput={this.clearInput}
-                    changeValue={this.changeTitle}
+                    onChange={this.changeTitle}
                   />
                 </span>
               </div>

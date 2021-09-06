@@ -183,7 +183,7 @@ class FormTest1 extends Component {
                   customInput={<ExampleCustomInput />}
                 /> */}
                 <AppDatePicker
-                  inputId="startDate"
+                  id="startDate"
                   label="공개종료기간333"
                   value={null}
                   valueFormat="YYYY-MM-DD"
@@ -208,7 +208,7 @@ class FormTest1 extends Component {
               </span>
               <span className="form_group wid40">
                 <AppTimePicker
-                  inputId="startTime"
+                  id="startTime"
                   label="시작시간"
                   value="14:59"
                   valueFormat="HH:mm"

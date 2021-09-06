@@ -76,7 +76,7 @@ class WorkOrderBasicTab extends Component {
           <div className="form_cell c_pt20">
             <span className="form_group wid35 c_mr5">
               <AppDatePicker
-                inputId="startDate"
+                id="startDate"
                 label="작업일시"
                 value={null}
                 valueFormat="YYYY-MM-DD"
@@ -86,7 +86,7 @@ class WorkOrderBasicTab extends Component {
             </span>
             <span className="form_group wid25 c_mr5">
               <AppTimePicker
-                inputId="startDate"
+                id="startDate"
                 label="시작시간"
                 value={null}
                 valueFormat="YYYY-MM-DD"
@@ -97,7 +97,7 @@ class WorkOrderBasicTab extends Component {
             <span className="form_group center c_mr5">-</span>
             <span className="form_group wid25 ">
               <AppTimePicker
-                inputId="startDate"
+                id="startDate"
                 label="종료시간"
                 value={null}
                 valueFormat="YYYY-MM-DD"
@@ -128,7 +128,7 @@ class WorkOrderBasicTab extends Component {
                 value={''}
                 label="작업 유형"
                 codeType="boardType"
-                changeValue={() => {}}
+                onChange={() => {}}
                 required={true}
               />
             </span>

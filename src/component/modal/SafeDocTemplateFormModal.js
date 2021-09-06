@@ -88,7 +88,7 @@ class SafeDocTemplateFormModal extends React.Component {
                     value={''}
                     label="템플릿 분류"
                     codeType="boardType"
-                    changeValue={() => {}}
+                    onChange={() => {}}
                   />
                 </span>
               </div>
@@ -116,7 +116,7 @@ class SafeDocTemplateFormModal extends React.Component {
                     value={''}
                     label="작성 주기"
                     codeType="boardType"
-                    changeValue={() => {}}
+                    onChange={() => {}}
                   />
                 </span>
               </div>
@@ -128,7 +128,7 @@ class SafeDocTemplateFormModal extends React.Component {
                     value={''}
                     label="보존연한"
                     codeType="boardType"
-                    changeValue={() => {}}
+                    onChange={() => {}}
                   />
                 </span>
               </div>
@@ -198,7 +198,7 @@ class SafeDocTemplateFormModal extends React.Component {
                       value={''}
                       label="결재선 추가"
                       codeType="boardType"
-                      changeValue={() => {}}
+                      onChange={() => {}}
                     />
                   </span>
                   <button className="btn_icon btn_dark_gray c_mr5">

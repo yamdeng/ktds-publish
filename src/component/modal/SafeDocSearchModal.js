@@ -102,7 +102,7 @@ class SafeDocSearchModal extends React.Component {
                     value={''}
                     label="템플릿"
                     codeType="boardType"
-                    changeValue={() => {}}
+                    onChange={() => {}}
                   />
                 </span>
                 <button className="btn_icon btn_dark_gray">

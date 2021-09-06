@@ -60,7 +60,7 @@ class SafeDocTemplateApplyList extends Component {
                   value={''}
                   label="공사유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>

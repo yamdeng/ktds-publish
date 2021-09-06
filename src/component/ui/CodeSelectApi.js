@@ -5,11 +5,11 @@ import Helper from 'util/Helper';
 /*
 
     code 콤보 박스 공통
-     : <CodeSelectApi inputId='' inputName='' value={''} label='직책코드' 
-        codeType='rankType' changeValue={() => {}} emptyValueText=''/>
+     : <CodeSelectApi id='' inputName='' value={''} label='직책코드' 
+        codeType='rankType' onChange={() => {}} emptyValueText=''/>
 
     props
-     -inputId(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
+     -id(option) : 라벨을 매핑시키기 위한 id(없으면 uuid로 정의)
      -inputName(option) : name 속성 값
      -label : input label
      -value : code value
@@ -53,10 +53,9 @@ class CodeSelectApi extends React.Component {
   }
 
   render() {
-    let { label, value, changeValue, inputId, inputName, emptyValueText } =
-      this.props;
+    let { label, value, onChange, id, inputName, emptyValueText } = this.props;
     let { codeList } = this.state;
-    let labelId = inputId ? inputId : Helper.getUuid();
+    let labelId = id ? id : Helper.getUuid();
     return (
       <React.Fragment>
         <select
@@ -64,7 +63,7 @@ class CodeSelectApi extends React.Component {
           id={labelId}
           className="form_tag_select isValue"
           value={value}
-          onChange={changeValue}
+          onChange={onChange}
         >
           <option value="">
             {emptyValueText ? emptyValueText : '선택해주세요'}

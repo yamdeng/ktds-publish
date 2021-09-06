@@ -94,7 +94,7 @@ class BoardList extends Component {
                   value={''}
                   label="검색어"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <div className="checkbox-wrapper">
@@ -116,7 +116,7 @@ class BoardList extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>
@@ -126,7 +126,7 @@ class BoardList extends Component {
                   value={''}
                   label="게시유형"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>

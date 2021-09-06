@@ -80,7 +80,7 @@ class GuideForm1 extends Component {
                   value={''}
                   label="게시판 번호"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
               <ReactTooltip id="toolTip" type="info">

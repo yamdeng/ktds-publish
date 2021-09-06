@@ -59,7 +59,7 @@ class SafeDocList extends Component {
                   value={'111111'}
                   label="공사ID"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
             </div>
@@ -86,7 +86,7 @@ class SafeDocList extends Component {
                   value={''}
                   label="템플릿"
                   codeType="boardType"
-                  changeValue={() => {}}
+                  onChange={() => {}}
                 />
               </span>
             </div>

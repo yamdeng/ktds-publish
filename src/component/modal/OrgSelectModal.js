@@ -100,7 +100,7 @@ class OrgSelectModal extends React.Component {
                         value={orgName}
                         label="조직명"
                         clearInput={this.clearInput}
-                        changeValue={this.changeOrgName}
+                        onChange={this.changeOrgName}
                       />
                     </span>
                     <button className="btn_text btn_green mobile_full">

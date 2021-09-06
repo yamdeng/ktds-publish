@@ -66,7 +66,7 @@ class MemberRoleList extends Component {
                   value={''}
                   label="사번"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
             </div>
@@ -76,7 +76,7 @@ class MemberRoleList extends Component {
                   value={''}
                   label="성명"
                   clearInput={this.clearInput}
-                  changeValue={this.changeTitle}
+                  onChange={this.changeTitle}
                 />
               </span>
             </div>
