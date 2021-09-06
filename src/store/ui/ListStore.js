@@ -187,7 +187,7 @@ class ListStore {
   }
 
   // 페이지 파리미터 공통
-  getApiParam() {
+  getPageParam() {
     let apiParam = {
       size: this.pageSize,
       page: this.currentPage

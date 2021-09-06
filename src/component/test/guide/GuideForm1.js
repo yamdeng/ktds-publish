@@ -58,7 +58,7 @@ class GuideForm1 extends Component {
   componentDidMount() {
     let { guideFormStore } = this.props;
     let detailId = this.props.match.params.detailId;
-    if (detailId !== Constant.FORM_NEW_ID) {
+    if (detailId !== Constant.FORM_ADD_ID) {
       // guideFormStore.getFormData(detailId);
     }
   }

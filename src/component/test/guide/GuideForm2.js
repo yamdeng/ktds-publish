@@ -63,7 +63,7 @@ class GuideForm2 extends Component {
 
   componentDidMount() {
     let detailId = this.props.match.params.detailId;
-    if (detailId !== Constant.FORM_NEW_ID) {
+    if (detailId !== Constant.FORM_ADD_ID) {
       this.detailId = detailId;
       this.formType = Constant.FORM_TYPE_UPDATE;
       // ApiService.get('boards/' + detailId).then((response) => {

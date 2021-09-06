@@ -192,7 +192,11 @@ class FormStore {
       let inputData = formData[key];
       if (inputData.isObject) {
         if (inputData.value) {
-          apiParam[key] = inputData.value[inputData.keyName];
+          if (inputData.keyName) {
+            apiParam[key] = inputData.value[inputData.keyName];
+          } else {
+            apiParam[key] = inputData.value;
+          }
         } else {
           apiParam[key] = null;
         }

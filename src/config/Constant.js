@@ -18,7 +18,7 @@ Constant.FORM_TYPE_ADD = 'add';
 Constant.FORM_TYPE_UPDATE = 'update';
 
 // form new id
-Constant.FORM_NEW_ID = 'new';
+Constant.FORM_ADD_ID = 'new';
 
 // modalType
 Constant.MODAL_TYPE_ALERT = 'alert';

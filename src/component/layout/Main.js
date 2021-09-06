@@ -69,7 +69,7 @@ class Main extends Component {
             exact
             path="/boards/:id"
             render={(props) => {
-              if (props.match.params.id === Constant.FORM_NEW_ID) {
+              if (props.match.params.id === Constant.FORM_ADD_ID) {
                 return <BoardForm {...props} />;
               } else {
                 return <BoardDetail {...props} />;
@@ -84,7 +84,7 @@ class Main extends Component {
             exact
             path="/work-orders/:id"
             render={(props) => {
-              if (props.match.params.id === Constant.FORM_NEW_ID) {
+              if (props.match.params.id === Constant.FORM_ADD_ID) {
                 return <WorkOrderForm {...props} />;
               } else {
                 return <WorkOrderForm {...props} />;
@@ -110,7 +110,7 @@ class Main extends Component {
             exact
             path="/closeness-permissions/:id"
             render={(props) => {
-              if (props.match.params.id === Constant.FORM_NEW_ID) {
+              if (props.match.params.id === Constant.FORM_ADD_ID) {
                 return <ClosenessPermissionForm {...props} />;
               } else {
                 return <ClosenessPermissionForm {...props} />;
@@ -127,7 +127,7 @@ class Main extends Component {
             exact
             path="/check-results/:id"
             render={(props) => {
-              if (props.match.params.id === Constant.FORM_NEW_ID) {
+              if (props.match.params.id === Constant.FORM_ADD_ID) {
                 return <CheckResultForm {...props} />;
               } else {
                 return <CheckResultForm {...props} />;
@@ -177,7 +177,7 @@ class Main extends Component {
             exact
             path="/safe-docs/:id"
             render={(props) => {
-              if (props.match.params.id === Constant.FORM_NEW_ID) {
+              if (props.match.params.id === Constant.FORM_ADD_ID) {
                 return <SafeDocForm {...props} />;
               } else {
                 return <SafeDocForm {...props} />;

@@ -299,13 +299,13 @@ function checkValidation(inputData, customErrorMessage) {
           ? inputData.notRequiredMessage
           : customErrorMessage || '필수 정보입니다';
         return validResult;
-      } else if (inputData.isArray && inputValue.length === 0) {
+      } else if (inputData.isArray && inputValue.length !== 0) {
         for (
           let inputArrayIndex = 0;
           inputArrayIndex < inputData.value.length;
           inputArrayIndex++
         ) {
-          let info = inputData.isArray[inputArrayIndex];
+          let info = inputData.value[inputArrayIndex];
           if (!info) {
             validResult.isValid = false;
             validResult.errorMessage = inputData.notRequiredMessage
