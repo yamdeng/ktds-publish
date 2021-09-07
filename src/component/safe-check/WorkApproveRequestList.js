@@ -57,13 +57,14 @@ class WorkApproveRequestList extends Component {
               </span>
             </div>
             <div className="form_cell f_wid70">
-              <span className="form_group wid70 c_mr5">
+              <span className="form_group wid70 c_mr5 _icon">
                 <input type="text" className="form_tag" disabled />
                 <label className="f_label">승인자</label>
+                <button className="btn_icon btn_dark_gray">
+                  <i class="fas fa-search"></i>
+                </button>
               </span>
-              <button className="btn_icon btn_dark_gray c_mr5">
-                <i class="fas fa-search"></i>
-              </button>
+
               <button className="btn_text btn_dark_gray">본인</button>
             </div>
           </div>

@@ -233,10 +233,11 @@
 }
 
 .form_table {
-  display: table;
+  display: flex;
   width: 100%;
   .form_cell {
-    display: table-cell;
+    // display: table-cell;
+    flex-grow: 1;
     padding-right: 10px;
     padding-top: 15px;
     position: relative;

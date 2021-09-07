@@ -529,3 +529,9 @@ display
 .search_test {
   background: url(../images/search_test.png) no-repeat left center;
 }
+
+@include mobile {
+  .m_mt15 {
+    margin-top: 15px;
+  }
+}
