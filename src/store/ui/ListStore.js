@@ -153,7 +153,7 @@ class ListStore {
   }
 
   @computed
-  checkedItem() {
+  get checkedItem() {
     let itemChecked = false;
     let list = toJS(this.list);
     for (let index = 0; index < list.length; index++) {
