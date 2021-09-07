@@ -310,6 +310,58 @@
       color: #{$col-red};
     }
   }
+  // 클리어버튼과 아이콘버튼이 같이 쓰일때
+  &._clear_icon {
+    .btn_icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .icon {
+      &.icon_clear {
+        right: 51px;
+      }
+    }
+    .form_tag {
+      padding-right: 70px;
+    }
+  }
+  // 클리어버튼과 텍스트버튼이 같이 쓰일때 (2글자 fix)
+  &._clear_text {
+    .btn_text {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .icon {
+      &.icon_clear {
+        right: 73px;
+      }
+    }
+    .form_tag {
+      padding-right: 92px;
+    }
+  }
+  // 아이콘버튼이나 텍스트 버튼만 있을때
+  &._icon,
+  &._text {
+    .btn_icon,
+    .btn_text {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  &._icon {
+    .form_tag {
+      padding-right: 60px;
+    }
+  }
+  &._text {
+    .form_tag {
+      padding-right: 82px;
+    }
+  }
 }
 
 .form_tag {

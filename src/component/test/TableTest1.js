@@ -144,22 +144,98 @@ class TableTest1 extends Component {
             </div>
           </div>
 
+          {/* 
+            아이콘이 버튼만 인풋안에 있는 case 
+            form_group 에 _icon 추가
+            button 을 form_group 안으로 넣는다.
+          */}
           <div className="form_table">
             <div className="form_cell f_wid50">
-              <span className="form_group wid70 c_mr5">
+              <span className="form_group wid70 c_mr5 _icon">
                 <input
                   type="text"
                   className="form_tag"
-                  disabled
                   placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
                 />
                 <label className="f_label" for="b">
                   공사번호
                 </label>
+                <button className="btn_icon btn_dark_gray">
+                  <i class="fas fa-search"></i>
+                </button>
               </span>
-              <button className="btn_icon btn_dark_gray">
-                <i class="fas fa-search"></i>
-              </button>
+            </div>
+          </div>
+          {/* 
+             텍스트 버튼만 인풋안에 있는 case 
+            form_group 에 _text 추가
+            button 을 form_group 안으로 넣는다.
+          */}
+          <div className="form_table">
+            <div className="form_cell f_wid50">
+              <span className="form_group wid70 c_mr5 _text">
+                <input
+                  type="text"
+                  className="form_tag"
+                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                />
+                <label className="f_label" for="b">
+                  공사번호
+                </label>
+                <button className="btn_text btn_dark_gray">추가</button>
+              </span>
+            </div>
+          </div>
+
+          {/* 
+            클리어버튼과 아이콘버튼이 같이 쓰일때 case 
+            form_group 에 _clear_icon 추가
+            button 을 form_group 안으로 넣는다.
+          */}
+          <div className="form_table">
+            <div className="form_cell f_wid50">
+              <span className="form_group wid70 form_search form_clear c_mr5 _clear_icon">
+                <input
+                  type="text"
+                  className="form_tag"
+                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                />
+                <label className="f_label" for="b">
+                  공사번호
+                </label>
+                <span className="icon icon_search">
+                  <i class="fas fa-search"></i>
+                </span>
+                <span className="icon icon_clear" style={{ display: 'block' }}>
+                  <i class="fas fa-times-circle"></i>
+                </span>
+                <button className="btn_icon btn_dark_gray">
+                  <i class="fas fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+          {/* 
+            클리어버튼과 아이콘버튼이 같이 쓰일때 case 
+            form_group 에 _clear_text 추가
+            button 을 form_group 안으로 넣는다.
+          */}
+          <div className="form_table">
+            <div className="form_cell f_wid50">
+              <span className="form_group wid70 form_clear c_mr5 _clear_text">
+                <input
+                  type="text"
+                  className="form_tag"
+                  placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
+                />
+                <label className="f_label" for="b">
+                  공사번호
+                </label>
+                <span className="icon icon_clear" style={{ display: 'block' }}>
+                  <i class="fas fa-times-circle"></i>
+                </span>
+                <button className="btn_text btn_dark_gray">추가</button>
+              </span>
             </div>
           </div>
           <div className="form_table">
