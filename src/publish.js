@@ -1,6 +1,8 @@
+import 'antd/dist/antd.css';
+import 'react-datepicker/dist/react-datepicker.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PublishApp from './PublishApp';
 import reportWebVitals from 'reportWebVitals';
 import { HashRouter as Router } from 'react-router-dom';
 import moment from 'moment';
@@ -10,9 +12,8 @@ import { Provider } from 'mobx-react';
 import rootStore from 'store/RootStore';
 import { registerLocale, setDefaultLocale } from 'react-datepicker';
 import ko from 'date-fns/locale/ko';
+import PublishApp from './PublishApp';
 
-import 'antd/dist/antd.css';
-import 'react-datepicker/dist/react-datepicker.css';
 import 'resources/css/import.scss';
 
 registerLocale('ko', ko);
