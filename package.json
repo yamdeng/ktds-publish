@@ -90,14 +90,12 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "scripts": {
-    "start": "cross-env APP_TYPE=app NODE_ENV=local DOT_ENV=local APP_ENV=local node scripts/start.js",
-    "build": "cross-env APP_TYPE=app DOT_ENV=production APP_ENV=production node scripts/build.js",
-    "build:dev": "cross-env APP_TYPE=app NODE_ENV=development DOT_ENV=development APP_ENV=development node scripts/build.js",
-    "start:publish": "cross-env ENTRY_NAME=publish APP_ENV=publish PORT=3006 node scripts/start.js",
+    "start": "cross-env NODE_ENV=start DOT_ENV=start node scripts/start.js",
+    "build": "cross-env NODE_ENV=production DOT_ENV=production node scripts/build.js",
+    "build:dev": "cross-env NODE_ENV=development DOT_ENV=development node scripts/build.js",
+    "start:publish": "cross-env ENTRY_NAME=publish PORT=3006 node scripts/start.js",
     "build:publish": "cross-env ENTRY_NAME=publish BUILD_PATH=publish node scripts/build.js",
-    "test": "node scripts/test.js",
-    "build-heroku": "cross-env ENTRY_NAME=publish node scripts/build.js",
-    "start-heroku": "cross-env ENTRY_NAME=publish APP_ENV=publish PORT=80 node scripts/start.js"
+    "test": "node scripts/test.js"
   },
   "eslintConfig": {
     "extends": [

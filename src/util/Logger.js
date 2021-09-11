@@ -24,7 +24,6 @@ const Logger = {
       let errorDoc = {};
       errorDoc.token = appStore.token;
       errorDoc.version = Config.version;
-      errorDoc.frontEnv = process.env.APP_ENV;
       errorDoc.message = message;
       errorDoc.created = moment().format('YYYY-MM-DD HH:mm:ss');
       errorDoc.currentRouteUrl = uiStore.currentRouteUrl || '';
