@@ -107,16 +107,16 @@ let Menu = [
         routeUrl: '/test/modal'
       },
       {
-        name: '(가이드) 테이블1',
-        routeUrl: '/test/guide/table1'
-      },
-      {
         name: '(가이드) form1',
         routeUrl: '/test/guide/form1'
       },
       {
         name: '(가이드-state) form2',
         routeUrl: '/test/guide/form2'
+      },
+      {
+        name: '테이블 상단 검색 필드 영역',
+        routeUrl: '/test/guide/table_top_layout'
       },
       {
         name: '검색 필드',
