@@ -115,8 +115,16 @@ let Menu = [
         routeUrl: '/test/guide/form2'
       },
       {
+        name: 'table 가이드',
+        routeUrl: '/test/guide/table1'
+      },
+      {
         name: '테이블 상단 검색 필드 영역',
         routeUrl: '/test/guide/table_top_layout'
+      },
+      {
+        name: '테이블 상단 검색 필드 영역2',
+        routeUrl: '/test/guide/table_top_layout2'
       },
       {
         name: '검색 필드',

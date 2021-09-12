@@ -154,6 +154,65 @@ class TableTopLayout extends Component {
             <button className="btn_text btn_green mobile_full">조회</button>
           </p>
         </div>
+        {/* 기타 배치 */}
+        <h3>상단 버튼 영역(기타 방법)</h3>
+        <div className="box_form">
+          {/* 1행 */}
+          <div className="form_table">
+            <div className="form_cell f_wid50 c_pr0">
+              <span className="form_group wid100 c_mr5">
+                <input type="text" className="form_tag" value={'KT'} />
+                <label className="f_label" for="b">
+                  이름2
+                </label>
+              </span>
+            </div>
+            <div className="form_cell f_wid50 right">
+              <span className="form_group wid100 c_mr5">
+                <button className="btn_text btn_green mobile_full">조회</button>
+              </span>
+            </div>
+          </div>
+          <div className="form_table">
+            <div className="form_cell f_wid100">
+              <span className="form_group wid50">
+                <input type="text" className="form_tag" value={'KT'} />
+                <label className="f_label" for="b">
+                  이름
+                </label>
+              </span>
+              <span className="form_group wid50 right">
+                <button className="btn_text btn_green">조회</button>
+              </span>
+            </div>
+          </div>
+          {/* 2행 */}
+          <div className="form_table">
+            <div className="form_cell f_wid100">
+              <span className="form_group wid50">
+                <input type="text" className="form_tag" value={'KT'} />
+                <label className="f_label" for="b">
+                  모바일에서도 [조회] 버튼이 바로 옆으로 되게끔
+                </label>
+              </span>{' '}
+              <button className="btn_text btn_green">조회</button>
+            </div>
+          </div>
+          {/* 3행 */}
+          <div className="form_table">
+            <div className="form_cell f_wid100">
+              <span className="form_group wid50">
+                <input type="text" className="form_tag" value={'KT'} />
+                <label className="f_label" for="b">
+                  모바일에서 [조회] 버튼이 100%로 나오게끔
+                </label>
+              </span>{' '}
+              <button className="btn_text btn_green mobile_full m_mt15">
+                조회
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

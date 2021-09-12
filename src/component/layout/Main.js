@@ -42,6 +42,7 @@ import GuideTable1 from 'component/test/guide/GuideTable1';
 import GuideForm1 from 'component/test/guide/GuideForm1';
 import GuideForm2 from 'component/test/guide/GuideForm2';
 import TableTopLayout from 'component/test/guide/TableTopLayout';
+import TableTopLayout2 from 'component/test/guide/TableTopLayout2';
 
 // 개발 가이드
 
@@ -200,6 +201,11 @@ class Main extends Component {
             exact
             path="/test/guide/table_top_layout"
             component={TableTopLayout}
+          />
+          <Route
+            exact
+            path="/test/guide/table_top_layout2"
+            component={TableTopLayout2}
           />
         </Switch>
       </>

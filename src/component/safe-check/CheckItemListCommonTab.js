@@ -112,17 +112,25 @@ class CheckItemListCommonTab extends Component {
             </div>
           </div>
           <div className="list_form_btns">
-            <button className="btn_text btn_green c_mr5">엑셀다운</button>
+            <button className="btn_text btn_green c_mr5 m_mt15">
+              엑셀다운
+            </button>
             <button
-              className="btn_text btn_green c_mr5"
+              className="btn_text btn_green c_mr5 m_mt15"
               onClick={this.openFormModal}
             >
               추가
             </button>
-            <button className="btn_text btn_green c_mr5">미사용 처리</button>
-            <button className="btn_text btn_green c_mr5">사용 처리</button>
-            <button className="btn_text btn_green c_mr5">순위저장</button>
-            <button className="btn_text btn_green">삭제</button>
+            <button className="btn_text btn_green c_mr5 m_mt15">
+              미사용 처리
+            </button>
+            <button className="btn_text btn_green c_mr5 m_mt15">
+              사용 처리
+            </button>
+            <button className="btn_text btn_green c_mr5 m_mt15">
+              순위저장
+            </button>
+            <button className="btn_text btn_green m_mt15">삭제2</button>
           </div>
         </div>
       </React.Fragment>

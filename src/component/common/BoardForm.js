@@ -49,9 +49,19 @@ class BoardForm extends Component {
                   onChange={this.changeTitle}
                 />
               </span>
-              <button className="btn_text btn_green mobile_full">조회</button>
+              <button className="btn_text btn_green">조회</button>
             </div>
-            <div className="form_cell f_wid20">
+            <div className="form_cell f_wid50">
+              <span className="form_group wid49">
+                <input type="text" className="form_tag " disabled />
+                <label className="f_label">작성자</label>
+              </span>{' '}
+              <span className="form_group wid49">
+                <input type="text" className="form_tag" disabled />
+                <label className="f_label">등록일시</label>
+              </span>
+            </div>
+            {/* <div className="form_cell f_wid20">
               <span className="form_group wid100 c_mr5">
                 <input type="text" className="form_tag " disabled />
                 <label className="f_label">작성자</label>
@@ -62,7 +72,7 @@ class BoardForm extends Component {
                 <input type="text" className="form_tag " disabled />
                 <label className="f_label">작성일시</label>
               </span>
-            </div>
+            </div> */}
             {/* <div className="form_cell f_wid50">
               <span className="form_group wid100 c_mr5">
                 <input type="text" className="form_tag " disabled />
