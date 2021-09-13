@@ -30,7 +30,8 @@ import Config from 'config/Config';
 
 */
 
-let list = [1, 2, 3, 4];
+// let list = [1, 2, 3, 4];
+let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 @withRouter
 @inject('modalStore', 'testStore')
@@ -157,7 +158,6 @@ class MemberSelectModal extends React.Component {
                   </tbody>
                 </table>
               </div>
-              <Pagination store={testStore} />
             </div>
           </div>
         </div>
