@@ -85,7 +85,6 @@ class GuideFormStore extends FormStore {
   save() {
     if (this.validate()) {
       let apiParam = this.getApiParam();
-      debugger;
       // 추가 액션
     }
   }

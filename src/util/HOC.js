@@ -217,7 +217,6 @@ const formState = (formData) => (WrappedComponent) =>
     }
 
     changeFormData(formData) {
-      debugger;
       this.setState({ formData: formData });
     }
 
@@ -261,7 +260,6 @@ const formState = (formData) => (WrappedComponent) =>
         return;
       }
       let apiParam = this.getApiParam();
-      debugger;
     }
 
     getApiParam() {

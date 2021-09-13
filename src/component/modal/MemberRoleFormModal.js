@@ -51,9 +51,7 @@ class MemberRoleFormModal extends React.Component {
     UiCommonService.openOrgSelectModal(this.selectOrgByModal);
   }
 
-  selectOrgByModal(orgInfo) {
-    debugger;
-  }
+  selectOrgByModal(orgInfo) {}
 
   render() {
     let list = [1, 2, 3, 4, 5, 6, 7];

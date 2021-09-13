@@ -125,7 +125,6 @@ const saveToState = function () {
     return;
   }
   let apiParam = this.getApiParam();
-  debugger;
 };
 
 const getApiParamToState = function () {
