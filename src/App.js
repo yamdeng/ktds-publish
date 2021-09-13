@@ -6,6 +6,7 @@ import LoadingBarContainer from 'component/layout/LoadingBarContainer';
 import AlertModalContainer from 'component/layout/AlertModalContainer';
 import ModalContainer from 'component/layout/ModalContainer';
 import NotLogin from 'component/NotLogin';
+import ErrorPage from 'component/ErrorPage';
 import Main from 'component/layout/Main';
 import ErrorBoundary from 'component/layout/ErrorBoundary';
 import AppHistory from 'util/AppHistory';
@@ -75,10 +76,13 @@ class App extends Component {
 
   render() {
     const { appStore } = this.props;
-    const { profile } = appStore;
+    const { profile, isError } = appStore;
     let mainComponent = null;
-    if (profile) {
-      // 로그인이 되어 있는 경우
+    if (isError) {
+      // 에러인 경우
+      mainComponent = <ErrorPage />;
+    } else if (profile) {
+      // 로그인 성공인 경우
       mainComponent = <Main />;
     } else {
       // 로그인 않되어 있는 경우

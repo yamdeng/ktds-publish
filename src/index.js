@@ -12,6 +12,7 @@ import { registerLocale, setDefaultLocale } from 'react-datepicker';
 
 import App from './App';
 import AppHistory from 'util/AppHistory';
+import Helper from 'util/Helper';
 import ko from 'date-fns/locale/ko';
 import 'resources/css/import.scss';
 registerLocale('ko', ko);
@@ -24,6 +25,12 @@ moment.locale('ko');
 configure({
   enforceActions: 'action'
 });
+
+// queryString 처리
+let isError = Helper.getQueryStringValue(AppHistory.location.search, 'isError');
+if (isError) {
+  rootStore.appStore.changeIsError(true);
+}
 
 ReactDOM.render(
   <Provider {...rootStore}>

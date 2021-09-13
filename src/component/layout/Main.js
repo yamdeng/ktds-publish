@@ -44,6 +44,8 @@ import GuideForm2 from 'component/test/guide/GuideForm2';
 import TableTopLayout from 'component/test/guide/TableTopLayout';
 import TableTopLayout2 from 'component/test/guide/TableTopLayout2';
 
+import ServerError from 'component/error/ServerError';
+
 // 개발 가이드
 
 @withRouter
@@ -207,6 +209,7 @@ class Main extends Component {
             path="/test/guide/table_top_layout2"
             component={TableTopLayout2}
           />
+          <Route exact path="/error/server" component={ServerError} />
         </Switch>
       </>
     );

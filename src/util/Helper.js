@@ -452,6 +452,11 @@ const getDefaultInputData = function (inputName, required, value) {
   return inputData;
 };
 
+const getQueryStringValue = function (queryString, paramKey) {
+  const query = new URLSearchParams(queryString);
+  return query.get(paramKey);
+};
+
 export default {
   saveInfoToLocalStorage,
   getByLocalStorage,
@@ -484,5 +489,6 @@ export default {
   capitalizeFirstLetter,
   getAppLink,
   validteRangeDate,
-  getDefaultInputData
+  getDefaultInputData,
+  getQueryStringValue
 };

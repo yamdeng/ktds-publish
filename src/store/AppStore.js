@@ -17,6 +17,10 @@ class AppStore {
   @observable
   token = '';
 
+  // 에러
+  @observable
+  isError = false;
+
   constructor(rootStore) {
     makeObservable(this);
     this.rootStore = rootStore;
@@ -127,9 +131,15 @@ class AppStore {
   }
 
   @action
+  changeIsError(isError) {
+    this.isError = isError;
+  }
+
+  @action
   clear() {
     this.profile = null;
     this.token = '';
+    this.isError = false;
   }
 }
 
