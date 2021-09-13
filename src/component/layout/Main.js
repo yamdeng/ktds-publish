@@ -43,6 +43,7 @@ import GuideForm1 from 'component/test/guide/GuideForm1';
 import GuideForm2 from 'component/test/guide/GuideForm2';
 import TableTopLayout from 'component/test/guide/TableTopLayout';
 import TableTopLayout2 from 'component/test/guide/TableTopLayout2';
+import EditTable from 'component/test/guide/EditTable';
 
 import ServerError from 'component/error/ServerError';
 
@@ -204,6 +205,7 @@ class Main extends Component {
             path="/test/guide/table_top_layout"
             component={TableTopLayout}
           />
+          <Route exact path="/test/guide/edit-table" component={EditTable} />
           <Route
             exact
             path="/test/guide/table_top_layout2"

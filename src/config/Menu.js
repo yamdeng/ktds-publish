@@ -127,24 +127,8 @@ let Menu = [
         routeUrl: '/test/guide/table_top_layout2'
       },
       {
-        name: '검색 필드',
-        routeUrl: '/test/search-field1'
-      },
-      {
-        name: '테이블1',
-        routeUrl: '/test/table1'
-      },
-      {
-        name: '테이블2',
-        routeUrl: '/test/table2'
-      },
-      {
-        name: '폼1',
-        routeUrl: '/test/form1'
-      },
-      {
-        name: '폼2',
-        routeUrl: '/test/form2'
+        name: '에디트 테이블',
+        routeUrl: '/test/guide/edit-table'
       }
     ]
   }
