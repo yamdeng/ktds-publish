@@ -917,6 +917,7 @@ hr.line {
     }
   }
 }
+
 .btn_icon {
   height: 35px;
   padding: 0 15px;
@@ -931,6 +932,9 @@ hr.line {
   &:disabled {
     opacity: 0.5;
     background: #{$col-gray350};
+  }
+  .fas {
+    width: 14px;
   }
 }
 
