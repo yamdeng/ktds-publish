@@ -87,17 +87,17 @@ class MemberSelectModal extends React.Component {
                 treeData={treeList}
                 loadData={(treeInfo) => testStore.loadTree(treeInfo)}
                 onSelect={this.selectTree}
-                switcherIcon={<span className="folder"></span>}
+                // switcherIcon={<span className="folder"></span>}
                 titleRender={(noteData) => {
                   const { depth, title, children, id, companies } = noteData;
                   let className = '';
-                  if (depth === 1) {
-                    className = 'folder';
-                  } else {
-                    if (!children || (children && !children.length)) {
-                      className = 'bridge';
-                    }
-                  }
+                  // if (depth === 1) {
+                  //   className = 'folder';
+                  // } else {
+                  //   if (!children || (children && !children.length)) {
+                  //     className = 'bridge';
+                  //   }
+                  // }
                   return (
                     <div>
                       <span className={className}>{title}</span>
@@ -110,7 +110,7 @@ class MemberSelectModal extends React.Component {
               <div className="box_form">
                 <div className="form_table">
                   <div className="form_cell f_wid70">
-                    <span className="form_group form_search form_clear wid70 c_mr5">
+                    <span className="form_group form_search form_clear wid100">
                       <SearchInput
                         value={orgName}
                         label="이름"
@@ -118,45 +118,53 @@ class MemberSelectModal extends React.Component {
                         onChange={this.changeOrgName}
                       />
                     </span>
+                  </div>
+                  <div className="form_cell f_wid30">
                     <button className="btn_text btn_green mobile_full">
                       조회
                     </button>
                   </div>
                 </div>
               </div>
-              <div className="list_form c_mt10">
+              <div className="list_form c_mb0 c_mt10">
                 <p className="relative c_mb10">
                   {/* Helper.convertNumberValue 사용 */}
                   <span className="fs_12">총 1000 건</span>
                 </p>
-                <table className="tb_list">
-                  <caption></caption>
-                  <thead>
-                    <tr>
-                      <th>사번</th>
-                      <th>성명</th>
-                      <th>소속</th>
-                      <th>직책/호칭</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {list.map((info) => {
-                      return (
-                        <tr>
-                          <td>11111111</td>
-                          <td>홍길동</td>
-                          <td>{'KT>전남광역본부>순천지점'}</td>
-                          <td>팀장/과장</td>
-                        </tr>
-                      );
-                    })}
-                    {!list.length ? (
-                      <tr>
-                        <td colSpan={4}>데이터가 존재하지 않습니다.</td>
-                      </tr>
-                    ) : null}
-                  </tbody>
-                </table>
+                <div className="modal_max_height_table">
+                  <div className="tb_wrap_scroll">
+                    <div className="horizon_tb">
+                      <table className="tb_list" style={{ minWidth: '380px' }}>
+                        <caption></caption>
+                        <thead>
+                          <tr>
+                            <th>사번</th>
+                            <th>성명</th>
+                            <th>소속</th>
+                            <th>직책/호칭</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {list.map((info) => {
+                            return (
+                              <tr>
+                                <td>11111111</td>
+                                <td>홍길동</td>
+                                <td>{'KT>전남광역본부>순천지점'}</td>
+                                <td>팀장/과장</td>
+                              </tr>
+                            );
+                          })}
+                          {!list.length ? (
+                            <tr>
+                              <td colSpan={4}>데이터가 존재하지 않습니다.</td>
+                            </tr>
+                          ) : null}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

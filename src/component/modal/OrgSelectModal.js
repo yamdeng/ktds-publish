@@ -93,10 +93,10 @@ class OrgSelectModal extends React.Component {
               />
             </div>
             <div className="pop_cont_form">
-              <div className="box_form">
+              <div className="box_form c_mb0">
                 <div className="form_table">
                   <div className="form_cell f_wid70">
-                    <span className="form_group form_search form_clear wid70 c_mr5">
+                    <span className="form_group form_search form_clear wid100">
                       <SearchInput
                         value={orgName}
                         label="조직명"
@@ -104,43 +104,49 @@ class OrgSelectModal extends React.Component {
                         onChange={this.changeOrgName}
                       />
                     </span>
+                  </div>
+                  <div className="form_cell f_wid30">
                     <button className="btn_text btn_green mobile_full">
                       조회
                     </button>
                   </div>
                 </div>
               </div>
-              <div className="list_form c_mt10">
+              <div className="list_form c_mb0 c_mt10">
                 <p className="relative c_mb10">
                   {/* Helper.convertNumberValue 사용 */}
                   <span className="fs_12">총 1000 건</span>
                 </p>
                 <div className="modal_max_height_table">
-                  <table className="tb_list">
-                    <caption></caption>
-                    <thead>
-                      <tr>
-                        <th>조직코드</th>
-                        <th>조직 명</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {/* 10개 */}
-                      {list.map((info) => {
-                        return (
+                  <div className="tb_wrap_scroll">
+                    <div className="horizon_tb">
+                      <table className="tb_list" style={{ minWidth: '380px' }}>
+                        <caption></caption>
+                        <thead>
                           <tr>
-                            <td>한성유통</td>
-                            <td>한성유통㈜</td>
+                            <th>조직코드</th>
+                            <th>조직 명</th>
                           </tr>
-                        );
-                      })}
-                      {!list.length ? (
-                        <tr>
-                          <td colSpan={2}>데이터가 존재하지 않습니다.</td>
-                        </tr>
-                      ) : null}
-                    </tbody>
-                  </table>
+                        </thead>
+                        <tbody>
+                          {/* 10개 */}
+                          {list.map((info) => {
+                            return (
+                              <tr>
+                                <td>한성유통</td>
+                                <td>한성유통㈜</td>
+                              </tr>
+                            );
+                          })}
+                          {!list.length ? (
+                            <tr>
+                              <td colSpan={2}>데이터가 존재하지 않습니다.</td>
+                            </tr>
+                          ) : null}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -90,12 +90,12 @@ menu {
 * {
   -webkit-tap-highlight-color: transparent; /* 터치 하이라이트 제거*/
   -webkit-overflow-scrolling: touch; /* ios 스크롤 스무스*/
-  -ms-overflow-style: none; /* IE에서 스크롤바 감춤*/
+  // -ms-overflow-style: none; /* IE에서 스크롤바 감춤*/
 }
 
-::-webkit-scrollbar {
-  display: none !important; /* 윈도우 크롬 등 */
-}
+// ::-webkit-scrollbar {
+//   display: none !important; /* 윈도우 크롬 등 */
+// }
 
 body {
 }

@@ -169,6 +169,9 @@
 
 .pop_flex_group {
   display: flex;
+  @include mobile {
+    display: block;
+  }
   .andt-tree-container {
     flex-grow: 1;
     @include mobile {
@@ -300,6 +303,9 @@
 .modal_max_height_table {
   overflow-y: auto;
   max-height: 600px;
+  @include mobile {
+    max-height: calc(100vh - 240px);
+  }
 }
 
 // picker
@@ -314,9 +320,13 @@
   box-sizing: border-box;
   width: 200px;
   max-height: 700px;
+  padding-right: 20px;
   overflow: auto;
   @include mobile {
     display: none;
+  }
+  .ant-tree-list-holder {
+    overflow: auto;
   }
   .tree-wrapper {
     overflow: auto;
@@ -362,13 +372,17 @@
       font-style: italic;
       font-weight: bold;
     }
+    span {
+      display: block;
+      white-space: nowrap;
+    }
   }
   .ant-tree {
     position: relative;
     .ant-tree-treenode {
       width: 100%;
-      padding: 8px 0;
-      text-indent: 10px;
+      padding: 2px 0;
+      // text-indent: 10px;
       border-radius: 4px;
       &:last-child {
         border-bottom: 0;
@@ -382,7 +396,8 @@
     }
   }
   .ant-tree-treenode-selected {
-    background-color: #4182f5;
+    color: #{$col-green};
+    font-weight: bold;
     .ant-tree-switcher {
       &.ant-tree-switcher_close {
         .folder {
@@ -399,10 +414,10 @@
   }
   .ant-tree-node-selected {
     background-color: transparent !important;
-    color: #fff;
+    color: #{$col-green};
   }
   .ant-tree-switcher {
-    width: 51px;
+    width: 10px;
     height: 20px;
     .folder {
       width: 100%;
