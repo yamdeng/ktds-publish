@@ -297,6 +297,11 @@
   }
 }
 
+.modal_max_height_table {
+  overflow-y: auto;
+  max-height: 600px;
+}
+
 // picker
 .react-datepicker-popper[data-placement^='top'] .react-datepicker__triangle,
 .react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle {
@@ -308,7 +313,7 @@
 .tree_wrap {
   box-sizing: border-box;
   width: 200px;
-  max-height: 900px;
+  max-height: 700px;
   overflow: auto;
   @include mobile {
     display: none;

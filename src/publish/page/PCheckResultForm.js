@@ -63,7 +63,7 @@ class PCheckResultForm extends Component {
               <span className="form_group wid30 c_mr5">
                 <input
                   type="text"
-                  className="form_tag date"
+                  className="form_tag"
                   disabled
                   value=""
                   onChange={this.onChangeInput}
@@ -77,7 +77,7 @@ class PCheckResultForm extends Component {
               <span className="form_group wid20 c_mr5">
                 <input
                   type="text"
-                  className="form_tag date"
+                  className="form_tag"
                   disabled
                   value={this.state.inputValue}
                   onChange={this.onChangeInput}
@@ -92,7 +92,7 @@ class PCheckResultForm extends Component {
               <span className="form_group wid20">
                 <input
                   type="text"
-                  className="form_tag date"
+                  className="form_tag"
                   disabled
                   value={this.state.inputValue}
                   onChange={this.onChangeInput}

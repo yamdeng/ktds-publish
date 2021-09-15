@@ -45,7 +45,7 @@ class SafeDocForm extends Component {
     const ExampleCustomInput = React.forwardRef(({ value, onClick }, ref) => (
       <input
         type="text"
-        className="form_tag date"
+        className="form_tag"
         onClick={onClick}
         ref={ref}
         value={value}

@@ -115,31 +115,33 @@ class OrgSelectModal extends React.Component {
                   {/* Helper.convertNumberValue 사용 */}
                   <span className="fs_12">총 1000 건</span>
                 </p>
-                <table className="tb_list">
-                  <caption></caption>
-                  <thead>
-                    <tr>
-                      <th>조직코드</th>
-                      <th>조직 명</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {/* 10개 */}
-                    {list.map((info) => {
-                      return (
-                        <tr>
-                          <td>한성유통</td>
-                          <td>한성유통㈜</td>
-                        </tr>
-                      );
-                    })}
-                    {!list.length ? (
+                <div className="modal_max_height_table">
+                  <table className="tb_list">
+                    <caption></caption>
+                    <thead>
                       <tr>
-                        <td colSpan={2}>데이터가 존재하지 않습니다.</td>
+                        <th>조직코드</th>
+                        <th>조직 명</th>
                       </tr>
-                    ) : null}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {/* 10개 */}
+                      {list.map((info) => {
+                        return (
+                          <tr>
+                            <td>한성유통</td>
+                            <td>한성유통㈜</td>
+                          </tr>
+                        );
+                      })}
+                      {!list.length ? (
+                        <tr>
+                          <td colSpan={2}>데이터가 존재하지 않습니다.</td>
+                        </tr>
+                      ) : null}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

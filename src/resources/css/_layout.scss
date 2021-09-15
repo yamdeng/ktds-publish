@@ -390,8 +390,8 @@
   outline: none !important;
   position: relative;
   text-indent: 10px;
-  &.date {
-    caret-color: #{$col-white};
+  &.center {
+    text-indent: 0;
   }
   .option_item {
     display: none;
@@ -443,18 +443,7 @@
     background: none;
     color: #{$col-default-text};
   }
-  // &.date:disabled {
-  //   color: #{$col-default-text};
-  //   background: #{$col-white};
-  //   border: 1px solid #{$col-gray300};
-  //   + .f_label {
-  //     color: #{$col-default-text};
-  //     position: absolute;
-  //     left: 10px;
-  //     top: 8px;
-  //     font-size: 14px;
-  //   }
-  // }
+
   &.fix_data:disabled {
     border: none;
     border-bottom: 1px solid #{$col-gray300};
@@ -495,8 +484,7 @@
   &:focus + .f_label,
   &.active + .f_label,
   &:not([value='']) + .f_label,
-  &.invalid + .f_label,
-  &.date:disabled:not([value='']) + .f_label {
+  &.invalid + .f_label {
     left: 10px;
     top: -8px;
     font-size: 12px;
@@ -539,12 +527,12 @@
   width: 100%;
   box-sizing: border-box;
   color: #{$col-default-text};
-  background: #{$col-white};
   outline: none !important;
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url(../images/chevron-down-solid.svg) no-repeat right 10px center;
+  background: #{$col-white} url(../images/chevron-down-solid.svg) no-repeat right
+    10px center;
   background-size: 10px;
 
   .option_item {
