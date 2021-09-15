@@ -25,8 +25,25 @@ class TableTopLayout2 extends Component {
         <h3>상단 버튼 영역(기타 방법)</h3>
         {/* 사외조직 목록 상단 */}
         <div className="box_form">
+          {/* 모바일에서 검색영역 노출여부 스위치 */}
+          <div className="mtoggle_wrap">
+            <div className="center">
+              <span className="txt">상세 검색</span>
+              <input
+                type="checkbox"
+                id="switchs"
+                name="switch"
+                className="switch_on_off"
+              />
+              <label for="switchs" className="switch_label_on_off">
+                <span className="marble"></span>
+                <span className="off">OFF</span>
+                <span class="on">ON</span>
+              </label>
+            </div>
+          </div>
           {/* 1행 */}
-          <div className="form_table">
+          <div className="form_table mtoggle _off">
             <div className="form_cell f_wid50 c_pr0">
               <span className="form_group form_search form_clear wid100 c_mr5">
                 <SearchInput
@@ -45,7 +62,7 @@ class TableTopLayout2 extends Component {
           </div>
           {/* 2행 */}
           <div className="form_table">
-            <div className="form_cell f_wid100">
+            <div className="form_cell mtoggle _on f_wid100">
               <span className="form_group form_search form_clear wid60">
                 <SearchInput
                   value={'하이'}

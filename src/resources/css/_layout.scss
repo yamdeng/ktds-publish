@@ -124,6 +124,18 @@
       box-sizing: border-box;
     }
   }
+  .vertical_lists {
+    padding: 15px 0;
+    border-bottom: 1px solid #{$col-gray300};
+    .label {
+      color: #{$col-gray600};
+      display: block;
+      padding-bottom: 15px;
+    }
+    .cont {
+      box-sizing: border-box;
+    }
+  }
 }
 
 .box_form {
@@ -431,18 +443,18 @@
     background: none;
     color: #{$col-default-text};
   }
-  &.date:disabled {
-    color: #{$col-default-text};
-    background: #{$col-white};
-    border: 1px solid #{$col-gray300};
-    + .f_label {
-      color: #{$col-default-text};
-      position: absolute;
-      left: 10px;
-      top: 8px;
-      font-size: 14px;
-    }
-  }
+  // &.date:disabled {
+  //   color: #{$col-default-text};
+  //   background: #{$col-white};
+  //   border: 1px solid #{$col-gray300};
+  //   + .f_label {
+  //     color: #{$col-default-text};
+  //     position: absolute;
+  //     left: 10px;
+  //     top: 8px;
+  //     font-size: 14px;
+  //   }
+  // }
   &.fix_data:disabled {
     border: none;
     border-bottom: 1px solid #{$col-gray300};
@@ -1195,6 +1207,14 @@ hr.line {
   width: 100%;
 }
 
+.mtoggle_wrap {
+  display: none;
+}
+
+.error_txt {
+  font-size: 30px;
+}
+
 @include tablet {
   .form_table {
     display: block;
@@ -1234,4 +1254,35 @@ hr.line {
 
 .fas.fa-folder-open {
   max-width: 14px;
+}
+
+@include mobile {
+  .mhide {
+    display: none;
+  }
+  .mtoggle_wrap {
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+    > div {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      .txt {
+        vertical-align: top;
+        margin-top: 5px;
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+  .mtoggle {
+    &._on {
+      display: block;
+    }
+    &._off {
+      display: none;
+    }
+  }
 }

@@ -229,16 +229,16 @@ class GuideTable1 extends Component {
           </div>
 
           <div className="list_form_btns">
-            <button className="btn_text btn_green c_mr5 m_mt15">
+            <button className="btn_text btn_green c_mr5 m_mt15 mhide">
               미사용 처리
             </button>
-            <button className="btn_text btn_green c_mr5 m_mt15">
+            <button className="btn_text btn_green c_mr5 m_mt15 mhide">
               미사용 처리
             </button>
-            <button className="btn_text btn_green c_mr5 m_mt15">
+            <button className="btn_text btn_green c_mr5 m_mt15 mhide">
               미사용 처리
             </button>
-            <button className="btn_text btn_green c_mr5 m_mt15">
+            <button className="btn_text btn_green c_mr5 m_mt15 mhide">
               미사용 처리
             </button>
             <button className="btn_text btn_green c_mr5 m_mt15">

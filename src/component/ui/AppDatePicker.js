@@ -54,6 +54,7 @@ class AppDatePicker extends React.Component {
               className={
                 errorMessage ? 'form_tag date invalid' : 'form_tag date'
               }
+              readOnly
               ref={ref}
               value={value}
               onClick={(event) => {

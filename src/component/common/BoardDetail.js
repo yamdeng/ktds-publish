@@ -53,7 +53,7 @@ class BoardDetail extends Component {
               <span className="label">제목 </span>
               <div className="cont">111111111</div>
             </li>
-            <li className="lists">
+            <li className="vertical_lists">
               <span className="label">내용 </span>
               <div className="cont">111111111</div>
             </li>

@@ -44,20 +44,18 @@ class CommonTextAreaModal extends React.Component {
       <div className="popup-container">
         <h3 className="pop_title">유예 사유</h3>
         <div className="pop_cont_box">
-          <div className="list_form">
-            <div className="form_table">
-              <div className="form_cell f_wid100">
-                <span className="form_group wid100 c_mr5">
-                  <textarea
-                    name=""
-                    id=""
-                    className="form_tag textarea"
-                  ></textarea>
-                  <label className="f_label" for="b">
-                    내용 <span className="required">*</span>
-                  </label>
-                </span>
-              </div>
+          <div className="form_table">
+            <div className="form_cell f_wid100">
+              <span className="form_group wid100 c_mr5">
+                <textarea
+                  name=""
+                  id=""
+                  className="form_tag textarea"
+                ></textarea>
+                <label className="f_label" for="b">
+                  내용 <span className="required">*</span>
+                </label>
+              </span>
             </div>
           </div>
         </div>
