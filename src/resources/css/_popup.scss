@@ -302,7 +302,7 @@
 
 .modal_max_height_table {
   overflow-y: auto;
-  max-height: 600px;
+  max-height: 450px;
   @include mobile {
     max-height: calc(100vh - 240px);
   }
@@ -319,7 +319,7 @@
 .tree_wrap {
   box-sizing: border-box;
   width: 200px;
-  max-height: 700px;
+  max-height: 540px;
   padding-right: 20px;
   overflow: auto;
   @include mobile {
