@@ -318,7 +318,7 @@
 
 .tree_wrap {
   box-sizing: border-box;
-  width: 200px;
+  min-width: 250px;
   max-height: 540px;
   padding-right: 20px;
   overflow: auto;
