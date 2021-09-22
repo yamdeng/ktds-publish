@@ -76,6 +76,7 @@
 .pop_cont_box {
   position: relative;
   max-height: 900px;
+  overflow-x: hidden;
   overflow-y: auto;
   padding-bottom: 30px;
   @include mobile {
