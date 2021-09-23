@@ -24,7 +24,31 @@ class Home extends Component {
   render() {
     return (
       <div className="content_area">
-        <h3>대시보드</h3>
+        <div className="home_flex_box">
+          <div className="item">
+            <div className="heibox500">1</div>
+          </div>
+          <div className="item">
+            <div className="home_sub_flex_box">
+              <div className="sub_item heibox500">2</div>
+              <div className="sub_item heibox500">2</div>
+            </div>
+          </div>
+          <div className="item">
+            <div className="heibox500">4</div>
+          </div>
+          <div className="item">
+            <div className="heibox300">1</div>
+            <div className="heibox200">1</div>
+          </div>
+          <div className="item">
+            <div className="heibox500">1</div>
+          </div>
+          <div className="item">
+            <div className="heibox300">1</div>
+            <div className="heibox200">1</div>
+          </div>
+        </div>
       </div>
     );
   }

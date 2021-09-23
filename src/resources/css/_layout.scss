@@ -35,6 +35,71 @@
   }
 }
 
+.home_flex_box {
+  display: flex;
+  flex-wrap: wrap;
+  @include tablet {
+    display: block;
+  }
+  .item {
+    flex: 1 0 calc(33% - 10px);
+    box-sizing: border-box;
+    align-self: baseline;
+    padding: 0 5px;
+    @include tablet {
+      width: 100%;
+    }
+    & > div {
+    }
+  }
+  .heibox500 {
+    border: 1px solid #000;
+    background: #fff;
+    height: 500px;
+    margin-bottom: 10px;
+    @include tablet {
+      height: auto;
+    }
+  }
+  .heibox300 {
+    border: 1px solid #000;
+    background: #fff;
+    height: 300px;
+    margin-bottom: 10px;
+    @include tablet {
+      height: auto;
+    }
+  }
+  .heibox200 {
+    border: 1px solid #000;
+    background: #fff;
+    height: 200px;
+    margin-bottom: 10px;
+    @include tablet {
+      height: auto;
+    }
+  }
+}
+
+.home_sub_flex_box {
+  display: flex;
+  flex-wrap: wrap;
+  .sub_item {
+    flex: 1 0 calc(50% - 10px);
+    box-sizing: border-box;
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  @include mobile {
+    display: block;
+    .sub_item {
+      margin-left: 0;
+    }
+  }
+}
+
 .horizon_tb {
   overflow-x: auto;
 }
@@ -534,7 +599,9 @@
   background: #{$col-white} url(../images/chevron-down-solid.svg) no-repeat right
     10px center;
   background-size: 10px;
-
+  &::-ms-expand {
+    display: none;
+  }
   .option_item {
     display: none;
     z-index: 3;
