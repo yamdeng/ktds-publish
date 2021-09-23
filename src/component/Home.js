@@ -26,7 +26,7 @@ class Home extends Component {
       <div className="content_area">
         <div className="home_flex_box">
           <div className="item">
-            <div className="heibox500">1</div>
+            <div className="heibox500">111</div>
           </div>
           <div className="item">
             <div className="home_sub_flex_box">
