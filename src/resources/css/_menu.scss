@@ -305,7 +305,7 @@ body {
   }
 }
 
-@include mobile {
+@include desktop {
   .menu_side {
     position: absolute;
     left: -280px;

@@ -35,6 +35,139 @@
   }
 }
 
+.indices_txt {
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @include tablet {
+    position: inherit;
+    padding: 30px 0;
+    text-align: center;
+    left: 0;
+    top: 0;
+    transform: inherit;
+  }
+}
+
+.list_flex {
+  display: flex;
+  flex-wrap: wrap;
+  @include mobile {
+    display: block;
+  }
+  li {
+    flex: 1 0 calc(50% - 20px);
+    box-sizing: border-box;
+    padding: 18px 5px;
+    overflow: hidden;
+    cursor: pointer;
+    @include mobile {
+      padding: 10px 5px;
+    }
+    &._three {
+      flex: 1 0 calc(33% - 20px);
+    }
+    span {
+      display: inline-block;
+    }
+    .txt {
+      float: left;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #{$col-gray600};
+      .sub {
+        padding-top: 5px;
+        font-size: 14px;
+        color: #{$col-gray350};
+      }
+    }
+    .count {
+      float: right;
+      font-size: 16px;
+      color: #{$col-green};
+      padding-right: 10px;
+    }
+  }
+}
+
+.img_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  @include sm-mobile {
+    display: block;
+  }
+  li {
+    flex: 1 0 calc(50% - 20px);
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 0 10px 20px;
+    cursor: pointer;
+    .img {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .txt {
+      color: #{$col-gray600};
+      padding-top: 10px;
+      span {
+        color: #{$col-green};
+        font-size: 16px;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 3px;
+      }
+      .download {
+        background: url(../images/icon_download.png) no-repeat left center;
+        width: 19px;
+        height: 20px;
+        margin-left: 5px;
+        text-indent: -10000px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.notice_list {
+  min-width: 0;
+  padding: 5px 0;
+  li {
+    background: url(../images/icon_home_bl.png) no-repeat left center;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    @include ellipsis();
+    .new {
+      position: absolute;
+      right: 0;
+      top: 13px;
+      color: #{$col-green};
+    }
+    &._notice {
+      padding: 15px;
+      padding-right: 30px;
+    }
+  }
+  &._two {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: 1 0 calc(50% - 20px);
+      box-sizing: border-box;
+      min-width: 0;
+    }
+  }
+}
+
 .home_flex_box {
   display: flex;
   flex-wrap: wrap;
@@ -42,41 +175,55 @@
     display: block;
   }
   .item {
-    flex: 1 0 calc(33% - 10px);
+    flex: 1 0 calc(33% - 20px);
     box-sizing: border-box;
-    align-self: baseline;
-    padding: 0 5px;
+    padding: 0 10px;
+    min-width: 0;
+    @include desktop {
+      flex: 1 0 calc(50% - 20px);
+    }
     @include tablet {
       width: 100%;
     }
     & > div {
     }
   }
-  .heibox500 {
-    border: 1px solid #000;
-    background: #fff;
-    height: 500px;
-    margin-bottom: 10px;
+  .heibox {
+    border: 1px solid #{$col-gray200};
+    background: #{$col-default-bg};
+    box-shadow: 3px 0 10px rgba($col-black, 0.1);
+    margin-bottom: 20px;
+    padding: 0 19px;
+    box-sizing: border-box;
     @include tablet {
-      height: auto;
+      height: auto !important;
     }
-  }
-  .heibox300 {
-    border: 1px solid #000;
-    background: #fff;
-    height: 300px;
-    margin-bottom: 10px;
-    @include tablet {
-      height: auto;
+    &._500 {
+      height: 500px;
     }
-  }
-  .heibox200 {
-    border: 1px solid #000;
-    background: #fff;
-    height: 200px;
-    margin-bottom: 10px;
-    @include tablet {
-      height: auto;
+    &._389 {
+      height: 389px;
+    }
+    &._300 {
+      height: 300px;
+    }
+    &._142 {
+      height: 142px;
+    }
+    &._139 {
+      height: 139px;
+    }
+    &._106 {
+      height: 106px;
+    }
+    &._108 {
+      height: 108px;
+    }
+    &._104 {
+      height: 104px;
+    }
+    &._65 {
+      height: 65px;
     }
   }
 }
@@ -85,9 +232,10 @@
   display: flex;
   flex-wrap: wrap;
   .sub_item {
-    flex: 1 0 calc(50% - 10px);
+    flex: 1 0 calc(50% - 20px);
     box-sizing: border-box;
-    margin-left: 10px;
+    margin-left: 20px;
+    min-width: 0;
     &:first-child {
       margin-left: 0;
     }
@@ -97,6 +245,65 @@
     .sub_item {
       margin-left: 0;
     }
+  }
+}
+
+.home_title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0 15px 43px;
+  border-bottom: 1px solid #{$col-orange};
+  box-sizing: border-box;
+  color: #{$col-gray600};
+  &._1 {
+    font-size: 14px;
+    font-weight: normal;
+    border-bottom: none;
+    padding: 22px 0 23px 43px;
+  }
+  &.h1 {
+    background: url(../images/icon_home_1.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h2 {
+    background: url(../images/icon_home_2.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h3 {
+    background: url(../images/icon_home_3.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h4 {
+    background: url(../images/icon_home_4.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h5 {
+    background: url(../images/icon_home_5.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h6 {
+    background: url(../images/icon_home_6.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h7 {
+    background: url(../images/icon_home_7.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h8 {
+    background: url(../images/icon_home_8.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h9 {
+    background: url(../images/icon_home_9.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h10 {
+    background: url(../images/icon_home_10.png) no-repeat 6px center;
+    background-size: 27px;
+  }
+  &.h11 {
+    background: url(../images/icon_home_11.png) no-repeat 6px center;
+    background-size: 27px;
   }
 }
 
@@ -1325,6 +1532,17 @@ hr.line {
 
 .fas.fa-folder-open {
   max-width: 14px;
+}
+
+@include desktop {
+  .home_flex_box .tablet_389 {
+    height: 389px !important;
+  }
+}
+@include tablet {
+  .home_flex_box .tablet_389 {
+    height: auto !important;
+  }
 }
 
 @include mobile {
