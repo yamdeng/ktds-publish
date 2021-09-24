@@ -35,7 +35,7 @@ if (isError) {
   rootStore.appStore.changeIsError(true);
 }
 
-ReactDOM.render(``
+ReactDOM.render(
   <Provider {...rootStore}>
     <Router history={AppHistory}>
       <App />
