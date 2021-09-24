@@ -105,6 +105,12 @@ body {
     transition: width 0.3s ease;
     overflow: hidden;
     -ms-transition: width 0.3s ease;
+    .menu_area {
+      width: 0;
+      transition: width 0.3s ease;
+      overflow: hidden;
+      -ms-transition: width 0.3s ease;
+    }
   }
 }
 .menu_wrap {
