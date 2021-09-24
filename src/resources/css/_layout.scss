@@ -236,6 +236,7 @@
     box-sizing: border-box;
     margin-left: 20px;
     min-width: 0;
+    -ms-flex: 1;
     &:first-child {
       margin-left: 0;
     }
