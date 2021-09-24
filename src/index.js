@@ -1,3 +1,6 @@
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
+import 'fast-text-encoding/text';
 import 'antd/dist/antd.css';
 import 'react-datepicker/dist/react-datepicker.css';
 import React from 'react';
@@ -32,7 +35,7 @@ if (isError) {
   rootStore.appStore.changeIsError(true);
 }
 
-ReactDOM.render(
+ReactDOM.render(``
   <Provider {...rootStore}>
     <Router history={AppHistory}>
       <App />
