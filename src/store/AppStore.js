@@ -1,4 +1,4 @@
-import { observable, action, makeObservable, computed } from 'mobx';
+import { observable, action, computed } from 'mobx';
 import ModalService from 'service/ModalService';
 import Helper from 'util/Helper';
 import Logger from 'util/Logger';
@@ -22,7 +22,6 @@ class AppStore {
   isError = false;
 
   constructor(rootStore) {
-    makeObservable(this);
     this.rootStore = rootStore;
     // this.profile = Helper.getByLocalStorage('profile') || null;
     // this.token = Helper.getByLocalStorage('token') || '';

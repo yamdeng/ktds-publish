@@ -1,3 +1,5 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 import 'fast-text-encoding/text';
@@ -26,7 +28,7 @@ moment.locale('ko');
 
 // state의 상태는 action을 통해서만 가능하게끔 셋팅
 configure({
-  enforceActions: 'action'
+  enforceActions: 'always'
 });
 
 // queryString 처리

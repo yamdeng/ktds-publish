@@ -1,4 +1,4 @@
-import { observable, action, makeObservable } from 'mobx';
+import { observable, action, toJS } from 'mobx';
 import AppHistory from 'util/AppHistory';
 import Menu from 'config/Menu';
 import update from 'immutability-helper';
@@ -39,7 +39,6 @@ class UiStore {
   @observable isDarkTheme = false;
 
   constructor(rootStore) {
-    makeObservable(this);
     this.rootStore = rootStore;
   }
 
@@ -64,10 +63,11 @@ class UiStore {
   // 왼쪽 1depth 메뉴 toggle
   @action
   toggle1DepthMenu(menuName) {
-    let searchIndex = this.menuList.findIndex((info) => info.name === menuName);
+    let menuList = toJS(this.menuList);
+    let searchIndex = menuList.findIndex((info) => info.name === menuName);
     if (searchIndex !== -1) {
-      let selectMenuInfo = this.menuList[searchIndex];
-      let newMenuList = update(this.menuList, {
+      let selectMenuInfo = menuList[searchIndex];
+      let newMenuList = update(menuList, {
         [searchIndex]: {
           isExpend: { $set: !selectMenuInfo.isExpend }
         }

@@ -1,4 +1,4 @@
-import { observable, action, makeObservable } from 'mobx';
+import { observable, action } from 'mobx';
 
 /*
 
@@ -19,7 +19,6 @@ class ModalStore {
   @observable historyModalData = [];
 
   constructor(rootStore) {
-    makeObservable(this);
     this.rootStore = rootStore;
   }
 

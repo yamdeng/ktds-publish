@@ -1,4 +1,4 @@
-import { observable, action, makeObservable } from 'mobx';
+import { observable, action } from 'mobx';
 
 /*
 
@@ -16,7 +16,6 @@ class AlertModalStore {
   @observable displayModal = false;
 
   constructor(rootStore) {
-    makeObservable(this);
     this.rootStore = rootStore;
   }
 

@@ -1,4 +1,4 @@
-import { observable, action, makeObservable, runInAction } from 'mobx';
+import { observable, action, runInAction } from 'mobx';
 import ListStore from 'store/ui/ListStore';
 
 /*
@@ -12,7 +12,6 @@ class BoardListStore extends ListStore {
 
   constructor(rootStore) {
     super();
-    makeObservable(this);
     this.rootStore = rootStore;
   }
 

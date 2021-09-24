@@ -1,10 +1,4 @@
-import {
-  action,
-  makeObservable,
-  observable,
-  override,
-  runInAction
-} from 'mobx';
+import { observable, action, runInAction } from 'mobx';
 import FormStore from 'store/ui/FormStore';
 import Helper from 'util/Helper';
 import ApiService from 'service/ApiService';
@@ -21,7 +15,6 @@ class GuideFormStore extends FormStore {
 
   constructor(rootStore) {
     super();
-    makeObservable(this);
     this.rootStore = rootStore;
     this.initFormData();
   }
@@ -81,7 +74,7 @@ class GuideFormStore extends FormStore {
     this.formData = formData;
   }
 
-  @override
+  @action
   save() {
     if (this.validate()) {
       let apiParam = this.getApiParam();
@@ -89,7 +82,7 @@ class GuideFormStore extends FormStore {
     }
   }
 
-  @override
+  @action
   validate() {
     let success = super.validate();
     // 추가 validate
