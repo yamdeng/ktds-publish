@@ -39,6 +39,30 @@ body {
     transform: translate(0, -50%);
   }
 }
+.profile {
+  span {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .img {
+    i {
+      font-size: 35px;
+    }
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 35px;
+      border: 1px solid $col-gray300;
+      overflow: hidden;
+    }
+  }
+  @include mobile {
+    .txt {
+      display: none;
+    }
+  }
+}
 
 .toggle_btn {
   position: absolute;
