@@ -79,7 +79,7 @@ body {
 }
 
 .menu_side {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   flex-shrink: 0;
   flex-direction: row;
@@ -218,7 +218,7 @@ body {
 }
 
 .content_area {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   flex: auto;
   box-sizing: border-box;
@@ -226,6 +226,7 @@ body {
   z-index: 1;
   height: calc(100vh - 0px);
   overflow-y: auto;
+  min-width: 0;
   @include mobile {
     display: block;
     flex-direction: row;
