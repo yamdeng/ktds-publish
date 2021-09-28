@@ -154,6 +154,12 @@
       top: 13px;
       color: #{$col-green};
     }
+    .best-new {
+      position: absolute;
+      right: 0;
+      top: 8px;
+      color: #{$col-green};
+    }
     &._notice {
       padding: 15px;
       padding-right: 30px;
