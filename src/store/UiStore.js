@@ -107,7 +107,7 @@ class UiStore {
     let { routeUrl } = menuInfo;
     this.goPage(routeUrl);
     if (DeviceUtil.isMobile) {
-      this.displaySideMenu = true;
+      this.displaySideMenu = !this.displaySideMenu;
     }
   }
 
