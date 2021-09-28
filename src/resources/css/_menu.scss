@@ -55,6 +55,7 @@ body {
       border-radius: 35px;
       border: 1px solid $col-gray300;
       overflow: hidden;
+      cursor: pointer;
     }
   }
   @include mobile {
