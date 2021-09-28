@@ -186,17 +186,17 @@ class Home extends Component {
           <div className="item">
             <div className="heibox _389 relative">
               <p className="home_title h8">안전지수</p>
-              <img
-                src={SAFEINDEX_GAUGE}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  paddingLeft: 20,
-                  paddingRight: 20,
-                  paddingBottom: 20,
-                  paddingTop: 5
-                }}
-              />
+              <p className=" indices_txt col_red">
+                <img
+                  src={SAFEINDEX_GAUGE}
+                  style={{
+                    width: '100%',
+                    maxWidth: '80%',
+                    margin: '0 auto',
+                    display: 'block'
+                  }}
+                />
+              </p>
               {/* col_red, col_orange, col_yellow, col_green */}
               {/* <p className=" indices_txt col_red">매우 위험 : 99</p> */}
             </div>
