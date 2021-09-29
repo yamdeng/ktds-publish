@@ -101,6 +101,7 @@ body {
     position: relative;
     width: 280px;
     min-width: 280px;
+    overflow-y: auto;
   }
   &.hide {
     width: 0;

@@ -74,22 +74,22 @@ class GuideFormStore extends FormStore {
     this.formData = formData;
   }
 
-  @action
-  save() {
-    if (this.validate()) {
-      let apiParam = this.getApiParam();
-      // 추가 액션
-    }
-  }
+  // @action
+  // save() {
+  //   if (this.validate()) {
+  //     let apiParam = this.getApiParam();
+  //     // 추가 액션
+  //   }
+  // }
 
-  @action
-  validate() {
-    let success = super.validate();
-    // 추가 validate
-    if (success) {
-    }
-    return success;
-  }
+  // @action
+  // validate() {
+  //   let success = super.validate();
+  //   // 추가 validate
+  //   if (success) {
+  //   }
+  //   return success;
+  // }
 
   // 상세 정보 가져와서 formData에 맵핑시키기
   @action
