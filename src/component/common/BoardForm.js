@@ -28,13 +28,28 @@ import AppDatePicker from 'component/ui/AppDatePicker';
 class BoardForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { fileCount: 0 };
+    this.addFile = this.addFile.bind(this);
+  }
+
+  addFile() {
+    let { fileCount } = this.state;
+    this.setState({ fileCount: fileCount + 1 });
   }
 
   componentDidMount() {}
 
   render() {
     let { boardFormStore } = this.props;
+
+    let { fileCount } = this.state;
+
+    let fileList = [];
+    for (let index = 0; index < fileCount; index++) {
+      fileList.push(1);
+    }
+    debugger;
+
     return (
       <div className="content_area">
         <h3>게시판 등록 / 수정</h3>
@@ -154,31 +169,38 @@ class BoardForm extends Component {
             </div>
           </div>
           <hr className="line" />
-          <div className="form_table">
-            <div className="form_cell f_wid100">
-              <span className="form_group wid50 c_mr5">
-                <input
-                  type="text"
-                  className="form_tag center"
-                  disabled
-                  placeholder="xxxxx.pdf - 10kb"
-                />
-                <label className="f_label" for="b">
-                  첨부
-                </label>
-                {/* input에 value 값이 있으면 style display로 제어 */}
-                <span className="icon icon_clear" style={{ display: 'block' }}>
-                  <i class="fas fa-times-circle"></i>
-                </span>
-              </span>
-              {/* <button className="btn_icon btn_dark_gray c_mr5">
+          {fileList.map((info) => {
+            return (
+              <div className="form_table">
+                <div className="form_cell f_wid100">
+                  <span className="form_group wid50 c_mr5">
+                    <input
+                      type="text"
+                      className="form_tag center"
+                      disabled
+                      placeholder="xxxxx.pdf - 10kb"
+                    />
+                    <label className="f_label" for="b">
+                      첨부
+                    </label>
+                    {/* input에 value 값이 있으면 style display로 제어 */}
+                    <span
+                      className="icon icon_clear"
+                      style={{ display: 'block' }}
+                    >
+                      <i class="fas fa-times-circle"></i>
+                    </span>
+                  </span>
+                  {/* <button className="btn_icon btn_dark_gray c_mr5">
                 <i class="fas fa-folder-open"></i>
               </button> */}
-              <button className="btn_icon btn_dark_gray c_mr5">
-                <i class="fas fa-times-circle"></i>
-              </button>
-            </div>
-          </div>
+                  <button className="btn_icon btn_dark_gray c_mr5">
+                    <i class="fas fa-times-circle"></i>
+                  </button>
+                </div>
+              </div>
+            );
+          })}
           <div className="form_table">
             <div className="form_cell f_wid100 c_pt5">
               <span className="form_group wid50 c_mr5">
@@ -191,7 +213,10 @@ class BoardForm extends Component {
                   <i class="fas fa-times-circle"></i>
                 </span> */}
               </span>
-              <button className="btn_icon btn_dark_gray c_mr5">
+              <button
+                className="btn_icon btn_dark_gray c_mr5"
+                onClick={this.addFile}
+              >
                 <i class="fas fa-folder-open"></i>
               </button>
               {/* <button className="btn_icon btn_dark_gray c_mr5">
