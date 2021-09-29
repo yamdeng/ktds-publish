@@ -6,7 +6,7 @@ body {
 #root > div {
   box-sizing: border-box;
   display: flex;
-  min-height: 100%;
+  height: calc(100vh - 0px);
 }
 
 .top_menu_toggle {
@@ -81,7 +81,8 @@ body {
 }
 
 .menu_side {
-  display: inline-flex;
+  display: flex;
+  display: -ms-flexbox;
   flex-direction: column;
   flex-shrink: 0;
   flex-direction: row;
@@ -96,7 +97,7 @@ body {
 
   .menu_area {
     box-sizing: border-box;
-    padding-top: 72px;
+    margin-top: 72px;
     box-sizing: border-box;
     position: relative;
     width: 280px;
@@ -230,19 +231,21 @@ body {
 }
 
 .content_area {
-  display: inline-flex;
-  flex-direction: column;
+  // display: flex;
+  // display: -ms-flexbox;
+  // flex-direction: column;
   flex: auto;
   box-sizing: border-box;
-  padding: 95px 30px 20px;
+  padding: 23px 30px 20px;
+  margin-top: 72px;
   z-index: 1;
-  height: calc(100vh - 0px);
-  overflow-y: auto;
   min-width: 0;
+  overflow-y: auto;
   @include mobile {
     display: block;
     flex-direction: row;
-    padding: 100px 15px 15px;
+    padding: 23px 15px 15px;
+    margin-top: 72px;
   }
 }
 
