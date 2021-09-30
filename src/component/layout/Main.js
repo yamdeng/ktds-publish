@@ -61,158 +61,160 @@ class Main extends Component {
     return (
       <>
         <SideBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route
-            exact
-            path="/outside-org-manage"
-            component={OutsideOrgManage}
-          />
-          <Route exact path="/boards" component={BoardList} />
-          <Route exact path="/boards" component={BoardList} />
-          <Route
-            exact
-            path="/boards/:id"
-            render={(props) => {
-              if (props.match.params.id === Constant.FORM_ADD_ID) {
-                return <BoardForm {...props} />;
-              } else {
-                return <BoardDetail {...props} />;
-              }
-            }}
-          />
-          <Route exact path="/boards/:id/update" component={BoardForm} />
-          <Route exact path="/member-roles" component={MemberRoleList} />
-          <Route exact path="/check-items" component={CheckItemList} />
-          <Route exact path="/work-orders" component={WorkOrderList} />
-          <Route
-            exact
-            path="/work-orders/:id"
-            render={(props) => {
-              if (props.match.params.id === Constant.FORM_ADD_ID) {
-                return <WorkOrderForm {...props} />;
-              } else {
-                return <WorkOrderForm {...props} />;
-              }
-            }}
-          />
-          <Route
-            exact
-            path="/work-orders/:id/update"
-            component={WorkOrderForm}
-          />
-          <Route
-            exact
-            path="/work-approve-requests"
-            component={WorkApproveRequestList}
-          />
-          <Route
-            exact
-            path="/closeness-permissions"
-            component={ClosenessPermissionList}
-          />
-          <Route
-            exact
-            path="/closeness-permissions/:id"
-            render={(props) => {
-              if (props.match.params.id === Constant.FORM_ADD_ID) {
-                return <ClosenessPermissionForm {...props} />;
-              } else {
-                return <ClosenessPermissionForm {...props} />;
-              }
-            }}
-          />
-          <Route
-            exact
-            path="/closeness-permissions/:id/update"
-            component={ClosenessPermissionForm}
-          />
-          <Route exact path="/check-results" component={CheckResultList} />
-          <Route
-            exact
-            path="/check-results/:id"
-            render={(props) => {
-              if (props.match.params.id === Constant.FORM_ADD_ID) {
-                return <CheckResultForm {...props} />;
-              } else {
-                return <CheckResultForm {...props} />;
-              }
-            }}
-          />
-          <Route
-            exact
-            path="/check-results/:id/update"
-            component={CheckResultForm}
-          />
-          <Route
-            exact
-            path="/work-order-statuses"
-            component={WorkOrderStatusList}
-          />
-          <Route
-            exact
-            path="/check-item-statuses"
-            component={CheckItemStatusList}
-          />
-          <Route
-            exact
-            path="/work-order-dashboard"
-            component={WorkOrderDashBoard}
-          />
-          <Route
-            exact
-            path="/safe-doc-templates"
-            component={SafeDocTemplateList}
-          />
-          <Route
-            exact
-            path="/safe-doc-template-applys"
-            component={SafeDocTemplateApplyList}
-          />
-          <Route exact path="/safe-managers" component={SafeManagerList} />
-          <Route exact path="/subjects" component={SubjectList} />
-          <Route exact path="/subjects/:id" component={SubjectDetail} />
-          <Route
-            exact
-            path="/safe-doc-schedules"
-            component={SafeDocScheduleList}
-          />
-          <Route exact path="/safe-docs" component={SafeDocList} />
-          <Route
-            exact
-            path="/safe-docs/:id"
-            render={(props) => {
-              if (props.match.params.id === Constant.FORM_ADD_ID) {
-                return <SafeDocForm {...props} />;
-              } else {
-                return <SafeDocForm {...props} />;
-              }
-            }}
-          />
-          {/* 이후 아래는 테스트 라우팅 */}
-          <Route exact path="/test/modal" component={ModalTest} />
-          <Route exact path="/test/table1" component={TableTest1} />
-          <Route exact path="/test/table2" component={TableTest2} />
-          <Route exact path="/test/form1" component={FormTest1} />
-          <Route exact path="/test/form2" component={FormTest2} />
-          {/* <Route exact path="/test/form3" component={FormTest3} /> */}
-          <Route exact path="/test/search-field1" component={SearchField1} />
-          <Route exact path="/test/guide/table1" component={GuideTable1} />
-          <Route exact path="/test/guide/form1" component={GuideForm1} />
-          <Route exact path="/test/guide/form2" component={GuideForm2} />
-          <Route
-            exact
-            path="/test/guide/table_top_layout"
-            component={TableTopLayout}
-          />
-          <Route exact path="/test/guide/edit-table" component={EditTable} />
-          <Route
-            exact
-            path="/test/guide/table_top_layout2"
-            component={TableTopLayout2}
-          />
-          <Route exact path="/error/server" component={ServerError} />
-        </Switch>
+        <div className="content_area_wrap">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route
+              exact
+              path="/outside-org-manage"
+              component={OutsideOrgManage}
+            />
+            <Route exact path="/boards" component={BoardList} />
+            <Route exact path="/boards" component={BoardList} />
+            <Route
+              exact
+              path="/boards/:id"
+              render={(props) => {
+                if (props.match.params.id === Constant.FORM_ADD_ID) {
+                  return <BoardForm {...props} />;
+                } else {
+                  return <BoardDetail {...props} />;
+                }
+              }}
+            />
+            <Route exact path="/boards/:id/update" component={BoardForm} />
+            <Route exact path="/member-roles" component={MemberRoleList} />
+            <Route exact path="/check-items" component={CheckItemList} />
+            <Route exact path="/work-orders" component={WorkOrderList} />
+            <Route
+              exact
+              path="/work-orders/:id"
+              render={(props) => {
+                if (props.match.params.id === Constant.FORM_ADD_ID) {
+                  return <WorkOrderForm {...props} />;
+                } else {
+                  return <WorkOrderForm {...props} />;
+                }
+              }}
+            />
+            <Route
+              exact
+              path="/work-orders/:id/update"
+              component={WorkOrderForm}
+            />
+            <Route
+              exact
+              path="/work-approve-requests"
+              component={WorkApproveRequestList}
+            />
+            <Route
+              exact
+              path="/closeness-permissions"
+              component={ClosenessPermissionList}
+            />
+            <Route
+              exact
+              path="/closeness-permissions/:id"
+              render={(props) => {
+                if (props.match.params.id === Constant.FORM_ADD_ID) {
+                  return <ClosenessPermissionForm {...props} />;
+                } else {
+                  return <ClosenessPermissionForm {...props} />;
+                }
+              }}
+            />
+            <Route
+              exact
+              path="/closeness-permissions/:id/update"
+              component={ClosenessPermissionForm}
+            />
+            <Route exact path="/check-results" component={CheckResultList} />
+            <Route
+              exact
+              path="/check-results/:id"
+              render={(props) => {
+                if (props.match.params.id === Constant.FORM_ADD_ID) {
+                  return <CheckResultForm {...props} />;
+                } else {
+                  return <CheckResultForm {...props} />;
+                }
+              }}
+            />
+            <Route
+              exact
+              path="/check-results/:id/update"
+              component={CheckResultForm}
+            />
+            <Route
+              exact
+              path="/work-order-statuses"
+              component={WorkOrderStatusList}
+            />
+            <Route
+              exact
+              path="/check-item-statuses"
+              component={CheckItemStatusList}
+            />
+            <Route
+              exact
+              path="/work-order-dashboard"
+              component={WorkOrderDashBoard}
+            />
+            <Route
+              exact
+              path="/safe-doc-templates"
+              component={SafeDocTemplateList}
+            />
+            <Route
+              exact
+              path="/safe-doc-template-applys"
+              component={SafeDocTemplateApplyList}
+            />
+            <Route exact path="/safe-managers" component={SafeManagerList} />
+            <Route exact path="/subjects" component={SubjectList} />
+            <Route exact path="/subjects/:id" component={SubjectDetail} />
+            <Route
+              exact
+              path="/safe-doc-schedules"
+              component={SafeDocScheduleList}
+            />
+            <Route exact path="/safe-docs" component={SafeDocList} />
+            <Route
+              exact
+              path="/safe-docs/:id"
+              render={(props) => {
+                if (props.match.params.id === Constant.FORM_ADD_ID) {
+                  return <SafeDocForm {...props} />;
+                } else {
+                  return <SafeDocForm {...props} />;
+                }
+              }}
+            />
+            {/* 이후 아래는 테스트 라우팅 */}
+            <Route exact path="/test/modal" component={ModalTest} />
+            <Route exact path="/test/table1" component={TableTest1} />
+            <Route exact path="/test/table2" component={TableTest2} />
+            <Route exact path="/test/form1" component={FormTest1} />
+            <Route exact path="/test/form2" component={FormTest2} />
+            {/* <Route exact path="/test/form3" component={FormTest3} /> */}
+            <Route exact path="/test/search-field1" component={SearchField1} />
+            <Route exact path="/test/guide/table1" component={GuideTable1} />
+            <Route exact path="/test/guide/form1" component={GuideForm1} />
+            <Route exact path="/test/guide/form2" component={GuideForm2} />
+            <Route
+              exact
+              path="/test/guide/table_top_layout"
+              component={TableTopLayout}
+            />
+            <Route exact path="/test/guide/edit-table" component={EditTable} />
+            <Route
+              exact
+              path="/test/guide/table_top_layout2"
+              component={TableTopLayout2}
+            />
+            <Route exact path="/error/server" component={ServerError} />
+          </Switch>
+        </div>
       </>
     );
   }
