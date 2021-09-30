@@ -64,6 +64,21 @@
   }
 }
 
+.subject-search-modal-content {
+  width: 1350px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  @include mobile {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    border-radius: 0 !important;
+    .popup-container {
+      height: 100%;
+    }
+  }
+}
+
 .pop_title {
   font-size: 16px;
   font-weight: bold;
