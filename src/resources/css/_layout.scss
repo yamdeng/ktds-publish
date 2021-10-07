@@ -154,13 +154,13 @@
     @include ellipsis();
     .new {
       position: absolute;
-      right: 0;
+      right: 7px;
       top: 13px;
       color: #{$col-green};
     }
     .best-new {
       position: absolute;
-      right: 0;
+      right: 7px;
       top: 8px;
       color: #{$col-green};
     }
@@ -1590,4 +1590,15 @@ hr.line {
       display: none;
     }
   }
+}
+
+.react-datepicker__header__dropdown {
+  text-align: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.react-datepicker__year-select {
+  width: 65px;
+  text-align: center;
 }

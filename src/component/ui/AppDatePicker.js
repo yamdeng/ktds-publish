@@ -2,6 +2,7 @@ import React from 'react';
 import Helper from 'util/Helper';
 import DatePicker from 'react-datepicker';
 import Config from 'config/Config';
+import { addDays, addYears } from 'date-fns';
 
 /*
 
@@ -38,7 +39,8 @@ class AppDatePicker extends React.Component {
       errorMessage,
       onBlur,
       onlySearch,
-      displayFormat
+      displayFormat,
+      displayYearSelect
     } = this.props;
     let labelId = id ? id : Helper.getUuid();
     valueFormat = valueFormat || Config.defaultDateValueFormat;
@@ -53,7 +55,6 @@ class AppDatePicker extends React.Component {
               type="text"
               className={errorMessage ? 'form_tag invalid' : 'form_tag'}
               readOnly
-              disabled
               ref={ref}
               value={value}
               onClick={(event) => {
@@ -83,6 +84,8 @@ class AppDatePicker extends React.Component {
       <React.Fragment>
         <DatePicker
           selected={selectedDate}
+          showYearDropdown={true}
+          dropdownMode="select"
           dateFormat={
             displayFormat ? displayFormat : Config.defaultDateDisplayFormat
           }
