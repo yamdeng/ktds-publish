@@ -318,6 +318,15 @@
     background: url(../images/icon_home_11.png) no-repeat 6px center;
     background-size: 27px;
   }
+  span {
+    display: inline-block;
+    padding: 6px;
+    padding-right: 0;
+    cursor: pointer;
+    img {
+      width: 15px;
+    }
+  }
 }
 
 .horizon_tb {

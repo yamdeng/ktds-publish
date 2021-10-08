@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HOC from 'util/HOC';
 import SAMPLE from '../resources/images/sample.png';
 import SAFEINDEX_GAUGE from '../resources/images/safe-index-gauge.png';
+import ICON_MORE from '../resources/images/ic_plus.png';
 
 /*
 
@@ -79,7 +80,12 @@ class Home extends Component {
           <div className="item">
             <div className="home_sub_flex_box">
               <div className="sub_item heibox _300">
-                <p className="home_title h2">공지사항</p>
+                <p className="home_title h2 relative">
+                  공지사항{' '}
+                  <span className="icon_more abrc">
+                    <img src={ICON_MORE} alt="" />
+                  </span>
+                </p>
                 <ul className="notice_list">
                   <li className="_notice">
                     1분기 안전 보건 교육 1분기 안전 보건 교육{' '}
