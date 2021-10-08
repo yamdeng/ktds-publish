@@ -85,6 +85,7 @@ class AppDatePicker extends React.Component {
         <DatePicker
           selected={selectedDate}
           showYearDropdown={true}
+          showMonthDropdown={true}
           dropdownMode="select"
           dateFormat={
             displayFormat ? displayFormat : Config.defaultDateDisplayFormat

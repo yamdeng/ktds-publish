@@ -1601,6 +1601,11 @@ hr.line {
   }
 }
 
+.react-datepicker__year-dropdown-container {
+  position: absolute;
+  right: 60px;
+}
+
 .react-datepicker__header__dropdown {
   text-align: right;
   margin-right: 5px;
