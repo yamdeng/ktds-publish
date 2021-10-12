@@ -40,6 +40,21 @@
   }
 }
 
+.member-select-modal-content {
+  width: 1100px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  @include mobile {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    border-radius: 0 !important;
+    .popup-container {
+      height: 100%;
+    }
+  }
+}
+
 .work-order-search-modal-content,
 .org-select-modal-content,
 .member-select-modal-content,
