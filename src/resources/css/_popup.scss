@@ -5,8 +5,7 @@
 .member-simple-form-modal-content,
 .subject-organize-modal-content,
 .work-order-reject-modal-content,
-.common-textarea-modal-content,
-.subject-committee-modal-content {
+.common-textarea-modal-content {
   width: 500px;
   box-sizing: border-box;
   padding: 20px 30px;
@@ -40,6 +39,7 @@
   }
 }
 
+.safe-doc-list-by-schd-modal-content,
 .member-select-modal-content {
   width: 1100px;
   box-sizing: border-box;
@@ -57,14 +57,14 @@
 
 .work-order-search-modal-content,
 .org-select-modal-content,
-.member-select-modal-content,
 .board-comment-list-modal-content,
 .safe-doc-template-form-modal-content,
 .safe-doc-search-modal-content,
 .safe-doc-list-by-subj-modal-content,
 .subject-search-modal-content,
 .board-reply-desc-modal-content,
-.common-map-modal-content {
+.common-map-modal-content,
+.subject-committee-modal-content {
   width: 900px;
   box-sizing: border-box;
   padding: 20px 30px;

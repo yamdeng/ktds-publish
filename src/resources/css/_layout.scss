@@ -370,6 +370,9 @@
       color: #{$col-white} !important;
     }
   }
+  tr.active-input {
+    background: #{$col-green} !important;
+  }
   th {
     font-weight: bold;
     border-bottom: 1px solid #{$col-gray300};
