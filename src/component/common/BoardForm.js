@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
@@ -7,6 +7,7 @@ import CodeSelect from 'component/ui/CodeSelect';
 import SearchInput from 'component/ui/SearchInput';
 
 import AppDatePicker from 'component/ui/AppDatePicker';
+import AppEditor from 'component/ui/AppEditor';
 
 /*
 
@@ -30,6 +31,7 @@ class BoardForm extends Component {
     super(props);
     this.state = { fileCount: 0 };
     this.addFile = this.addFile.bind(this);
+    this.editorRef = createRef();
   }
 
   addFile() {
@@ -48,7 +50,6 @@ class BoardForm extends Component {
     for (let index = 0; index < fileCount; index++) {
       fileList.push(1);
     }
-    debugger;
 
     return (
       <div className="content_area">
@@ -131,15 +132,9 @@ class BoardForm extends Component {
           <div className="form_table">
             <div className="form_cell f_wid100">
               <span className="form_group wid100 c_mr5">
-                <textarea
-                  name=""
-                  id=""
-                  className="form_tag textarea invalid"
-                ></textarea>
-                <label className="f_label" for="b">
-                  내용 <span className="required">*</span>
-                </label>
-                <span class="invalid_txt textarea">유효하지 않습니다.</span>
+                <div>
+                  <AppEditor editorRef={this.editorRef} value={'aaa'} />
+                </div>
               </span>
             </div>
           </div>
