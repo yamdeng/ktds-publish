@@ -11,7 +11,7 @@ class PConfinedSpaceForm1 extends Component {
   render() {
     return (
       <div className="content_area">
-        <h3>22 : 밀폐공간 작업 허가서 등록 : 작업정보 탭</h3>
+        <h3>밀폐공간 작업허가서-작업정보</h3>
         <div className="box_form">
           <div className="form_table">
             <div className="form_cell f_wid50">
@@ -119,8 +119,8 @@ class PConfinedSpaceForm1 extends Component {
           </p>
         </div>
         <ul className="tabs_wrap">
-          <li className="">작업정보</li>
-          <li className="active">안전조치 요구사항</li>
+          <li className="active">작업정보</li>
+          <li className="">안전조치 요구사항</li>
           <li className="">산소 및 유해가스 농도 측정</li>
         </ul>
         <div className="box_form tabs_cont">

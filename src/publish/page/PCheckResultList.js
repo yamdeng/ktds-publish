@@ -11,7 +11,7 @@ class PCheckResultList extends Component {
   render() {
     return (
       <div className="content_area">
-        <h3>25 : 점검결과 현황</h3>
+        <h3>점검 결과 관리</h3>
         <div className="box_form">
           <div className="form_table">
             {/* 

@@ -12,7 +12,15 @@ import PDocContentWPlanFling from './page/PDocContentWPlanFling';
 import PDocContentFileAttach from './page/PDocContentFileAttach';
 import PDocContentWorkInspection from './page/PDocContentWorkInspection';
 import PDocContentWorkCondition from './page/PDocContentWorkCondition';
-// import PDocContentWorkCondition from './page/PDocContentWorkCondition';
+import PCheckItemList1 from './page/PCheckItemList1';
+import PCheckItemList2 from './page/PCheckItemList2';
+import PConfinedSpaceForm1 from './page/PConfinedSpaceForm1';
+import PConfinedSpaceForm2 from './page/PConfinedSpaceForm2';
+import PConfinedSpaceForm3 from './page/PConfinedSpaceForm3';
+import PCheckResultList from './page/PCheckResultList';
+import PCheckResultForm from './page/PCheckResultForm';
+import PWorkOrderResgistStats from './page/PWorkOrderResgistStats';
+import PWorkOrderDashBoard from './page/PWorkOrderDashBoard';
 
 const PageConfig2 = {};
 
@@ -74,8 +82,40 @@ const list = [
     url: '/safe-docs/content/PDocContentWorkCondition'
   },
   {
-    component: PDocContentWorkCondition,
-    url: '/safe-docs/content/PDocContentWorkCondition'
+    component: PCheckItemList1,
+    url: '/check/PCheckItemList1'
+  },
+  {
+    component: PCheckItemList2,
+    url: '/check/PCheckItemList2'
+  },
+  {
+    component: PConfinedSpaceForm1,
+    url: '/check/PConfinedSpaceForm1'
+  },
+  {
+    component: PConfinedSpaceForm2,
+    url: '/check/PConfinedSpaceForm2'
+  },
+  {
+    component: PConfinedSpaceForm3,
+    url: '/check/PConfinedSpaceForm3'
+  },
+  {
+    component: PCheckResultList,
+    url: '/check/PCheckResultList'
+  },
+  {
+    component: PCheckResultForm,
+    url: '/check/PCheckResultForm'
+  },
+  {
+    component: PWorkOrderResgistStats,
+    url: '/etc/PWorkOrderResgistStats'
+  },
+  {
+    component: PWorkOrderDashBoard,
+    url: '/etc/PWorkOrderDashBoard'
   }
 ];
 

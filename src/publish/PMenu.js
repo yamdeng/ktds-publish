@@ -98,7 +98,7 @@ let PMenu = [
       },
       {
         name: '밀폐공간 작업허가서-산소 농도측정',
-        routeUrl: '/check/PConfinedSpaceForm2'
+        routeUrl: '/check/PConfinedSpaceForm3'
       },
       {
         name: '점검 결과 관리',

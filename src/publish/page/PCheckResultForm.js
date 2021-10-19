@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import ModalService from 'service/ModalService';
+import ModalType from 'config/ModalType';
 
 class PCheckResultForm extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.openModal = this.openModal.bind(this);
+    this.openModal2 = this.openModal2.bind(this);
+  }
+
+  openModal() {
+    // CommonEditorModal.js
+    ModalService.openModal(ModalType.COMMON_EDITOR_MODAL, {});
+  }
+
+  openModal2() {
+    // CommonSignModal.js
+    ModalService.openModal(ModalType.COMMON_SIGN_MODAL, {});
   }
 
   componentDidMount() {}
@@ -12,7 +25,7 @@ class PCheckResultForm extends Component {
   render() {
     return (
       <div className="content_area">
-        <h3>26 : 점검결과 등록</h3>
+        <h3>점검 결과 등록(모달 2개 포함)</h3>
         <div className="box_form">
           <div className="form_table">
             {/* 
@@ -183,7 +196,15 @@ class PCheckResultForm extends Component {
                     </td>
                     <td>양호/미흡</td>
                     <td>
-                      <Link>등록</Link>
+                      <a
+                        href=""
+                        onClick={(event) => {
+                          event.preventDefault();
+                          this.openModal();
+                        }}
+                      >
+                        등록
+                      </a>
                     </td>
                   </tr>
                 </tbody>
@@ -209,7 +230,15 @@ class PCheckResultForm extends Component {
                     </td>
                     <td>양호/미흡</td>
                     <td>
-                      <Link>등록</Link>
+                      <a
+                        href=""
+                        onClick={(event) => {
+                          event.preventDefault();
+                          this.openModal2();
+                        }}
+                      >
+                        사인
+                      </a>
                     </td>
                   </tr>
                 </tbody>
