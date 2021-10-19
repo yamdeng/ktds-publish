@@ -101,6 +101,7 @@
     "build:dev": "cross-env NODE_ENV=development DOT_ENV=development node scripts/build.js",
     "start:publish": "cross-env ENTRY_NAME=publish PORT=3006 node scripts/start.js",
     "build:publish": "cross-env ENTRY_NAME=publish BUILD_PATH=publish node scripts/build.js",
+    "start:publishold": "cross-env ENTRY_NAME=publishold PORT=3006 node scripts/start.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {

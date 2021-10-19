@@ -48,12 +48,6 @@ class PWorkFormLeft extends Component {
             <button className="btn_text btn_dark_gray  c_mb10">
               양식 다운로드
             </button>
-            <button className="btn_text btn_dark_gray  c_mb10">
-              서류 다운로드
-            </button>
-            <button className="btn_text btn_dark_gray  c_mb10">
-              작성이력 보기
-            </button>
           </div>
         </div>
       </div>
