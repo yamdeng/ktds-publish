@@ -20,18 +20,98 @@ class PDocContentEducationAttendUser extends Component {
           <PWorkFormLeft />
           <div className="work_content">
             <div className="box_form">
+              <div className="tb_wrap_scroll c_mt15">
+                <div className="horizon_tb">
+                  <table className="tb_list" style={{ minWidth: '500px' }}>
+                    <caption></caption>
+                    <thead>
+                      <tr>
+                        <th>사번</th>
+                        <th>성명</th>
+                        <th>소속</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>담당</td>
+                        <td>11111111</td>
+                        <td>ㅇㅇ</td>
+                        <td>
+                          <i class="fas fa-trash-alt"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
               <div className="form_table">
-                <div className="form_cell f_wid100">
-                  <span className="form_group  form_clear wid60 c_mr5">
+                <div className="form_cell form_cell_flex">
+                  <span className="form_group form_glow  c_mr5">
                     <input type="text" className="form_tag" />
-                    <label className="f_label">교육참여자</label>
+                    <label className="f_label" for="b">
+                      사번
+                    </label>
                   </span>
-                  <button className="btn_icon btn_dark_gray c_mr5">
-                    <i class="fas fa-question"></i>
-                  </button>
-                  <button className="btn_icon btn_green c_mr5">
-                    <i class="fas fa-download"></i>
-                  </button>
+                  <span className="form_group form_glow  c_mr5">
+                    <input type="text" className="form_tag" disabled="true" />
+                    <label className="f_label" for="b">
+                      이름
+                    </label>
+                  </span>
+                  <span className="form_group form_glow ">
+                    <input type="text" className="form_tag" disabled="true" />
+                    <label className="f_label" for="b">
+                      소속
+                    </label>
+                  </span>
+                </div>
+                <div className="form_cell shrink right">
+                  <span className="form_group c_mr5">
+                    <button className="btn_icon btn_dark_gray">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </span>
+                  <span className="form_group">
+                    <button className="btn_icon btn_dark_gray">
+                      <i class="fas fa-times-circle"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div className="form_table">
+                <div className="form_cell form_cell_flex">
+                  <span className="form_group form_glow  c_mr5">
+                    <input type="text" className="form_tag" />
+                    <label className="f_label" for="b">
+                      사번
+                    </label>
+                  </span>
+                  <span className="form_group form_glow  c_mr5">
+                    <input type="text" className="form_tag" disabled="true" />
+                    <label className="f_label" for="b">
+                      이름
+                    </label>
+                  </span>
+                  <span className="form_group form_glow ">
+                    <input type="text" className="form_tag" disabled="true" />
+                    <label className="f_label" for="b">
+                      소속
+                    </label>
+                  </span>
+                </div>
+                <div className="form_cell shrink right">
+                  <span className="form_group c_mr5">
+                    <button className="btn_icon btn_dark_gray">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </span>
+
+                  <span className="form_group">
+                    <button className="btn_icon btn_dark_gray">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </span>
                 </div>
               </div>
             </div>

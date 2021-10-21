@@ -546,14 +546,33 @@
 .form_table {
   display: flex;
   width: 100%;
+  @include tablet {
+    display: block;
+  }
   .form_cell {
-    // display: table-cell;
-    flex-grow: 1;
     padding-right: 10px;
     padding-top: 15px;
     position: relative;
+    @include tablet {
+      display: block;
+      padding-right: 0;
+    }
     &:last-child {
       padding-right: 0;
+    }
+    &.form_cell_flex {
+      flex-grow: 1;
+      display: flex;
+      width: 100%;
+    }
+    &.shrink {
+      flex-shrink: 0;
+      @include tablet {
+        padding-top: 5px;
+      }
+    }
+    .form_glow {
+      flex-grow: 1;
     }
   }
 }
@@ -1522,14 +1541,6 @@ hr.line {
 }
 
 @include tablet {
-  .form_table {
-    display: block;
-    .form_cell {
-      display: block;
-      padding-right: 0;
-    }
-  }
-
   .f_wid10,
   .f_wid15,
   .f_wid20,

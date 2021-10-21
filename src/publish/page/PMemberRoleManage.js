@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ModalService from 'service/ModalService';
 import ModalType from 'config/ModalType';
+import SearchInput from 'component/ui/SearchInput';
+import PageSizeSelect from 'component/ui/PageSizeSelect';
 
 class PMemberRoleManage extends Component {
   constructor(props) {
@@ -18,11 +20,57 @@ class PMemberRoleManage extends Component {
   render() {
     return (
       <div className="content_area">
-        <h3>사용자 권한 부여(모달 포함)</h3>
+        <h3>사용자 권한 부여</h3>
         <div className="box_form">
-          <p className="c_pt15 right">
-            <button className="btn_text btn_green">조회</button>
-          </p>
+          <div className="form_table">
+            <div className="form_cell f_wid30">
+              <span className="form_group form_search wid100">
+                <SearchInput
+                  value={''}
+                  label="사번"
+                  clearInput={this.clearInput}
+                  onChange={this.changeTitle}
+                />
+              </span>
+            </div>
+            <div className="form_cell f_wid30">
+              <span className="form_group form_search wid100">
+                <SearchInput
+                  value={''}
+                  label="성명"
+                  clearInput={this.clearInput}
+                  onChange={this.changeTitle}
+                />
+              </span>
+            </div>
+          </div>
+          {/* 2행 */}
+          <div className="form_table">
+            <div className="form_cell f_wid80">
+              <span className="form_group wid100 _icon">
+                <input
+                  type="text"
+                  className="form_tag"
+                  disabled
+                  placeholder="조직을 선택해주세요"
+                />
+                <label className="f_label" for="b">
+                  조직
+                </label>
+                <button
+                  className="btn_icon btn_dark_gray"
+                  onClick={this.openOrgSelectModal}
+                >
+                  <i class="fas fa-search"></i>
+                </button>
+              </span>
+            </div>
+            <div className="form_cell f_wid20">
+              <p className="c_pt15 right">
+                <button className="btn_text btn_green mobile_full">조회</button>
+              </p>
+            </div>
+          </div>
         </div>
         <div className="list_form c_mt10">
           <p className="relative c_mb10">
@@ -37,154 +85,25 @@ class PMemberRoleManage extends Component {
           </p>
           <div className="tb_wrap_scroll">
             <div className="horizon_tb">
-              <table className="tb_list" style={{ minWidth: '1000px' }}>
+              <table className="tb_list" style={{ minWidth: '700px' }}>
                 <caption></caption>
                 <thead>
                   <tr>
-                    <th>등록일시</th>
-                    <th>등록자</th>
-                    <th>제목</th>
-                    <th>유형</th>
-                    <th>공개기간</th>
-                    <th>파일</th>
-                    <th>댓글수</th>
-                    <th>조회수</th>
-                    <th>상세</th>
+                    <th>사번</th>
+                    <th>이름</th>
+                    <th>소속</th>
+                    <th>부여 권한</th>
                     <th>편집</th>
-                    <th>삭제</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="Yyyy-MM-DD HH:MI"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        className="form_tag center edit"
-                        disabled
-                        value="ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ"
-                        onChange={this.onChangeInput}
-                        onBlur={this.onChangeInput}
-                      />
-                    </td>
-                    <td>
-                      {/* 공지 */}
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label only_label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      {/* 한성유통㈜ */}
-                      <input
-                        type="checkbox"
-                        id="switchs"
-                        name="switch"
-                        className="switch_on_off"
-                      />
-                      <label for="switchs" className="switch_label_on_off">
-                        <span className="marble"></span>
-                        <span className="off">NO</span>
-                        <span class="on">YES</span>
-                      </label>
-                    </td>
-                    <td>
-                      <select
-                        name=""
-                        id="b"
-                        disabled
-                        className="form_tag_select center edit"
-                      >
-                        <option value="">첨부</option>
-                        <option value="">전체</option>
-                        <option value="">전체2</option>
-                      </select>
-                    </td>
-                    <td>
-                      <select
-                        name=""
-                        id="b"
-                        disabled
-                        className="form_tag_select center edit"
-                      >
-                        <option value="">5</option>
-                        <option value="">전체</option>
-                        <option value="">전체2</option>
-                      </select>
-                    </td>
-                    <td>1</td>
-                    <td>
-                      <span className="ico_view">보기</span>
-                    </td>
+                    <td>11111111</td>
+                    <td>ㅇㅇㅇ</td>
+                    <td>전남광역본부>순천지사/ㅇㅇㅇ팀</td>
+                    <td>안전서류,안전검검</td>
                     <td>
                       <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Yyyy-MM-DD HH:MI</td>
-                    <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
-                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
-                    <td>공지</td>
-                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
-                    <td>첨부</td>
-                    <td>5</td>
-                    <td>1</td>
-                    <td>
-                      <span className="ico_view">보기</span>
-                    </td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Yyyy-MM-DD HH:MI</td>
-                    <td>ㅇㅇㅇ 부문>ㅇㅇㅇㅇ팀 홍길동</td>
-                    <td>ㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌㅌ</td>
-                    <td>공지</td>
-                    <td>Yyyy-mm-dd~yyyy-mm-dd</td>
-                    <td>첨부</td>
-                    <td>5</td>
-                    <td>1</td>
-                    <td>
-                      <span className="ico_view">보기</span>
-                    </td>
-                    <td>
-                      <i class="fas fa-edit"></i>
-                    </td>
-                    <td>
-                      <i class="fas fa-trash-alt"></i>
                     </td>
                   </tr>
                 </tbody>
@@ -196,7 +115,7 @@ class PMemberRoleManage extends Component {
               className="btn_text btn_green c_mr5"
               onClick={this.openModal}
             >
-              권한 추가
+              추가
             </button>
           </div>
         </div>

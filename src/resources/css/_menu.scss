@@ -287,6 +287,7 @@ body {
     margin-left: 10px;
     @include mobile {
       padding-left: 0;
+      margin-left: 0;
       border: none;
       .box_form {
         padding: 0;

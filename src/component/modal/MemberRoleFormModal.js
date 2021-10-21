@@ -61,8 +61,8 @@ class MemberRoleFormModal extends React.Component {
         <div className="pop_cont_box">
           <div className="box_form">
             <div className="form_table">
-              <div className="form_cell f_wid100">
-                <span className="form_group form_search wid30 c_mr5">
+              <div className="form_cell f_wid40">
+                <span className="form_group form_search wid100 ">
                   <SearchInput
                     value={''}
                     label="사번"
@@ -70,16 +70,18 @@ class MemberRoleFormModal extends React.Component {
                     onChange={this.changeTitle}
                   />
                 </span>
-                <span className="form_group form_search wid50 c_mr5">
+              </div>
+              <div className="form_cell f_wid50">
+                <span className="form_group wid100 _icon">
                   <input type="text" className="form_tag" disabled />
                   <label className="f_label">조직명</label>
+                  <button
+                    className="btn_icon btn_dark_gray "
+                    onClick={this.openOrgSelectModal}
+                  >
+                    <i class="fas fa-search"></i>
+                  </button>
                 </span>
-                <button
-                  className="btn_icon btn_dark_gray "
-                  onClick={this.openOrgSelectModal}
-                >
-                  <i class="fas fa-search"></i>
-                </button>
               </div>
             </div>
           </div>
