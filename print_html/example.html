@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta charset="UTF-8" />
+    <title>Title</title>
+
+    <style>
+      body {
+        font-family: 'NanumBarunGothic';
+      }
+    </style>
+  </head>
+
+  <body style="margin: 10px; border: 1px solid black; padding: 20px">
+    <h1 style="text-align: center">안전보건총괄책임자 지정서</h1>
+    <br />
+    <h2>1. 선임자</h2>
+    <div style="margin-left: 5%; font-size: 1.2em">
+      - 성 &nbsp;&nbsp;&nbsp; 명 : <span th:text="${membName}"></span>
+    </div>
+    <div style="margin-left: 5%; font-size: 1.2em">
+      - 직 &nbsp;&nbsp;&nbsp;&nbsp; 책 : <span th:text="${lvlName}"></span>
+    </div>
+    <div style="margin-left: 5%; font-size: 1.2em">
+      - 선&nbsp;&nbsp;임&nbsp;&nbsp;일 : <span th:text="${appointDate}"></span>
+    </div>
+    <br />
+    <h2>2. 수행업무</h2>
+    <div style="margin-left: 1%; font-size: 1.1em">
+      - 「산업안전보건법 시행령」제53조에 따른 업무
+    </div>
+    <div style="margin-left: 5%; font-size: 1.1em">
+      (1) 위험성평가의 실시에 관한 사항
+    </div>
+    <div style="margin-left: 5%; font-size: 1.1em">(2) 작업의 중지 및 재개</div>
+    <div style="margin-left: 5%; font-size: 1.1em">
+      (3) 도급사업 시의 안전·보건 조치
+    </div>
+    <div style="margin-left: 5%; font-size: 1.1em">
+      (4) 수급인의 산업안전보건관리비의 집행 감독 및 그 사용에 관한 관계수급인
+      간의 협의·조정
+    </div>
+    <div style="margin-left: 5%; font-size: 1.1em">
+      (5) 안전인증대상기계등과 자율안전확인대상기계등의 사용 여부 확인
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <p style="font-size: 1.2em">
+      귀하를 KT <span th:text="${subjOrgName}"></span> 지사에 「산업안전보건법」
+      제62조에 따른 안전보건총괄책임자로 지정합니다.
+      <br />
+      <center style="font-size: 1.2em">
+        20 &nbsp; &nbsp; . &nbsp; &nbsp; . &nbsp; &nbsp; .
+      </center>
+      <br />
+      <center style="font-size: 1.2em">
+        대표이사 &nbsp; &nbsp; &nbsp; &nbsp; (직인)
+      </center>
+      <br />
+    </p>
+
+    <h2>본인 확인</h2>
+    <p style="font-size: 1.2em">
+      본인은 KT <span th:text="${subjOrgName}"></span>지사의 근로자와 관계수급인
+      근로자의 산업재해를 예방하기위한 업무를 총괄하여 관리하는
+      안전보건총괄책임자로 지정된 사실을 확인합니다.
+      <br />
+      <center style="font-size: 1.2em">
+        20 &nbsp; &nbsp; . &nbsp; &nbsp; . &nbsp; &nbsp; .
+      </center>
+      <br />
+      <center style="font-size: 1.2em">
+        성 명 &nbsp; &nbsp; &nbsp; &nbsp; (직인)
+      </center>
+      <br />
+    </p>
+  </body>
+</html>

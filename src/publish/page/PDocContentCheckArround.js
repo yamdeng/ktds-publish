@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PWorkFormLeft from 'publish/page/layout/PWorkFormLeft';
 import PWorkFormTop from 'publish/page/layout/PWorkFormTop';
 import PWorkFormBottom from 'publish/page/layout/PWorkFormBottom';
+import AppDatePicker from 'component/ui/AppDatePicker';
 
 class PDocContentCheckArround extends Component {
   constructor(props) {
@@ -21,19 +22,61 @@ class PDocContentCheckArround extends Component {
           <div className="work_content">
             <div className="box_form">
               <div className="form_table">
-                <div className="form_cell f_wid100">
-                  <span className="form_group  form_clear wid60 c_mr5">
-                    <input type="text" className="form_tag" />
-                    <label className="f_label">순외점검_기본정보</label>
+                <div className="form_cell f_wid30">
+                  <span className="form_group wid100">
+                    <AppDatePicker
+                      id="aa"
+                      label="점검일"
+                      name={'aa'}
+                      value={''}
+                      onChange={() => {}}
+                      required={true}
+                    />
                   </span>
-                  <button className="btn_icon btn_dark_gray c_mr5">
-                    <i class="fas fa-question"></i>
-                  </button>
-                  <button className="btn_icon btn_green c_mr5">
-                    <i class="fas fa-download"></i>
-                  </button>
+                </div>
+                <div className="form_cell f_wid70"></div>
+              </div>
+              <div className="form_table">
+                <div className="form_cell f_wid70">
+                  <span className="form_group wid80 c_mr5 _icon">
+                    <input
+                      id="a"
+                      type="text"
+                      className="form_tag"
+                      placeholder="점검자를 검색해주세요"
+                      disabled
+                      value="개발팀 황승연"
+                    />
+                    <label className="f_label" for="a">
+                      점검자
+                    </label>
+                    <button className="btn_icon btn_dark_gray">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </span>
+                </div>
+                <div className="form_cell f_wid30"></div>
+              </div>
+              <div className="form_table">
+                <div className="form_cell">
+                  <span className="form_group wid100">
+                    <input
+                      id="inspPlace"
+                      name="inspPlace"
+                      type="text"
+                      className="form_tag"
+                      value="마포"
+                    />
+                    <label className="f_label" for="inspPlace">
+                      점검장소
+                    </label>
+                  </span>
                 </div>
               </div>
+              <p className="c_pt15 right">
+                <button className="btn_text btn_green">저장</button>
+              </p>
+              {/* box_form end */}
             </div>
             <PWorkFormBottom />
           </div>
