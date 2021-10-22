@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component, createRef } from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
+import CodeSelect from 'component/ui/CodeSelect';
+import AppEditor from 'component/ui/AppEditor';
 
 /*
 
@@ -33,6 +35,7 @@ class CheckItemFormModal extends React.Component {
     super(props);
     this.state = {};
     this.close = this.close.bind(this);
+    this.editorRef = createRef();
   }
 
   close() {
@@ -47,33 +50,31 @@ class CheckItemFormModal extends React.Component {
           <div className="write_form">
             <div className="form_table">
               <div className="form_cell f_wid100 c_pr0">
-                <span className="form_group form_clear wid100 ">
+                <span className="form_group form_clear wid50 ">
                   <input type="text" className="form_tag" disabled />
                   <label className="f_label">항목 ID</label>
                 </span>
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid100">
-                <span className="form_group wid40 c_mr5">
-                  <select name="" id="b" className="form_tag_select ">
-                    <option value="0">00</option>
-                    <option value="1">전체1</option>
-                    <option value="2">전체2</option>
-                  </select>
-                  <label className="f_label" for="b">
-                    작업 부문
-                  </label>
+              <div className="form_cell form_cell_flex">
+                <span className="form_group form_glow c_mr5">
+                  <CodeSelect
+                    value={''}
+                    label="작업 부문"
+                    codeType="boardType"
+                    onChange={() => {}}
+                    required={true}
+                  />
                 </span>
-                <span className="form_group wid40">
-                  <select name="" id="b" className="form_tag_select ">
-                    <option value=""> </option>
-                    <option value="">전체1</option>
-                    <option value="">전체2</option>
-                  </select>
-                  <label className="f_label" for="b">
-                    공사 유형
-                  </label>
+                <span className="form_group form_glow">
+                  <CodeSelect
+                    value={''}
+                    label="공사유형"
+                    codeType="boardType"
+                    onChange={() => {}}
+                    required={true}
+                  />
                 </span>
               </div>
             </div>
@@ -116,14 +117,21 @@ class CheckItemFormModal extends React.Component {
             <div className="form_table">
               <div className="form_cell f_wid100">
                 <span className="form_group wid100 c_mr5">
-                  <textarea
+                  <div>
+                    <AppEditor
+                      editorRef={this.editorRef}
+                      value={'aaa'}
+                      height={'300px'}
+                    />
+                  </div>
+                  {/* <textarea
                     name=""
                     id=""
                     className="form_tag textarea"
                   ></textarea>
                   <label className="f_label" for="b">
-                    내용 *
-                  </label>
+                    점검내용 *
+                  </label> */}
                 </span>
               </div>
             </div>

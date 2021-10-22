@@ -24,23 +24,19 @@ class PMemberRoleManage extends Component {
         <div className="box_form">
           <div className="form_table">
             <div className="form_cell f_wid30">
-              <span className="form_group form_search wid100">
-                <SearchInput
-                  value={''}
-                  label="사번"
-                  clearInput={this.clearInput}
-                  onChange={this.changeTitle}
-                />
+              <span className="form_group wid100">
+                <input type="text" className="form_tag" placeholder="" />
+                <label className="f_label" for="b">
+                  사번
+                </label>
               </span>
             </div>
             <div className="form_cell f_wid30">
-              <span className="form_group form_search wid100">
-                <SearchInput
-                  value={''}
-                  label="성명"
-                  clearInput={this.clearInput}
-                  onChange={this.changeTitle}
-                />
+              <span className="form_group wid100">
+                <input type="text" className="form_tag" placeholder="" />
+                <label className="f_label" for="b">
+                  성명
+                </label>
               </span>
             </div>
           </div>

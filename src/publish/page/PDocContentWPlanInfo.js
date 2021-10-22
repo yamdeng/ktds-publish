@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PWorkFormLeft from 'publish/page/layout/PWorkFormLeft';
 import PWorkFormTop from 'publish/page/layout/PWorkFormTop';
 import PWorkFormBottom from 'publish/page/layout/PWorkFormBottom';
-import SearchInput from 'component/ui/SearchInput';
+import CodeSelect from 'component/ui/CodeSelect';
 
 class PDocContentWPlanInfo extends Component {
   constructor(props) {
@@ -158,12 +158,13 @@ class PDocContentWPlanInfo extends Component {
                   </span>
                 </div>
                 <div className="form_cell f_wid50">
-                  <span className="form_group form_search form_clear wid100 c_mr5">
-                    <SearchInput
-                      value={'111111'}
-                      label="신호방법"
-                      clearInput={this.clearInput}
-                      onChange={this.changeTitle}
+                  <span className="form_group wid100 c_mr5">
+                    <CodeSelect
+                      value={''}
+                      label="교육유형"
+                      codeType="boardType"
+                      onChange={() => {}}
+                      required={true}
                     />
                   </span>
                 </div>

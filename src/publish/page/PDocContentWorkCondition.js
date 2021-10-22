@@ -4,6 +4,7 @@ import PWorkFormTop from 'publish/page/layout/PWorkFormTop';
 import PWorkFormBottom from 'publish/page/layout/PWorkFormBottom';
 import AppDatePicker from 'component/ui/AppDatePicker';
 import SearchInput from 'component/ui/SearchInput';
+import CodeSelect from 'component/ui/CodeSelect';
 
 class PDocContentWorkCondition extends Component {
   constructor(props) {
@@ -40,8 +41,8 @@ class PDocContentWorkCondition extends Component {
                     </div>
                   </span>
                 </div>
-                <div className="form_cell wid50">
-                  <span className="form_group f_wid50">
+                <div className="form_cell wid100">
+                  <span className="form_group wid50">
                     <AppDatePicker
                       id="startDate"
                       label="발생일"
@@ -76,12 +77,13 @@ class PDocContentWorkCondition extends Component {
                   </span>
                 </div>
                 <div className="form_cell form_cell_flex">
-                  <span className="form_group form_search form_clear form_glow c_mr5">
-                    <SearchInput
-                      value={'111111'}
+                  <span className="form_group form_glow c_mr5">
+                    <CodeSelect
+                      value={''}
                       label="유형"
-                      clearInput={this.clearInput}
-                      onChange={this.changeTitle}
+                      codeType="boardType"
+                      onChange={() => {}}
+                      required={true}
                     />
                   </span>
                   <span className="form_group form_glow">
@@ -119,12 +121,13 @@ class PDocContentWorkCondition extends Component {
                   </span>
                 </div>
                 <div className="form_cell form_cell_flex">
-                  <span className="form_group form_search form_clear form_glow c_mr5">
-                    <SearchInput
-                      value={'111111'}
+                  <span className="form_group form_glow c_mr5">
+                    <CodeSelect
+                      value={''}
                       label="유형"
-                      clearInput={this.clearInput}
-                      onChange={this.changeTitle}
+                      codeType="boardType"
+                      onChange={() => {}}
+                      required={true}
                     />
                   </span>
                   <span className="form_group form_glow">
@@ -162,12 +165,13 @@ class PDocContentWorkCondition extends Component {
                   </span>
                 </div>
                 <div className="form_cell form_cell_flex">
-                  <span className="form_group form_search form_clear form_glow c_mr5">
-                    <SearchInput
-                      value={'111111'}
+                  <span className="form_group form_glow c_mr5">
+                    <CodeSelect
+                      value={''}
                       label="유형"
-                      clearInput={this.clearInput}
-                      onChange={this.changeTitle}
+                      codeType="boardType"
+                      onChange={() => {}}
+                      required={true}
                     />
                   </span>
                   <span className="form_group form_glow">

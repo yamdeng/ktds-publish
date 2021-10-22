@@ -3,7 +3,7 @@ import PWorkFormLeft from 'publish/page/layout/PWorkFormLeft';
 import PWorkFormTop from 'publish/page/layout/PWorkFormTop';
 import PWorkFormBottom from 'publish/page/layout/PWorkFormBottom';
 import AppDatePicker from 'component/ui/AppDatePicker';
-import SearchInput from 'component/ui/SearchInput';
+import CodeSelect from 'component/ui/CodeSelect';
 
 class PDocContentWorkInspection extends Component {
   constructor(props) {
@@ -25,12 +25,13 @@ class PDocContentWorkInspection extends Component {
               <div className="write_form">
                 <div className="form_table">
                   <div className="form_cell f_wid50">
-                    <span className="form_group form_search form_clear wid100 c_mr5">
-                      <SearchInput
-                        value={'111111'}
+                    <span className="form_group wid100 c_mr5">
+                      <CodeSelect
+                        value={''}
                         label="조사 사유"
-                        clearInput={this.clearInput}
-                        onChange={this.changeTitle}
+                        codeType="boardType"
+                        onChange={() => {}}
+                        required={true}
                       />
                     </span>
                   </div>
@@ -62,7 +63,7 @@ class PDocContentWorkInspection extends Component {
                         placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
                       />
                       <label className="f_label" for="b">
-                        조사 자 사번
+                        조사자 사번
                       </label>
                     </span>
                     <span className="form_group form_glow c_mr5">
@@ -73,7 +74,7 @@ class PDocContentWorkInspection extends Component {
                         placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
                       />
                       <label className="f_label" for="b">
-                        조사 자 이름
+                        조사자 이름
                       </label>
                     </span>
                     <span className="form_group form_glow">
@@ -84,7 +85,7 @@ class PDocContentWorkInspection extends Component {
                         placeholder="직영시 조직명+년도  공사는 공사명 + 기간"
                       />
                       <label className="f_label" for="b">
-                        조사 자 소속
+                        조사자 소속
                       </label>
                     </span>
                   </div>

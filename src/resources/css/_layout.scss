@@ -362,8 +362,19 @@
 }
 .tb_list {
   width: 100%;
-
   border-top: 2px solid #{$col-default-text};
+  &.tb_bor {
+    tr > td,
+    tr > th {
+      border-left: 1px solid #{$col-gray300};
+      &:first-child {
+        border-left: none;
+      }
+      &.fix_bor_left {
+        border-left: 1px solid #{$col-gray300} !important;
+      }
+    }
+  }
   tr.active {
     background: #{$col-green} !important;
     * {
@@ -550,6 +561,7 @@
     display: block;
   }
   .form_cell {
+    flex-grow: 1;
     padding-right: 10px;
     padding-top: 15px;
     position: relative;
@@ -575,7 +587,7 @@
       align-items: center;
     }
     .form_glow {
-      flex-grow: 1;
+      flex: 1 1;
     }
   }
 }
@@ -1336,7 +1348,6 @@ hr.line {
   margin-bottom: 10px;
   border-bottom: 1px solid #{$col-green};
   position: relative;
-  margin-bottom: -1px;
   &::after {
     content: '';
     clear: both;
