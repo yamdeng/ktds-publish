@@ -14,9 +14,9 @@ class PWorkOrderResgistStats extends Component {
         <h3>작업지시 등록 현황</h3>
 
         <div className="box_form">
-          <div className="form_table">
-            <div className="form_cell">
-              <span className="form_group form_search form_clear wid70 c_mr5">
+          <div className="form_table f_wid50">
+            <div className="form_cell form_cell_flex">
+              <span className="form_group form_search form_clear form_glow c_mr5">
                 <input type="text" className="form_tag" />
                 <label className="f_label">조직</label>
                 <span className="icon icon_search">
@@ -31,9 +31,9 @@ class PWorkOrderResgistStats extends Component {
               </button>
             </div>
           </div>
-          <div className="form_table">
-            <div className="form_cell">
-              <span className="form_group wid30 c_mr5">
+          <div className="form_table f_wid50">
+            <div className="form_cell form_cell_flex">
+              <span className="form_group form_glow c_mr5">
                 <input type="text" className="form_tag" />
                 <label className="f_label">년도</label>
               </span>

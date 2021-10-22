@@ -20,16 +20,11 @@ class PDocContentWPlanFling extends Component {
           <PWorkFormLeft />
           <div className="work_content">
             <div className="box_form">
-              <div className="form_table">
-                <div className="form_cell f_wid100">
-                  <span className="form_group  form_clear wid60 c_mr5">
-                    <input type="text" className="form_tag" />
-                    <label className="f_label">중량물 작업계획서 생성</label>
-                  </span>
-                  <button className="btn_icon btn_green c_mr5">
-                    <i class="fas fa-download"></i>
-                  </button>
-                </div>
+              <div className="relative" style={{ height: '100px' }}>
+                <span className="abcc">파일을 생성하시겠습니까 ?</span>
+                {/* <span className="abcc">
+                  이미 파일이 생성되어 있습니다. 파일을 다시 만드시겠습니까 ?
+                </span> */}
               </div>
             </div>
             <PWorkFormBottom />

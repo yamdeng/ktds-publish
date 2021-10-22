@@ -89,7 +89,7 @@ class WorkOrderMemberSettingTab extends Component {
                   </tbody>
                 </table>
               </div>
-              <div className="abcc c_pt30">
+              <div className="abtc c_pt30">
                 <p style={{ fontSize: '20px' }}>
                   <i class="fas fa-arrow-circle-right"></i>
                 </p>

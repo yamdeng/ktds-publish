@@ -67,7 +67,9 @@ class PCheckItemList2 extends Component {
                 </label>
                 <span className="invalid_txt">유효하지 않습니다.</span>
               </span>
-              <button className="btn_text btn_dark_gray">조회</button>
+              <button className="btn_text btn_green mobile_full m_mt15">
+                조회
+              </button>
             </div>
           </div>
         </div>

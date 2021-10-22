@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PWorkFormLeft from 'publish/page/layout/PWorkFormLeft';
 import PWorkFormTop from 'publish/page/layout/PWorkFormTop';
 import PWorkFormBottom from 'publish/page/layout/PWorkFormBottom';
+import AppDatePicker from 'component/ui/AppDatePicker';
+import SearchInput from 'component/ui/SearchInput';
 
 class PDocContentWorkCondition extends Component {
   constructor(props) {
@@ -21,14 +23,166 @@ class PDocContentWorkCondition extends Component {
           <div className="work_content">
             <div className="box_form">
               <div className="form_table">
-                <div className="form_cell f_wid100">
-                  <span className="form_group  form_clear wid60 c_mr5">
-                    <input type="text" className="form_tag" />
-                    <label className="f_label">근골격계 조사표 상황</label>
+                <div className="form_cell shrink" style={{ width: '150px' }}>
+                  <span className="form_group">
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        name="Claude Monet"
+                        id="question-1-option-1"
+                      />
+                      <label
+                        className="checkbox-label"
+                        for="question-1-option-1"
+                      >
+                        작업 설비 변화
+                      </label>
+                    </div>
                   </span>
-                  <button className="btn_icon btn_green c_mr5">
-                    <i class="fas fa-download"></i>
-                  </button>
+                </div>
+                <div className="form_cell wid50">
+                  <span className="form_group f_wid50">
+                    <AppDatePicker
+                      id="startDate"
+                      label="발생일"
+                      value={null}
+                      valueFormat="YYYY-MM-DD"
+                      onChange={(date) => {}}
+                      required={true}
+                    />
+                    <span className="icon icon_calendar">
+                      <i class="fas fa-calendar-alt"></i>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <hr className="line" />
+              <div className="form_table">
+                <div className="form_cell shrink" style={{ width: '150px' }}>
+                  <span className="form_group">
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        name="Claude Monet"
+                        id="question-1-option-1"
+                      />
+                      <label
+                        className="checkbox-label"
+                        for="question-1-option-1"
+                      >
+                        작업 량 변화
+                      </label>
+                    </div>
+                  </span>
+                </div>
+                <div className="form_cell form_cell_flex">
+                  <span className="form_group form_search form_clear form_glow c_mr5">
+                    <SearchInput
+                      value={'111111'}
+                      label="유형"
+                      clearInput={this.clearInput}
+                      onChange={this.changeTitle}
+                    />
+                  </span>
+                  <span className="form_group form_glow">
+                    <AppDatePicker
+                      id="startDate"
+                      label="발생일"
+                      value={null}
+                      valueFormat="YYYY-MM-DD"
+                      onChange={(date) => {}}
+                      required={true}
+                    />
+                    <span className="icon icon_calendar">
+                      <i class="fas fa-calendar-alt"></i>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <hr className="line" />
+              <div className="form_table">
+                <div className="form_cell shrink" style={{ width: '150px' }}>
+                  <span className="form_group">
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        name="Claude Monet"
+                        id="question-1-option-1"
+                      />
+                      <label
+                        className="checkbox-label"
+                        for="question-1-option-1"
+                      >
+                        작업 속도 변화
+                      </label>
+                    </div>
+                  </span>
+                </div>
+                <div className="form_cell form_cell_flex">
+                  <span className="form_group form_search form_clear form_glow c_mr5">
+                    <SearchInput
+                      value={'111111'}
+                      label="유형"
+                      clearInput={this.clearInput}
+                      onChange={this.changeTitle}
+                    />
+                  </span>
+                  <span className="form_group form_glow">
+                    <AppDatePicker
+                      id="startDate"
+                      label="발생일"
+                      value={null}
+                      valueFormat="YYYY-MM-DD"
+                      onChange={(date) => {}}
+                      required={true}
+                    />
+                    <span className="icon icon_calendar">
+                      <i class="fas fa-calendar-alt"></i>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <hr className="line" />
+              <div className="form_table">
+                <div className="form_cell shrink" style={{ width: '150px' }}>
+                  <span className="form_group">
+                    <div className="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        name="Claude Monet"
+                        id="question-1-option-1"
+                      />
+                      <label
+                        className="checkbox-label"
+                        for="question-1-option-1"
+                      >
+                        업무 변화
+                      </label>
+                    </div>
+                  </span>
+                </div>
+                <div className="form_cell form_cell_flex">
+                  <span className="form_group form_search form_clear form_glow c_mr5">
+                    <SearchInput
+                      value={'111111'}
+                      label="유형"
+                      clearInput={this.clearInput}
+                      onChange={this.changeTitle}
+                    />
+                  </span>
+                  <span className="form_group form_glow">
+                    <AppDatePicker
+                      id="startDate"
+                      label="발생일"
+                      value={null}
+                      valueFormat="YYYY-MM-DD"
+                      onChange={(date) => {}}
+                      required={true}
+                    />
+                    <span className="icon icon_calendar">
+                      <i class="fas fa-calendar-alt"></i>
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
 import ModalTopCloseButton from 'component/ui/ModalTopCloseButton';
+import AppDatePicker from 'component/ui/AppDatePicker';
 
 /*
 
@@ -47,15 +48,17 @@ class SafeClothSupplyFormModal extends React.Component {
           <div className="write_form">
             <div className="form_table">
               <div className="form_cell f_wid100 c_pr0">
-                <span className="form_group form_clear wid100 ">
-                  <input type="text" className="form_tag" />
-                  <label className="f_label">지급일</label>
-                  {/* input에 value 값이 있으면 style display로 제어 */}
-                  <span
-                    className="icon icon_clear"
-                    style={{ display: 'block' }}
-                  >
-                    <i class="fas fa-calendar"></i>
+                <span className="form_group wid100">
+                  <AppDatePicker
+                    id="startDate"
+                    label="지급일"
+                    value={null}
+                    valueFormat="YYYY-MM-DD"
+                    onChange={(date) => {}}
+                    required={true}
+                  />
+                  <span className="icon icon_calendar">
+                    <i class="fas fa-calendar-alt"></i>
                   </span>
                 </span>
               </div>
@@ -91,8 +94,8 @@ class SafeClothSupplyFormModal extends React.Component {
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid50">
-                <span className="form_group wid20 c_mr5">
+              <div className="form_cell form_cell_flex">
+                <span className="form_group form_glow c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -102,7 +105,7 @@ class SafeClothSupplyFormModal extends React.Component {
                     수령인 사번
                   </label>
                 </span>
-                <span className="form_group wid20 c_mr5">
+                <span className="form_group form_glow c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -113,7 +116,7 @@ class SafeClothSupplyFormModal extends React.Component {
                     수령인 이름
                   </label>
                 </span>
-                <span className="form_group wid30 c_mr5">
+                <span className="form_group form_glow">
                   <input
                     type="text"
                     className="form_tag"
@@ -124,7 +127,9 @@ class SafeClothSupplyFormModal extends React.Component {
                     수령인 소속
                   </label>
                 </span>
-                <span className="form_group c_mr5">
+              </div>
+              <div className="form_cell shrink right">
+                <span className="form_group">
                   <button className="btn_icon btn_dark_gray">
                     <i class="fas fa-search"></i>
                   </button>
@@ -132,8 +137,8 @@ class SafeClothSupplyFormModal extends React.Component {
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid50">
-                <span className="form_group wid20 c_mr5">
+              <div className="form_cell form_cell_flex">
+                <span className="form_group form_glow c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -143,7 +148,7 @@ class SafeClothSupplyFormModal extends React.Component {
                     지급담당 사번
                   </label>
                 </span>
-                <span className="form_group wid20 c_mr5">
+                <span className="form_group form_glow c_mr5">
                   <input
                     type="text"
                     className="form_tag"
@@ -154,7 +159,7 @@ class SafeClothSupplyFormModal extends React.Component {
                     지급담당 이름
                   </label>
                 </span>
-                <span className="form_group wid30 c_mr5">
+                <span className="form_group form_glow">
                   <input
                     type="text"
                     className="form_tag"
@@ -165,7 +170,9 @@ class SafeClothSupplyFormModal extends React.Component {
                     지급담당 소속
                   </label>
                 </span>
-                <span className="form_group c_mr5">
+              </div>
+              <div className="form_cell shrink right">
+                <span className="form_group">
                   <button className="btn_icon btn_dark_gray">
                     <i class="fas fa-search"></i>
                   </button>

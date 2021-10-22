@@ -285,6 +285,8 @@ body {
     border-left: 1px solid #{$col-gray100};
     padding-left: 10px;
     margin-left: 10px;
+    width: 100%;
+    overflow: hidden;
     @include mobile {
       padding-left: 0;
       margin-left: 0;

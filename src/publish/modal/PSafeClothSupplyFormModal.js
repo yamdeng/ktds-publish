@@ -68,7 +68,7 @@ class PSafeClothSupplyFormModal extends React.Component {
               </div>
             </div>
             <div className="form_table">
-              <div className="form_cell f_wid50">
+              <div className="form_cell form_cell_flex">
                 <span className="form_group wid20 c_mr5">
                   <input
                     type="text"
@@ -101,7 +101,9 @@ class PSafeClothSupplyFormModal extends React.Component {
                     수령인 소속
                   </label>
                 </span>
-                <span className="form_group c_mr5">
+              </div>
+              <div className="form_cell shrink right">
+                <span className="form_group">
                   <button className="btn_icon btn_dark_gray">
                     <i class="fas fa-search"></i>
                   </button>

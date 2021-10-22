@@ -571,6 +571,9 @@
         padding-top: 5px;
       }
     }
+    &.align_center {
+      align-items: center;
+    }
     .form_glow {
       flex-grow: 1;
     }
@@ -1314,10 +1317,17 @@ hr.line {
   top: 50%;
   transform: translate(0, -50%);
 }
-.abcc {
+.abtc {
   position: absolute;
   left: 50%;
   top: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.abcc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
