@@ -27,18 +27,22 @@
     padding: 0;
   }
 }
+
+.equipment-supply-form-modal-content,
+.safety-equip-search-modal-content,
 .work-order-list-modal-content {
   width: 900px;
   box-sizing: border-box;
   padding: 20px 30px;
   @include mobile {
-    width: 90%;
+    width: 100%;
     padding: 0;
   }
 }
 
 .check-item-type-form-modal-content,
 .check-item-form-modal-content,
+.check-item-view-modal-content,
 .safe-doc-list-by-schd-modal-content,
 .org-safety-member-modal-content,
 .member-select-modal-content {
