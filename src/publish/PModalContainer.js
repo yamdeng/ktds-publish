@@ -76,7 +76,7 @@ class PModalContainer extends React.Component {
           <PCommonSimpleDescriptionModal modalData={modalData} />
         );
         break;
-      case ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL:
+      case ModalType.EQUIPMENT_SUPPLY_FORM_MODAL:
         modalComponent = <PSafeClothSupplyFormModal modalData={modalData} />;
         break;
       case ModalType.CHECK_ITEM_FORM_MODAL:

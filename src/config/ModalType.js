@@ -71,6 +71,6 @@ ModalType.COMMON_TEXTAREA_MODAL = 'common-textarea-modal';
 ModalType.SAFE_DOC_SEARCH_MODAL = 'safe-doc-search-modal';
 
 // 보호구 지급 대장 폼 모달 : SafeClothSupplyFormModal
-ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL = 'safe-cloth-supply-form-modal';
+ModalType.EQUIPMENT_SUPPLY_FORM_MODAL = 'equipment-supply-form-modal';
 
 export default ModalType;

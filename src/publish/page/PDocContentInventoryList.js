@@ -15,7 +15,7 @@ class PDocContentInventoryList extends Component {
 
   openModal() {
     // SafeClothSupplyFormModal.js
-    ModalService.openModal(ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL, {});
+    ModalService.openModal(ModalType.EQUIPMENT_SUPPLY_FORM_MODAL, {});
   }
 
   componentDidMount() {}

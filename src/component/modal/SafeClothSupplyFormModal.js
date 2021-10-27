@@ -6,7 +6,7 @@ import AppDatePicker from 'component/ui/AppDatePicker';
 
 /*
 
-    보호구 지급대장 폼 모달 : ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL
+    보호구 지급대장 폼 모달 : ModalType.EQUIPMENT_SUPPLY_FORM_MODAL
 
     modalData 설명
     {

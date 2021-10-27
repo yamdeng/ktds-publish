@@ -141,7 +141,7 @@ const modalList = [
   },
   {
     name: '보호구 지급 대장 폼 모달',
-    modalType: ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL,
+    modalType: ModalType.EQUIPMENT_SUPPLY_FORM_MODAL,
     isAlertModal: false,
     modalData: {}
   }

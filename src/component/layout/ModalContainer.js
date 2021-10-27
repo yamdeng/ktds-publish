@@ -119,7 +119,7 @@ class ModalContainer extends React.Component {
         case ModalType.SAFE_DOC_SEARCH_MODAL:
           modalComponent = <SafeDocSearchModal modalData={modalData} />;
           break;
-        case ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL:
+        case ModalType.EQUIPMENT_SUPPLY_FORM_MODAL:
           modalComponent = <SafeClothSupplyFormModal modalData={modalData} />;
           break;
         default:

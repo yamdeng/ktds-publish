@@ -134,7 +134,7 @@ const list = [
     fileName: 'PSafeClothSupplyFormModal.js',
     pageCount: '10',
     success: true,
-    modalType: ModalType.SAFE_CLOTH_SUPPLY_FORM_MODAL,
+    modalType: ModalType.EQUIPMENT_SUPPLY_FORM_MODAL,
     isAlert: false,
     isMobileFull: true,
     description: ''
