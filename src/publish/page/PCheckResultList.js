@@ -20,8 +20,8 @@ class PCheckResultList extends Component {
           f_wid50 : 10~100 까지 10단위고, 같은 그룹끼리 묶였을때 쓰는값 (모바일에서는 100%로 강제)
           wid50 : 10~100 까지 10단위고, 모바일에서도 그상태 그대로 유지됨.
         */}
-            <div className="form_cell f_wid40">
-              <span className="form_group form_search form_clear wid40 c_mr5">
+            <div className="form_cell form_cell_flex">
+              <span className="form_group form_search form_clear form_glow c_mr5">
                 <input type="text" className="form_tag" />
                 <label className="f_label">
                   작업지시 ID <span className="required">*</span>
@@ -34,15 +34,15 @@ class PCheckResultList extends Component {
                   <i class="fas fa-times-circle"></i>
                 </span>
               </span>
-              <span className="form_group wid50">
+              <span className="form_group form_glow">
                 <input type="text" className="form_tag" />
                 <label className="f_label">
                   작업지시 명 <span className="required">*</span>
                 </label>
               </span>
             </div>
-            <div className="form_cell f_wid60">
-              <span className="form_group wid50 c_mr5">
+            <div className="form_cell form_cell_flex">
+              <span className="form_group form_glow c_mr5">
                 <input type="text" className="form_tag" />
                 <label className="f_label">작업 조직</label>
               </span>
@@ -53,8 +53,8 @@ class PCheckResultList extends Component {
           </div>
 
           <div className="form_table">
-            <div className="form_cell f_wid40">
-              <span className="form_group wid40 c_mr5">
+            <div className="form_cell form_cell_flex">
+              <span className="form_group form_glow">
                 <select name="" id="b" className="form_tag_select ">
                   <option value=""> </option>
                   <option value="">전체1</option>
@@ -65,13 +65,13 @@ class PCheckResultList extends Component {
                 </label>
               </span>
             </div>
-            <div className="form_cell f_wid60">
+            <div className="form_cell form_cell_flex">
               <span className="form_group wid20 c_mr5">
                 <input type="text" className="form_tag" />
                 <label className="f_label">점검 자</label>
                 {/* input에 value 값이 있으면 style display로 제어 */}
               </span>
-              <span className="form_group wid30 c_mr5">
+              <span className="form_group form_glow c_mr5">
                 <input type="text" className="form_tag" />
               </span>
               <button className="btn_icon btn_dark_gray c_mr5">
@@ -176,34 +176,8 @@ class PCheckResultList extends Component {
                         onBlur={this.onChangeInput}
                       />
                     </td>
-                    <td>
-                      {/* 공지 */}
-                      <div className="checkbox-wrapper">
-                        <input
-                          type="checkbox"
-                          name="Claude Monet"
-                          id="question-1-option-1"
-                        />
-                        <label
-                          className="checkbox-label only_label"
-                          for="question-1-option-1"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      {/* 한성유통㈜ */}
-                      <input
-                        type="checkbox"
-                        id="switchs"
-                        name="switch"
-                        className="switch_on_off"
-                      />
-                      <label for="switchs" className="switch_label_on_off">
-                        <span className="marble"></span>
-                        <span className="off">NO</span>
-                        <span class="on">YES</span>
-                      </label>
-                    </td>
+                    <td>11010101</td>
+                    <td>홍길동</td>
                     <td>
                       <select
                         name=""
@@ -211,7 +185,7 @@ class PCheckResultList extends Component {
                         disabled
                         className="form_tag_select center edit"
                       >
-                        <option value="">첨부</option>
+                        <option value="">ㅇㅇ부문>ㅁㅁ팀</option>
                         <option value="">전체</option>
                         <option value="">전체2</option>
                       </select>
@@ -223,12 +197,12 @@ class PCheckResultList extends Component {
                         disabled
                         className="form_tag_select center edit"
                       >
-                        <option value="">5</option>
+                        <option value="">ㅇㅇㅇㅇ</option>
                         <option value="">전체</option>
                         <option value="">전체2</option>
                       </select>
                     </td>
-                    <td>1</td>
+                    <td>YYYY-MM-DD HH:MI</td>
                     <td>
                       <select
                         name=""
