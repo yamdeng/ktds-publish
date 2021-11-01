@@ -45,7 +45,8 @@
 .check-item-view-modal-content,
 .safe-doc-list-by-schd-modal-content,
 .org-safety-member-modal-content,
-.member-select-modal-content {
+.member-select-modal-content,
+.org-change-modal-content {
   width: 1100px;
   box-sizing: border-box;
   padding: 20px 30px;
@@ -350,6 +351,7 @@
 // picker
 .react-datepicker-popper[data-placement^='top'] .react-datepicker__triangle,
 .react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle {
+  z-index: 100;
   transform: translate3d(36px, 0px, 0px) !important;
 }
 
