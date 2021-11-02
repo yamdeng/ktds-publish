@@ -286,7 +286,7 @@ body {
     padding-left: 10px;
     margin-left: 10px;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     @include mobile {
       padding-left: 0;
       margin-left: 0;
