@@ -352,15 +352,15 @@ body {
   }
 }
 
-@include desktop {
+@include tablet {
   .menu_side {
     position: absolute;
-    left: -280px;
+    left: 0;
     width: 280px;
     transition: left 0.3s ease;
     &.hide {
       width: 280px;
-      left: 0;
+      left: -280px;
       transition: left 0.3s ease;
     }
   }
@@ -370,17 +370,11 @@ body {
     background: rgba($color: #000000, $alpha: 0.3);
     position: fixed;
     z-index: 3;
-    display: none;
+    display: block;
     &.active {
-      display: block;
+      display: none;
     }
   }
-}
-
-@include tablet {
-}
-
-@include desktop {
 }
 
 // 부모 선택자 이용해서 다크테마 각각 클래스에 적용하기
