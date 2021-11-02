@@ -14,7 +14,8 @@ import DeviceUtil from 'util/DeviceUtil';
 class PSideBar2 extends Component {
   constructor(props) {
     super(props);
-    this.state = { displaySideMenu: true, menuList: PMenu };
+    let displaySideMenu = DeviceUtil.isMobile ? false : true;
+    this.state = { displaySideMenu: displaySideMenu, menuList: PMenu };
 
     // 좌측 최상단 메뉴 메뉴 버튼 토글
     this.toggleSideMenu = this.toggleSideMenu.bind(this);
@@ -24,6 +25,8 @@ class PSideBar2 extends Component {
 
     // 메뉴 선택
     this.selectMenu = this.selectMenu.bind(this);
+
+    this.hideMenu = this.hideMenu.bind(this);
   }
 
   toggleSideMenu() {
@@ -49,7 +52,7 @@ class PSideBar2 extends Component {
     let { uiStore } = this.props;
     uiStore.goPage(routeUrl);
     if (DeviceUtil.isMobile) {
-      this.displaySideMenu = !this.displaySideMenu;
+      this.setState({ displaySideMenu: false });
     }
   }
 
@@ -61,6 +64,10 @@ class PSideBar2 extends Component {
       $('body').addClass('dark-theme');
     }
     this.setState({ isDarkTheme: !isDarkTheme });
+  }
+
+  hideMenu() {
+    this.setState({ displaySideMenu: false });
   }
 
   componentDidMount() {}
@@ -138,7 +145,13 @@ class PSideBar2 extends Component {
             </div>
           </div>
         </div>
-        <span className={displaySideMenu ? 'menu_bg' : 'menu_bg active'}>
+        <span
+          className={displaySideMenu ? 'menu_bg' : 'menu_bg active'}
+          onClick={(event) => {
+            event.stopPropagation();
+            this.hideMenu();
+          }}
+        >
           &nbsp;
         </span>
       </React.Fragment>
