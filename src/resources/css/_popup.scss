@@ -117,15 +117,31 @@
   max-height: 900px;
   overflow-x: hidden;
   overflow-y: auto;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 0;
   @include mobile {
-    padding: 20px 20px 60px;
+    padding: 20px 20px 35px;
     overflow-y: auto;
+  }
+  .write_form {
+    border-bottom: none;
+    margin-bottom: 20px;
+    padding-bottom: 0 !important;
+  }
+  .list_form {
+    margin-bottom: 20px;
   }
   .box_form {
     margin-bottom: 0;
     border: none;
     padding: 0;
+  }
+  + .pop_btns {
+    border-top: 1px solid #{$col-gray350};
+    padding-top: 20px;
+    @include mobile {
+      border-top: none;
+    }
   }
 }
 
@@ -148,6 +164,13 @@
     padding: 0;
     border: none;
   }
+  + .pop_btns {
+    border-top: 1px solid #{$col-gray350};
+    padding-top: 20px;
+    @include mobile {
+      border-top: none;
+    }
+  }
   @include mobile {
     height: calc(100vh - 60px);
     overflow-y: auto;
@@ -158,13 +181,6 @@
     .write_form {
       margin-bottom: 30px;
     }
-  }
-}
-.pop_full_cont_box + .pop_btns {
-  border-top: 1px solid #{$col-gray350};
-  padding-top: 20px;
-  @include mobile {
-    border-top: none;
   }
 }
 

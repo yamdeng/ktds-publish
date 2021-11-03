@@ -46,17 +46,19 @@ class SafeDocTemplateApplyFormModal extends React.Component {
         <h3 className="pop_title">템플릿 적용 추가</h3>
         <div className="pop_cont_box">
           <div className="box_form">
-            <div className="form_table">
-              <div className="form_cell f_wid100 c_pr0">
-                <span className="form_group form_clear wid100 ">
-                  <CodeSelect
-                    value={''}
-                    label="템플릿"
-                    codeType="boardType"
-                    onChange={() => {}}
-                    required={true}
-                  />
-                </span>
+            <div className="write_form">
+              <div className="form_table">
+                <div className="form_cell f_wid100 c_pr0">
+                  <span className="form_group form_clear wid100 ">
+                    <CodeSelect
+                      value={''}
+                      label="템플릿"
+                      codeType="boardType"
+                      onChange={() => {}}
+                      required={true}
+                    />
+                  </span>
+                </div>
               </div>
             </div>
           </div>

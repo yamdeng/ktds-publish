@@ -46,12 +46,12 @@ class CommonSignModal extends React.Component {
     return (
       <div className="popup-container">
         <h3 className="pop_title">공통 결재 모달</h3>
-        <div className="pop_full_cont_box">
+        <div className="pop_cont_box">
           <ul className="tabs_wrap">
             <li className="active">점검자</li>
             <li className="">확인자</li>
           </ul>
-          <div className="box_form tabs_cont">
+          <div className="box_form">
             <div className="write_form c_mt15">
               <div className="sigCanvas_box">
                 <SignatureCanvas

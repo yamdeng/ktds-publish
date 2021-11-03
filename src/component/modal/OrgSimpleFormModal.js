@@ -46,24 +46,26 @@ class OrgSimpleFormModal extends React.Component {
         <h3 className="pop_title">조직 등록/수정</h3>
         <div className="pop_cont_box">
           <div className="box_form">
-            <div className="form_table">
-              <div className="form_cell f_wid100 c_pr0">
-                <span className="form_group form_clear wid100 ">
-                  <input type="text" className="form_tag" />
-                  <label className="f_label">
-                    조직코드 <span className="required">*</span>
-                  </label>
-                </span>
+            <div className="write_form">
+              <div className="form_table">
+                <div className="form_cell f_wid100 c_pr0">
+                  <span className="form_group form_clear wid100 ">
+                    <input type="text" className="form_tag" />
+                    <label className="f_label">
+                      조직코드 <span className="required">*</span>
+                    </label>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="form_table">
-              <div className="form_cell f_wid100 c_pr0">
-                <span className="form_group form_clear wid100 ">
-                  <input type="text" className="form_tag" />
-                  <label className="f_label">
-                    조직명 <span className="required">*</span>
-                  </label>
-                </span>
+              <div className="form_table">
+                <div className="form_cell f_wid100 c_pr0">
+                  <span className="form_group form_clear wid100 ">
+                    <input type="text" className="form_tag" />
+                    <label className="f_label">
+                      조직명 <span className="required">*</span>
+                    </label>
+                  </span>
+                </div>
               </div>
             </div>
           </div>

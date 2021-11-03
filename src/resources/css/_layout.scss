@@ -824,7 +824,14 @@
     transition: all 0.2s ease;
   }
   &:disabled + .f_label {
-    background: none;
+    background: #{$col-gray};
+    background: linear-gradient(
+      180deg,
+      $col-white 0%,
+      $col-white 50%,
+      #{$col-gray} 51%,
+      #{$col-gray} 100%
+    );
     color: #{$col-gray350};
   }
   &:focus + .f_label,

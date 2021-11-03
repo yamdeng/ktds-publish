@@ -26,7 +26,8 @@ class PDocContentCheckItem extends Component {
                   <span className="form_group form_clear wid100 c_mr5">
                     <input
                       type="text"
-                      className="form_tag"
+                      className="form_tag invalid"
+                      disabled="true"
                       value="aaa"
                       onChange={() => {}}
                     />

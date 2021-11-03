@@ -45,7 +45,7 @@ class CommonEditorModal extends React.Component {
     return (
       <div className="popup-container">
         <h3 className="pop_title">미흡사항 등록</h3>
-        <div className="pop_full_cont_box">
+        <div className="pop_cont_box c_pt5">
           <div className="write_form">
             <div className="form_table">
               <div className="form_cell f_wid100">

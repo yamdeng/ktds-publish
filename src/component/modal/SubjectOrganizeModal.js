@@ -46,36 +46,38 @@ class SubjectOrganizeModal extends React.Component {
         <h3 className="pop_title">공사 관리</h3>
         <div className="pop_cont_box">
           <div className="box_form">
-            <div className="form_table">
-              <div className="form_cell f_wid100 c_pr0">
-                <span className="form_group form_clear wid100 ">
-                  <input type="text" className="form_tag" disabled />
-                  <label className="f_label">공사 조직</label>
-                </span>
+            <div className="write_form">
+              <div className="form_table">
+                <div className="form_cell f_wid100 c_pr0">
+                  <span className="form_group form_clear wid100 ">
+                    <input type="text" className="form_tag" disabled />
+                    <label className="f_label">공사 조직</label>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="form_table">
-              <div className="form_cell f_wid100 c_pr0">
-                <span className="form_group form_clear wid100 ">
-                  <CodeSelect
-                    value={''}
-                    label="공사유형"
-                    codeType="boardType"
-                    onChange={() => {}}
-                  />
-                </span>
+              <div className="form_table">
+                <div className="form_cell f_wid100 c_pr0">
+                  <span className="form_group form_clear wid100 ">
+                    <CodeSelect
+                      value={''}
+                      label="공사유형"
+                      codeType="boardType"
+                      onChange={() => {}}
+                    />
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="form_table">
-              <div className="form_cell f_wid100 c_pr0">
-                <span className="form_group form_clear wid100 ">
-                  <CodeSelect
-                    value={''}
-                    label="공사년도"
-                    codeType="yearList"
-                    onChange={() => {}}
-                  />
-                </span>
+              <div className="form_table">
+                <div className="form_cell f_wid100 c_pr0">
+                  <span className="form_group form_clear wid100 ">
+                    <CodeSelect
+                      value={''}
+                      label="공사년도"
+                      codeType="yearList"
+                      onChange={() => {}}
+                    />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
