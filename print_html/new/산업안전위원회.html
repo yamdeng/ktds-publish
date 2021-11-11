@@ -1,18 +1,138 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-    <meta charset="UTF-8" />
-    <title>산업안전위원회</title>
 
-    <style>
-      body {
-        font-family: 'NanumBarunGothic';
-      }
-    </style>
-  </head>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <meta charset="UTF-8" />
+  <title>산업안전위원회</title>
 
-  <body style="margin: 10px; padding: 20px">
-    <p>산업안전위원회</p>
-  </body>
+  <style>
+    body {
+      font-family: 'NanumBarunGothic';
+    }
+  </style>
+</head>
+
+<body style="margin: 10px; border: 1px solid black; padding: 20px">
+  <table width="100%" style="border-collapse: collapse; border-spacing: 0;">
+    <tr>
+      <td style="font-size:20px; padding:50px 0 20px; text-align:center;">
+        <span style="display:inline-block; padding-bottom:3px;"><span style="border-bottom:1px solid #000;">산업안전위원회
+          </span></span>
+      </td>
+    </tr>
+  </table>
+  <table width="100%" style="border:1px solid #000; border-collapse: collapse; border-spacing: 0;">
+    <colgroup>
+      <col style="width:20%;" />
+      <col style="" />
+      <col style="width:15%;" />
+      <col style="width:15%;" />
+      <col style="width:15%;" />
+    </colgroup>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">구분</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">소속</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">성명</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">직책</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">서명</td>
+    </tr>
+    <tr>
+      <td rowspan="5" style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">사측 위원</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">근로자 대표</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td rowspan="5" style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">근로자 위원</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">명예감독관</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">안전관리자</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">그 시점의 관리자</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">N/A</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">보건관리자</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">그 시점의 관리자</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:10px; font-size:15px; ">N/A</td>
+    </tr>
+  </table>
+
+
+
+
+  </div>
+</body>
+
 </html>

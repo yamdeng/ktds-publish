@@ -1,18 +1,213 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-    <meta charset="UTF-8" />
-    <title>작업계획서</title>
 
-    <style>
-      body {
-        font-family: 'NanumBarunGothic';
-      }
-    </style>
-  </head>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <meta charset="UTF-8" />
+  <title>작업계획서</title>
 
-  <body style="margin: 10px; padding: 20px">
-    <p>작업계획서</p>
-  </body>
+  <style>
+    body {
+      font-family: 'NanumBarunGothic';
+    }
+  </style>
+</head>
+
+<body style="margin: 10px; border: 1px solid black; padding: 20px">
+  <table width="100%" style="border-collapse: collapse; border-spacing: 0;">
+    <tr>
+      <td style="font-size:20px; padding:50px 0 20px; text-align:center;">
+        <span style="display:inline-block; padding-bottom:3px;"><span style="border-bottom:1px solid #000;">작업계획서
+          </span></span>
+      </td>
+    </tr>
+  </table>
+  <table width="100%" style="border:1px solid #000; border-collapse: collapse; border-spacing: 0;">
+    <colgroup>
+      <col style="width:25%;" />
+      <col style="" />
+    </colgroup>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">중량물</td>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">
+        <span style="display:inline-block; width:30%;">품명: </span>
+        <span style="display:inline-block; width:30%;">중량: </span>
+        <span style="display:inline-block; width:30%;">형상:</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">작업자</td>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">
+        <span style="display:inline-block; width:30%;">부서: </span>
+        <span style="display:inline-block; width:30%;">작업자: </span>
+        <span style="display:inline-block; width:30%;">지휘자:</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px; ">운반장비</td>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">
+        <span style="display:inline-block; width:50%;">장비명: </span>
+        <span style="display:inline-block; width:30%;">정격하중(톤): </span>
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px; ">작업 장소</td>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px; ">운반</td>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">
+        <span style="display:inline-block; width:30%;">경로: </span>
+        <span style="display:inline-block; width:30%;">거리: </span>
+        <span style="display:inline-block; width:30%;">신호방법:</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px; ">지형</td>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">
+        <span style="display:inline-block; width:30%;">경사: </span>
+        <span style="display:inline-block; width:30%;">지반: </span>
+        <span style="display:inline-block; width:30%;">바닥단차:</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px; ">작업 내용</td>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">
+        &nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px; ">줄걸이</td>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">
+        <span style="display:inline-block; width:24%;">재료: </span>
+        <span style="display:inline-block; width:24%;">방법: </span>
+        <span style="display:inline-block; width:24%;">위치:</span>
+        <span style="display:inline-block; width:24%;">체결도구:</span>
+      </td>
+    </tr>
+  </table>
+  <p style="margin-bottom:5px; font-size:17px; padding:0;">점검 결과
+  </p>
+  <table width="100%" style="border:1px solid #000; border-collapse: collapse; border-spacing: 0;">
+    <colgroup>
+      <col style="width:85%;" />
+      <col style="" />
+    </colgroup>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">운반물의 중량은 장비의 정격하중 이내인가 ?</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">양호</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">붕괴, 낙하 위험이 있는 운반물은 견고하게 묶었는가 ?
+      </td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">양호</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">운반물 취급방법, 순서 등을 작업자가 숙지하고 있는가 ?
+      </td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">불량</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">운반물 형상 및 중량에 적합한 운반지그 또는 보조 로프를
+        사용하고 그 상태는 적정한가 ?</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">양호</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">작업자가 운반물을 들어 올릴 때 편하중이 생기지 않는 위치
+        및 줄걸이 방법을 알고 있는가? </td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">양호</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">운반이 용이하도록 통로는 안전하게 확보 되었는가 ?
+      </td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">불량</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">작업시작 전 장비를 점검한 결과, 문제점이 없는가 ?
+      </td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">양호</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">월1회 장비 정기점검을 실시하고, 문제점 발견시
+        개선하였는가 ?</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">양호</td>
+    </tr>
+  </table>
+  <p style="margin-bottom:5px; font-size:17px; padding:0;">안전교육
+  </p>
+  <table width="100%" style="border:1px solid #000; border-collapse: collapse; border-spacing: 0;">
+    <colgroup>
+      <col style="width:25%;" />
+      <col style="" />
+    </colgroup>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">교육일시</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">교육시간</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">교육장소</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">강사</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">교육내용</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+  </table>
+  <p style="margin-bottom:5px; font-size:17px; padding:0;">작업 및 안전관리
+  </p>
+  <table width="100%" style="border:1px solid #000; border-collapse: collapse; border-spacing: 0;">
+    <colgroup>
+      <col style="width:25%;" />
+      <col style="" />
+    </colgroup>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">주요 작업 사항</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">중점 안전관리 사항</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+  </table>
+  <p style="margin-bottom:5px; font-size:17px; padding:0;">분야별 안전관리 사항
+  </p>
+  <table width="100%" style="border:1px solid #000; border-collapse: collapse; border-spacing: 0;">
+    <colgroup>
+      <col style="width:25%;" />
+      <col style="" />
+    </colgroup>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">추락대책</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">붕괴대책</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">전도대책</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:left; padding:15px; font-size:14px;">협착대책</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px; font-size:14px;">&nbsp;</td>
+    </tr>
+  </table>
+
+
+
+
+  </div>
+</body>
+
 </html>

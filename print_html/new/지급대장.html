@@ -1,18 +1,182 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-    <meta charset="UTF-8" />
-    <title>지급대장</title>
 
-    <style>
-      body {
-        font-family: 'NanumBarunGothic';
-      }
-    </style>
-  </head>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <meta charset="UTF-8" />
+  <title>지급대장</title>
 
-  <body style="margin: 10px; padding: 20px">
-    <p>지급대장</p>
-  </body>
+  <style>
+    body {
+      font-family: 'NanumBarunGothic';
+    }
+  </style>
+</head>
+
+<body style="margin: 10px; border: 1px solid black; padding: 20px">
+  <table width="100%" style="border-collapse: collapse; border-spacing: 0;">
+    <tr>
+      <td style="font-size:20px; padding:50px 0 20px; text-align:center;">
+        <span style="display:inline-block; padding-bottom:3px;"><span style="border-bottom:1px solid #000;">지급대장
+          </span></span>
+      </td>
+    </tr>
+  </table>
+  <table width="100%" style="border:1px solid #000; border-collapse: collapse; border-spacing: 0;">
+    <colgroup>
+      <col style="width:10%;" />
+      <col style="" />
+      <col style="" />
+      <col style="" />
+      <col style="width:10%;" />
+      <col style="width:12%;" />
+      <col style="width:12%;" />
+    </colgroup>
+    <tr>
+      <td rowspan="2" style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">지급일</td>
+      <td rowspan="2" style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">보호구명</td>
+      <td rowspan="2" style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">안전인증번호</td>
+      <td rowspan="2" style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">수령부서</td>
+      <td rowspan="2" style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">수량</td>
+      <td colspan="2" style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">서명 및 날인</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">수령인</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">지급담당</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">　000-000-00</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">　해당없음</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+      <td style="border:1px solid #999; text-align:center; padding:15px 10px; font-size:14px; ">&nbsp;</td>
+    </tr>
+
+  </table>
+
+
+
+
+  </div>
+</body>
+
 </html>
