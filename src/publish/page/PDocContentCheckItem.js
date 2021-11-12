@@ -22,30 +22,33 @@ class PDocContentCheckItem extends Component {
             <div className="box_form">
               {/* 점검사항 목록 1행 */}
               <div className="form_table">
-                <div className="form_cell f_wid45">
-                  <span className="form_group form_clear wid100 c_mr5">
-                    <input
-                      type="text"
-                      className="form_tag invalid"
-                      disabled="true"
-                      value="aaa"
-                      onChange={() => {}}
-                    />
-                    <label className="f_label">점검사항</label>
+                <div className="form_cell form_cell_flex">
+                  <span className="form_group form_glow c_mr5">
+                    <textarea
+                      name=""
+                      id=""
+                      className="form_tag textarea invalid"
+                      style={{ height: '100px' }}
+                    ></textarea>
+                    <label className="f_label" for="b">
+                      점검사항
+                    </label>
                   </span>
                 </div>
-                <div className="form_cell f_wid45 c_pr5">
-                  <span className="form_group form_clear wid100 c_mr5">
-                    <input
-                      type="text"
-                      className="form_tag"
-                      value="aaa"
-                      onChange={() => {}}
-                    />
-                    <label className="f_label">개선방안</label>
+                <div className="form_cell form_cell_flex ">
+                  <span className="form_group form_glow c_mr5">
+                    <textarea
+                      name=""
+                      id=""
+                      className="form_tag textarea invalid"
+                      style={{ height: '100px' }}
+                    ></textarea>
+                    <label className="f_label" for="b">
+                      개선방안
+                    </label>
                   </span>
                 </div>
-                <div className="form_cell f_wid10">
+                <div className="form_cell shrink right">
                   <button className="btn_icon btn_dark_gray c_mr5">
                     <i class="fas fa-times-circle"></i>
                   </button>
@@ -56,29 +59,33 @@ class PDocContentCheckItem extends Component {
               </div>
               {/* 점검사항 2행 */}
               <div className="form_table">
-                <div className="form_cell f_wid45">
-                  <span className="form_group form_clear wid100 c_mr5">
-                    <input
-                      type="text"
-                      className="form_tag"
-                      value="aaa"
-                      onChange={() => {}}
-                    />
-                    <label className="f_label">점검사항</label>
+                <div className="form_cell form_cell_flex">
+                  <span className="form_group form_glow c_mr5">
+                    <textarea
+                      name=""
+                      id=""
+                      className="form_tag textarea invalid"
+                      style={{ height: '100px' }}
+                    ></textarea>
+                    <label className="f_label" for="b">
+                      점검사항
+                    </label>
                   </span>
                 </div>
-                <div className="form_cell f_wid45 c_pr5">
-                  <span className="form_group form_clear wid100 c_mr5">
-                    <input
-                      type="text"
-                      className="form_tag"
-                      value="aaa"
-                      onChange={() => {}}
-                    />
-                    <label className="f_label">개선방안</label>
+                <div className="form_cell form_cell_flex ">
+                  <span className="form_group form_glow c_mr5">
+                    <textarea
+                      name=""
+                      id=""
+                      className="form_tag textarea invalid"
+                      style={{ height: '100px' }}
+                    ></textarea>
+                    <label className="f_label" for="b">
+                      개선방안
+                    </label>
                   </span>
                 </div>
-                <div className="form_cell f_wid10">
+                <div className="form_cell shrink right">
                   <button className="btn_icon btn_dark_gray c_mr5">
                     <i class="fas fa-times-circle"></i>
                   </button>
