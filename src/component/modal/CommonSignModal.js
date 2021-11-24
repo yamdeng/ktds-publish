@@ -46,19 +46,15 @@ class CommonSignModal extends React.Component {
     return (
       <div className="popup-container">
         <h3 className="pop_title">공통 결재 모달</h3>
-        <div className="pop_cont_box">
-          <ul className="tabs_wrap">
-            <li className="active">점검자</li>
-            <li className="">확인자</li>
-          </ul>
+        <div className="pop_cont_box c_pt5">
           <div className="box_form">
             <div className="write_form c_mt15">
               <div className="sigCanvas_box">
                 <SignatureCanvas
                   penColor="green"
                   canvasProps={{
-                    width: 500,
-                    height: 200,
+                    width: 300,
+                    height: 230,
                     className: 'sigCanvas'
                   }}
                 />
@@ -70,9 +66,6 @@ class CommonSignModal extends React.Component {
         <div className="pop_btns">
           <button className="btn_text btn_dark_gray" onClick={this.close}>
             닫기
-          </button>
-          <button className="btn_text btn_green" onClick={this.close}>
-            저장
           </button>
         </div>
         <span className="pop_close" onClick={this.close}>
