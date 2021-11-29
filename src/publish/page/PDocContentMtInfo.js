@@ -22,78 +22,74 @@ class PDocContentMtInfo extends Component {
             <div className="box_form">
               {/* 점검사항 목록 1행 */}
               <div className="form_table">
-                {/* <div className="form_cell form_cell_flex">
-                  <span className="form_group form_glow c_mr5">
-                    <textarea
-                      name=""
-                      id=""
-                      className="form_tag textarea invalid"
-                      style={{ height: '100px' }}
-                    ></textarea>
-                    <label className="f_label" for="b">
-                      점검사항
-                    </label>
+                <div className="form_cell form_cell_flex">
+                  <span className="form_group form_clear form_glow ">
+                    <input type="text" className="form_tag invalid" />
+                    <label className="f_label">안건</label>
+                    <span class="invalid_txt">필수정보입니다.</span>
                   </span>
-                </div> */}
+                </div>
+              </div>
+              <div className="form_table">
                 <div className="form_cell form_cell_flex ">
-                  <span className="form_group form_glow c_mr5">
+                  <span className="form_group form_glow">
                     <textarea
                       name=""
                       id=""
                       className="form_tag textarea invalid"
-                      style={{ height: '100px' }}
                     ></textarea>
                     <label className="f_label" for="b">
-                      개선방안
+                      내용
                     </label>
+                    <span class="invalid_txt textarea">필수정보입니다.</span>
                   </span>
                 </div>
-                <div className="form_cell shrink right">
-                  <button className="btn_icon btn_dark_gray c_mr5">
-                    <i class="fas fa-times-circle"></i>
-                  </button>
-                  <button className="btn_icon btn_dark_gray c_mr5">
-                    <i class="fas fa-plus"></i>
-                  </button>
-                </div>
+              </div>
+              <div className="right c_mt5">
+                <button className="btn_icon btn_dark_gray c_ml5 ">
+                  <i class="fas fa-times-circle"></i>
+                </button>
+                <button className="btn_icon btn_dark_gray c_ml5 ">
+                  <i class="fas fa-plus"></i>
+                </button>
               </div>
               {/* 점검사항 2행 */}
-              <div className="form_table">
-                <div className="form_cell form_cell_flex">
-                  <span className="form_group form_glow c_mr5">
-                    <textarea
-                      name=""
-                      id=""
-                      className="form_tag textarea invalid"
-                      style={{ height: '100px' }}
-                    ></textarea>
-                    <label className="f_label" for="b">
-                      점검사항
-                    </label>
-                  </span>
+              <>
+                <hr className="add_group_line" />
+                <div className="form_table">
+                  <div className="form_cell form_cell_flex">
+                    <span className="form_group form_clear form_glow ">
+                      <input type="text" className="form_tag" />
+                      <label className="f_label">안건</label>
+                      <span class="invalid_txt textarea">필수정보입니다.</span>
+                    </span>
+                  </div>
                 </div>
-                <div className="form_cell form_cell_flex ">
-                  <span className="form_group form_glow c_mr5">
-                    <textarea
-                      name=""
-                      id=""
-                      className="form_tag textarea invalid"
-                      style={{ height: '100px' }}
-                    ></textarea>
-                    <label className="f_label" for="b">
-                      개선방안
-                    </label>
-                  </span>
+                <div className="form_table">
+                  <div className="form_cell form_cell_flex ">
+                    <span className="form_group form_glow">
+                      <textarea
+                        name=""
+                        id=""
+                        className="form_tag textarea invalid"
+                      ></textarea>
+                      <label className="f_label" for="b">
+                        내용
+                      </label>
+                      <span class="invalid_txt textarea">필수정보입니다.</span>
+                    </span>
+                  </div>
                 </div>
-                <div className="form_cell shrink right">
-                  <button className="btn_icon btn_dark_gray c_mr5">
+                <div className="right c_mt5">
+                  <button className="btn_icon btn_dark_gray c_ml5 ">
                     <i class="fas fa-times-circle"></i>
                   </button>
-                  <button className="btn_icon btn_dark_gray c_mr5">
+                  <button className="btn_icon btn_dark_gray c_ml5 ">
                     <i class="fas fa-plus"></i>
                   </button>
                 </div>
-              </div>
+              </>
+              <hr className="add_group_line" />
               <p className="c_pt15 right">
                 <button className="btn_text btn_green">저장</button>
               </p>
