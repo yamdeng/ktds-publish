@@ -39,6 +39,12 @@ body {
     top: 50%;
     transform: translate(0, -50%);
   }
+  .my-todo {
+    left: -10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }
 .profile {
   span {
@@ -63,6 +69,15 @@ body {
     .txt {
       display: none;
     }
+  }
+}
+
+.todo-button {
+  height: 50px;
+  font-size: 20px;
+
+  &:hover {
+    font-weight: 600;
   }
 }
 
@@ -198,7 +213,7 @@ body {
           }
         }
         .dep_2 {
-          max-height: 600px;
+          max-height: 700px;
           transition: max-height 0.3s ease-out;
 
           .dep_3 {
@@ -322,6 +337,10 @@ body {
     &.active {
       color: #{$col-white};
       background: #{$col-green};
+    }
+    &.complete {
+      color: #{$col-white};
+      background: #{$col-dark-green};
     }
   }
   @include mobile {

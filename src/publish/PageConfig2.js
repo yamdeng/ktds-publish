@@ -12,6 +12,7 @@ import PDocContentWPlanFling from './page/PDocContentWPlanFling';
 import PDocContentFileAttach from './page/PDocContentFileAttach';
 import PDocContentWorkInspection from './page/PDocContentWorkInspection';
 import PDocContentWorkCondition from './page/PDocContentWorkCondition';
+import PDocContentMtInfo from './page/PDocContentMtInfo';
 import PCheckItemList1 from './page/PCheckItemList1';
 import PCheckItemList2 from './page/PCheckItemList2';
 import PConfinedSpaceForm1 from './page/PConfinedSpaceForm1';
@@ -80,6 +81,10 @@ const list = [
   {
     component: PDocContentWorkCondition,
     url: '/safe-docs/content/PDocContentWorkCondition'
+  },
+  {
+    component: PDocContentMtInfo,
+    url: '/safe-docs/content/PDocContentMtInfo'
   },
   {
     component: PCheckItemList1,

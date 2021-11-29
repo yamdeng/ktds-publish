@@ -17,7 +17,7 @@ let PMenu = [
     ]
   },
   {
-    name: '안전 서류',
+    name: '안전 서류2',
     iconClass: 'far fa-file-alt',
     isExpend: false,
     childs: [
@@ -72,6 +72,10 @@ let PMenu = [
       {
         name: '근골격계 조사표 상황',
         routeUrl: '/safe-docs/content/PDocContentWorkCondition'
+      },
+      {
+        name: '회의내용',
+        routeUrl: '/safe-docs/content/PDocContentMtInfo'
       }
     ]
   },
