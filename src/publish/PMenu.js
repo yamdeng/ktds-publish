@@ -17,7 +17,7 @@ let PMenu = [
     ]
   },
   {
-    name: '안전 서류2',
+    name: '안전 서류',
     iconClass: 'far fa-file-alt',
     isExpend: false,
     childs: [
