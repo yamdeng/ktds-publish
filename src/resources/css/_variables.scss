@@ -13,6 +13,7 @@ $col-dark-green: #12837f;
 $col-white: #fff;
 $col-black: #000;
 $col-orange: #ffab65;
+$col-dark-orange: #b1703b;
 
 $col-gray: #f5f5f5;
 $col-gray100: #eee;
@@ -38,6 +39,11 @@ $dark-col-white: #222;
 .col_orange {
   color: #{$col-orange};
 }
+
+.col_orange_bold {
+  color: #{$col-dark-orange};
+}
+
 .col_green {
   color: #{$col-green};
 }
