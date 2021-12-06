@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import { observer } from 'mobx-react';
 import { Route, withRouter, Switch } from 'react-router-dom';
-import SideBar from './PSideBar2';
+import SideBar from './PNewSideBar';
 import PageConfig2 from './PageConfig2';
-import PHome from 'publish/page/PHome';
+import PNewHome from 'publish/page/PNewHome';
 
 @withRouter
 @observer
@@ -23,7 +23,7 @@ class PMain2 extends Component {
         <SideBar />
         <div className="content_area_wrap">
           <Switch>
-            <Route exact path="/" component={PHome} />
+            <Route exact path="/" component={PNewHome} />
             {pageList.map((pageInfo) => {
               return (
                 <Route
