@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { withRouter } from 'react-router-dom';
 
-import logo from 'resources/images/ktLogo.png';
+import logo from 'resources/images/logo.svg';
 import PROFILE from 'resources/images/profile.jpeg';
 import PMenu from './PMenu';
 import update from 'immutability-helper';
@@ -82,15 +82,37 @@ class PNewSideBar extends Component {
           </button>
           <h1 className="">
             <img src={logo} alt="" />
-            <span>SAFETY-DOC2</span>
           </h1>
+          <div className="top_members_talk_wrap">
+            <div className="arrs">
+              <span className="arr_l"></span>
+              <span className="arr_r"></span>
+            </div>
+            <div className="profile">
+              <span className="img sm c_ml32">
+                <i class="fas fa-user-circle" style={{ display: 'none' }}></i>
+                <img src={PROFILE} alt="" />
+              </span>
+              <span className="txt c_ml8">
+                <span>
+                  “오늘도 안전한 작업을 위해 작업 전 안전지침을 되새기고 작업에
+                  임하겠습니다.”
+                </span>
+              </span>
+            </div>
+            <div className="member">
+              <span className="">임꺽정 직원 / 대리 산업안전팀</span>
+            </div>
+          </div>
           <div className="mode_change">
             <div className="profile">
+              <span className="txt">
+                안용성님 환영합니다<span>산업안전팀</span>
+              </span>
               <span className="img">
                 <i class="fas fa-user-circle" style={{ display: 'none' }}></i>
                 <img src={PROFILE} alt="" />
               </span>
-              <span className="txt">안용성님 환영합니다</span>
             </div>
             <input
               type="checkbox"
@@ -112,7 +134,11 @@ class PNewSideBar extends Component {
                       <ul class="dep_2">
                         {childs.map((childMenuInfo) => {
                           return (
-                            <li onClick={() => this.selectMenu(childMenuInfo)}>
+                            // dev_2 active 필요
+                            <li
+                              className=""
+                              onClick={() => this.selectMenu(childMenuInfo)}
+                            >
                               <p>{childMenuInfo.name}</p>
                             </li>
                           );
@@ -127,15 +153,15 @@ class PNewSideBar extends Component {
                           this.toggle1DepthMenu(firstDepthMenuInfo.name)
                         }
                       >
-                        <span className="icon ablc">
-                          <i class={firstDepthMenuInfo.iconClass}></i>
-                        </span>
-                        {firstDepthMenuInfo.name}
-                        {childs.length ? (
-                          <span className="abrc">
-                            <i class="fas fa-chevron-right"></i>
+                        <span>
+                          <span className="icon">
+                            <span
+                              className={firstDepthMenuInfo.iconClass}
+                            ></span>
                           </span>
-                        ) : null}
+                          {firstDepthMenuInfo.name}
+                        </span>
+                        {childs.length ? <span className="arr"></span> : null}
                       </p>
                       {childMenuComponent}
                     </li>

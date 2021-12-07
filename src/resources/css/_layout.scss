@@ -180,6 +180,127 @@
     }
   }
 }
+.home_flex_box_wrap1 {
+  display: flex;
+  flex-wrap: wrap;
+  .item:nth-child(1) {
+    flex-shrink: 0;
+    width: 430px;
+  }
+  .item:nth-child(2) {
+    flex-grow: 1;
+    margin-left: 24px;
+  }
+  @include homeMobile {
+    display: block;
+  }
+}
+.home_flex_box_wrap2 {
+  display: flex;
+  flex-wrap: wrap;
+  .item:nth-child(1) {
+    flex-shrink: 0;
+    width: 312px;
+  }
+  .item:nth-child(2) {
+    flex-shrink: 0;
+    width: 384px;
+    margin-left: 24px;
+  }
+  .item:nth-child(3) {
+    flex-grow: 1;
+    margin-left: 24px;
+  }
+  @include homeMobile {
+    display: block;
+  }
+}
+.home_flex_box_wrap3 {
+  display: flex;
+  flex-wrap: wrap;
+  .item:nth-child(1) {
+    flex-shrink: 0;
+    width: 720px;
+  }
+  .item:nth-child(2) {
+    flex-grow: 1;
+    margin-left: 24px;
+  }
+  @include homeMobile {
+    display: block;
+  }
+}
+.home_flex_box_wrap .item {
+  @include homeMobile {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+.home_flex_box_wrap .item_box {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 #eaf3f5;
+  border: solid 1px #e7eced;
+  background-color: #fdfdfd;
+  overflow: hidden;
+}
+.home_flex_box_wrap .item_btn_box {
+}
+
+.home_tit {
+  font-size: 18px;
+  font-weight: 500;
+  color: #{$col-main-txt};
+  display: flex;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  span.ico {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+    &.ico_1 {
+      background: url(../images/home_ico_1.svg) no-repeat center center;
+    }
+    &.ico_2 {
+      background: url(../images/home_ico_2.svg) no-repeat center center;
+    }
+    &.ico_3 {
+      background: url(../images/home_ico_3.svg) no-repeat center center;
+    }
+    &.ico_4 {
+      background: url(../images/home_ico_4.svg) no-repeat center center;
+    }
+    &.ico_5 {
+      background: url(../images/home_ico_5.svg) no-repeat center center;
+    }
+    &.ico_6 {
+      background: url(../images/home_ico_6.svg) no-repeat center center;
+    }
+  }
+  .sm {
+    color: #{$col-main-txt-over};
+    font-size: 14px;
+    margin-left: 8px;
+  }
+}
+
+.sub_home_1 {
+  display: flex;
+  flex-wrap: wrap;
+  .sub_item {
+    flex: 1 1 33.33333333%;
+    border-left: 1px solid #e7eced;
+    border-bottom: 1px solid #e7eced;
+  }
+}
+.border_line {
+  &.bl_none {
+    border-left: none;
+  }
+  &.bb_none {
+    border-bottom: none;
+  }
+}
 
 .home_flex_box {
   display: flex;

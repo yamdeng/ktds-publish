@@ -1,7 +1,9 @@
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 1024px;
 $breakpoint-desktop-min: 1000px;
+$breakpoint-top-member-min: 1280px;
 $breakpoint-desktop: 1650px;
+$breakpoint-main-desktop: 1240px;
 
 $col-default-text: #222;
 $col-default-bg: #fff;
@@ -25,12 +27,17 @@ $col-gray500: #555;
 $col-gray600: #666;
 
 $col-disabled: #f1f1f1;
-$col-menu-bg: #f5f5f5;
+$col-menu-bg: #2cbbb6;
+$col-content-bg: #fafbfb;
 $search-form: #f7f7f7;
 
 $dark-col-default-text: #fff;
 $dark-col-default-bg: #222;
 $dark-col-white: #222;
+
+$col-main-top-txt: #c2f3fe;
+$col-main-txt: #08261b;
+$col-main-txt-over: #00a1ab;
 
 .col_red {
   color: #{$col-red};

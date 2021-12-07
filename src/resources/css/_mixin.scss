@@ -16,6 +16,18 @@
   }
 }
 
+@mixin topmember {
+  @media (max-width: #{$breakpoint-top-member-min}) {
+    @content;
+  }
+}
+
+@mixin homeMobile {
+  @media (max-width: #{$breakpoint-main-desktop}) {
+    @content;
+  }
+}
+
 // ellipsis
 
 @mixin ellipsis() {

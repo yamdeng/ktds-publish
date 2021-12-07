@@ -21,7 +21,7 @@ class PMain2 extends Component {
     return (
       <>
         <SideBar />
-        <div className="content_area_wrap">
+        <div className="content_area_wrap home">
           <Switch>
             <Route exact path="/" component={PNewHome} />
             {pageList.map((pageInfo) => {

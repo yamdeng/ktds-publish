@@ -7,7 +7,7 @@
 let PMenu = [
   {
     name: '운영 관리',
-    iconClass: 'fas fa-user-cog',
+    iconClass: 'menu1',
     isExpend: false,
     childs: [
       {
@@ -18,7 +18,7 @@ let PMenu = [
   },
   {
     name: '안전 서류',
-    iconClass: 'far fa-file-alt',
+    iconClass: 'menu2',
     isExpend: false,
     childs: [
       {
@@ -81,7 +81,7 @@ let PMenu = [
   },
   {
     name: '안전 점검',
-    iconClass: 'fas fa-tasks',
+    iconClass: 'menu3',
     isExpend: false,
     childs: [
       {
@@ -116,7 +116,7 @@ let PMenu = [
   },
   {
     name: '기타',
-    iconClass: 'fas fa-code',
+    iconClass: 'menu4',
     isExpend: true,
     childs: [
       {
