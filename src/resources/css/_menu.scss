@@ -293,6 +293,25 @@ body {
               transform: rotate(180deg);
               transition: transform 0.3s ease;
             }
+            &.icon {
+              // background: #fff;
+              display: inline-block;
+              box-sizing: border-box;
+              text-align: center;
+              padding-right: 0;
+              .menu1 {
+                background: url(../images/ico_menu_1_on.svg) no-repeat left
+                  center;
+              }
+              .menu2 {
+                background: url(../images/ico_menu_2_on.svg) no-repeat left
+                  center;
+              }
+              .menu3 {
+                background: url(../images/ico_menu_3_on.svg) no-repeat left
+                  center;
+              }
+            }
           }
         }
         .dep_2 {
