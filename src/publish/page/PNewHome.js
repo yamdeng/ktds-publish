@@ -43,7 +43,7 @@ class PNewHome extends Component {
     return (
       <div className="content_area">
         {/* 메인 배너 영역 */}
-        {/* <div id="mainBannerOuter" className="mainBannerOuter">
+        <div id="mainBannerOuter" className="mainBannerOuter">
           <Slider ref={(slider) => (this.slider = slider)} {...sliderOption}>
             {sliderImageList.map((bannerInfo) => {
               return (
@@ -53,7 +53,11 @@ class PNewHome extends Component {
               );
             })}
           </Slider>
-        </div> */}
+          <div className="ban_count">
+            1<span>/3</span>
+            <span className="icon_more">배너 전체보기</span>
+          </div>
+        </div>
         <div className="home_flex_box_wrap home_flex_box_wrap1">
           <div className="item">
             <p className="home_tit">
