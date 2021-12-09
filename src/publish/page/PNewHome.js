@@ -29,8 +29,10 @@ class PNewHome extends Component {
   render() {
     let sliderOption = {
       className: 'mainBanner',
+      dots: false,
       centerMode: false,
       infinite: true,
+      pauseOnHover: false,
       speed: 1000,
       slidesToScroll: 1,
       variableWidth: false
@@ -48,14 +50,15 @@ class PNewHome extends Component {
             {sliderImageList.map((bannerInfo) => {
               return (
                 <div>
-                  <img src={bannerInfo.imageSrc} alt="" />
+                  <div className="banner">
+                    <img src={bannerInfo.imageSrc} alt="" />
+                  </div>
                 </div>
               );
             })}
           </Slider>
           <div className="ban_count">
-            1<span>/3</span>
-            <span className="icon_more">배너 전체보기</span>
+            <span>01 / 03</span>
           </div>
         </div>
         <div className="home_flex_box_wrap home_flex_box_wrap1">
@@ -107,148 +110,156 @@ class PNewHome extends Component {
               <span className="more">더보기</span>
             </p>
             <div className="item_box">
-              <table>
-                <caption>나의 할일</caption>
-                <colgroup>
-                  <col style={{ width: '10%' }} />
-                  <col />
-                  <col style={{ width: '10%' }} />
-                  <col style={{ width: '20%' }} />
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>구분</th>
-                    <th>제목</th>
-                    <th>현재상태</th>
-                    <th>일시</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>작업등록</td>
-                    <td>2021년 11월 정기정검</td>
-                    <td>
-                      <span>미작성</span>
-                    </td>
-                    <td>2021-11-01</td>
-                  </tr>
-                  <tr>
-                    <td>작업등록</td>
-                    <td>2021년 11월 정기정검</td>
-                    <td>
-                      <span>미작성</span>
-                    </td>
-                    <td>2021-11-01</td>
-                  </tr>
-                  <tr>
-                    <td>작업등록</td>
-                    <td>2021년 11월 정기정검</td>
-                    <td>
-                      <span>미작성</span>
-                    </td>
-                    <td>2021-11-01</td>
-                  </tr>
-                  <tr>
-                    <td>작업등록</td>
-                    <td>2021년 11월 정기정검</td>
-                    <td>
-                      <span>미작성</span>
-                    </td>
-                    <td>2021-11-01</td>
-                  </tr>
-                  <tr>
-                    <td>작업등록</td>
-                    <td>2021년 11월 정기정검</td>
-                    <td>
-                      <span>미작성</span>
-                    </td>
-                    <td>2021-11-01</td>
-                  </tr>
-                  <tr>
-                    <td>작업등록</td>
-                    <td>2021년 11월 정기정검</td>
-                    <td>
-                      <span>미작성</span>
-                    </td>
-                    <td>2021-11-01</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="home_table_wrap">
+                <table className="home_table">
+                  <caption>나의 할일</caption>
+                  <colgroup>
+                    <col style={{ width: '15%' }} />
+                    <col />
+                    <col style={{ width: '15%' }} />
+                    <col style={{ width: '30%' }} />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>구분</th>
+                      <th>제목</th>
+                      <th>현재상태</th>
+                      <th>일시</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>작업등록</td>
+                      <td>2021년 11월 정기정검</td>
+                      <td>
+                        <span className="writing">미작성</span>
+                      </td>
+                      <td>2021-11-01</td>
+                    </tr>
+                    <tr>
+                      <td>작업등록</td>
+                      <td>2021년 11월 정기정검</td>
+                      <td>
+                        <span className="non_write">미작성</span>
+                      </td>
+                      <td>2021-11-01</td>
+                    </tr>
+                    <tr>
+                      <td>작업등록</td>
+                      <td>2021년 11월 정기정검</td>
+                      <td>
+                        <span className="writing">미작성</span>
+                      </td>
+                      <td>2021-11-01</td>
+                    </tr>
+                    <tr>
+                      <td>작업등록</td>
+                      <td>2021년 11월 정기정검</td>
+                      <td>
+                        <span className="writing">미작성</span>
+                      </td>
+                      <td>2021-11-01</td>
+                    </tr>
+                    <tr>
+                      <td>작업등록</td>
+                      <td>2021년 11월 정기정검</td>
+                      <td>
+                        <span className="writing">미작성</span>
+                      </td>
+                      <td>2021-11-01</td>
+                    </tr>
+                    <tr>
+                      <td>작업등록</td>
+                      <td>2021년 11월 정기정검</td>
+                      <td>
+                        <span className="writing">미작성</span>
+                      </td>
+                      <td>2021-11-01</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
         <div className="home_flex_box_wrap home_flex_box_wrap2">
           <div className="item">
-            <p className="home_tit">
-              <span>
-                <span className="ico ico_3"></span>당월 점검현황
-              </span>
-            </p>
-            <div className="item_box">
-              <div>
-                <div>
-                  <div>
-                    <p className="">순회점검</p>
-                    <span className="ico1"></span>
+            <div className="sub_item">
+              <p className="home_tit">
+                <span>
+                  <span className="ico ico_3"></span>당월 점검현황
+                </span>
+              </p>
+              <div className="item_box">
+                <div className="float_list first">
+                  <div className="float">
+                    <div className="current_check_box_top">
+                      <p className="t t1">순회점검</p>
+                      <span className="ico ico1"></span>
+                    </div>
+                    <div className="current_check_box_btm">
+                      <p className="t t1">
+                        <span className="under_line">1</span>
+                        <span>건</span>
+                      </p>
+                      <span className="t t2">누적 1건</span>
+                    </div>
                   </div>
-                  <div>
-                    <p className="">
-                      <span className="under_line">1</span>
-                      <span>건</span>
-                    </p>
-                    <span>누적 1건</span>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <p className="">활동점검</p>
-                    <span className="ico2"></span>
-                  </div>
-                  <div>
-                    <p className="">
-                      <span className="under_line">1</span>
-                      <span>건</span>
-                    </p>
-                    <span>누적 1건</span>
+                  <div className="float">
+                    <div className="current_check_box_top">
+                      <p className="t t2">활동점검</p>
+                      <span className="ico ico2"></span>
+                    </div>
+                    <div className="current_check_box_btm">
+                      <p className="t t1">
+                        <span className="under_line">1</span>
+                        <span>건</span>
+                      </p>
+                      <span className="t t2">누적 1건</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <p className="home_tit">
-              <span>
-                <span className="ico ico_4"></span>등록현황
-              </span>
-            </p>
-            <div className="item_box">
-              <div>
-                <div>
-                  <span className="dot"></span>
-                  <p className="">신규</p>
+            <div className="sub_item">
+              <p className="home_tit">
+                <span>
+                  <span className="ico ico_4"></span>등록현황
+                </span>
+              </p>
+              <div className="item_box">
+                <div className="float_list">
+                  <div className="float">
+                    <div>
+                      <span className="dot"></span>
+                      <p className="">신규</p>
+                    </div>
+                    <p className="">
+                      <span className="under_line">1</span>
+                      <span>건</span>
+                    </p>
+                  </div>
+                  <div className="float">
+                    <div>
+                      <span className="dot"></span>
+                      <p className="">누적</p>
+                    </div>
+                    <p className="">
+                      <span className="under_line">1</span>
+                      <span>건</span>
+                    </p>
+                  </div>
+                  <div className="float">
+                    <div>
+                      <span className="dot"></span>
+                      <p className="">지연</p>
+                    </div>
+                    <p className="">
+                      <span className="under_line">1</span>
+                      <span>건</span>
+                    </p>
+                  </div>
                 </div>
-                <p className="">
-                  <span className="under_line">1</span>
-                  <span>건</span>
-                </p>
-              </div>
-              <div>
-                <div>
-                  <span className="dot"></span>
-                  <p className="">누적</p>
-                </div>
-                <p className="">
-                  <span className="under_line">1</span>
-                  <span>건</span>
-                </p>
-              </div>
-              <div>
-                <div>
-                  <span className="dot"></span>
-                  <p className="">지연</p>
-                </div>
-                <p className="">
-                  <span className="under_line">1</span>
-                  <span>건</span>
-                </p>
               </div>
             </div>
           </div>
@@ -260,17 +271,43 @@ class PNewHome extends Component {
               <span className="more">더보기</span>
             </p>
             <div className="item_box">
-              <div className="home_tabs three">
-                <p className="">공지사항</p>
-                <p className="">안전점검의 날</p>
-                <p className="">자료실</p>
+              <div className="home_tabs">
+                <p className="tab active">공지사항</p>
+                <p className="tab">안전점검의 날</p>
+                <p className="tab">자료실</p>
               </div>
-              <ul>
-                <li>
-                  <p className="">안전보건관리시스템 개선(변경사항) 안...</p>
-                  <span className="flex-shrink0">2021-10-01</span>
-                </li>
-              </ul>
+              <div className="home_list">
+                <div>
+                  <p className="txt">
+                    <span>안전보건관리시스템 개선(변경사항)</span>
+                  </p>
+                  <span className="shrink">2021-10-01</span>
+                </div>
+                <div>
+                  <p className="txt">
+                    <span>안전보건관리시스템 개선(변경사항)</span>
+                  </p>
+                  <span className="shrink">2021-10-01</span>
+                </div>
+                <div>
+                  <p className="txt">
+                    <span>안전보건관리시스템 개선(변경사항)</span>
+                  </p>
+                  <span className="shrink">2021-10-01</span>
+                </div>
+                <div>
+                  <p className="txt">
+                    <span>안전보건관리시스템 개선(변경사항)</span>
+                  </p>
+                  <span className="shrink">2021-10-01</span>
+                </div>
+                <div>
+                  <p className="txt">
+                    <span>안전보건관리시스템 개선(변경사항)</span>
+                  </p>
+                  <span className="shrink">2021-10-01</span>
+                </div>
+              </div>
             </div>
           </div>
           <div className="item">
@@ -282,15 +319,17 @@ class PNewHome extends Component {
             </p>
             <div className="item_box">
               <div className="home_tabs">
-                <p className="">사고사례</p>
-                <p className="">Best Practice</p>
+                <p className="tab active">사고사례</p>
+                <p className="tab">Best Practice</p>
               </div>
-              <ul>
-                <li>
-                  <p className="">안전보건관리시스템 개선(변경사항) 안...</p>
-                  <span className="flex-shrink0">2021-10-01</span>
-                </li>
-              </ul>
+              <div className="home_list">
+                <div>
+                  <p className="txt">
+                    <span>안전보건관리시스템 개선(변경사항)</span>
+                  </p>
+                  <span className="shrink">2021-10-01</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
