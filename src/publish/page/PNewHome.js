@@ -67,29 +67,95 @@ class PNewHome extends Component {
               <span>
                 <span className="ico ico_1"></span>안전보건체계
               </span>
+              {/* hover, active 로 제어해놓았음. 꼭 9개가 들어가야함. */}
               <div className="tip">
-                더보기
+                <span>더보기</span>
                 <div className="tip_wrap">
-                  <ul>
-                    <li>
-                      <p className="t">안전보건관리책임자</p>
-                      <p className="st">
-                        안전업무를 담당하는 작업자를 의미합니다.
-                      </p>
-                    </li>
-                    <li>
-                      <p className="t">안전보건관리책임자</p>
-                      <p className="st">
-                        안전업무를 담당하는 작업자를 의미합니다.
-                      </p>
-                    </li>
-                    <li>
-                      <p className="t">안전보건관리책임자</p>
-                      <p className="st">
-                        안전업무를 담당하는 작업자를 의미합니다.
-                      </p>
-                    </li>
-                  </ul>
+                  <div className="arrow-left"></div>
+                  <div className="arrow-left-inner"></div>
+                  <div className="tip_wrap_box">
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
