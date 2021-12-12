@@ -63,12 +63,36 @@ class PNewHome extends Component {
         </div>
         <div className="home_flex_box_wrap home_flex_box_wrap1">
           <div className="item">
-            <p className="home_tit">
+            <div className="home_tit">
               <span>
                 <span className="ico ico_1"></span>안전보건체계
               </span>
-              <span className="tip">더보기</span>
-            </p>
+              <div className="tip">
+                더보기
+                <div className="tip_wrap">
+                  <ul>
+                    <li>
+                      <p className="t">안전보건관리책임자</p>
+                      <p className="st">
+                        안전업무를 담당하는 작업자를 의미합니다.
+                      </p>
+                    </li>
+                    <li>
+                      <p className="t">안전보건관리책임자</p>
+                      <p className="st">
+                        안전업무를 담당하는 작업자를 의미합니다.
+                      </p>
+                    </li>
+                    <li>
+                      <p className="t">안전보건관리책임자</p>
+                      <p className="st">
+                        안전업무를 담당하는 작업자를 의미합니다.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div className="item_box">
               <div className="sub_home_1 ">
                 <div className="sub_item">
@@ -134,7 +158,7 @@ class PNewHome extends Component {
                       <td>
                         <span className="writing">미작성</span>
                       </td>
-                      <td>2021-11-01</td>
+                      <td>2021-11-01 12:00</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
@@ -142,7 +166,7 @@ class PNewHome extends Component {
                       <td>
                         <span className="non_write">미작성</span>
                       </td>
-                      <td>2021-11-01</td>
+                      <td>2021-11-01 12:00</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
@@ -150,7 +174,7 @@ class PNewHome extends Component {
                       <td>
                         <span className="writing">미작성</span>
                       </td>
-                      <td>2021-11-01</td>
+                      <td>2021-11-01 12:00</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
@@ -158,7 +182,7 @@ class PNewHome extends Component {
                       <td>
                         <span className="writing">미작성</span>
                       </td>
-                      <td>2021-11-01</td>
+                      <td>2021-11-01 12:00</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
@@ -166,7 +190,7 @@ class PNewHome extends Component {
                       <td>
                         <span className="writing">미작성</span>
                       </td>
-                      <td>2021-11-01</td>
+                      <td>2021-11-01 12:00</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
@@ -174,7 +198,7 @@ class PNewHome extends Component {
                       <td>
                         <span className="writing">미작성</span>
                       </td>
-                      <td>2021-11-01</td>
+                      <td>2021-11-01 12:00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -230,33 +254,33 @@ class PNewHome extends Component {
               <div className="item_box">
                 <div className="float_list">
                   <div className="float">
-                    <div>
+                    <div className="sub">
                       <span className="dot"></span>
-                      <p className="">신규</p>
+                      <span className="">신규</span>
                     </div>
-                    <p className="">
+                    <p className="sub btm">
                       <span className="under_line">1</span>
-                      <span>건</span>
+                      <span className="txt">건</span>
                     </p>
                   </div>
                   <div className="float">
-                    <div>
+                    <div className="sub">
                       <span className="dot"></span>
-                      <p className="">누적</p>
+                      <span className="">누적</span>
                     </div>
-                    <p className="">
+                    <p className="sub btm">
                       <span className="under_line">1</span>
-                      <span>건</span>
+                      <span className="txt">건</span>
                     </p>
                   </div>
                   <div className="float">
-                    <div>
+                    <div className="sub">
                       <span className="dot"></span>
-                      <p className="">지연</p>
+                      <span className="">지연</span>
                     </div>
-                    <p className="">
+                    <p className="sub btm">
                       <span className="under_line">1</span>
-                      <span>건</span>
+                      <span className="txt">건</span>
                     </p>
                   </div>
                 </div>
@@ -281,31 +305,31 @@ class PNewHome extends Component {
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-10-01</span>
+                  <span className="shrink">2021-11-01 12:00</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-10-01</span>
+                  <span className="shrink">2021-11-01 12:00</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-10-01</span>
+                  <span className="shrink">2021-11-01 12:00</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-10-01</span>
+                  <span className="shrink">2021-11-01 12:00</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-10-01</span>
+                  <span className="shrink">2021-11-01 12:00</span>
                 </div>
               </div>
             </div>
@@ -327,7 +351,7 @@ class PNewHome extends Component {
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-10-01</span>
+                  <span className="shrink">2021-11-01 12:00</span>
                 </div>
               </div>
             </div>
@@ -336,16 +360,20 @@ class PNewHome extends Component {
         <div className="home_flex_box_wrap home_flex_box_wrap3">
           <div className="item c_mt24">
             <div className="item_box">
-              <div className="">
-                <span className="ico"></span>
-                <p className="">태풍 시 작업 유의사항 및 개인안전 유의사항</p>
+              <div className="home_btm_left">
+                <div>
+                  <span className="ico"></span>
+                  <p className="txt">
+                    태풍 시 작업 유의사항 및 개인안전 유의사항
+                  </p>
+                </div>
+                <p className="date">2021-10-02 12:00</p>
               </div>
-              <p className="">2021-10-02</p>
             </div>
           </div>
           <div className="item c_mt24 item_btn_box">
-            <div className="">
-              <div className="">
+            <div className="home_btm_right">
+              <div className="btms">
                 <span className="ico"></span>
                 <p className="txt">
                   안전보건
@@ -354,10 +382,10 @@ class PNewHome extends Component {
                 </p>
                 <span className="arr"></span>
               </div>
-            </div>
-            <div className="">
-              <p className="">Q&A</p>
-              <span className="ico"></span>
+              <div className="btms">
+                <span className="txt">Q&A</span>
+                <span className="ico"></span>
+              </div>
             </div>
           </div>
         </div>
