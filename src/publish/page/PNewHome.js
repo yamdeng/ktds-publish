@@ -155,6 +155,10 @@ class PNewHome extends Component {
                         </p>
                       </div>
                     </div>
+                    {/* 모바일 그리드 박스 */}
+                    <div className="tips show_mobile">
+                      <div></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -196,6 +200,10 @@ class PNewHome extends Component {
                       <span className="unit">명</span>
                     </p>
                   </div>
+                </div>
+                {/* 모바일 빈영역 차지하는 놈 */}
+                <div className="sub_item show_mobile">
+                  <div></div>
                 </div>
               </div>
             </div>
