@@ -187,7 +187,16 @@ class PNewHome extends Component {
                 <div className="sub_item">1</div>
                 <div className="sub_item">1</div>
                 <div className="sub_item">1</div>
-                <div className="sub_item">1</div>
+                <div className="sub_item">
+                  <div>
+                    <p className="tit">안전보건관리책임자</p>
+                    <p className="count">
+                      <span className="ico"></span>
+                      <span className="num">100</span>
+                      <span className="unit">명</span>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -204,67 +213,50 @@ class PNewHome extends Component {
                 <table className="home_table">
                   <caption>나의 할일</caption>
                   <colgroup>
-                    <col style={{ width: '15%' }} />
+                    <col style={{ width: '20%' }} />
                     <col />
-                    <col style={{ width: '15%' }} />
                     <col style={{ width: '30%' }} />
                   </colgroup>
                   <thead>
                     <tr>
                       <th>구분</th>
                       <th>제목</th>
-                      <th>현재상태</th>
                       <th>일시</th>
                     </tr>
                   </thead>
                   <tbody>
+                    {/* <tr>
+                      <td colSpan={3}>데이터가 존재하지 않습니다.</td>
+                    </tr> */}
                     <tr>
                       <td>작업등록</td>
                       <td>2021년 11월 정기정검</td>
-                      <td>
-                        <span className="writing">미작성</span>
-                      </td>
-                      <td>2021-11-01 12:00</td>
+                      <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td>2021년 11월 정기정검</td>
-                      <td>
-                        <span className="non_write">미작성</span>
-                      </td>
-                      <td>2021-11-01 12:00</td>
+                      <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td>2021년 11월 정기정검</td>
-                      <td>
-                        <span className="writing">미작성</span>
-                      </td>
-                      <td>2021-11-01 12:00</td>
+                      <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td>2021년 11월 정기정검</td>
-                      <td>
-                        <span className="writing">미작성</span>
-                      </td>
-                      <td>2021-11-01 12:00</td>
+                      <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td>2021년 11월 정기정검</td>
-                      <td>
-                        <span className="writing">미작성</span>
-                      </td>
-                      <td>2021-11-01 12:00</td>
+                      <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td>2021년 11월 정기정검</td>
-                      <td>
-                        <span className="writing">미작성</span>
-                      </td>
-                      <td>2021-11-01 12:00</td>
+                      <td>2021-11-01</td>
                     </tr>
                   </tbody>
                 </table>
@@ -371,31 +363,31 @@ class PNewHome extends Component {
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01 12:00</span>
+                  <span className="shrink">2021-11-01</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01 12:00</span>
+                  <span className="shrink">2021-11-01</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01 12:00</span>
+                  <span className="shrink">2021-11-01</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01 12:00</span>
+                  <span className="shrink">2021-11-01</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01 12:00</span>
+                  <span className="shrink">2021-11-01</span>
                 </div>
               </div>
             </div>
@@ -417,7 +409,7 @@ class PNewHome extends Component {
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01 12:00</span>
+                  <span className="shrink">2021-11-01</span>
                 </div>
               </div>
             </div>
@@ -433,7 +425,7 @@ class PNewHome extends Component {
                     태풍 시 작업 유의사항 및 개인안전 유의사항
                   </p>
                 </div>
-                <p className="date">2021-10-02 12:00</p>
+                <p className="date">2021-10-02</p>
               </div>
             </div>
           </div>
