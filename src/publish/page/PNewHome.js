@@ -234,32 +234,32 @@ class PNewHome extends Component {
                     </tr> */}
                     <tr>
                       <td>작업등록</td>
-                      <td>2021년 11월 정기정검</td>
+                      <td className="pointer">2021년 11월 정기정검</td>
                       <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
-                      <td>2021년 11월 정기정검</td>
+                      <td className="pointer">2021년 11월 정기정검</td>
                       <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
-                      <td>2021년 11월 정기정검</td>
+                      <td className="pointer">2021년 11월 정기정검</td>
                       <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
-                      <td>2021년 11월 정기정검</td>
+                      <td className="pointer">2021년 11월 정기정검</td>
                       <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
-                      <td>2021년 11월 정기정검</td>
+                      <td className="pointer">2021년 11월 정기정검</td>
                       <td>2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
-                      <td>2021년 11월 정기정검</td>
+                      <td className="pointer">2021년 11월 정기정검</td>
                       <td>2021-11-01</td>
                     </tr>
                   </tbody>
@@ -286,7 +286,7 @@ class PNewHome extends Component {
                     <div className="current_check_box_btm">
                       <p className="t t1">
                         <span className="under_line">1</span>
-                        <span>건</span>
+                        <span className="count">건</span>
                       </p>
                       <span className="t t2">누적 1건</span>
                     </div>
@@ -299,7 +299,7 @@ class PNewHome extends Component {
                     <div className="current_check_box_btm">
                       <p className="t t1">
                         <span className="under_line">1</span>
-                        <span>건</span>
+                        <span className="count">건</span>
                       </p>
                       <span className="t t2">누적 1건</span>
                     </div>
@@ -331,7 +331,7 @@ class PNewHome extends Component {
                       <span className="">누적</span>
                     </div>
                     <p className="sub btm">
-                      <span className="under_line">1</span>
+                      <span className="under_line orange">1</span>
                       <span className="txt">건</span>
                     </p>
                   </div>
@@ -341,7 +341,7 @@ class PNewHome extends Component {
                       <span className="">지연</span>
                     </div>
                     <p className="sub btm">
-                      <span className="under_line">1</span>
+                      <span className="under_line red">1</span>
                       <span className="txt">건</span>
                     </p>
                   </div>

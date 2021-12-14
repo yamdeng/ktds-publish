@@ -185,7 +185,7 @@
   flex-wrap: wrap;
   .item:nth-child(1) {
     flex-shrink: 0;
-    width: 430px;
+    width: 470px;
   }
   .item:nth-child(2) {
     flex-grow: 1;
@@ -224,7 +224,7 @@
     }
   }
   .item:nth-child(2) {
-    flex-grow: 1;
+    flex: 1 1 50%;
     margin-left: 24px;
     @include homeMobile {
       flex-grow: 1;
@@ -232,7 +232,7 @@
     }
   }
   .item:nth-child(3) {
-    flex-grow: 1;
+    flex: 1 1 50%;
     margin-left: 24px;
   }
   @include homeMobile {
@@ -410,9 +410,13 @@
             &:nth-child(3n + 1) {
               border-left: none;
             }
-            &:nth-child(7),
-            &:nth-child(8),
-            &:nth-child(9) {
+            &.blNone {
+              border-left: none;
+            }
+            &:nth-last-child(-n + 3) {
+              border-bottom: none;
+            }
+            &.bbNone {
               border-bottom: none;
             }
             @include mobile {
@@ -420,18 +424,31 @@
               &:nth-child(3n + 1) {
                 border-left: 1px solid #e7eced;
               }
+              &.blShow {
+                border-left: 1px solid #e7eced;
+              }
               &:nth-child(2n + 1) {
+                border-left: none;
+              }
+              &.blNone {
                 border-left: none;
               }
               &:nth-child(7),
               &:nth-child(8) {
                 border-bottom: 1px solid #e7eced;
               }
+              &.bbShow {
+                border-bottom: 1px solid #e7eced;
+              }
               &:nth-child(9),
               &:nth-child(10) {
                 border-bottom: none;
               }
+              &.bbNone {
+                border-bottom: none;
+              }
             }
+
             > div {
               width: 100%;
               text-align: center;
@@ -506,6 +523,7 @@
   @include mobile {
     width: 100%;
   }
+
   .sub_item {
     flex: 1 1 33.33333333%;
     border-left: 1px solid #e7eced;
@@ -521,7 +539,13 @@
     &:nth-child(3n + 1) {
       border-left: none;
     }
+    &.blNone {
+      border-left: none;
+    }
     &:nth-last-child(-n + 3) {
+      border-bottom: none;
+    }
+    &.bbNone {
       border-bottom: none;
     }
     @include mobile {
@@ -529,14 +553,26 @@
       &:nth-child(3n + 1) {
         border-left: 1px solid #e7eced;
       }
+      &.blShow {
+        border-left: 1px solid #e7eced;
+      }
       &:nth-child(2n + 1) {
+        border-left: none;
+      }
+      &.blNone {
         border-left: none;
       }
       &:nth-child(7),
       &:nth-child(8) {
         border-bottom: 1px solid #e7eced;
       }
+      &.bbShow {
+        border-bottom: 1px solid #e7eced;
+      }
       &:nth-child(9) {
+        border-bottom: none;
+      }
+      &.bbNone {
         border-bottom: none;
       }
     }
@@ -846,7 +882,7 @@
         display: inline-block;
       }
       &.btm {
-        margin-top: 8px;
+        margin-top: 10px;
       }
     }
     .dot {
@@ -863,6 +899,15 @@
       font-size: 20px;
       font-weight: 500;
       border-bottom: 1px solid #00a1ab;
+      line-height: 1em;
+      &.orange {
+        color: #f07300;
+        border-bottom: 1px solid #f07300;
+      }
+      &.red {
+        color: #e56161;
+        border-bottom: 1px solid #e56161;
+      }
     }
     .txt {
       margin-left: 3px;
@@ -996,16 +1041,19 @@
       font-size: 20px;
       font-weight: 500;
       color: #08261b;
+      .count {
+        margin-left: 3px;
+      }
     }
     &.t2 {
       color: #8f8f8f;
     }
   }
   .under_line {
+    color: #000 !important;
     font-family: 'Roboto';
-    border-bottom: 1px solid #08261b;
-    line-height: 0.7em;
-    display: inline-block;
+    border-bottom: 1px solid #08261b !important;
+    line-height: 1em;
   }
   .ico {
     width: 24px;

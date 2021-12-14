@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body,
 p,
 h1,
@@ -569,6 +571,10 @@ display
 
 .search_test {
   background: url(../images/search_test.png) no-repeat left center;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @include mobile {
