@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HOC from 'util/HOC';
+import DeviceUtil from 'util/DeviceUtil';
 import SAMPLE from 'resources/images/sample.png';
 import SAFEINDEX_GAUGE from 'resources/images/safe-index-gauge.png';
 import ICON_MORE from 'resources/images/ic_plus.png';
@@ -146,15 +147,7 @@ class PNewHome extends Component {
                         </p>
                       </div>
                     </div>
-                    <div className="tips">
-                      <div>
-                        <span className="ico"></span>
-                        <p className="t">안전보건관리책임자</p>
-                        <p className="st">
-                          안전업무를 담당하는 작업자를 의미합니다.
-                        </p>
-                      </div>
-                    </div>
+                    <div className="tips"></div>
                     {/* 모바일 그리드 박스 */}
                     <div className="tips show_mobile">
                       <div></div>
@@ -190,7 +183,6 @@ class PNewHome extends Component {
                 <div className="sub_item">1</div>
                 <div className="sub_item">1</div>
                 <div className="sub_item">1</div>
-                <div className="sub_item">1</div>
                 <div className="sub_item">
                   <div>
                     <p className="tit">안전보건관리책임자</p>
@@ -201,10 +193,14 @@ class PNewHome extends Component {
                     </p>
                   </div>
                 </div>
+                <div
+                  className="sub_item"
+                  style={{ display: DeviceUtil.isMobile ? 'none' : '' }}
+                ></div>
                 {/* 모바일 빈영역 차지하는 놈 */}
-                <div className="sub_item show_mobile">
+                {/* <div className="sub_item show_mobile">
                   <div></div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -221,9 +217,9 @@ class PNewHome extends Component {
                 <table className="home_table">
                   <caption>나의 할일</caption>
                   <colgroup>
-                    <col style={{ width: '20%' }} />
+                    <col style={{ width: '25%' }} />
                     <col />
-                    <col style={{ width: '30%' }} />
+                    <col style={{ width: '25%' }} />
                   </colgroup>
                   <thead>
                     <tr>
