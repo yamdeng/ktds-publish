@@ -255,6 +255,15 @@ body {
               vertical-align: top;
               margin-top: 2px;
             }
+            .menu4 {
+              background: url(../images/ico_menu_4.svg) no-repeat left center;
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              margin-right: 5px;
+              vertical-align: top;
+              margin-top: 2px;
+            }
           }
         }
       }
@@ -309,6 +318,10 @@ body {
               }
               .menu3 {
                 background: url(../images/ico_menu_3_on.svg) no-repeat left
+                  center;
+              }
+              .menu4 {
+                background: url(../images/ico_menu_4_on.svg) no-repeat left
                   center;
               }
             }
