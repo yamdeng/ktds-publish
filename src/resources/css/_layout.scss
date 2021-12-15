@@ -413,7 +413,9 @@
             &.blNone {
               border-left: none;
             }
-            &:nth-last-child(-n + 3) {
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9) {
               border-bottom: none;
             }
             &.bbNone {
@@ -483,6 +485,9 @@
               color: #00799f;
               display: block;
               text-align: center;
+              @include mobile {
+                font-size: 14px;
+              }
             }
             .st {
               font-size: 12px;

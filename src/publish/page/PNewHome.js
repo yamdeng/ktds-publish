@@ -147,7 +147,15 @@ class PNewHome extends Component {
                         </p>
                       </div>
                     </div>
-                    <div className="tips"></div>
+                    <div className="tips">
+                      <div>
+                        <span className="ico"></span>
+                        <p className="t">안전보건관리책임자</p>
+                        <p className="st">
+                          안전업무를 담당하는 작업자를 의미합니다.
+                        </p>
+                      </div>
+                    </div>
                     {/* 모바일 그리드 박스 */}
                     <div className="tips show_mobile">
                       <div></div>
@@ -183,6 +191,7 @@ class PNewHome extends Component {
                 <div className="sub_item">1</div>
                 <div className="sub_item">1</div>
                 <div className="sub_item">1</div>
+                <div className="sub_item">1</div>
                 <div className="sub_item">
                   <div>
                     <p className="tit">안전보건관리책임자</p>
@@ -195,7 +204,7 @@ class PNewHome extends Component {
                 </div>
                 <div
                   className="sub_item"
-                  style={{ display: DeviceUtil.isMobile ? 'none' : '' }}
+                  style={{ display: DeviceUtil.isMobile ? '' : '' }}
                 ></div>
                 {/* 모바일 빈영역 차지하는 놈 */}
                 {/* <div className="sub_item show_mobile">
