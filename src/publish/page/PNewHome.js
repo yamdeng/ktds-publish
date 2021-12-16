@@ -254,32 +254,32 @@ class PNewHome extends Component {
                     <tr>
                       <td>작업등록</td>
                       <td className="pointer">2021년 11월 정기정검</td>
-                      <td>2021-11-01</td>
+                      <td className="date_font">2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td className="pointer">2021년 11월 정기정검</td>
-                      <td>2021-11-01</td>
+                      <td className="date_font">2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td className="pointer">2021년 11월 정기정검</td>
-                      <td>2021-11-01</td>
+                      <td className="date_font">2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td className="pointer">2021년 11월 정기정검</td>
-                      <td>2021-11-01</td>
+                      <td className="date_font">2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td className="pointer">2021년 11월 정기정검</td>
-                      <td>2021-11-01</td>
+                      <td className="date_font">2021-11-01</td>
                     </tr>
                     <tr>
                       <td>작업등록</td>
                       <td className="pointer">2021년 11월 정기정검</td>
-                      <td>2021-11-01</td>
+                      <td className="date_font">2021-11-01</td>
                     </tr>
                   </tbody>
                 </table>
@@ -346,7 +346,7 @@ class PNewHome extends Component {
                   </div>
                   <div className="float">
                     <div className="sub">
-                      <span className="dot"></span>
+                      <span className="dot orange"></span>
                       <span className="">누적</span>
                     </div>
                     <p className="sub btm">
@@ -356,7 +356,7 @@ class PNewHome extends Component {
                   </div>
                   <div className="float">
                     <div className="sub">
-                      <span className="dot"></span>
+                      <span className="dot red"></span>
                       <span className="">지연</span>
                     </div>
                     <p className="sub btm">
@@ -386,31 +386,31 @@ class PNewHome extends Component {
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01</span>
+                  <span className="shrink date_font">2021-11-01</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01</span>
+                  <span className="shrink date_font">2021-11-01</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01</span>
+                  <span className="shrink date_font">2021-11-01</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01</span>
+                  <span className="shrink date_font">2021-11-01</span>
                 </div>
                 <div>
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01</span>
+                  <span className="shrink date_font">2021-11-01</span>
                 </div>
               </div>
             </div>
@@ -432,7 +432,7 @@ class PNewHome extends Component {
                   <p className="txt">
                     <span>안전보건관리시스템 개선(변경사항)</span>
                   </p>
-                  <span className="shrink">2021-11-01</span>
+                  <span className="shrink date_font">2021-11-01</span>
                 </div>
               </div>
             </div>
@@ -448,7 +448,7 @@ class PNewHome extends Component {
                     태풍 시 작업 유의사항 및 개인안전 유의사항
                   </p>
                 </div>
-                <p className="date">2021-10-02</p>
+                <p className="date date_font">2021-10-02</p>
               </div>
             </div>
           </div>

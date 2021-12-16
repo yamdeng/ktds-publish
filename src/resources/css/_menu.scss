@@ -45,6 +45,8 @@ body {
     span {
       font-size: 12px;
       color: #{$col-white};
+      display: inline-block;
+      vertical-align: top;
     }
   }
 }
@@ -94,11 +96,13 @@ body {
     font-weight: 500;
     text-align: right;
     span {
-      margin-top: 3px;
       color: #{$col-main-top-txt};
       font-size: 14px;
       font-weight: normal;
       display: block;
+      &.t {
+        margin-top: 3px;
+      }
     }
   }
   .img {

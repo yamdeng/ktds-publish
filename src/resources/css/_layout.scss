@@ -287,8 +287,10 @@
     height: 20px;
     margin: 0 8px;
     vertical-align: top;
+    margin-top: 1px;
     &.ico_1 {
       background: url(../images/home_ico_1.svg) no-repeat center center;
+      margin-top: 0;
     }
     &.ico_2 {
       background: url(../images/home_ico_2.svg) no-repeat center center;
@@ -400,7 +402,7 @@
           }
 
           .tips {
-            flex: 1 1 33.33333333%;
+            flex: 1 1 26%;
             border-left: 1px solid #e7eced;
             border-bottom: 1px solid #e7eced;
             padding: 0 16px;
@@ -530,7 +532,7 @@
   }
 
   .sub_item {
-    flex: 1 1 33.33333333%;
+    flex: 1 1 26%;
     border-left: 1px solid #e7eced;
     border-bottom: 1px solid #e7eced;
     padding: 0 16px;
@@ -599,6 +601,10 @@
       }
       .num {
         font-size: 20px;
+        font-family: 'Roboto Medium';
+        display: inline-block;
+        vertical-align: top;
+        margin-top: -1px;
         cursor: pointer;
       }
       .unit {
@@ -859,6 +865,10 @@
     }
   }
 }
+.date_font {
+  font-family: 'Roboto Light';
+  font-weight: 900;
+}
 
 .float_list {
   display: flex;
@@ -897,10 +907,16 @@
       margin-top: -2px;
       border-radius: 8px;
       background-color: #00a1ab;
+      &.orange {
+        background-color: #f07300;
+      }
+      &.red {
+        background-color: #e56161;
+      }
     }
     .under_line {
       color: #00a1ab;
-      font-family: 'Roboto';
+      font-family: 'Roboto Bold';
       font-size: 20px;
       font-weight: 500;
       border-bottom: 1px solid #00a1ab;
@@ -948,7 +964,8 @@
   }
   .date {
     color: #8f8f8f;
-    font-family: 'Roboto';
+    font-family: 'Roboto Light';
+    font-weight: 900;
   }
 }
 
@@ -995,7 +1012,7 @@
         display: inline-block;
       }
       .txt {
-        font-family: 'Roboto';
+        font-family: 'Roboto Bold';
         font-size: 24px;
         color: #fff;
         font-weight: 500;
@@ -1056,8 +1073,9 @@
   }
   .under_line {
     color: #000 !important;
-    font-family: 'Roboto';
+    font-family: 'Roboto Bold';
     border-bottom: 1px solid #08261b !important;
+    display: inline-block;
     line-height: 1em;
   }
   .ico {

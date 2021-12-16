@@ -107,7 +107,7 @@ class PNewSideBar extends Component {
           <div className="mode_change">
             <div className="profile">
               <span className="txt">
-                안용성님 환영합니다<span>산업안전팀</span>
+                안용성님 환영합니다<span className="t">산업안전팀</span>
               </span>
               <span className="img">
                 <i class="fas fa-user-circle" style={{ display: 'none' }}></i>
